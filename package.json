@@ -1,0 +1,27 @@
+{
+  "name": "Engineered-AI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.26.0",
+  "devDependencies": {
+    "@types/jsdom": "^28.0.1",
+    "jsdom": "^29.0.1",
+    "vitepress": "2.0.0-alpha.17"
+  },
+  "dependencies": {
+    "defuddle": "^0.14.0",
+    "gray-matter": "^4.0.3",
+    "vue": "^3.5.31"
+  }
+}

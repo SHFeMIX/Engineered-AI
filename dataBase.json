@@ -1,0 +1,4583 @@
+[
+  {
+    "title": "Anthropic",
+    "link": "https://www.anthropic.com/engineering",
+    "posts": [
+      {
+        "title": "Quantifying infrastructure noise in agentic coding evals",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/infrastructure-noise",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 1784
+      },
+      {
+        "title": "Claude Code auto mode: a safer way to skip permissions",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/claude-code-auto-mode",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 3531
+      },
+      {
+        "title": "Harness design for long-running application development",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/harness-design-long-running-apps",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 5166
+      },
+      {
+        "title": "Eval awareness in Claude Opus 4.6’s BrowseComp performance",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 2046
+      },
+      {
+        "title": "Building a C compiler with a team of parallel Claudes",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/building-c-compiler",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 2441
+      },
+      {
+        "title": "Designing AI resistant technical evaluations",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 2673
+      },
+      {
+        "title": "Demystifying evals for AI agents",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 5965
+      },
+      {
+        "title": "Effective harnesses for long-running agents",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 2105
+      },
+      {
+        "title": "Introducing advanced tool use on the Claude Developer Platform",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/advanced-tool-use",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 3181
+      },
+      {
+        "title": "Code execution with MCP: building more efficient AI agents",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 1914
+      },
+      {
+        "title": "Making Claude Code more secure and autonomous with sandboxing",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/claude-code-sandboxing",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 1102
+      },
+      {
+        "title": "Effective context engineering for AI agents",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 3097
+      },
+      {
+        "title": "A postmortem of three recent issues",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/a-postmortem-of-three-recent-issues",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 2069
+      },
+      {
+        "title": "Writing effective tools for AI agents—using AI agents",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/writing-tools-for-agents",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 3272
+      },
+      {
+        "title": "Claude Desktop Extensions: One-click MCP server installation for Claude Desktop",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/desktop-extensions",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 2355
+      },
+      {
+        "title": "How we built our multi-agent research system",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/multi-agent-research-system",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 3750
+      },
+      {
+        "title": "Claude Code overview",
+        "site": "Claude Code Docs",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/claude-code-best-practices",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 1047
+      },
+      {
+        "title": "The \"think\" tool: Enabling Claude to stop and think",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/claude-think-tool",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 2306
+      },
+      {
+        "title": "Claude SWE-Bench Performance",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/swe-bench-sonnet",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 2839
+      },
+      {
+        "title": "Building Effective AI Agents",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/building-effective-agents",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 2687
+      },
+      {
+        "title": "Contextual Retrieval in AI Systems",
+        "site": "Anthropic",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/contextual-retrieval",
+        "domain": "anthropic.com",
+        "language": "en",
+        "wordCount": 2308
+      }
+    ]
+  },
+  {
+    "title": "Claude",
+    "link": "https://claude.com/blog",
+    "posts": [
+      {
+        "title": "Auto mode for Claude Code",
+        "site": "Claude",
+        "published": "Mar 24, 2026",
+        "source": "https://claude.com/blog/auto-mode",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 470
+      },
+      {
+        "title": "Put Claude to work on your computer",
+        "site": "Claude",
+        "published": "Mar 23, 2026",
+        "source": "https://claude.com/blog/dispatch-and-computer-use",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 571
+      },
+      {
+        "title": "Product management on the AI exponential",
+        "site": "Claude",
+        "published": "Mar 19, 2026",
+        "source": "https://claude.com/blog/product-management-on-the-ai-exponential",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1931
+      },
+      {
+        "title": "Code with Claude comes to San Francisco, London, and Tokyo",
+        "site": "Claude",
+        "published": "Mar 18, 2026",
+        "source": "https://claude.com/blog/code-with-claude-san-francisco-london-tokyo",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 185
+      },
+      {
+        "title": "1M context is now generally available for Opus 4.6 and Sonnet 4.6",
+        "site": "Claude",
+        "published": "Mar 13, 2026",
+        "source": "https://claude.com/blog/1m-context-ga",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 372
+      },
+      {
+        "title": "Claude builds interactive visuals right in your conversation",
+        "site": "Claude",
+        "published": "Mar 12, 2026",
+        "source": "https://claude.com/blog/claude-builds-visuals",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 318
+      },
+      {
+        "title": "Advancing Claude for Excel and PowerPoint",
+        "site": "Claude",
+        "published": "Mar 11, 2026",
+        "source": "https://claude.com/blog/claude-excel-powerpoint-updates",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 679
+      },
+      {
+        "title": "Code Review for Claude Code",
+        "site": "Claude",
+        "published": "Mar 09, 2026",
+        "source": "https://claude.com/blog/code-review",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 636
+      },
+      {
+        "title": "Common workflow patterns for AI agents",
+        "site": "Claude",
+        "published": "Mar 05, 2026",
+        "source": "https://claude.com/blog/common-workflow-patterns-for-ai-agents-and-when-to-use-them",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1847
+      },
+      {
+        "title": "Improving skill-creator: Test, measure, and refine Agent Skills",
+        "site": "Claude",
+        "published": "Mar 03, 2026",
+        "source": "https://claude.com/blog/improving-skill-creator-test-measure-and-refine-agent-skills",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 858
+      },
+      {
+        "title": "Cowork and plugins for finance",
+        "site": "Claude",
+        "published": "Feb 24, 2026",
+        "source": "https://claude.com/blog/cowork-plugins-finance",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 783
+      },
+      {
+        "title": "Cowork and plugins for teams across the enterprise",
+        "site": "Claude",
+        "published": "Feb 24, 2026",
+        "source": "https://claude.com/blog/cowork-plugins-across-enterprise",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1005
+      },
+      {
+        "title": "How AI helps break the cost barrier to COBOL modernization",
+        "site": "Claude",
+        "published": "Feb 23, 2026",
+        "source": "https://claude.com/blog/how-ai-helps-break-cost-barrier-cobol-modernization",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 936
+      },
+      {
+        "title": "Preview, review, and merge with Claude Code",
+        "site": "Claude",
+        "published": "Feb 20, 2026",
+        "source": "https://claude.com/blog/preview-review-and-merge-with-claude-code",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 474
+      },
+      {
+        "title": "Improved Web Search with Dynamic Filtering",
+        "site": "Claude",
+        "published": "Feb 17, 2026",
+        "source": "https://claude.com/blog/improved-web-search-with-dynamic-filtering",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 839
+      },
+      {
+        "title": "Claude Enterprise, now available self-serve",
+        "site": "Claude",
+        "published": "Feb 12, 2026",
+        "source": "https://claude.com/blog/self-serve-enterprise",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 620
+      },
+      {
+        "title": "Harvey, Bolt, Shopify & Lovable Test Claude Opus 4.6 Pre-Launch",
+        "site": "Claude",
+        "published": "Feb 09, 2026",
+        "source": "https://claude.com/blog/behind-model-launch-what-customers-discovered-testing-claude-opus-4-6-early",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1160
+      },
+      {
+        "title": "Advancing finance with Claude Opus 4.6",
+        "site": "Claude",
+        "published": "Feb 05, 2026",
+        "source": "https://claude.com/blog/opus-4-6-finance",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1225
+      },
+      {
+        "title": "Customize Cowork with plugins",
+        "site": "Claude",
+        "published": "Jan 30, 2026",
+        "source": "https://claude.com/blog/cowork-plugins",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 459
+      },
+      {
+        "title": "A complete guide to building skills for Claude",
+        "site": "Claude",
+        "published": "Jan 29, 2026",
+        "source": "https://claude.com/blog/complete-guide-to-building-skills-for-claude",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 283
+      },
+      {
+        "title": "Measure Claude Code's impact with contribution metrics",
+        "site": "Claude",
+        "published": "Jan 29, 2026",
+        "source": "https://claude.com/blog/contribution-metrics",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 376
+      },
+      {
+        "title": "How leading retailers are turning AI pilots into enterprise-wide transformation",
+        "site": "Claude",
+        "published": "Jan 28, 2026",
+        "source": "https://claude.com/blog/how-leading-retailers-are-turning-ai-pilots-into-enterprise-wide-transformation",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 359
+      },
+      {
+        "title": "Updates to Claude Team",
+        "site": "Claude",
+        "published": "Jan 28, 2026",
+        "source": "https://claude.com/blog/claude-team-updates",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 204
+      },
+      {
+        "title": "Interactive connectors and MCP Apps",
+        "site": "Claude",
+        "published": "Jan 26, 2026",
+        "source": "https://claude.com/blog/interactive-tools-in-claude",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 458
+      },
+      {
+        "title": "How Anthropic uses Claude in Marketing",
+        "site": "Claude",
+        "published": "Jan 26, 2026",
+        "source": "https://claude.com/blog/how-anthropic-uses-claude-marketing",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1718
+      },
+      {
+        "title": "When to use multi-agent systems (and when not to)",
+        "site": "Claude",
+        "published": "Jan 23, 2026",
+        "source": "https://claude.com/blog/building-multi-agent-systems-when-and-how-to-use-them",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 2800
+      },
+      {
+        "title": "Building Agents with Skills: Equipping Agents for Specialized Work",
+        "site": "Claude",
+        "published": "Jan 22, 2026",
+        "source": "https://claude.com/blog/building-agents-with-skills-equipping-agents-for-specialized-work",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1704
+      },
+      {
+        "title": "Eight trends defining how software gets built in 2026",
+        "site": "Claude",
+        "published": "Jan 21, 2026",
+        "source": "https://claude.com/blog/eight-trends-defining-how-software-gets-built-in-2026",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 376
+      },
+      {
+        "title": "Extending Claude's capabilities with skills and MCP",
+        "site": "Claude",
+        "published": "Dec 19, 2025",
+        "source": "https://claude.com/blog/extending-claude-capabilities-with-skills-mcp-servers",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1705
+      },
+      {
+        "title": "Skills for organizations, partners, the ecosystem",
+        "site": "Claude",
+        "published": "Dec 18, 2025",
+        "source": "https://claude.com/blog/organization-skills-and-directory",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 319
+      },
+      {
+        "title": "Making Claude a better electrical engineer",
+        "site": "Claude",
+        "published": "Dec 12, 2025",
+        "source": "https://claude.com/blog/making-claude-a-better-electrical-engineer",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 838
+      },
+      {
+        "title": "Claude Code power user customization: How to configure hooks",
+        "site": "Claude",
+        "published": "Dec 11, 2025",
+        "source": "https://claude.com/blog/how-to-configure-hooks",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 2497
+      },
+      {
+        "title": "How enterprises are building AI agents in 2026",
+        "site": "Claude",
+        "published": "Dec 09, 2025",
+        "source": "https://claude.com/blog/how-enterprises-are-building-ai-agents-in-2026",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 542
+      },
+      {
+        "title": "How Anthropic uses Claude in Legal",
+        "site": "Claude",
+        "published": "Dec 08, 2025",
+        "source": "https://claude.com/blog/how-anthropic-uses-claude-legal",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1520
+      },
+      {
+        "title": "Claude Code and Slack",
+        "site": "Claude",
+        "published": "Dec 08, 2025",
+        "source": "https://claude.com/blog/claude-code-and-slack",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 356
+      },
+      {
+        "title": "The key benefits of transitioning to agentic coding",
+        "site": "Claude",
+        "published": "Dec 01, 2025",
+        "source": "https://claude.com/blog/key-benefits-transitioning-agentic-coding",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1568
+      },
+      {
+        "title": "Using CLAUDE.MD files: Customizing Claude Code for your codebase",
+        "site": "Claude",
+        "published": "Nov 25, 2025",
+        "source": "https://claude.com/blog/using-claude-md-files",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 2268
+      },
+      {
+        "title": "Claude: From Chatbot to Thinking Partner",
+        "site": "Claude",
+        "published": "Nov 20, 2025",
+        "source": "https://claude.com/blog/your-thinking-partner",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 330
+      },
+      {
+        "title": "How to create Skills for Claude: steps and examples",
+        "site": "Claude",
+        "published": "Nov 19, 2025",
+        "source": "https://claude.com/blog/how-to-create-skills-key-steps-limitations-and-examples",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 4234
+      },
+      {
+        "title": "How three YC startups built their companies with Claude Code",
+        "site": "Claude",
+        "published": "Nov 17, 2025",
+        "source": "https://claude.com/blog/building-companies-with-claude-code",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 2210
+      },
+      {
+        "title": "Structured outputs on the Claude Developer Platform",
+        "site": "Claude",
+        "published": "Nov 14, 2025",
+        "source": "https://claude.com/blog/structured-outputs-on-the-claude-developer-platform",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 404
+      },
+      {
+        "title": "Skills explained: How Skills compares to prompts, Projects, MCP, and subagents",
+        "site": "Claude",
+        "published": "Nov 13, 2025",
+        "source": "https://claude.com/blog/skills-explained",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 2646
+      },
+      {
+        "title": "Improving frontend design through Skills",
+        "site": "Claude",
+        "published": "Nov 12, 2025",
+        "source": "https://claude.com/blog/improving-frontend-design-through-skills",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 2303
+      },
+      {
+        "title": "Prompt engineering best practices",
+        "site": "Claude",
+        "published": "Nov 10, 2025",
+        "source": "https://claude.com/blog/best-practices-for-prompt-engineering",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 3144
+      },
+      {
+        "title": "Building AI agents for startups",
+        "site": "Claude",
+        "published": "Nov 03, 2025",
+        "source": "https://claude.com/blog/building-ai-agents-for-startups",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1592
+      },
+      {
+        "title": "What is Model Context Protocol? Connect AI to your world",
+        "site": "Claude",
+        "published": "Oct 31, 2025",
+        "source": "https://claude.com/blog/what-is-model-context-protocol",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1399
+      },
+      {
+        "title": "Introduction to agentic coding",
+        "site": "Claude",
+        "published": "Oct 30, 2025",
+        "source": "https://claude.com/blog/introduction-to-agentic-coding",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1482
+      },
+      {
+        "title": "Building AI agents in healthcare and life sciences",
+        "site": "Claude",
+        "published": "Oct 30, 2025",
+        "source": "https://claude.com/blog/building-ai-agents-in-healthcare-and-life-sciences",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1989
+      },
+      {
+        "title": "Building AI agents for financial services",
+        "site": "Claude",
+        "published": "Oct 30, 2025",
+        "source": "https://claude.com/blog/building-ai-agents-in-financial-services",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 2088
+      },
+      {
+        "title": "How Brex improves code quality and productivity with Claude Code",
+        "site": "Claude",
+        "published": "Oct 30, 2025",
+        "source": "https://claude.com/blog/how-brex-improves-code-quality-and-productivity-with-claude-code",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1142
+      },
+      {
+        "title": "Fix software bugs faster with Claude",
+        "site": "Claude",
+        "published": "Oct 28, 2025",
+        "source": "https://claude.com/blog/fix-software-bugs-faster-with-claude",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1303
+      },
+      {
+        "title": "How to integrate APIs seamlessly",
+        "site": "Claude",
+        "published": "Oct 27, 2025",
+        "source": "https://claude.com/blog/integrate-apis-seamlessly",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1037
+      },
+      {
+        "title": "Claude Code on the web",
+        "site": "Claude",
+        "published": "Oct 20, 2025",
+        "source": "https://claude.com/blog/claude-code-on-the-web",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 442
+      },
+      {
+        "title": "Equipping agents for the real world with Agent Skills \\ Anthropic",
+        "site": "Claude",
+        "published": "Oct 16, 2025",
+        "source": "https://claude.com/blog/equipping-agents-for-the-real-world-with-agent-skills",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1495
+      },
+      {
+        "title": "Claude and your productivity platforms",
+        "site": "Claude",
+        "published": "Oct 16, 2025",
+        "source": "https://claude.com/blog/productivity-platforms",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 404
+      },
+      {
+        "title": "Introducing Agent Skills",
+        "site": "Claude",
+        "published": "Oct 16, 2025",
+        "source": "https://claude.com/blog/skills",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 641
+      },
+      {
+        "title": "How to scale agentic coding across your engineering organization",
+        "site": "Claude",
+        "published": "Oct 15, 2025",
+        "source": "https://claude.com/blog/scaling-agentic-coding",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1628
+      },
+      {
+        "title": "Build responsive web layouts",
+        "site": "Claude",
+        "published": "Oct 10, 2025",
+        "source": "https://claude.com/blog/build-responsive-web-layouts",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1632
+      },
+      {
+        "title": "Customize Claude Code with plugins",
+        "site": "Claude",
+        "published": "Oct 09, 2025",
+        "source": "https://claude.com/blog/claude-code-plugins",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 609
+      },
+      {
+        "title": "Beyond permission prompts: making Claude Code more secure and autonomous",
+        "site": "Claude",
+        "published": "Oct 08, 2025",
+        "source": "https://claude.com/blog/beyond-permission-prompts-making-claude-code-more-secure-and-autonomous",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1051
+      },
+      {
+        "title": "Optimize code performance quickly",
+        "site": "Claude",
+        "published": "Oct 06, 2025",
+        "source": "https://claude.com/blog/optimize-code-performance-quickly",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1190
+      },
+      {
+        "title": "How enterprises are driving AI transformation with Claude",
+        "site": "Claude",
+        "published": "Oct 01, 2025",
+        "source": "https://claude.com/blog/driving-ai-transformation-with-claude",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1501
+      },
+      {
+        "title": "Claude and Slack",
+        "site": "Claude",
+        "published": "Oct 01, 2025",
+        "source": "https://claude.com/blog/claude-and-slack",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 663
+      },
+      {
+        "title": "Building agents with the Claude Agent SDK",
+        "site": "Claude",
+        "published": "Sep 29, 2025",
+        "source": "https://claude.com/blog/building-agents-with-the-claude-agent-sdk",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 2173
+      },
+      {
+        "title": "Managing context on the Claude Developer Platform",
+        "site": "Claude",
+        "published": "Sep 29, 2025",
+        "source": "https://claude.com/blog/context-management",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 619
+      },
+      {
+        "title": "Claude is now available in Microsoft 365 Copilot",
+        "site": "Claude",
+        "published": "Sep 24, 2025",
+        "source": "https://claude.com/blog/claude-now-available-in-microsoft-365-copilot",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 408
+      },
+      {
+        "title": "Claude can now create and edit files",
+        "site": "Claude",
+        "published": "Sep 09, 2025",
+        "source": "https://claude.com/blog/create-files",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 491
+      },
+      {
+        "title": "Piloting Claude in Chrome",
+        "site": "Claude",
+        "published": "Aug 25, 2025",
+        "source": "https://claude.com/blog/claude-for-chrome",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1393
+      },
+      {
+        "title": "Claude Code and new admin controls for business plans",
+        "site": "Claude",
+        "published": "Aug 20, 2025",
+        "source": "https://claude.com/blog/claude-code-and-new-admin-controls-for-business-plans",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 652
+      },
+      {
+        "title": "Prompt caching with Claude",
+        "site": "Claude",
+        "published": "Aug 14, 2025",
+        "source": "https://claude.com/blog/prompt-caching",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 639
+      },
+      {
+        "title": "Claude Sonnet 4 now supports 1M tokens of context",
+        "site": "Claude",
+        "published": "Aug 12, 2025",
+        "source": "https://claude.com/blog/1m-context",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 513
+      },
+      {
+        "title": "Automate security reviews with Claude Code",
+        "site": "Claude",
+        "published": "Aug 06, 2025",
+        "source": "https://claude.com/blog/automate-security-reviews-with-claude-code",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 515
+      },
+      {
+        "title": "Build and share AI-powered apps with Claude",
+        "site": "Claude",
+        "published": "Jul 25, 2025",
+        "source": "https://claude.com/blog/claude-powered-artifacts",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 362
+      },
+      {
+        "title": "How Anthropic teams use Claude Code",
+        "site": "Claude",
+        "published": "Jul 24, 2025",
+        "source": "https://claude.com/blog/how-anthropic-teams-use-claude-code",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 1137
+      },
+      {
+        "title": "Discover tools that work with Claude",
+        "site": "Claude",
+        "published": "Jul 14, 2025",
+        "source": "https://claude.com/blog/connectors-directory",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 328
+      },
+      {
+        "title": "Introducing Citations on the Anthropic API",
+        "site": "Claude",
+        "published": "Jun 23, 2025",
+        "source": "https://claude.com/blog/introducing-citations-api",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 639
+      },
+      {
+        "title": "Remote MCP support in Claude Code",
+        "site": "Claude",
+        "published": "Jun 18, 2025",
+        "source": "https://claude.com/blog/claude-code-remote-mcp",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 332
+      },
+      {
+        "title": "New capabilities for building agents on the Anthropic API",
+        "site": "Claude",
+        "published": "May 22, 2025",
+        "source": "https://claude.com/blog/agent-capabilities-api",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 858
+      },
+      {
+        "title": "Introducing web search on the Anthropic API",
+        "site": "Claude",
+        "published": "May 07, 2025",
+        "source": "https://claude.com/blog/web-search-api",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 703
+      },
+      {
+        "title": "Claude can now connect to your world",
+        "site": "Claude",
+        "published": "May 01, 2025",
+        "source": "https://claude.com/blog/integrations",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 693
+      },
+      {
+        "title": "Claude takes research to new places",
+        "site": "Claude",
+        "published": "Apr 15, 2025",
+        "source": "https://claude.com/blog/research",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 793
+      },
+      {
+        "title": "Introducing the Max Plan",
+        "site": "Claude",
+        "published": "Apr 09, 2025",
+        "source": "https://claude.com/blog/max-plan",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 410
+      },
+      {
+        "title": "Claude on Google Cloud’s Vertex AI: FedRAMP High and IL2 Authorized",
+        "site": "Claude",
+        "published": "Apr 02, 2025",
+        "source": "https://claude.com/blog/claude-on-google-cloud-fedramp-high",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 373
+      },
+      {
+        "title": "Claude web search now available globally on all plans",
+        "site": "Claude",
+        "published": "Mar 20, 2025",
+        "source": "https://claude.com/blog/web-search",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 313
+      },
+      {
+        "title": "Token-saving updates on the Anthropic API",
+        "site": "Claude",
+        "published": "Mar 13, 2025",
+        "source": "https://claude.com/blog/token-saving-updates",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 756
+      },
+      {
+        "title": "Get to production faster with the upgraded Anthropic Console",
+        "site": "Claude",
+        "published": "Mar 06, 2025",
+        "source": "https://claude.com/blog/upgraded-anthropic-console",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 482
+      },
+      {
+        "title": "Claude 3.5 Haiku on AWS Trainium2 and model distillation in Amazon Bedrock",
+        "site": "Claude",
+        "published": "Dec 03, 2024",
+        "source": "https://claude.com/blog/trainium2-and-distillation",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 575
+      },
+      {
+        "title": "Introducing the analysis tool in Claude.ai",
+        "site": "Claude",
+        "published": "Oct 24, 2024",
+        "source": "https://claude.com/blog/analysis-tool",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 375
+      },
+      {
+        "title": "Improve your prompts in the developer console",
+        "site": "Claude",
+        "published": "Oct 14, 2024",
+        "source": "https://claude.com/blog/prompt-improver",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 675
+      },
+      {
+        "title": "Introducing the Message Batches API",
+        "site": "Claude",
+        "published": "Oct 08, 2024",
+        "source": "https://claude.com/blog/message-batches-api",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 529
+      },
+      {
+        "title": "Claude for Enterprise",
+        "site": "Claude",
+        "published": "Sep 10, 2024",
+        "source": "https://claude.com/blog/claude-for-enterprise",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 659
+      },
+      {
+        "title": "Workspaces in the Anthropic API Console",
+        "site": "Claude",
+        "published": "Sep 10, 2024",
+        "source": "https://claude.com/blog/workspaces",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 263
+      },
+      {
+        "title": "Artifacts are now generally available",
+        "site": "Claude",
+        "published": "Aug 27, 2024",
+        "source": "https://claude.com/blog/artifacts",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 271
+      },
+      {
+        "title": "Claude Android app",
+        "site": "Claude",
+        "published": "Jul 16, 2024",
+        "source": "https://claude.com/blog/android-app",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 224
+      },
+      {
+        "title": "Fine-tune Claude 3 Haiku in Amazon Bedrock",
+        "site": "Claude",
+        "published": "Jul 10, 2024",
+        "source": "https://claude.com/blog/fine-tune-claude-3-haiku",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 720
+      },
+      {
+        "title": "Evaluate prompts in the developer console",
+        "site": "Claude",
+        "published": "Jul 09, 2024",
+        "source": "https://claude.com/blog/evaluate-prompts",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 466
+      },
+      {
+        "title": "Claude can now use tools",
+        "site": "Claude",
+        "published": "May 30, 2024",
+        "source": "https://claude.com/blog/tool-use-ga",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 680
+      },
+      {
+        "title": "Generate better prompts in the developer console",
+        "site": "Claude",
+        "published": "May 20, 2024",
+        "source": "https://claude.com/blog/prompt-generator",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 743
+      },
+      {
+        "title": "Introducing the Claude Team plan and iOS app",
+        "site": "Claude",
+        "published": "May 01, 2024",
+        "source": "https://claude.com/blog/team-plan-and-ios",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 587
+      },
+      {
+        "title": "Long context prompting for Claude 2.1",
+        "site": "Claude",
+        "published": "Dec 06, 2023",
+        "source": "https://claude.com/blog/claude-2-1-prompting",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 944
+      },
+      {
+        "title": "Claude on Amazon Bedrock now available to every AWS customer",
+        "site": "Claude",
+        "published": "Sep 28, 2023",
+        "source": "https://claude.com/blog/amazon-bedrock-general-availability",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 605
+      },
+      {
+        "title": "Claude 2 on Amazon Bedrock",
+        "site": "Claude",
+        "published": "Aug 23, 2023",
+        "source": "https://claude.com/blog/claude-2-amazon-bedrock",
+        "domain": "claude.com",
+        "language": "en-US",
+        "wordCount": 500
+      }
+    ]
+  },
+  {
+    "title": "Cursor",
+    "link": "https://cursor.com/blog",
+    "posts": [
+      {
+        "title": "Improving Composer through real-time RL · Cursor",
+        "site": "Cursor",
+        "published": "2026-03-26T00:00:00.000Z, 2026-03-26T00:00:00.000Z",
+        "source": "https://cursor.com/blog/real-time-rl-for-composer",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1122
+      },
+      {
+        "title": "Run cloud agents in your own infrastructure · Cursor",
+        "site": "Cursor",
+        "published": "2026-03-25T12:00:00.000Z, 2026-03-25T12:00:00.000Z",
+        "source": "https://cursor.com/blog/self-hosted-cloud-agents",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 720
+      },
+      {
+        "title": "Fast regex search: indexing text for agent tools · Cursor",
+        "site": "Cursor",
+        "published": "2026-03-23T12:00:00.000Z, 2026-03-23T12:00:00.000Z",
+        "source": "https://cursor.com/blog/fast-regex-search",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 4512
+      },
+      {
+        "title": "Introducing Composer 2 · Cursor",
+        "site": "Cursor",
+        "published": "2026-03-19T00:00:00.000Z, 2026-03-19T00:00:00.000Z",
+        "source": "https://cursor.com/blog/composer-2",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 406
+      },
+      {
+        "title": "Training Composer for longer horizons · Cursor",
+        "site": "Cursor",
+        "published": "2026-03-17T12:00:00.000Z, 2026-03-17T12:00:00.000Z",
+        "source": "https://cursor.com/blog/self-summarization",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1066
+      },
+      {
+        "title": "Securing our codebase with autonomous agents · Cursor",
+        "site": "Cursor",
+        "published": "2026-03-16T00:00:00.000Z, 2026-03-16T00:00:00.000Z",
+        "source": "https://cursor.com/blog/security-agents",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 868
+      },
+      {
+        "title": "How we compare model quality in Cursor · Cursor",
+        "site": "Cursor",
+        "published": "2026-03-11T12:00:00.000Z, 2026-03-11T12:00:00.000Z",
+        "source": "https://cursor.com/blog/cursorbench",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1040
+      },
+      {
+        "title": "Over 30 new plugins join the Cursor Marketplace · Cursor",
+        "site": "Cursor",
+        "published": "2026-03-11T00:00:00.000Z, 2026-03-11T00:00:00.000Z",
+        "source": "https://cursor.com/blog/new-plugins",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 358
+      },
+      {
+        "title": "Build agents that run automatically · Cursor",
+        "site": "Cursor",
+        "published": "2026-03-05T12:00:00.000Z, 2026-03-05T12:00:00.000Z",
+        "source": "https://cursor.com/blog/automations",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 895
+      },
+      {
+        "title": "Cursor is now available in JetBrains IDEs · Cursor",
+        "site": "Cursor",
+        "published": "2026-03-04T12:00:00.000Z, 2026-03-04T12:00:00.000Z",
+        "source": "https://cursor.com/blog/jetbrains-acp",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 280
+      },
+      {
+        "title": "How technical support at Cursor uses Cursor · Cursor",
+        "site": "Cursor",
+        "published": "2026-03-03T12:00:00.000Z, 2026-03-03T12:00:00.000Z",
+        "source": "https://cursor.com/blog/cursor-support",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 829
+      },
+      {
+        "title": "The third era of AI software development · Cursor",
+        "site": "Cursor",
+        "published": "2026-02-26T19:35:24.000Z, 2026-02-26T19:35:24.000Z",
+        "source": "https://cursor.com/blog/third-era",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 654
+      },
+      {
+        "title": "Closing the code review loop with Bugbot Autofix · Cursor",
+        "site": "Cursor",
+        "published": "2026-02-26T12:00:00.000Z, 2026-02-26T12:00:00.000Z",
+        "source": "https://cursor.com/blog/bugbot-autofix",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 272
+      },
+      {
+        "title": "Cursor agents can now control their own computers · Cursor",
+        "site": "Cursor",
+        "published": "2026-02-24T00:00:00.000Z, 2026-02-24T00:00:00.000Z",
+        "source": "https://cursor.com/blog/agent-computer-use",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1010
+      },
+      {
+        "title": "Implementing a secure sandbox for local agents · Cursor",
+        "site": "Cursor",
+        "published": "2026-02-18T12:00:00.000Z, 2026-02-18T12:00:00.000Z",
+        "source": "https://cursor.com/blog/agent-sandboxing",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1019
+      },
+      {
+        "title": "Extend Cursor with plugins · Cursor",
+        "site": "Cursor",
+        "published": "2026-02-17T00:00:00.000Z, 2026-02-17T00:00:00.000Z",
+        "source": "https://cursor.com/blog/marketplace",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 468
+      },
+      {
+        "title": "Expanding our long-running agents research preview · Cursor",
+        "site": "Cursor",
+        "published": "2026-02-12T00:00:00.000Z, 2026-02-12T00:00:00.000Z",
+        "source": "https://cursor.com/blog/long-running-agents",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 978
+      },
+      {
+        "title": "Increased usage for agents · Cursor",
+        "site": "Cursor",
+        "published": "2026-02-11T00:00:00.000Z, 2026-02-11T00:00:00.000Z",
+        "source": "https://cursor.com/blog/increased-agent-usage",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 452
+      },
+      {
+        "title": "Introducing Composer 1.5 · Cursor",
+        "site": "Cursor",
+        "published": "2026-02-09T00:00:00.000Z, 2026-02-09T00:00:00.000Z",
+        "source": "https://cursor.com/blog/composer-1-5",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 435
+      },
+      {
+        "title": "Towards self-driving codebases · Cursor",
+        "site": "Cursor",
+        "published": "2026-02-05T12:00:00.000Z, 2026-02-05T12:00:00.000Z",
+        "source": "https://cursor.com/blog/self-driving-codebases",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 3273
+      },
+      {
+        "title": "Securely indexing large codebases · Cursor",
+        "site": "Cursor",
+        "published": "2026-01-27T12:00:00.000Z, 2026-01-27T12:00:00.000Z",
+        "source": "https://cursor.com/blog/secure-codebase-indexing",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 930
+      },
+      {
+        "title": "Building a better Bugbot · Cursor",
+        "site": "Cursor",
+        "published": "2026-01-15T12:00:00.000Z, 2026-01-15T12:00:00.000Z",
+        "source": "https://cursor.com/blog/building-bugbot",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1213
+      },
+      {
+        "title": "Scaling long-running autonomous coding · Cursor",
+        "site": "Cursor",
+        "published": "2026-01-14T12:00:00.000Z, 2026-01-14T12:00:00.000Z",
+        "source": "https://cursor.com/blog/scaling-agents",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1067
+      },
+      {
+        "title": "Cursor agent best practices",
+        "site": "Cursor",
+        "published": "2026-01-09T12:00:00.000Z, 2026-01-09T12:00:00.000Z",
+        "source": "https://cursor.com/blog/agent-best-practices",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 2846
+      },
+      {
+        "title": "Dynamic context discovery · Cursor",
+        "site": "Cursor",
+        "published": "2026-01-06T12:00:00.000Z, 2026-01-06T12:00:00.000Z",
+        "source": "https://cursor.com/blog/dynamic-context-discovery",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1096
+      },
+      {
+        "title": "Hooks for security and platform teams · Cursor",
+        "site": "Cursor",
+        "published": "2025-12-22T00:00:00.000Z, 2025-12-22T00:00:00.000Z",
+        "source": "https://cursor.com/blog/hooks-partners",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 374
+      },
+      {
+        "title": "Graphite is joining Cursor · Cursor",
+        "site": "Cursor",
+        "published": "2025-12-19T00:00:00.000Z, 2025-12-19T00:00:00.000Z",
+        "source": "https://cursor.com/blog/graphite",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1889
+      },
+      {
+        "title": "A visual editor for the Cursor Browser · Cursor",
+        "site": "Cursor",
+        "published": "2025-12-11T00:00:00.000Z, 2025-12-11T00:00:00.000Z",
+        "source": "https://cursor.com/blog/browser-visual-editor",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 378
+      },
+      {
+        "title": "Introducing Debug Mode: Agents with runtime logs · Cursor",
+        "site": "Cursor",
+        "published": "2025-12-10T00:00:00.000Z, 2025-12-10T00:00:00.000Z",
+        "source": "https://cursor.com/blog/debug-mode",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 477
+      },
+      {
+        "title": "Improving Cursor’s agent for OpenAI Codex models · Cursor",
+        "site": "Cursor",
+        "published": "2025-12-04T16:02:50.287Z, 2025-12-04T16:02:50.287Z",
+        "source": "https://cursor.com/blog/codex-model-harness",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1147
+      },
+      {
+        "title": "Past, Present, and Future · Cursor",
+        "site": "Cursor",
+        "published": "2025-11-13T11:27:11.894Z, 2025-11-13T11:27:11.894Z",
+        "source": "https://cursor.com/blog/series-d",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 255
+      },
+      {
+        "title": "The productivity impact of coding agents · Cursor",
+        "site": "Cursor",
+        "published": "2025-11-11T17:37:00.000Z, 2025-11-11T17:37:00.000Z",
+        "source": "https://cursor.com/blog/productivity",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 511
+      },
+      {
+        "title": "Improving agent with semantic search · Cursor",
+        "site": "Cursor",
+        "published": "2025-11-06T03:10:00.000Z, 2025-11-06T03:10:00.000Z",
+        "source": "https://cursor.com/blog/semsearch",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 536
+      },
+      {
+        "title": "Introducing Cursor for Enterprise · Cursor",
+        "site": "Cursor",
+        "published": "2025-10-31T19:23:00.000Z, 2025-10-31T19:23:00.000Z",
+        "source": "https://cursor.com/blog/enterprise",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 551
+      },
+      {
+        "title": "Cloud Agents · Cursor",
+        "site": "Cursor",
+        "published": "2025-10-30T15:09:14.822Z, 2025-10-30T15:09:14.822Z",
+        "source": "https://cursor.com/blog/cloud-agents",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 389
+      },
+      {
+        "title": "Composer: Building a fast frontier model with RL · Cursor",
+        "site": "Cursor",
+        "published": "2025-10-29T06:49:00.000Z, 2025-10-29T06:49:00.000Z",
+        "source": "https://cursor.com/blog/composer",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 743
+      },
+      {
+        "title": "Introducing Cursor 2.0 and Composer · Cursor",
+        "site": "Cursor",
+        "published": "2025-10-29T04:54:48.600Z, 2025-10-29T04:54:48.600Z",
+        "source": "https://cursor.com/blog/2-0",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 327
+      },
+      {
+        "title": "Introducing Plan Mode · Cursor",
+        "site": "Cursor",
+        "published": "2025-10-07T17:00:00.000Z, 2025-10-07T17:00:00.000Z",
+        "source": "https://cursor.com/blog/plan-mode",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 182
+      },
+      {
+        "title": "Improving Java support in Cursor · Cursor",
+        "site": "Cursor",
+        "published": "2025-10-01T17:20:00.000Z, 2025-10-01T17:20:00.000Z",
+        "source": "https://cursor.com/blog/java",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 169
+      },
+      {
+        "title": "Improving Cursor Tab with online RL · Cursor",
+        "site": "Cursor",
+        "published": "2025-09-12T01:16:00.000Z, 2025-09-12T01:16:00.000Z",
+        "source": "https://cursor.com/blog/tab-rl",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1109
+      },
+      {
+        "title": "1.5x faster MoE training with custom MXFP8 kernels · Cursor",
+        "site": "Cursor",
+        "published": "2025-08-29T02:55:25.007Z, 2025-08-29T02:55:25.007Z",
+        "source": "https://cursor.com/blog/kernels",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 4264
+      },
+      {
+        "title": "Bringing the Cursor Agent to Linear · Cursor",
+        "site": "Cursor",
+        "published": "2025-08-21T07:00:00.000Z, 2025-08-21T07:00:00.000Z",
+        "source": "https://cursor.com/blog/linear",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 326
+      },
+      {
+        "title": "Updates to Teams and Auto · Cursor",
+        "site": "Cursor",
+        "published": "2025-08-12T07:00:00.000Z, 2025-08-12T07:00:00.000Z",
+        "source": "https://cursor.com/blog/aug-2025-pricing",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 237
+      },
+      {
+        "title": "Cursor Agent CLI · Cursor",
+        "site": "Cursor",
+        "published": "2025-08-07T07:10:00.000Z, 2025-08-07T07:10:00.000Z",
+        "source": "https://cursor.com/blog/cli",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 288
+      },
+      {
+        "title": "GPT-5 is now available in Cursor · Cursor",
+        "site": "Cursor",
+        "published": "2025-08-07T07:00:00.000Z, 2025-08-07T07:00:00.000Z",
+        "source": "https://cursor.com/blog/gpt-5",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 369
+      },
+      {
+        "title": "Bugbot is out of beta · Cursor",
+        "site": "Cursor",
+        "published": "2025-07-24T07:00:00.000Z, 2025-07-24T07:00:00.000Z",
+        "source": "https://cursor.com/blog/bugbot-out-of-beta",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 384
+      },
+      {
+        "title": "Clarifying our pricing · Cursor",
+        "site": "Cursor",
+        "published": "2025-07-04T20:08:00.000Z, 2025-07-04T20:08:00.000Z",
+        "source": "https://cursor.com/blog/june-2025-pricing",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 563
+      },
+      {
+        "title": "Cursor on web and mobile · Cursor",
+        "site": "Cursor",
+        "published": "2025-06-30T23:09:00.000Z, 2025-06-30T23:09:00.000Z",
+        "source": "https://cursor.com/blog/agent-web",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 266
+      },
+      {
+        "title": "Updates to Ultra and Pro · Cursor",
+        "site": "Cursor",
+        "published": "2025-06-16T20:08:00.000Z, 2025-06-16T20:08:00.000Z",
+        "source": "https://cursor.com/blog/new-tier",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 181
+      },
+      {
+        "title": "Series C and Scale · Cursor",
+        "site": "Cursor",
+        "published": "2025-06-06T20:08:00.000Z, 2025-06-06T20:08:00.000Z",
+        "source": "https://cursor.com/blog/series-c",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1654
+      },
+      {
+        "title": "Early team · Cursor",
+        "site": "Cursor",
+        "published": "2025-04-26T20:08:00.000Z, 2025-04-26T20:08:00.000Z",
+        "source": "https://cursor.com/blog/team",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 248
+      },
+      {
+        "title": "Series B and Automating Code · Cursor",
+        "site": "Cursor",
+        "published": "2025-01-16T21:08:00.000Z, 2025-01-16T21:08:00.000Z",
+        "source": "https://cursor.com/blog/series-b",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 196
+      },
+      {
+        "title": "A new Tab model · Cursor",
+        "site": "Cursor",
+        "published": "2025-01-13T21:08:00.000Z, 2025-01-13T21:08:00.000Z",
+        "source": "https://cursor.com/blog/tab-update",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 509
+      },
+      {
+        "title": "Character Prefix Conditioning · Cursor",
+        "site": "Cursor",
+        "published": "2025-01-06T21:08:00.000Z, 2025-01-06T21:08:00.000Z",
+        "source": "https://cursor.com/blog/cpc",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 245
+      },
+      {
+        "title": "Supermaven joins Cursor · Cursor",
+        "site": "Cursor",
+        "published": "2024-11-12T00:58:00.000Z, 2024-11-12T00:58:00.000Z",
+        "source": "https://cursor.com/blog/supermaven",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 217
+      },
+      {
+        "title": "Iterating with shadow workspaces · Cursor",
+        "site": "Cursor",
+        "published": "2024-09-01T23:58:00.000Z, 2024-09-01T23:58:00.000Z",
+        "source": "https://cursor.com/blog/shadow-workspace",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 3911
+      },
+      {
+        "title": "Series A and Magic · Cursor",
+        "site": "Cursor",
+        "published": "2024-08-22T23:58:00.000Z, 2024-08-22T23:58:00.000Z",
+        "source": "https://cursor.com/blog/series-a",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 268
+      },
+      {
+        "title": "More problems · Cursor",
+        "site": "Cursor",
+        "published": "2024-05-25T23:58:00.000Z, 2024-05-25T23:58:00.000Z",
+        "source": "https://cursor.com/blog/problems-2024",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1076
+      },
+      {
+        "title": "Editing Files at 1000 Tokens per Second · Cursor",
+        "site": "Cursor",
+        "published": "2024-05-14T07:00:00.000Z, 2024-05-14T07:00:00.000Z",
+        "source": "https://cursor.com/blog/instant-apply",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1533
+      },
+      {
+        "title": "Our problems · Cursor",
+        "site": "Cursor",
+        "published": "2023-10-12T23:58:00.000Z, 2023-10-12T23:58:00.000Z",
+        "source": "https://cursor.com/blog/problems-2023",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 819
+      },
+      {
+        "title": "Inference characteristics of Llama · Cursor",
+        "site": "Cursor",
+        "published": "2023-07-20T16:11:00.000Z, 2023-07-20T16:11:00.000Z",
+        "source": "https://cursor.com/blog/llama-inference",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 3508
+      },
+      {
+        "title": "Prompt design · Cursor",
+        "site": "Cursor",
+        "published": "2023-06-11T23:58:00.000Z, 2023-06-11T23:58:00.000Z",
+        "source": "https://cursor.com/blog/prompt-design",
+        "domain": "cursor.com",
+        "language": "en-US",
+        "wordCount": 1073
+      }
+    ]
+  },
+  {
+    "title": "LongChain",
+    "link": "https://blog.langchain.com",
+    "posts": [
+      {
+        "title": "How we build evals for Deep Agents",
+        "site": "LangChain Blog",
+        "published": "2026-03-26T15:18:56.000Z",
+        "source": "https://blog.langchain.com/how-we-build-evals-for-deep-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1910
+      },
+      {
+        "title": "The Anatomy of an Agent Harness",
+        "site": "LangChain Blog",
+        "published": "2026-03-11T02:41:22.000Z",
+        "source": "https://blog.langchain.com/the-anatomy-of-an-agent-harness/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 2266
+      },
+      {
+        "title": "How we built LangChain’s GTM Agent",
+        "site": "LangChain Blog",
+        "published": "2026-03-09T15:30:13.000Z",
+        "source": "https://blog.langchain.com/how-we-built-langchains-gtm-agent/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 2182
+      },
+      {
+        "title": "Evaluating Skills",
+        "site": "LangChain Blog",
+        "published": "2026-03-05T18:00:49.000Z",
+        "source": "https://blog.langchain.com/evaluating-skills/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1798
+      },
+      {
+        "title": "LangSmith CLI & Skills",
+        "site": "LangChain Blog",
+        "published": "2026-03-04T18:00:31.000Z",
+        "source": "https://blog.langchain.com/langsmith-cli-skills/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 581
+      },
+      {
+        "title": "How Middleware Lets You Customize Your Agent Harness",
+        "site": "LangChain Blog",
+        "published": "2026-03-26T14:53:27.000Z",
+        "source": "https://blog.langchain.com/how-middleware-lets-you-customize-your-agent-harness/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1171
+      },
+      {
+        "title": "Skills in LangSmith Fleet",
+        "site": "LangChain Blog",
+        "published": "2026-03-25T16:10:11.000Z",
+        "source": "https://blog.langchain.com/skills-in-langsmith-fleet/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 749
+      },
+      {
+        "title": "How Moda Builds Production-Grade AI Design Agents with Deep Agents",
+        "site": "LangChain Blog",
+        "published": "2026-03-24T17:07:54.000Z",
+        "source": "https://blog.langchain.com/how-moda-builds-production-grade-ai-design-agents-with-deep-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1336
+      },
+      {
+        "title": "Join LangChain at Google Cloud Next 2026",
+        "site": "LangChain Blog",
+        "published": "2026-03-23T21:37:58.000Z",
+        "source": "https://blog.langchain.com/join-langchain-at-google-cloud-next-2026/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 738
+      },
+      {
+        "title": "Two different types of agent authorization",
+        "site": "LangChain Blog",
+        "published": "2026-03-23T17:29:28.000Z",
+        "source": "https://blog.langchain.com/two-different-types-of-agent-authorization/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 860
+      },
+      {
+        "title": "Introducing LangSmith Fleet",
+        "site": "LangChain Blog",
+        "published": "2026-03-19T16:49:42.000Z",
+        "source": "https://blog.langchain.com/introducing-langsmith-fleet/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1104
+      },
+      {
+        "title": "Polly is generally available everywhere you work in LangSmith",
+        "site": "LangChain Blog",
+        "published": "2026-03-18T15:38:58.000Z",
+        "source": "https://blog.langchain.com/polly-langsmith-ga/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 693
+      },
+      {
+        "title": "Introducing LangSmith Sandboxes: Secure Code Execution for Agents",
+        "site": "LangChain Blog",
+        "published": "2026-03-17T15:51:07.000Z",
+        "source": "https://blog.langchain.com/introducing-langsmith-sandboxes-secure-code-execution-for-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 807
+      },
+      {
+        "title": "Open SWE: An Open-Source Framework for Internal Coding Agents",
+        "site": "LangChain Blog",
+        "published": "2026-03-17T15:30:00.000Z",
+        "source": "https://blog.langchain.com/open-swe-an-open-source-framework-for-internal-coding-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1855
+      },
+      {
+        "title": "LangChain Announces Enterprise Agentic AI Platform Built with NVIDIA",
+        "site": "LangChain Blog",
+        "published": "2026-03-16T21:31:28.000Z",
+        "source": "https://blog.langchain.com/nvidia-enterprise/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1205
+      },
+      {
+        "title": "Introducing deploy cli",
+        "site": "LangChain Blog",
+        "published": "2026-03-16T17:20:21.000Z",
+        "source": "https://blog.langchain.com/introducing-deploy-cli/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 268
+      },
+      {
+        "title": "Autonomous context compression",
+        "site": "LangChain Blog",
+        "published": "2026-03-11T18:24:27.000Z",
+        "source": "https://blog.langchain.com/autonomous-context-compression/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 845
+      },
+      {
+        "title": "How Coding Agents Are Reshaping Engineering, Product and Design",
+        "site": "LangChain Blog",
+        "published": "2026-03-10T22:34:07.000Z",
+        "source": "https://blog.langchain.com/how-coding-agents-are-reshaping-engineering-product-and-design/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1985
+      },
+      {
+        "title": "LangChain Skills",
+        "site": "LangChain Blog",
+        "published": "2026-03-04T18:00:19.000Z",
+        "source": "https://blog.langchain.com/langchain-skills/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 428
+      },
+      {
+        "title": "February 2026: LangChain Newsletter",
+        "site": "LangChain Blog",
+        "published": "2026-03-04T00:05:00.000Z",
+        "source": "https://blog.langchain.com/febraury-2026-langchain-newsletter/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 929
+      },
+      {
+        "title": "You don’t know what your agent will do until it’s in production",
+        "site": "LangChain Blog",
+        "published": "2026-02-26T04:28:00.000Z",
+        "source": "https://blog.langchain.com/you-dont-know-what-your-agent-will-do-until-its-in-production/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 2739
+      },
+      {
+        "title": "How we built Agent Builder’s memory system",
+        "site": "LangChain Blog",
+        "published": "2026-02-22T03:55:36.000Z",
+        "source": "https://blog.langchain.com/how-we-built-agent-builders-memory-system/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 2096
+      },
+      {
+        "title": "Agent Observability Powers Agent Evaluation",
+        "site": "LangChain Blog",
+        "published": "2026-02-22T03:51:44.000Z",
+        "source": "https://blog.langchain.com/agent-observability-powers-agent-evaluation/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 3057
+      },
+      {
+        "title": "How to Use Memory in Agent Builder",
+        "site": "LangChain Blog",
+        "published": "2026-02-19T18:28:14.000Z",
+        "source": "https://blog.langchain.com/how-to-use-memory-in-agent-builder/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 928
+      },
+      {
+        "title": "New in Agent Builder: all new agent chat, file uploads + tool registry",
+        "site": "LangChain Blog",
+        "published": "2026-02-18T15:55:08.000Z",
+        "source": "https://blog.langchain.com/new-in-agent-builder-all-new-agent-chat-file-uploads-tool-registry/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 961
+      },
+      {
+        "title": "monday Service + LangSmith: Building a Code-First Evaluation Strategy from Day 1",
+        "site": "LangChain Blog",
+        "published": "2026-02-18T08:05:53.000Z",
+        "source": "https://blog.langchain.com/customers-monday/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1825
+      },
+      {
+        "title": "Improving Deep Agents with harness engineering",
+        "site": "LangChain Blog",
+        "published": "2026-02-17T16:15:28.000Z",
+        "source": "https://blog.langchain.com/improving-deep-agents-with-harness-engineering/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1794
+      },
+      {
+        "title": "On Agent Frameworks and Agent Observability",
+        "site": "LangChain Blog",
+        "published": "2026-02-13T02:23:40.000Z",
+        "source": "https://blog.langchain.com/on-agent-frameworks-and-agent-observability/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 979
+      },
+      {
+        "title": "Join us for Interrupt: The Agent Conference",
+        "site": "LangChain Blog",
+        "published": "2026-02-12T17:42:03.000Z",
+        "source": "https://blog.langchain.com/join-us-for-interrupt-the-agent-conference/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 289
+      },
+      {
+        "title": "The two patterns by which agents connect sandboxes",
+        "site": "LangChain Blog",
+        "published": "2026-02-10T16:32:35.000Z",
+        "source": "https://blog.langchain.com/the-two-patterns-by-which-agents-connect-sandboxes/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1389
+      },
+      {
+        "title": "LangSmith is Now Available in Google Cloud Marketplace",
+        "site": "LangChain Blog",
+        "published": "2026-02-10T02:47:44.000Z",
+        "source": "https://blog.langchain.com/langsmith-is-now-available-in-google-cloud-marketplace/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 765
+      },
+      {
+        "title": "January 2026: LangChain Newsletter",
+        "site": "LangChain Blog",
+        "published": "2026-01-30T02:27:28.000Z",
+        "source": "https://blog.langchain.com/january-2026-langchain-newsletter/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1041
+      },
+      {
+        "title": "Context Management for Deep Agents",
+        "site": "LangChain Blog",
+        "published": "2026-01-28T16:11:29.000Z",
+        "source": "https://blog.langchain.com/context-management-for-deepagents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1174
+      },
+      {
+        "title": "Deploy agents instantly with Agent Builder templates",
+        "site": "LangChain Blog",
+        "published": "2026-01-21T17:00:00.000Z",
+        "source": "https://blog.langchain.com/introducing-agent-builder-template-library/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 654
+      },
+      {
+        "title": "Building Multi-Agent Applications with Deep Agents",
+        "site": "LangChain Blog",
+        "published": "2026-01-21T16:30:00.000Z",
+        "source": "https://blog.langchain.com/building-multi-agent-applications-with-deep-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1125
+      },
+      {
+        "title": "From Traces to Insights: Understanding Agent Behavior at Scale",
+        "site": "LangChain Blog",
+        "published": "2026-01-20T17:16:56.000Z",
+        "source": "https://blog.langchain.com/from-traces-to-insights-understanding-agent-behavior-at-scale/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1179
+      },
+      {
+        "title": "How Remote uses LangChain and LangGraph to onboard thousands of customers with AI",
+        "site": "LangChain Blog",
+        "published": "2026-01-19T16:00:07.000Z",
+        "source": "https://blog.langchain.com/customers-remote/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1136
+      },
+      {
+        "title": "Choosing the Right Multi-Agent Architecture",
+        "site": "LangChain Blog",
+        "published": "2026-01-14T18:06:14.000Z",
+        "source": "https://blog.langchain.com/choosing-the-right-multi-agent-architecture/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1575
+      },
+      {
+        "title": "Now GA: LangSmith Agent Builder",
+        "site": "LangChain Blog",
+        "published": "2026-01-13T16:00:38.000Z",
+        "source": "https://blog.langchain.com/langsmith-agent-builder-generally-available/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 487
+      },
+      {
+        "title": "In software, the code documents the app. In AI, the traces do.",
+        "site": "LangChain Blog",
+        "published": "2026-01-10T17:39:27.000Z",
+        "source": "https://blog.langchain.com/in-software-the-code-documents-the-app-in-ai-the-traces-do/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1409
+      },
+      {
+        "title": "Fastweb + Vodafone: Transforming Customer Experience with AI Agents using LangGraph and LangSmith",
+        "site": "LangChain Blog",
+        "published": "2025-12-16T20:50:55.000Z",
+        "source": "https://blog.langchain.com/customers-vodafone-italy/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1537
+      },
+      {
+        "title": "Debugging Deep Agents with LangSmith",
+        "site": "LangChain Blog",
+        "published": "2025-12-10T17:08:19.000Z",
+        "source": "https://blog.langchain.com/debugging-deep-agents-with-langsmith/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1192
+      },
+      {
+        "title": "Introducing LangSmith Fetch: Debug agents from your terminal",
+        "site": "LangChain Blog",
+        "published": "2025-12-10T17:07:57.000Z",
+        "source": "https://blog.langchain.com/introducing-langsmith-fetch/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1021
+      },
+      {
+        "title": "Introducing Polly: Your AI Agent Engineer",
+        "site": "LangChain Blog",
+        "published": "2025-12-10T17:07:48.000Z",
+        "source": "https://blog.langchain.com/introducing-polly-your-ai-agent-engineer/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 808
+      },
+      {
+        "title": "Agent Engineering: A New Discipline",
+        "site": "LangChain Blog",
+        "published": "2025-12-09T16:20:35.000Z",
+        "source": "https://blog.langchain.com/agent-engineering-a-new-discipline/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1271
+      },
+      {
+        "title": "Evaluating Deep Agents CLI on Terminal Bench 2.0",
+        "site": "LangChain Blog",
+        "published": "2025-12-05T17:50:24.000Z",
+        "source": "https://blog.langchain.com/evaluating-deepagents-cli-on-terminal-bench-2-0/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 765
+      },
+      {
+        "title": "Evaluating Deep Agents: Our Learnings",
+        "site": "LangChain Blog",
+        "published": "2025-12-03T17:44:17.000Z",
+        "source": "https://blog.langchain.com/evaluating-deep-agents-our-learnings/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1638
+      },
+      {
+        "title": "LangSmith Agent Builder now in Public Beta",
+        "site": "LangChain Blog",
+        "published": "2025-12-02T16:30:39.000Z",
+        "source": "https://blog.langchain.com/langsmith-agent-builder-now-in-public-beta/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1542
+      },
+      {
+        "title": "Using skills with Deep Agents",
+        "site": "LangChain Blog",
+        "published": "2025-11-25T16:45:09.000Z",
+        "source": "https://blog.langchain.com/using-skills-with-deep-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 584
+      },
+      {
+        "title": "How agents can use filesystems for context engineering",
+        "site": "LangChain Blog",
+        "published": "2025-11-21T18:45:13.000Z",
+        "source": "https://blog.langchain.com/how-agents-can-use-filesystems-for-context-engineering/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1655
+      },
+      {
+        "title": "How Jimdo empower solopreneurs with AI-powered business assistance",
+        "site": "LangChain Blog",
+        "published": "2025-11-20T01:47:31.000Z",
+        "source": "https://blog.langchain.com/customers-jimdo/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 985
+      },
+      {
+        "title": "How ServiceNow uses LangSmith to get visibility into its customer success agents",
+        "site": "LangChain Blog",
+        "published": "2025-11-17T22:42:50.000Z",
+        "source": "https://blog.langchain.com/customers-servicenow/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1018
+      },
+      {
+        "title": "Execute Code with Sandboxes for Deep Agents",
+        "site": "LangChain Blog",
+        "published": "2025-11-13T16:22:20.000Z",
+        "source": "https://blog.langchain.com/execute-code-with-sandboxes-for-deepagents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 712
+      },
+      {
+        "title": "Join LangChain at AWS re:Invent 2025",
+        "site": "LangChain Blog",
+        "published": "2025-11-11T00:58:44.000Z",
+        "source": "https://blog.langchain.com/join-langchain-at-aws-re-invent-2025/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 513
+      },
+      {
+        "title": "Why We Rebuilt LangChain’s Chatbot and What We Learned",
+        "site": "LangChain Blog",
+        "published": "2025-11-05T16:28:53.000Z",
+        "source": "https://blog.langchain.com/rebuilding-chat-langchain/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 3266
+      },
+      {
+        "title": "Introducing Deep Agents CLI",
+        "site": "LangChain Blog",
+        "published": "2025-10-30T16:55:35.000Z",
+        "source": "https://blog.langchain.com/introducing-deepagents-cli/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 564
+      },
+      {
+        "title": "Introducing LangSmith’s No Code Agent Builder",
+        "site": "LangChain Blog",
+        "published": "2025-10-29T14:38:43.000Z",
+        "source": "https://blog.langchain.com/langsmith-agent-builder/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 930
+      },
+      {
+        "title": "Doubling down on Deep Agents",
+        "site": "LangChain Blog",
+        "published": "2025-10-28T17:02:22.000Z",
+        "source": "https://blog.langchain.com/doubling-down-on-deepagents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 550
+      },
+      {
+        "title": "Agent Frameworks, Runtimes, and Harnesses- oh my!",
+        "site": "LangChain Blog",
+        "published": "2025-10-25T16:14:35.000Z",
+        "source": "https://blog.langchain.com/agent-frameworks-runtimes-and-harnesses-oh-my/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 671
+      },
+      {
+        "title": "Improve agent quality with Insights Agent and Multi-turn Evals, now in LangSmith",
+        "site": "LangChain Blog",
+        "published": "2025-10-23T14:23:55.000Z",
+        "source": "https://blog.langchain.com/insights-agent-multiturn-evals-langsmith/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 905
+      },
+      {
+        "title": "LangChain and LangGraph Agent Frameworks Reach v1.0 Milestones",
+        "site": "LangChain Blog",
+        "published": "2025-10-22T14:58:46.000Z",
+        "source": "https://blog.langchain.com/langchain-langgraph-1dot0/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1682
+      },
+      {
+        "title": "LangChain raises $125M to build the platform for agent engineering",
+        "site": "LangChain Blog",
+        "published": "2025-10-20T14:36:50.000Z",
+        "source": "https://blog.langchain.com/series-b/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 719
+      },
+      {
+        "title": "Reflections on Three Years of Building LangChain",
+        "site": "LangChain Blog",
+        "published": "2025-10-20T14:34:32.000Z",
+        "source": "https://blog.langchain.com/three-years-langchain/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1617
+      },
+      {
+        "title": "Securing your agents with authentication and authorization",
+        "site": "LangChain Blog",
+        "published": "2025-10-13T21:12:15.000Z",
+        "source": "https://blog.langchain.com/agent-authorization-explainer/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1555
+      },
+      {
+        "title": "Not Another Workflow Builder",
+        "site": "LangChain Blog",
+        "published": "2025-10-07T16:38:16.000Z",
+        "source": "https://blog.langchain.com/not-another-workflow-builder/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 977
+      },
+      {
+        "title": "How to turn Claude Code into a domain specific coding agent",
+        "site": "LangChain Blog",
+        "published": "2025-09-11T16:54:37.000Z",
+        "source": "https://blog.langchain.com/how-to-turn-claude-code-into-a-domain-specific-coding-agent/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 2256
+      },
+      {
+        "title": "Monte Carlo: Building Data + AI Observability Agents with LangGraph and LangSmith",
+        "site": "LangChain Blog",
+        "published": "2025-09-11T04:30:49.000Z",
+        "source": "https://blog.langchain.com/customers-monte-carlo/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 831
+      },
+      {
+        "title": "Agent Middleware",
+        "site": "LangChain Blog",
+        "published": "2025-09-08T21:11:12.000Z",
+        "source": "https://blog.langchain.com/agent-middleware/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1072
+      },
+      {
+        "title": "Building LangGraph: Designing an Agent Runtime from first principles",
+        "site": "LangChain Blog",
+        "published": "2025-09-04T16:26:16.000Z",
+        "source": "https://blog.langchain.com/building-langgraph/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 4060
+      },
+      {
+        "title": "Standard message content",
+        "site": "LangChain Blog",
+        "published": "2025-09-03T16:10:02.000Z",
+        "source": "https://blog.langchain.com/standard-message-content/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 812
+      },
+      {
+        "title": "LangChain & LangGraph 1.0 alpha releases",
+        "site": "LangChain Blog",
+        "published": "2025-09-02T17:02:02.000Z",
+        "source": "https://blog.langchain.com/langchain-langchain-1-0-alpha-releases/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 757
+      },
+      {
+        "title": "Introducing Open SWE: An Open-Source Asynchronous Coding Agent",
+        "site": "LangChain Blog",
+        "published": "2025-08-06T16:53:45.000Z",
+        "source": "https://blog.langchain.com/introducing-open-swe-an-open-source-asynchronous-coding-agent/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1626
+      },
+      {
+        "title": "Deep Agents",
+        "site": "LangChain Blog",
+        "published": "2025-07-30T15:53:38.000Z",
+        "source": "https://blog.langchain.com/deep-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 775
+      },
+      {
+        "title": "Introducing Align Evals: Streamlining LLM Application Evaluation",
+        "site": "LangChain Blog",
+        "published": "2025-07-29T20:12:52.000Z",
+        "source": "https://blog.langchain.com/introducing-align-evals/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 594
+      },
+      {
+        "title": "How Bertelsmann Built a Multi-Agent System to Empower Creatives",
+        "site": "LangChain Blog",
+        "published": "2025-07-29T14:30:45.000Z",
+        "source": "https://blog.langchain.com/customer-bertelsmann/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1431
+      },
+      {
+        "title": "Why agent infrastructure matters",
+        "site": "LangChain Blog",
+        "published": "2025-07-28T05:21:48.000Z",
+        "source": "https://blog.langchain.com/why-agent-infrastructure/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 960
+      },
+      {
+        "title": "LangSmith and LangGraph Platform are now available in AWS Marketplace",
+        "site": "LangChain Blog",
+        "published": "2025-07-16T17:30:41.000Z",
+        "source": "https://blog.langchain.com/aws-marketplace-july-2025-announce/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 704
+      },
+      {
+        "title": "Open Deep Research",
+        "site": "LangChain Blog",
+        "published": "2025-07-16T15:43:23.000Z",
+        "source": "https://blog.langchain.com/open-deep-research/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 2055
+      },
+      {
+        "title": "How to Build an Agent",
+        "site": "LangChain Blog",
+        "published": "2025-07-10T00:01:04.000Z",
+        "source": "https://blog.langchain.com/how-to-build-an-agent/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1490
+      },
+      {
+        "title": "Context Engineering",
+        "site": "LangChain Blog",
+        "published": "2025-07-02T15:52:42.000Z",
+        "source": "https://blog.langchain.com/context-engineering-for-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 2647
+      },
+      {
+        "title": "How Exa built a Web Research Multi-Agent System with LangGraph and LangSmith",
+        "site": "LangChain Blog",
+        "published": "2025-07-01T04:29:33.000Z",
+        "source": "https://blog.langchain.com/exa/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 828
+      },
+      {
+        "title": "How Captide agents running on LangGraph Platform compress investment research from days to seconds",
+        "site": "LangChain Blog",
+        "published": "2025-06-24T20:54:47.000Z",
+        "source": "https://blog.langchain.com/captide/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 816
+      },
+      {
+        "title": "The rise of \"context engineering\"",
+        "site": "LangChain Blog",
+        "published": "2025-06-23T16:56:00.000Z",
+        "source": "https://blog.langchain.com/the-rise-of-context-engineering/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1367
+      },
+      {
+        "title": "How and when to build multi-agent systems",
+        "site": "LangChain Blog",
+        "published": "2025-06-16T14:52:10.000Z",
+        "source": "https://blog.langchain.com/how-and-when-to-build-multi-agent-systems/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1527
+      },
+      {
+        "title": "The Hidden Metric That Determines AI Product Success",
+        "site": "LangChain Blog",
+        "published": "2025-06-12T15:24:39.000Z",
+        "source": "https://blog.langchain.com/the-hidden-metric-that-determines-ai-product-success/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1899
+      },
+      {
+        "title": "Benchmarking Multi-Agent Architectures",
+        "site": "LangChain Blog",
+        "published": "2025-06-11T01:40:14.000Z",
+        "source": "https://blog.langchain.com/benchmarking-multi-agent-architectures/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1711
+      },
+      {
+        "title": "LangGraph Release Week Recap",
+        "site": "LangChain Blog",
+        "published": "2025-06-09T19:17:29.000Z",
+        "source": "https://blog.langchain.com/langgraph-release-week-recap/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 420
+      },
+      {
+        "title": "Why do I need LangGraph Platform for agent deployment?",
+        "site": "LangChain Blog",
+        "published": "2025-05-22T15:33:45.000Z",
+        "source": "https://blog.langchain.com/why-langgraph-platform/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 950
+      },
+      {
+        "title": "How Webtoon Entertainment built agentic workflows with LangGraph to scale story understanding",
+        "site": "LangChain Blog",
+        "published": "2025-05-19T19:00:00.000Z",
+        "source": "https://blog.langchain.com/customers-webtoon/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 890
+      },
+      {
+        "title": "Recap of Interrupt 2025: The AI Agent Conference by LangChain",
+        "site": "LangChain Blog",
+        "published": "2025-05-15T05:47:50.000Z",
+        "source": "https://blog.langchain.com/interrupt-2025-recap/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 907
+      },
+      {
+        "title": "LangGraph Platform is now Generally Available: Deploy & manage long-running, stateful Agents",
+        "site": "LangChain Blog",
+        "published": "2025-05-14T13:55:34.000Z",
+        "source": "https://blog.langchain.com/langgraph-platform-ga/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1033
+      },
+      {
+        "title": "How Outshift by Cisco achieved a 10x productivity boost with their Agentic AI Platform Engineer",
+        "site": "LangChain Blog",
+        "published": "2025-05-04T21:00:12.000Z",
+        "source": "https://blog.langchain.com/cisco-outshift/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1046
+      },
+      {
+        "title": "How DocentPro Built a Multi-Agent Travel Companion with LangGraph",
+        "site": "LangChain Blog",
+        "published": "2025-04-29T20:35:39.000Z",
+        "source": "https://blog.langchain.com/customers-docentpro/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 693
+      },
+      {
+        "title": "Catch production failures early with LangSmith Alerts",
+        "site": "LangChain Blog",
+        "published": "2025-04-22T15:58:23.000Z",
+        "source": "https://blog.langchain.com/langsmith-alerts/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 455
+      },
+      {
+        "title": "How Trellix cut log parsing time from days to minutes with LangGraph Studio and LangSmith",
+        "site": "LangChain Blog",
+        "published": "2025-04-22T03:00:19.000Z",
+        "source": "https://blog.langchain.com/customers-trellix/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1031
+      },
+      {
+        "title": "How to think about agent frameworks",
+        "site": "LangChain Blog",
+        "published": "2025-04-20T17:32:47.000Z",
+        "source": "https://blog.langchain.com/how-to-think-about-agent-frameworks/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 5136
+      },
+      {
+        "title": "TAMM AI Assistant: Transforming Government Services in Abu Dhabi with LangChain and LangGraph\"",
+        "site": "LangChain Blog",
+        "published": "2025-04-15T15:00:26.000Z",
+        "source": "https://blog.langchain.com/customers-abu-dhabi-government/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 837
+      },
+      {
+        "title": "How Harmonic built an investment agent with LangGraph and LangSmith— so VCs can focus on founders",
+        "site": "LangChain Blog",
+        "published": "2025-04-13T23:14:30.000Z",
+        "source": "https://blog.langchain.com/customers-harmonic/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1010
+      },
+      {
+        "title": "Why Definely chose LangGraph for building their multi-agent AI system",
+        "site": "LangChain Blog",
+        "published": "2025-04-07T19:53:40.000Z",
+        "source": "https://blog.langchain.com/customers-definely/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 678
+      },
+      {
+        "title": "Introducing End-to-End OpenTelemetry Support in LangSmith",
+        "site": "LangChain Blog",
+        "published": "2025-03-27T06:55:36.000Z",
+        "source": "https://blog.langchain.com/end-to-end-opentelemetry-langsmith/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 658
+      },
+      {
+        "title": "How Lovable uses LangSmith to debug & monitor agents in production",
+        "site": "LangChain Blog",
+        "published": "2025-03-25T19:35:40.000Z",
+        "source": "https://blog.langchain.com/customers-lovable/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 422
+      },
+      {
+        "title": "Vodafone transforms data operations with AI using LangChain and LangGraph",
+        "site": "LangChain Blog",
+        "published": "2025-03-24T04:00:28.000Z",
+        "source": "https://blog.langchain.com/customers-vodafone/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1064
+      },
+      {
+        "title": "How Inconvo is improving customer-facing analytics with conversational AI built on LangGraph",
+        "site": "LangChain Blog",
+        "published": "2025-03-19T18:41:17.000Z",
+        "source": "https://blog.langchain.com/customers-inconvo/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 493
+      },
+      {
+        "title": "AI Agent Latency 101: How do I speed up my AI agent?",
+        "site": "LangChain Blog",
+        "published": "2025-03-15T18:34:47.000Z",
+        "source": "https://blog.langchain.com/how-do-i-speed-up-my-agent/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 995
+      },
+      {
+        "title": "How C.H. Robinson is transforming the logistics industry with LangChain",
+        "site": "LangChain Blog",
+        "published": "2025-03-10T21:55:16.000Z",
+        "source": "https://blog.langchain.com/customers-chrobinson/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 579
+      },
+      {
+        "title": "MCP: Flash in the Pan or Future Standard?",
+        "site": "LangChain Blog",
+        "published": "2025-03-08T16:25:03.000Z",
+        "source": "https://blog.langchain.com/mcp-fad-or-fixture/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1314
+      },
+      {
+        "title": "LangGraph 0.3 Release: Prebuilt Agents",
+        "site": "LangChain Blog",
+        "published": "2025-02-27T15:09:15.000Z",
+        "source": "https://blog.langchain.com/langgraph-0-3-release-prebuilt-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 363
+      },
+      {
+        "title": "How MUFG Bank increased sales efficiency by 10x with LangChain",
+        "site": "LangChain Blog",
+        "published": "2025-02-27T07:29:48.000Z",
+        "source": "https://blog.langchain.com/customers-mufgbank/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 665
+      },
+      {
+        "title": "Quickly Start Evaluating LLMs With OpenEvals",
+        "site": "LangChain Blog",
+        "published": "2025-02-26T18:35:25.000Z",
+        "source": "https://blog.langchain.com/evaluating-llms-with-openevals/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 841
+      },
+      {
+        "title": "Beyond RAG: Implementing Agent Search with LangGraph for Smarter Knowledge Retrieval",
+        "site": "LangChain Blog",
+        "published": "2025-02-22T23:23:08.000Z",
+        "source": "https://blog.langchain.com/beyond-rag-implementing-agent-search-with-langgraph-for-smarter-knowledge-retrieval/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 2615
+      },
+      {
+        "title": "LangMem SDK for agent long-term memory",
+        "site": "LangChain Blog",
+        "published": "2025-02-18T15:50:31.000Z",
+        "source": "https://blog.langchain.com/langmem-sdk-launch/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1457
+      },
+      {
+        "title": "How Klarna's AI assistant redefined customer support at scale for 85 million active users",
+        "site": "LangChain Blog",
+        "published": "2025-02-12T15:00:55.000Z",
+        "source": "https://blog.langchain.com/customers-klarna/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 455
+      },
+      {
+        "title": "Benchmarking Single Agent Performance",
+        "site": "LangChain Blog",
+        "published": "2025-02-10T17:13:25.000Z",
+        "source": "https://blog.langchain.com/react-agent-benchmarking/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 2894
+      },
+      {
+        "title": "How Vizient empowers healthcare providers with reliable GenAI insights using LangGraph and LangSmith",
+        "site": "LangChain Blog",
+        "published": "2025-02-10T16:41:48.000Z",
+        "source": "https://blog.langchain.com/customers-vizient/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 537
+      },
+      {
+        "title": "How Infor is Transforming Enterprise AI using LangGraph and LangSmith",
+        "site": "LangChain Blog",
+        "published": "2025-02-06T07:18:26.000Z",
+        "source": "https://blog.langchain.com/customers-infor/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 904
+      },
+      {
+        "title": "Is LangGraph Used In Production?",
+        "site": "LangChain Blog",
+        "published": "2025-02-05T07:47:42.000Z",
+        "source": "https://blog.langchain.com/is-langgraph-used-in-production/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 795
+      },
+      {
+        "title": "Introducing Interrupt: The AI Agent Conference by LangChain",
+        "site": "LangChain Blog",
+        "published": "2025-02-03T16:29:57.000Z",
+        "source": "https://blog.langchain.com/introducing-interrupt-langchain-conference/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 457
+      },
+      {
+        "title": "Introducing the LangGraph Functional API",
+        "site": "LangChain Blog",
+        "published": "2025-01-29T16:20:22.000Z",
+        "source": "https://blog.langchain.com/introducing-the-langgraph-functional-api/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1708
+      },
+      {
+        "title": "Exploring Prompt Optimization",
+        "site": "LangChain Blog",
+        "published": "2025-01-28T16:29:38.000Z",
+        "source": "https://blog.langchain.com/exploring-prompt-optimization/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 3991
+      },
+      {
+        "title": "Introducing Pytest and Vitest integrations for LangSmith Evaluations",
+        "site": "LangChain Blog",
+        "published": "2025-01-22T17:54:26.000Z",
+        "source": "https://blog.langchain.com/pytest-and-vitest-for-langsmith-evals/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1348
+      },
+      {
+        "title": "How Captide is redefining equity research with agentic workflows running on LangGraph Platform",
+        "site": "LangChain Blog",
+        "published": "2025-01-20T16:58:57.000Z",
+        "source": "https://blog.langchain.com/how-captide-is-redefining-equity-research-with-agentic-workflows-built-on-langgraph-and-langsmith/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 730
+      },
+      {
+        "title": "How Minimal built a multi-agent customer support system with LangGraph & LangSmith",
+        "site": "LangChain Blog",
+        "published": "2025-01-20T16:52:14.000Z",
+        "source": "https://blog.langchain.com/how-minimal-built-a-multi-agent-customer-support-system-with-langgraph-langsmith/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 807
+      },
+      {
+        "title": "Introducing ambient agents",
+        "site": "LangChain Blog",
+        "published": "2025-01-14T17:07:02.000Z",
+        "source": "https://blog.langchain.com/introducing-ambient-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1512
+      },
+      {
+        "title": "Acxiom's use of LangSmith for enhanced audience segmentation",
+        "site": "LangChain Blog",
+        "published": "2025-01-13T07:47:34.000Z",
+        "source": "https://blog.langchain.com/customers-acxiom/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 837
+      },
+      {
+        "title": "Structured Report Generation Blueprint with NVIDIA AI",
+        "site": "LangChain Blog",
+        "published": "2025-01-06T18:30:00.000Z",
+        "source": "https://blog.langchain.com/structured-report-generation-blueprint/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 696
+      },
+      {
+        "title": "Top 5 LangGraph Agents in Production 2024",
+        "site": "LangChain Blog",
+        "published": "2024-12-31T18:03:10.000Z",
+        "source": "https://blog.langchain.com/top-5-langgraph-agents-in-production-2024/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 651
+      },
+      {
+        "title": "LangChain State of AI 2024 Report",
+        "site": "LangChain Blog",
+        "published": "2024-12-19T17:30:11.000Z",
+        "source": "https://blog.langchain.com/langchain-state-of-ai-2024/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1157
+      },
+      {
+        "title": "Custom Authentication and Access Control for LangGraph Platform",
+        "site": "LangChain Blog",
+        "published": "2024-12-19T16:40:26.000Z",
+        "source": "https://blog.langchain.com/custom-authentication-and-access-control-in-langgraph/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 754
+      },
+      {
+        "title": "How AppFolio transformed property management workflows with Realm-X, built using LangGraph and LangSmith",
+        "site": "LangChain Blog",
+        "published": "2024-12-16T17:30:11.000Z",
+        "source": "https://blog.langchain.com/customers-appfolio/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 890
+      },
+      {
+        "title": "Making it easier to build human-in-the-loop agents with interrupt",
+        "site": "LangChain Blog",
+        "published": "2024-12-14T16:37:58.000Z",
+        "source": "https://blog.langchain.com/making-it-easier-to-build-human-in-the-loop-agents-with-interrupt/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 871
+      },
+      {
+        "title": "Command: A new tool for building multi-agent architectures in LangGraph",
+        "site": "LangChain Blog",
+        "published": "2024-12-10T17:13:42.000Z",
+        "source": "https://blog.langchain.com/command-a-new-tool-for-multi-agent-architectures-in-langgraph/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 517
+      },
+      {
+        "title": "Introducing OpenTelemetry support for LangSmith",
+        "site": "LangChain Blog",
+        "published": "2024-12-09T16:44:18.000Z",
+        "source": "https://blog.langchain.com/opentelemetry-langsmith/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 790
+      },
+      {
+        "title": "Easier evaluations with LangSmith SDK v0.2",
+        "site": "LangChain Blog",
+        "published": "2024-12-05T18:51:25.000Z",
+        "source": "https://blog.langchain.com/easier-evaluations-with-langsmith-sdk-v0-2/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 947
+      },
+      {
+        "title": "Semantic Search for LangGraph Memory",
+        "site": "LangChain Blog",
+        "published": "2024-12-05T14:08:36.000Z",
+        "source": "https://blog.langchain.com/semantic-search-for-langgraph-memory/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 729
+      },
+      {
+        "title": "How Cleric’s AI SRE leveled up with continuous learning through LangSmith",
+        "site": "LangChain Blog",
+        "published": "2024-12-03T05:39:41.000Z",
+        "source": "https://blog.langchain.com/customers-cleric/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 835
+      },
+      {
+        "title": "How Airtop built web-automation for AI agents powered by the LangChain ecosystem",
+        "site": "LangChain Blog",
+        "published": "2024-11-26T14:00:45.000Z",
+        "source": "https://blog.langchain.com/customers-airtop/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 670
+      },
+      {
+        "title": "Agent Protocol: Interoperability for LLM agents",
+        "site": "LangChain Blog",
+        "published": "2024-11-19T17:00:02.000Z",
+        "source": "https://blog.langchain.com/agent-protocol-interoperability-for-llm-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 821
+      },
+      {
+        "title": "LangSmith: Redesigned product homepage and Resource Tags for better organization",
+        "site": "LangChain Blog",
+        "published": "2024-11-19T15:59:58.000Z",
+        "source": "https://blog.langchain.com/langsmith-homepage-redesign-and-resource-tags/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 875
+      },
+      {
+        "title": "How Dun & Bradstreet’s ChatD&B™ uses LangChain and LangSmith to deliver trusted, data-driven AI insights",
+        "site": "LangChain Blog",
+        "published": "2024-11-18T15:30:21.000Z",
+        "source": "https://blog.langchain.com/customers-dun-bradstreet/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 954
+      },
+      {
+        "title": "Promptim: an experimental library for prompt optimization",
+        "site": "LangChain Blog",
+        "published": "2024-11-13T18:09:41.000Z",
+        "source": "https://blog.langchain.com/promptim/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 884
+      },
+      {
+        "title": "Introducing Prompt Canvas: a Novel UX for Developing Prompts",
+        "site": "LangChain Blog",
+        "published": "2024-11-12T16:59:11.000Z",
+        "source": "https://blog.langchain.com/introducing-prompt-canvas/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 649
+      },
+      {
+        "title": "Composio’s SWE agent advances open-source on SweBench with a 48.6% score using LangGraph and LangSmith",
+        "site": "LangChain Blog",
+        "published": "2024-11-11T17:16:31.000Z",
+        "source": "https://blog.langchain.com/composio-swekit/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1294
+      },
+      {
+        "title": "SCIPE - Systematic Chain Improvement and Problem Evaluation",
+        "site": "LangChain Blog",
+        "published": "2024-11-07T17:27:18.000Z",
+        "source": "https://blog.langchain.com/scipe-systematic-chain-improvement-and-problem-evaluation/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1273
+      },
+      {
+        "title": "How Chaos Labs built a multi-agent system for resolution in prediction markets",
+        "site": "LangChain Blog",
+        "published": "2024-11-06T17:07:30.000Z",
+        "source": "https://blog.langchain.com/how-chaos-labs-built-a-multi-agent-system-for-resolution-in-prediction-markets/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 890
+      },
+      {
+        "title": "LangGraph Platform in beta: New deployment options for scalable agent infrastructure",
+        "site": "LangChain Blog",
+        "published": "2024-10-31T15:23:29.000Z",
+        "source": "https://blog.langchain.com/langgraph-platform-announce/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 941
+      },
+      {
+        "title": "Communication is all you need",
+        "site": "LangChain Blog",
+        "published": "2024-10-26T16:28:29.000Z",
+        "source": "https://blog.langchain.com/communication-is-all-you-need/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1754
+      },
+      {
+        "title": "LangChain's Second Birthday",
+        "site": "LangChain Blog",
+        "published": "2024-10-24T14:43:53.000Z",
+        "source": "https://blog.langchain.com/langchain-second-birthday/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1420
+      },
+      {
+        "title": "Memory for agents",
+        "site": "LangChain Blog",
+        "published": "2024-10-19T17:00:23.000Z",
+        "source": "https://blog.langchain.com/memory-for-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1121
+      },
+      {
+        "title": "How Rexera’s AI agents drive quality control with LangGraph",
+        "site": "LangChain Blog",
+        "published": "2024-10-09T20:14:27.000Z",
+        "source": "https://blog.langchain.com/customers-rexera/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 955
+      },
+      {
+        "title": "Unify Launches Agents for Account Qualification using LangGraph and LangSmith",
+        "site": "LangChain Blog",
+        "published": "2024-10-08T17:23:51.000Z",
+        "source": "https://blog.langchain.com/unify-launches-agents-for-account-qualification-using-langgraph-and-langsmith/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1448
+      },
+      {
+        "title": "Launching Long-Term Memory Support in LangGraph",
+        "site": "LangChain Blog",
+        "published": "2024-10-08T15:02:03.000Z",
+        "source": "https://blog.langchain.com/launching-long-term-memory-support-in-langgraph/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 496
+      },
+      {
+        "title": "OpenRecovery: Transforming addiction recovery with LangGraph Platform",
+        "site": "LangChain Blog",
+        "published": "2024-10-03T16:02:44.000Z",
+        "source": "https://blog.langchain.com/customers-openrecovery/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 708
+      },
+      {
+        "title": "Pushing LangSmith to new limits with Replit Agent's complex workflows",
+        "site": "LangChain Blog",
+        "published": "2024-09-26T18:22:15.000Z",
+        "source": "https://blog.langchain.com/customers-replit/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 676
+      },
+      {
+        "title": "Introducing Assistant Editor for configuring agents in LangGraph Studio",
+        "site": "LangChain Blog",
+        "published": "2024-09-25T17:14:19.000Z",
+        "source": "https://blog.langchain.com/asssistant-editor/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 569
+      },
+      {
+        "title": "How Tradestack launched their MVP in 6 weeks using LangGraph Cloud",
+        "site": "LangChain Blog",
+        "published": "2024-09-25T14:00:52.000Z",
+        "source": "https://blog.langchain.com/customers-tradestack/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 973
+      },
+      {
+        "title": "Launching LangGraph Templates",
+        "site": "LangChain Blog",
+        "published": "2024-09-19T15:27:28.000Z",
+        "source": "https://blog.langchain.com/launching-langgraph-templates/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 827
+      },
+      {
+        "title": "Announcing LangChain v0.3",
+        "site": "LangChain Blog",
+        "published": "2024-09-16T16:40:01.000Z",
+        "source": "https://blog.langchain.com/announcing-langchain-v0-3/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 543
+      },
+      {
+        "title": "Building a Data Visualization Agent with LangGraph Cloud",
+        "site": "LangChain Blog",
+        "published": "2024-09-12T16:17:24.000Z",
+        "source": "https://blog.langchain.com/data-viz-agent/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 4455
+      },
+      {
+        "title": "Build stateful conversational AI agents with LangGraph and assistant-ui",
+        "site": "LangChain Blog",
+        "published": "2024-09-11T15:44:40.000Z",
+        "source": "https://blog.langchain.com/assistant-ui/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 910
+      },
+      {
+        "title": "How Paradigm runs and monitors thousands of agents in parallel with LangChain and LangSmith",
+        "site": "LangChain Blog",
+        "published": "2024-09-04T15:34:34.000Z",
+        "source": "https://blog.langchain.com/customers-paradigm/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 695
+      },
+      {
+        "title": "Build reliable agents in JavaScript with LangGraph.js v0.2: Now supporting Cloud and Studio",
+        "site": "LangChain Blog",
+        "published": "2024-09-03T14:52:36.000Z",
+        "source": "https://blog.langchain.com/javascript-langgraph-v02-cloud-studio/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 894
+      },
+      {
+        "title": "How Podium optimized agent behavior and reduced engineering intervention by 90% with LangSmith",
+        "site": "LangChain Blog",
+        "published": "2024-08-15T14:00:04.000Z",
+        "source": "https://blog.langchain.com/customers-podium/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1240
+      },
+      {
+        "title": "LangChain Integration Docs: Find information faster with revamped pages & API references",
+        "site": "LangChain Blog",
+        "published": "2024-08-14T15:36:14.000Z",
+        "source": "https://blog.langchain.com/langchain-integration-docs-revamped/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 532
+      },
+      {
+        "title": "UX for Agents, Part 3: Spreadsheet, Generative, and Collaborative UI/UX",
+        "site": "LangChain Blog",
+        "published": "2024-08-10T14:00:36.000Z",
+        "source": "https://blog.langchain.com/ux-for-agents-part-3/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 879
+      },
+      {
+        "title": "LangGraph v0.2: Increased customization with new checkpointer libraries",
+        "site": "LangChain Blog",
+        "published": "2024-08-07T16:16:24.000Z",
+        "source": "https://blog.langchain.com/langgraph-v0-2/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1036
+      },
+      {
+        "title": "UX for Agents, Part 2: Ambient",
+        "site": "LangChain Blog",
+        "published": "2024-08-03T00:53:41.000Z",
+        "source": "https://blog.langchain.com/ux-for-agents-part-2-ambient/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 958
+      },
+      {
+        "title": "LangGraph Studio: The first agent IDE",
+        "site": "LangChain Blog",
+        "published": "2024-08-01T16:38:17.000Z",
+        "source": "https://blog.langchain.com/langgraph-studio-the-first-agent-ide/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 890
+      },
+      {
+        "title": "Dataset schemas for fast and iterative data curation in LangSmith",
+        "site": "LangChain Blog",
+        "published": "2024-07-31T12:17:07.000Z",
+        "source": "https://blog.langchain.com/dataset-schemas/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 893
+      },
+      {
+        "title": "UX for Agents, Part 1: Chat",
+        "site": "LangChain Blog",
+        "published": "2024-07-27T01:14:17.000Z",
+        "source": "https://blog.langchain.com/ux-for-agents-part-1-chat-2/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1000
+      },
+      {
+        "title": "Few-shot prompting to improve tool-calling performance",
+        "site": "LangChain Blog",
+        "published": "2024-07-24T14:00:04.000Z",
+        "source": "https://blog.langchain.com/few-shot-prompting-to-improve-tool-calling-performance/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1992
+      },
+      {
+        "title": "How Athena Intelligence optimized research reports with LangSmith, LangChain, and LangGraph",
+        "site": "LangChain Blog",
+        "published": "2024-07-22T02:02:31.000Z",
+        "source": "https://blog.langchain.com/customers-athena-intelligence/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 902
+      },
+      {
+        "title": "Planning for Agents",
+        "site": "LangChain Blog",
+        "published": "2024-07-20T15:02:23.000Z",
+        "source": "https://blog.langchain.com/planning-for-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1401
+      },
+      {
+        "title": "Improving core tool interfaces and docs in LangChain",
+        "site": "LangChain Blog",
+        "published": "2024-07-18T16:55:18.000Z",
+        "source": "https://blog.langchain.com/improving-core-tool-interfaces-and-docs-in-langchain/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 931
+      },
+      {
+        "title": "How We Deployed our Multi-Agent Flow to LangGraph Cloud",
+        "site": "LangChain Blog",
+        "published": "2024-07-15T15:51:05.000Z",
+        "source": "https://blog.langchain.com/how-we-deployed-our-multi-agent-flow-to-langgraph-cloud-2/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1177
+      },
+      {
+        "title": "Why you should outsource your agentic infrastructure, but own your cognitive architecture",
+        "site": "LangChain Blog",
+        "published": "2024-07-13T13:25:35.000Z",
+        "source": "https://blog.langchain.com/why-you-should-outsource-your-agentic-infrastructure-but-own-your-cognitive-architecture/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 773
+      },
+      {
+        "title": "[Week of 7/8] LangChain Release Notes",
+        "site": "LangChain Blog",
+        "published": "2024-07-12T15:15:28.000Z",
+        "source": "https://blog.langchain.com/week-of-7-8-langchain-release-notes/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 846
+      },
+      {
+        "title": "LangSmith for the full product lifecycle: How Wordsmith quickly builds, debugs, and evaluates LLM performance in production",
+        "site": "LangChain Blog",
+        "published": "2024-07-09T04:56:13.000Z",
+        "source": "https://blog.langchain.com/customers-wordsmith/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 937
+      },
+      {
+        "title": "What is a \"cognitive architecture\"?",
+        "site": "LangChain Blog",
+        "published": "2024-07-06T05:52:03.000Z",
+        "source": "https://blog.langchain.com/what-is-a-cognitive-architecture/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 751
+      },
+      {
+        "title": "Jockey: A Conversational Video Agent Powered by Twelve Labs APIs and LangGraph",
+        "site": "LangChain Blog",
+        "published": "2024-07-03T18:06:58.000Z",
+        "source": "https://blog.langchain.com/jockey-twelvelabs-langgraph/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1323
+      },
+      {
+        "title": "Improving Memory Retrieval: How New Computer achieved 50% higher recall with LangSmith",
+        "site": "LangChain Blog",
+        "published": "2024-07-02T14:59:14.000Z",
+        "source": "https://blog.langchain.com/customers-new-computer/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 832
+      },
+      {
+        "title": "What is an AI agent?",
+        "site": "LangChain Blog",
+        "published": "2024-06-29T01:01:01.000Z",
+        "source": "https://blog.langchain.com/what-is-an-agent/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 922
+      },
+      {
+        "title": "Announcing LangGraph v0.1 & LangGraph Cloud: Running agents at scale, reliably",
+        "site": "LangChain Blog",
+        "published": "2024-06-27T15:13:05.000Z",
+        "source": "https://blog.langchain.com/langgraph-cloud/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1290
+      },
+      {
+        "title": "Aligning LLM-as-a-Judge with Human Preferences",
+        "site": "LangChain Blog",
+        "published": "2024-06-26T16:59:06.000Z",
+        "source": "https://blog.langchain.com/aligning-llm-as-a-judge-with-human-preferences/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1256
+      },
+      {
+        "title": "How Factory used LangSmith to automate their feedback loop and improve iteration speed by 2x",
+        "site": "LangChain Blog",
+        "published": "2024-06-19T15:16:54.000Z",
+        "source": "https://blog.langchain.com/customers-factory/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 956
+      },
+      {
+        "title": "Workspaces in LangSmith for improved collaboration and organization",
+        "site": "LangChain Blog",
+        "published": "2024-06-13T14:45:00.000Z",
+        "source": "https://blog.langchain.com/workspaces-in-langsmith/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 773
+      },
+      {
+        "title": "Documentation Refresh for LangChain v0.2",
+        "site": "LangChain Blog",
+        "published": "2024-05-20T16:19:15.000Z",
+        "source": "https://blog.langchain.com/documentation-refresh-for-langchain-v0-2/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 708
+      },
+      {
+        "title": "Integrating LangChain with Azure Container Apps dynamic sessions",
+        "site": "LangChain Blog",
+        "published": "2024-05-16T17:57:28.000Z",
+        "source": "https://blog.langchain.com/integrating-langchain-with-azure-container-apps-dynamic-sessions/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 687
+      },
+      {
+        "title": "Pairwise Evaluations with LangSmith",
+        "site": "LangChain Blog",
+        "published": "2024-05-15T15:00:44.000Z",
+        "source": "https://blog.langchain.com/pairwise-evaluations-with-langsmith/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 965
+      },
+      {
+        "title": "LangChain v0.2: A Leap Towards Stability",
+        "site": "LangChain Blog",
+        "published": "2024-05-10T16:16:38.000Z",
+        "source": "https://blog.langchain.com/langchain-v02-leap-to-stability/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1123
+      },
+      {
+        "title": "How to Build the Ultimate AI Automation with Multi-Agent Collaboration",
+        "site": "LangChain Blog",
+        "published": "2024-05-09T18:55:22.000Z",
+        "source": "https://blog.langchain.com/how-to-build-the-ultimate-ai-automation-with-multi-agent-collaboration/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1927
+      },
+      {
+        "title": "Role Based Access Control (RBAC) for LangSmith",
+        "site": "LangChain Blog",
+        "published": "2024-05-08T15:30:00.000Z",
+        "source": "https://blog.langchain.com/access-control-updates-for-langsmith/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 506
+      },
+      {
+        "title": "How Dosu Used LangSmith to Achieve a 30% Accuracy Improvement with No Prompt Engineering",
+        "site": "LangChain Blog",
+        "published": "2024-05-02T15:16:51.000Z",
+        "source": "https://blog.langchain.com/dosu-langsmith-no-prompt-eng/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1605
+      },
+      {
+        "title": "Regression Testing with LangSmith",
+        "site": "LangChain Blog",
+        "published": "2024-05-01T16:23:06.000Z",
+        "source": "https://blog.langchain.com/regression-testing/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 713
+      },
+      {
+        "title": "Graph-based metadata filtering for improving vector search in RAG applications",
+        "site": "LangChain Blog",
+        "published": "2024-04-25T15:30:52.000Z",
+        "source": "https://blog.langchain.com/graph-based-metadata-filtering-for-improving-vector-search-in-rag-applications/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 2574
+      },
+      {
+        "title": "Announcing LangSmith is now a transactable offering in the Azure Marketplace",
+        "site": "LangChain Blog",
+        "published": "2024-04-24T15:03:59.000Z",
+        "source": "https://blog.langchain.com/announcing-langsmith-is-now-a-transactable-offering-in-the-azure-marketplace/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 917
+      },
+      {
+        "title": "Empowering Development with FlowTestAI: Bridging APIs and LLMs for Enhanced Testing and Privacy",
+        "site": "LangChain Blog",
+        "published": "2024-04-22T15:48:58.000Z",
+        "source": "https://blog.langchain.com/empowering-development-with-flowtestai/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1635
+      },
+      {
+        "title": "Tool Calling with LangChain",
+        "site": "LangChain Blog",
+        "published": "2024-04-11T16:46:57.000Z",
+        "source": "https://blog.langchain.com/tool-calling-with-langchain/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1511
+      },
+      {
+        "title": "Rethinking Our Documentation",
+        "site": "LangChain Blog",
+        "published": "2024-04-05T15:18:25.000Z",
+        "source": "https://blog.langchain.com/langchain-documentation-refresh/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1035
+      },
+      {
+        "title": "LangSmith: Production Monitoring & Automations",
+        "site": "LangChain Blog",
+        "published": "2024-04-02T15:41:23.000Z",
+        "source": "https://blog.langchain.com/langsmith-production-logging-automations/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1456
+      },
+      {
+        "title": "LangFriend: a Journal with Long-Term Memory",
+        "site": "LangChain Blog",
+        "published": "2024-03-28T16:03:00.000Z",
+        "source": "https://blog.langchain.com/langfriend/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1282
+      },
+      {
+        "title": "Open Source Extraction Service",
+        "site": "LangChain Blog",
+        "published": "2024-03-26T15:15:35.000Z",
+        "source": "https://blog.langchain.com/open-source-extraction-service/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1426
+      },
+      {
+        "title": "Using Feedback to Improve Your Application: Self Learning GPTs",
+        "site": "LangChain Blog",
+        "published": "2024-03-20T16:38:28.000Z",
+        "source": "https://blog.langchain.com/self-learning-gpts/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1133
+      },
+      {
+        "title": "LangChain Integrates NVIDIA NIM for GPU-optimized LLM Inference in RAG",
+        "site": "LangChain Blog",
+        "published": "2024-03-18T22:00:45.000Z",
+        "source": "https://blog.langchain.com/nvidia-nim/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 868
+      },
+      {
+        "title": "Enhancing RAG-based application accuracy by constructing and leveraging knowledge graphs",
+        "site": "LangChain Blog",
+        "published": "2024-03-15T18:01:37.000Z",
+        "source": "https://blog.langchain.com/enhancing-rag-based-applications-accuracy-by-constructing-and-leveraging-knowledge-graphs/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1769
+      },
+      {
+        "title": "Benchmarking Query Analysis in High Cardinality Situations",
+        "site": "LangChain Blog",
+        "published": "2024-03-15T15:15:19.000Z",
+        "source": "https://blog.langchain.com/high-cardinality/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1446
+      },
+      {
+        "title": "Multi Needle in a Haystack",
+        "site": "LangChain Blog",
+        "published": "2024-03-13T16:02:08.000Z",
+        "source": "https://blog.langchain.com/multi-needle-in-a-haystack/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1274
+      },
+      {
+        "title": "Iterating Towards LLM Reliability with Evaluation Driven Development",
+        "site": "LangChain Blog",
+        "published": "2024-03-11T15:11:53.000Z",
+        "source": "https://blog.langchain.com/iterating-towards-llm-reliability-with-evaluation-driven-development/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1555
+      },
+      {
+        "title": "Use Case Accelerant: Extraction Service",
+        "site": "LangChain Blog",
+        "published": "2024-03-06T18:00:35.000Z",
+        "source": "https://blog.langchain.com/use-case-accelerant-extraction-service/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1882
+      },
+      {
+        "title": "LangGraph for Code Generation",
+        "site": "LangChain Blog",
+        "published": "2024-02-27T16:10:00.000Z",
+        "source": "https://blog.langchain.com/code-execution-with-langgraph/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 980
+      },
+      {
+        "title": "Reflection Agents",
+        "site": "LangChain Blog",
+        "published": "2024-02-21T09:29:10.000Z",
+        "source": "https://blog.langchain.com/reflection-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1289
+      },
+      {
+        "title": "JSON agents with Ollama & LangChain",
+        "site": "LangChain Blog",
+        "published": "2024-02-20T17:24:29.000Z",
+        "source": "https://blog.langchain.com/json-based-agents-with-ollama-and-langchain/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1731
+      },
+      {
+        "title": "Supercharging If-Statements With Prompt Classification Using Ollama and LangChain",
+        "site": "LangChain Blog",
+        "published": "2024-02-19T17:16:07.000Z",
+        "source": "https://blog.langchain.com/supercharging-if-statements-with-prompt-classification-using-ollama-and-langchain/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1431
+      },
+      {
+        "title": "Announcing the General Availability of LangSmith and Our Series A Led By Sequoia Capital",
+        "site": "LangChain Blog",
+        "published": "2024-02-15T16:00:38.000Z",
+        "source": "https://blog.langchain.com/langsmith-ga/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1404
+      },
+      {
+        "title": "Rakuten Group builds with LangChain and LangSmith to deliver premium products for its business clients and employees",
+        "site": "LangChain Blog",
+        "published": "2024-02-14T20:20:31.000Z",
+        "source": "https://blog.langchain.com/customers-rakuten/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 766
+      },
+      {
+        "title": "How Dataherald Makes Natural Language to SQL Easy",
+        "site": "LangChain Blog",
+        "published": "2024-02-14T17:09:09.000Z",
+        "source": "https://blog.langchain.com/dataherald/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 748
+      },
+      {
+        "title": "Plan-and-Execute Agents",
+        "site": "LangChain Blog",
+        "published": "2024-02-13T16:35:24.000Z",
+        "source": "https://blog.langchain.com/planning-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1192
+      },
+      {
+        "title": "BCG X Releases AgentKit, a Full-Stack Starter Kit for Building Constrained Agents",
+        "site": "LangChain Blog",
+        "published": "2024-02-12T16:38:19.000Z",
+        "source": "https://blog.langchain.com/bcg-x-releases-agentkit-a-full-stack-starter-kit-for-building-constrained-agents/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1125
+      },
+      {
+        "title": "LangChain Partners with CommandBar on their Copilot User Assistant",
+        "site": "LangChain Blog",
+        "published": "2024-02-08T21:10:49.000Z",
+        "source": "https://blog.langchain.com/langchain-partners-with-commandbar-on-their-copilot-user-assistant/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 533
+      },
+      {
+        "title": "Human-in-the-loop with OpenGPTs and LangGraph",
+        "site": "LangChain Blog",
+        "published": "2024-02-08T16:56:41.000Z",
+        "source": "https://blog.langchain.com/human-in-the-loop-with-opengpts-and-langgraph/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 671
+      },
+      {
+        "title": "Self-Reflective RAG with LangGraph",
+        "site": "LangChain Blog",
+        "published": "2024-02-07T16:47:25.000Z",
+        "source": "https://blog.langchain.com/agentic-rag-with-langgraph/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1303
+      },
+      {
+        "title": "Meet Connery: An Open-Source Plugin Infrastructure for OpenGPTs and LLM apps",
+        "site": "LangChain Blog",
+        "published": "2024-02-07T16:41:33.000Z",
+        "source": "https://blog.langchain.com/meet-connery-an-open-source-plugin-infrastructure-for-opengpts-and-llm-apps/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1835
+      },
+      {
+        "title": "Generating Usable Text with AI",
+        "site": "LangChain Blog",
+        "published": "2024-02-05T19:47:37.000Z",
+        "source": "https://blog.langchain.com/generating-usable-text-with-ai/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 2135
+      },
+      {
+        "title": "OpenGPTs",
+        "site": "LangChain Blog",
+        "published": "2024-01-31T16:47:26.000Z",
+        "source": "https://blog.langchain.com/opengpts/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1532
+      },
+      {
+        "title": "LangSmith's Latest Feature: Grouped Monitoring Charts",
+        "site": "LangChain Blog",
+        "published": "2024-01-30T17:55:48.000Z",
+        "source": "https://blog.langchain.com/grouped-monitoring-charts/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 783
+      },
+      {
+        "title": "LangChain partners with Elastic to launch the Elastic AI Assistant",
+        "site": "LangChain Blog",
+        "published": "2024-01-30T17:52:47.000Z",
+        "source": "https://blog.langchain.com/langchain-partners-with-elastic-to-launch-the-elastic-ai-assistant/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 881
+      },
+      {
+        "title": "Mental Health Therapy as an LLM State Machine",
+        "site": "LangChain Blog",
+        "published": "2024-01-26T16:55:34.000Z",
+        "source": "https://blog.langchain.com/mental-health-therapy-as-an-llm-state-machine/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1457
+      },
+      {
+        "title": "How Mendable leverages LangSmith to debug Tools & Actions",
+        "site": "LangChain Blog",
+        "published": "2024-01-25T17:38:20.000Z",
+        "source": "https://blog.langchain.com/how-mendable-leverages-langsmith-to-debug-tools-actions/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1287
+      },
+      {
+        "title": "LangGraph: Multi-Agent Workflows",
+        "site": "LangChain Blog",
+        "published": "2024-01-23T17:32:37.000Z",
+        "source": "https://blog.langchain.com/langgraph-multi-agent-workflows/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1261
+      },
+      {
+        "title": "LangGraph",
+        "site": "LangChain Blog",
+        "published": "2024-01-17T17:46:54.000Z",
+        "source": "https://blog.langchain.com/langgraph/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1853
+      },
+      {
+        "title": "Build and deploy a RAG app with Pinecone Serverless",
+        "site": "LangChain Blog",
+        "published": "2024-01-16T14:16:07.000Z",
+        "source": "https://blog.langchain.com/pinecone-serverless/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 608
+      },
+      {
+        "title": "Ally Financial Collaborates with LangChain to Deliver Critical Coding Module to Mask Personal Identifying Information in a Compliant and Safe Manner",
+        "site": "LangChain Blog",
+        "published": "2024-01-11T16:33:43.000Z",
+        "source": "https://blog.langchain.com/ally-financial-collaborates-with-langchain-to-deliver-critical-coding-module-to-mask-personal-identifying-information-in-a-compliant-and-safe-manner/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1305
+      },
+      {
+        "title": "LangChain v0.1.0",
+        "site": "LangChain Blog",
+        "published": "2024-01-08T16:39:54.000Z",
+        "source": "https://blog.langchain.com/langchain-v0-1-0/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 2710
+      },
+      {
+        "title": "LangChain State of AI 2023",
+        "site": "LangChain Blog",
+        "published": "2023-12-21T16:20:36.000Z",
+        "source": "https://blog.langchain.com/langchain-state-of-ai-2023/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1504
+      },
+      {
+        "title": "Benchmarking Agent Tool Use",
+        "site": "LangChain Blog",
+        "published": "2023-12-20T06:28:18.000Z",
+        "source": "https://blog.langchain.com/benchmarking-agent-tool-use/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 2890
+      },
+      {
+        "title": "How Rubric Labs and Graphite leveraged LLMs to create personalized videos at scale",
+        "site": "LangChain Blog",
+        "published": "2023-12-19T18:27:38.000Z",
+        "source": "https://blog.langchain.com/rubric-labs-graphite-personalized-video-at-scale/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1603
+      },
+      {
+        "title": "Benchmarking RAG on tables",
+        "site": "LangChain Blog",
+        "published": "2023-12-13T16:21:48.000Z",
+        "source": "https://blog.langchain.com/benchmarking-rag-on-tables/",
+        "domain": "blog.langchain.com",
+        "language": "en",
+        "wordCount": 1130
+      }
+    ]
+  },
+  {
+    "title": "OpenAI",
+    "link": "https://openai.com/news/engineering",
+    "posts": [
+      {
+        "title": "",
+        "site": "OpenAI",
+        "published": "",
+        "source": "https://openai.com/index/equip-responses-api-computer-environment/",
+        "domain": "openai.com",
+        "language": "en-US",
+        "wordCount": 0
+      },
+      {
+        "title": "",
+        "site": "OpenAI",
+        "published": "",
+        "source": "https://openai.com/index/beyond-rate-limits/",
+        "domain": "openai.com",
+        "language": "en-US",
+        "wordCount": 0
+      },
+      {
+        "title": "",
+        "site": "OpenAI",
+        "published": "",
+        "source": "https://openai.com/index/harness-engineering/",
+        "domain": "openai.com",
+        "language": "en-US",
+        "wordCount": 0
+      },
+      {
+        "title": "",
+        "site": "OpenAI",
+        "published": "",
+        "source": "https://openai.com/index/unlocking-the-codex-harness/",
+        "domain": "openai.com",
+        "language": "en-US",
+        "wordCount": 0
+      },
+      {
+        "title": "",
+        "site": "OpenAI",
+        "published": "",
+        "source": "https://openai.com/index/inside-our-in-house-data-agent/",
+        "domain": "openai.com",
+        "language": "en-US",
+        "wordCount": 0
+      },
+      {
+        "title": "",
+        "site": "OpenAI",
+        "published": "",
+        "source": "https://openai.com/index/unrolling-the-codex-agent-loop/",
+        "domain": "openai.com",
+        "language": "en-US",
+        "wordCount": 0
+      },
+      {
+        "title": "",
+        "site": "OpenAI",
+        "published": "",
+        "source": "https://openai.com/index/scaling-postgresql/",
+        "domain": "openai.com",
+        "language": "en-US",
+        "wordCount": 0
+      },
+      {
+        "title": "",
+        "site": "OpenAI",
+        "published": "",
+        "source": "https://openai.com/index/shipping-sora-for-android-with-codex/",
+        "domain": "openai.com",
+        "language": "en-US",
+        "wordCount": 0
+      },
+      {
+        "title": "",
+        "site": "OpenAI",
+        "published": "",
+        "source": "https://openai.com/index/building-chatgpt-atlas/",
+        "domain": "openai.com",
+        "language": "en-US",
+        "wordCount": 0
+      }
+    ]
+  },
+  {
+    "title": "PhilSchmid",
+    "link": "https://www.philschmid.de",
+    "posts": [
+      {
+        "title": "How Kimi, Cursor, and Chroma Train Agentic Models with RL",
+        "site": "Philipp Schmid",
+        "published": "2026-03-28T00:00:00.000Z",
+        "source": "https://www.philschmid.de/kimi-composer-context",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2476
+      },
+      {
+        "title": "Combine Built-in Tools and Function Calling in the Gemini Interactions API",
+        "site": "Philipp Schmid",
+        "published": "2026-03-24T00:00:00.000Z",
+        "source": "https://www.philschmid.de/tool-combo",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 546
+      },
+      {
+        "title": "Developer Guide: Nano Banana 2 with the Gemini Interactions API",
+        "site": "Philipp Schmid",
+        "published": "2026-03-16T00:00:00.000Z",
+        "source": "https://www.philschmid.de/nano-banana-2-interactions-api",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 953
+      },
+      {
+        "title": "How Autoresearch will change Small Language Models adoption",
+        "site": "Philipp Schmid",
+        "published": "2026-03-10T00:00:00.000Z",
+        "source": "https://www.philschmid.de/autoresearch",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 655
+      },
+      {
+        "title": "Practical Guide to Evaluating and Testing Agent Skills",
+        "site": "Philipp Schmid",
+        "published": "2026-03-04T00:00:00.000Z",
+        "source": "https://www.philschmid.de/testing-skills",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1644
+      },
+      {
+        "title": "Writing a Good AGENTS.md",
+        "site": "Philipp Schmid",
+        "published": "2026-02-24T00:00:00.000Z",
+        "source": "https://www.philschmid.de/writing-good-agents",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 540
+      },
+      {
+        "title": "Agents: Inner Loop vs Outer Loop",
+        "site": "Philipp Schmid",
+        "published": "2026-02-20T00:00:00.000Z",
+        "source": "https://www.philschmid.de/inner-loop-vs-outer-loop",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 592
+      },
+      {
+        "title": "Can We Close the Loop in 2026?",
+        "site": "Philipp Schmid",
+        "published": "2026-02-17T00:00:00.000Z",
+        "source": "https://www.philschmid.de/closing-the-loop",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 804
+      },
+      {
+        "title": "Multimodal Function Calling with Gemini 3 and Interactions API",
+        "site": "Philipp Schmid",
+        "published": "2026-02-13T00:00:00.000Z",
+        "source": "https://www.philschmid.de/interactions-multimodal-fc",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 824
+      },
+      {
+        "title": "Getting Started with Gemini Deep Research API",
+        "site": "Philipp Schmid",
+        "published": "2026-02-02T00:00:00.000Z",
+        "source": "https://www.philschmid.de/gemini-deep-research-getting-started",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 701
+      },
+      {
+        "title": "The Agent Client Protocol Overview",
+        "site": "Philipp Schmid",
+        "published": "2026-02-01T00:00:00.000Z",
+        "source": "https://www.philschmid.de/acp-overview",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 452
+      },
+      {
+        "title": "Gemini Interactions API Quick Start",
+        "site": "Philipp Schmid",
+        "published": "2026-01-22T00:00:00.000Z",
+        "source": "https://www.philschmid.de/interactions-api-quickstart",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 956
+      },
+      {
+        "title": "MCP is Not the Problem, It's your Server: Best Practices for Building MCP Servers",
+        "site": "Philipp Schmid",
+        "published": "2026-01-21T00:00:00.000Z",
+        "source": "https://www.philschmid.de/mcp-best-practices",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1427
+      },
+      {
+        "title": "Transparent PNG Stickers with Nano Banana Pro and Gemini interactions API",
+        "site": "Philipp Schmid",
+        "published": "2026-01-19T00:00:00.000Z",
+        "source": "https://www.philschmid.de/generate-stickers",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1991
+      },
+      {
+        "title": "Building Agents with the Gemini Interactions API",
+        "site": "Philipp Schmid",
+        "published": "2026-01-14T00:00:00.000Z",
+        "source": "https://www.philschmid.de/building-agents-interactions-api",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1728
+      },
+      {
+        "title": "Introducing MCP CLI: A way to call MCP Servers Efficiently",
+        "site": "Philipp Schmid",
+        "published": "2026-01-09T00:00:00.000Z",
+        "source": "https://www.philschmid.de/mcp-cli",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1510
+      },
+      {
+        "title": "The importance of Agent Harness in 2026",
+        "site": "Philipp Schmid",
+        "published": "2026-01-05T00:00:00.000Z",
+        "source": "https://www.philschmid.de/agent-harness-2026",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1031
+      },
+      {
+        "title": "8 Predictions for 2026. What comes next in AI?",
+        "site": "Philipp Schmid",
+        "published": "2025-12-31T00:00:00.000Z",
+        "source": "https://www.philschmid.de/2026-predictions",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 497
+      },
+      {
+        "title": "Context Engineering for AI Agents: Part 2",
+        "site": "Philipp Schmid",
+        "published": "2025-12-04T00:00:00.000Z",
+        "source": "https://www.philschmid.de/context-engineering-part-2",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1379
+      },
+      {
+        "title": "Why (Senior) Engineers Struggle to Build AI Agents",
+        "site": "Philipp Schmid",
+        "published": "2025-11-26T00:00:00.000Z",
+        "source": "https://www.philschmid.de/why-engineers-struggle-building-agents",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1154
+      },
+      {
+        "title": "Practical Guide on how to build an Agent from scratch with Gemini 3",
+        "site": "Philipp Schmid",
+        "published": "2025-11-21T00:00:00.000Z",
+        "source": "https://www.philschmid.de/building-agents",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1956
+      },
+      {
+        "title": "Gemini 3 Prompting: Best Practices for General Usage",
+        "site": "Philipp Schmid",
+        "published": "2025-11-19T00:00:00.000Z",
+        "source": "https://www.philschmid.de/gemini-3-prompt-practices",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1180
+      },
+      {
+        "title": "Gemini API File Search: A Web Developer Tutorial",
+        "site": "Philipp Schmid",
+        "published": "2025-11-07T00:00:00.000Z",
+        "source": "https://www.philschmid.de/gemini-file-search-javascript",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1356
+      },
+      {
+        "title": "Build your first AI Agent with Gemini, n8n and Google Cloud Run",
+        "site": "Philipp Schmid",
+        "published": "2025-10-30T00:00:00.000Z",
+        "source": "https://www.philschmid.de/n8n-cloud-run-gemini",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1300
+      },
+      {
+        "title": "AI Agent Benchmark Compendium",
+        "site": "Philipp Schmid",
+        "published": "2025-10-15T00:00:00.000Z",
+        "source": "https://www.philschmid.de/benchmark-compedium",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2349
+      },
+      {
+        "title": "Agents 2.0: From Shallow Loops to Deep Agents",
+        "site": "Philipp Schmid",
+        "published": "2025-10-12T00:00:00.000Z",
+        "source": "https://www.philschmid.de/agents-2.0-deep-agents",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 861
+      },
+      {
+        "title": "The Rise of Subagents",
+        "site": "Philipp Schmid",
+        "published": "2025-09-15T00:00:00.000Z",
+        "source": "https://www.philschmid.de/the-rise-of-subagents",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 979
+      },
+      {
+        "title": "The 10 Steps for product AI generation with Gemini 2.5 Flash",
+        "site": "Philipp Schmid",
+        "published": "2025-08-27T00:00:00.000Z",
+        "source": "https://www.philschmid.de/gemini-image-generation-product",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2903
+      },
+      {
+        "title": "Memory in Agents, Make LLMs remember.",
+        "site": "Philipp Schmid",
+        "published": "2025-08-04T00:00:00.000Z",
+        "source": "https://www.philschmid.de/memory-in-agents",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 978
+      },
+      {
+        "title": "Google Gemini CLI Cheatsheet",
+        "site": "Philipp Schmid",
+        "published": "2025-07-24T00:00:00.000Z",
+        "source": "https://www.philschmid.de/gemini-cli-cheatsheet",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1681
+      },
+      {
+        "title": "Code Sandbox MCP: A Simple Code Interpreter for Your AI Agents",
+        "site": "Philipp Schmid",
+        "published": "2025-07-22T00:00:00.000Z",
+        "source": "https://www.philschmid.de/code-sandbox-mcp",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 683
+      },
+      {
+        "title": "Integrating Long-Term Memory with Gemini 2.5",
+        "site": "Philipp Schmid",
+        "published": "2025-07-03T00:00:00.000Z",
+        "source": "https://www.philschmid.de/gemini-with-memory",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2709
+      },
+      {
+        "title": "The New Skill in AI is Not Prompting, It's Context Engineering",
+        "site": "Philipp Schmid",
+        "published": "2025-06-30T00:00:00.000Z",
+        "source": "https://www.philschmid.de/context-engineering",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 937
+      },
+      {
+        "title": "Single vs Multi-Agent System?",
+        "site": "Philipp Schmid",
+        "published": "2025-06-20T00:00:00.000Z",
+        "source": "https://www.philschmid.de/single-vs-multi-agents",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 851
+      },
+      {
+        "title": "Zero to One: Learning Agentic Patterns",
+        "site": "Philipp Schmid",
+        "published": "2025-05-05T00:00:00.000Z",
+        "source": "https://www.philschmid.de/agentic-pattern",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 3067
+      },
+      {
+        "title": "Google Gemini LangChain Cheatsheet",
+        "site": "Philipp Schmid",
+        "published": "2025-04-28T00:00:00.000Z",
+        "source": "https://www.philschmid.de/gemini-langchain-cheatsheet",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1225
+      },
+      {
+        "title": "OpenAI Codex CLI, how does it work?",
+        "site": "Philipp Schmid",
+        "published": "2025-04-17T00:00:00.000Z",
+        "source": "https://www.philschmid.de/openai-codex-cli",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1524
+      },
+      {
+        "title": "Model Context Protocol (MCP) an overview",
+        "site": "Philipp Schmid",
+        "published": "2025-04-03T00:00:00.000Z",
+        "source": "https://www.philschmid.de/mcp-introduction",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1755
+      },
+      {
+        "title": "ReAct agent from scratch with Gemini 2.5 and LangGraph",
+        "site": "Philipp Schmid",
+        "published": "2025-03-31T00:00:00.000Z",
+        "source": "https://www.philschmid.de/langgraph-gemini-2-5-react-agent",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2394
+      },
+      {
+        "title": "Pass@k vs Pass^k: Understanding Agent Reliability",
+        "site": "Philipp Schmid",
+        "published": "2025-03-24T00:00:00.000Z",
+        "source": "https://www.philschmid.de/agents-pass-at-k-pass-power-k",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 627
+      },
+      {
+        "title": "Google Gemma 3 Function Calling Example",
+        "site": "Philipp Schmid",
+        "published": "2025-03-14T00:00:00.000Z",
+        "source": "https://www.philschmid.de/gemma-function-calling",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1501
+      },
+      {
+        "title": "Function Calling Guide: Google DeepMind Gemini 2.0 Flash",
+        "site": "Philipp Schmid",
+        "published": "2025-03-05T00:00:00.000Z",
+        "source": "https://www.philschmid.de/gemini-function-calling",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 3966
+      },
+      {
+        "title": "From PDFs to Insights: Structured Outputs from PDFs with Gemini 2.0",
+        "site": "Philipp Schmid",
+        "published": "2025-02-07T00:00:00.000Z",
+        "source": "https://www.philschmid.de/gemini-pdf-to-data",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1526
+      },
+      {
+        "title": "Mini-R1: Reproduce Deepseek R1 „aha moment“ a RL tutorial",
+        "site": "Philipp Schmid",
+        "published": "2025-01-30T00:00:00.000Z",
+        "source": "https://www.philschmid.de/mini-deepseek-r1",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 4503
+      },
+      {
+        "title": "How to align open LLMs in 2025 with DPO & and synthetic data",
+        "site": "Philipp Schmid",
+        "published": "2025-01-23T00:00:00.000Z",
+        "source": "https://www.philschmid.de/rl-with-llms-in-2025-dpo",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 3039
+      },
+      {
+        "title": "Bite: How Deepseek R1 was trained",
+        "site": "Philipp Schmid",
+        "published": "2025-01-17T00:00:00.000Z",
+        "source": "https://www.philschmid.de/deepseek-r1",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 712
+      },
+      {
+        "title": "How to use Anthropic MCP Server with open LLMs, OpenAI or Google Gemini",
+        "site": "Philipp Schmid",
+        "published": "2025-01-17T00:00:00.000Z",
+        "source": "https://www.philschmid.de/mcp-example-llama",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2253
+      },
+      {
+        "title": "Fine-tune classifier with ModernBERT in 2025",
+        "site": "Philipp Schmid",
+        "published": "2024-12-25T00:00:00.000Z",
+        "source": "https://www.philschmid.de/fine-tune-modern-bert-in-2025",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1659
+      },
+      {
+        "title": "How to fine-tune open LLMs in 2025 with Hugging Face",
+        "site": "Philipp Schmid",
+        "published": "2024-12-20T00:00:00.000Z",
+        "source": "https://www.philschmid.de/fine-tune-llms-in-2025",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 3421
+      },
+      {
+        "title": "Deploy QwQ-32B-Preview the best open Reasoning Model on AWS with Hugging Face",
+        "site": "Philipp Schmid",
+        "published": "2024-12-03T00:00:00.000Z",
+        "source": "https://www.philschmid.de/sagemaker-deploy-qwq",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1094
+      },
+      {
+        "title": "Deploy Llama 3.2 Vision on Amazon SageMaker",
+        "site": "Philipp Schmid",
+        "published": "2024-10-17T00:00:00.000Z",
+        "source": "https://www.philschmid.de/sagemaker-llama32-vision",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1334
+      },
+      {
+        "title": "How to Fine-Tune Multimodal Models or VLMs with Hugging Face TRL",
+        "site": "Philipp Schmid",
+        "published": "2024-09-30T00:00:00.000Z",
+        "source": "https://www.philschmid.de/fine-tune-multimodal-llms-with-trl",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 3032
+      },
+      {
+        "title": "Evaluate open LLMs with Vertex AI and Gemini",
+        "site": "Philipp Schmid",
+        "published": "2024-09-24T00:00:00.000Z",
+        "source": "https://www.philschmid.de/evaluate-llm-with-gemini",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1795
+      },
+      {
+        "title": "Evaluate LLMs using Evaluation Harness and Hugging Face TGI/vLLM",
+        "site": "Philipp Schmid",
+        "published": "2024-09-19T00:00:00.000Z",
+        "source": "https://www.philschmid.de/evaluate-llms-with-lm-eval-and-tgi-vllm",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1016
+      },
+      {
+        "title": "Deploy open LLMs with Terraform and Amazon SageMaker",
+        "site": "Philipp Schmid",
+        "published": "2024-08-05T00:00:00.000Z",
+        "source": "https://www.philschmid.de/terraform-llm-sagemaker",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1157
+      },
+      {
+        "title": "LLM Evaluation doesn't need to be complicated",
+        "site": "Philipp Schmid",
+        "published": "2024-07-11T00:00:00.000Z",
+        "source": "https://www.philschmid.de/llm-evaluation",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2150
+      },
+      {
+        "title": "Evaluating Open LLMs with MixEval: The Closest Benchmark to LMSYS Chatbot Arena",
+        "site": "Philipp Schmid",
+        "published": "2024-06-28T00:00:00.000Z",
+        "source": "https://www.philschmid.de/evaluate-llm-mixeval",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1035
+      },
+      {
+        "title": "Train and Deploy open Embedding Models on Amazon SageMaker",
+        "site": "Philipp Schmid",
+        "published": "2024-06-25T00:00:00.000Z",
+        "source": "https://www.philschmid.de/sagemaker-train-deploy-embedding-models",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1950
+      },
+      {
+        "title": "Deploy Mixtral 8x7B on AWS Inferentia2 with Hugging Face Optimum",
+        "site": "Philipp Schmid",
+        "published": "2024-06-18T00:00:00.000Z",
+        "source": "https://www.philschmid.de/inferentia2-mixtral-8x7b",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2130
+      },
+      {
+        "title": "Fine-tune Llama 3 with PyTorch FSDP and Q-Lora on Amazon SageMaker",
+        "site": "Philipp Schmid",
+        "published": "2024-06-11T00:00:00.000Z",
+        "source": "https://www.philschmid.de/sagemaker-train-deploy-llama3",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2967
+      },
+      {
+        "title": "Fine-tune Embedding models for Retrieval Augmented Generation (RAG)",
+        "site": "Philipp Schmid",
+        "published": "2024-06-04T00:00:00.000Z",
+        "source": "https://www.philschmid.de/fine-tune-embedding-model-for-rag",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2379
+      },
+      {
+        "title": "Understanding the Cost of Generative AI Models in Production",
+        "site": "Philipp Schmid",
+        "published": "2024-05-27T00:00:00.000Z",
+        "source": "https://www.philschmid.de/cost-generative-ai",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 635
+      },
+      {
+        "title": "Deploy Llama 3 70B on AWS Inferentia2 with Hugging Face Optimum",
+        "site": "Philipp Schmid",
+        "published": "2024-05-23T00:00:00.000Z",
+        "source": "https://www.philschmid.de/inferentia2-llama3-70b",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2069
+      },
+      {
+        "title": "Deploy open LLMs with vLLM on Hugging Face Inference Endpoints",
+        "site": "Philipp Schmid",
+        "published": "2024-05-02T00:00:00.000Z",
+        "source": "https://www.philschmid.de/vllm-inference-endpoints",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 814
+      },
+      {
+        "title": "Efficiently fine-tune Llama 3 with PyTorch FSDP and Q-Lora",
+        "site": "Philipp Schmid",
+        "published": "2024-04-22T00:00:00.000Z",
+        "source": "https://www.philschmid.de/fsdp-qlora-llama3",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2053
+      },
+      {
+        "title": "Deploy Llama 3 on Amazon SageMaker",
+        "site": "Philipp Schmid",
+        "published": "2024-04-18T00:00:00.000Z",
+        "source": "https://www.philschmid.de/sagemaker-llama3",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1549
+      },
+      {
+        "title": "Accelerate Mixtral 8x7B with Speculative Decoding and Quantization on Amazon SageMaker",
+        "site": "Philipp Schmid",
+        "published": "2024-04-02T00:00:00.000Z",
+        "source": "https://www.philschmid.de/sagemaker-awq-medusa",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1501
+      },
+      {
+        "title": "Deploy Llama 2 70B on AWS Inferentia2 with Hugging Face Optimum",
+        "site": "Philipp Schmid",
+        "published": "2024-03-26T00:00:00.000Z",
+        "source": "https://www.philschmid.de/inferentia2-llama-70b-inference",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2301
+      },
+      {
+        "title": "Fine-Tune & Evaluate LLMs in 2024 with Amazon SageMaker",
+        "site": "Philipp Schmid",
+        "published": "2024-03-12T00:00:00.000Z",
+        "source": "https://www.philschmid.de/sagemaker-train-evalaute-llms-2024",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 3226
+      },
+      {
+        "title": "Evaluate LLMs with Hugging Face Lighteval on Amazon SageMaker",
+        "site": "Philipp Schmid",
+        "published": "2024-03-05T00:00:00.000Z",
+        "source": "https://www.philschmid.de/sagemaker-evaluate-llm-lighteval",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1112
+      },
+      {
+        "title": "How to fine-tune Google Gemma with ChatML and Hugging Face TRL",
+        "site": "Philipp Schmid",
+        "published": "2024-03-01T00:00:00.000Z",
+        "source": "https://www.philschmid.de/fine-tune-google-gemma",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 1755
+      },
+      {
+        "title": "RLHF in 2024 with DPO & Hugging Face",
+        "site": "Philipp Schmid",
+        "published": "2024-01-23T00:00:00.000Z",
+        "source": "https://www.philschmid.de/dpo-align-llms-in-2024-with-trl",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 3871
+      },
+      {
+        "title": "How to Fine-Tune LLMs in 2024 with Hugging Face",
+        "site": "Philipp Schmid",
+        "published": "2024-01-23T00:00:00.000Z",
+        "source": "https://www.philschmid.de/fine-tune-llms-in-2024-with-trl",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 3601
+      },
+      {
+        "title": "Scale LLM Inference on Amazon SageMaker with Multi-Replica Endpoints",
+        "site": "Philipp Schmid",
+        "published": "2024-01-11T00:00:00.000Z",
+        "source": "https://www.philschmid.de/sagemaker-multi-replica",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2061
+      },
+      {
+        "title": "Fine-tune Llama 7B on AWS Trainium",
+        "site": "Philipp Schmid",
+        "published": "2023-12-21T00:00:00.000Z",
+        "source": "https://www.philschmid.de/fine-tune-llama-7b-trainium",
+        "domain": "philschmid.de",
+        "language": "en",
+        "wordCount": 2366
+      }
+    ]
+  }
+]

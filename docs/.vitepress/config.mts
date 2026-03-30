@@ -11,7 +11,11 @@ const rewrites = Object.fromEntries(
   dataBase.map(item => [`${item.title}/:rest*`, `${extractPath(item.link)}/:rest*`])
 )
 
-const nav = dataBase.map(item => ({ text: item.title, link: `/${extractPath(item.link)}/index.md` }))
+const nav = dataBase.map(item => ({ 
+  text: item.title, 
+  link: `/${extractPath(item.link)}/index.md`,
+  activeMatch: `^/${extractPath(item.link)}/`
+}))
 
 const sidebar = Object.fromEntries(
   dataBase.filter(item => item.title !== 'OpenAI')

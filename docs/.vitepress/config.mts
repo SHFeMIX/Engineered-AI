@@ -28,7 +28,7 @@ const sidebar = Object.fromEntries(
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/EngineeredAI/',
+  base: '/Engineered-AI/',
   title: "Engineered AI",
   description: "最权威前沿 AI 资讯来源集合",
   rewrites,

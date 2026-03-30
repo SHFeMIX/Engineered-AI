@@ -35,7 +35,7 @@ To make it easier to leverage the intelligence of the Claude 3 models with tools
 - **Forced tool use allows developers to instruct Claude on tool selection**: Developers can specify which tools Claude should use or leave the choice with Claude, helping create more targeted and efficient applications.
 - **Tools also work with images**:Claude can incorporate image inputs in live applications.
 
-During our beta many developers used Opus to build sophisticated user-facing assistants. To further enhance this experience, Opus will now include <thinking> tags in its outputs, clarifying Claude’s reasoning and simplifying the debugging process for developers. Our Claude 3 models are currently unable to support parallel tool calls.
+During our beta many developers used Opus to build sophisticated user-facing assistants. To further enhance this experience, Opus will now include \<thinking\> tags in its outputs, clarifying Claude's reasoning and simplifying the debugging process for developers. Our Claude 3 models are currently unable to support parallel tool calls.
 
 ## Customer spotlight: StudyFetch
 

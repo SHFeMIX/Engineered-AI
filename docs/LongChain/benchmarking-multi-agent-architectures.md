@@ -119,7 +119,7 @@ Give the supervisor access to a `forward_message` tool. This tool lets it “for
 
 **Tool naming**
 
-Test different framings for the tool name that the supervisor agent would call to handoff to a sub agent (”delegate\_to\_<agent>” vs “transfer\_to\_<agent>”)
+Test different framings for the tool name that the supervisor agent would call to handoff to a sub agent (”delegate\_to\_\<agent\>” vs “transfer\_to\_\<agent\>”)
 
 ## Future work
 

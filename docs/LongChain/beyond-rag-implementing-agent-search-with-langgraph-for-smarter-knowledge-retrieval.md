@@ -126,7 +126,7 @@ As the project quickly grew more complex, here are some of the observations we m
 ### Directory and File Structure
 
 - The number of nodes can get rather large across a complex graph. We decided to use a one-node-per-file approach (modulo reuse of functions for different nodes).
-- With many nodes, a clear directory structure and file naming strategy are advised. We created a directory for each subgraph and generally adopted an <action>\_<object>.py naming convention. Adding a digit for the step number can also be helpful, while it would require some extra work when nodes are added or removed.
+- With many nodes, a clear directory structure and file naming strategy are advised. We created a directory for each subgraph and generally adopted an \<action\>\_\<object\>.py naming convention. Adding a digit for the step number can also be helpful, while it would require some extra work when nodes are added or removed.
 - We use subgraphs extensively for purposes of parallelization (see below) and reuse. Each subgraph directory has its own edges, states and models files as well as its graph builder.
 - To visualize the graph, using a mermaid png of the overall graph proved to be very useful.
 
@@ -173,7 +173,7 @@ This is of course not really different from traditional nested functions, but in
 Our recommendations - no surprise - are to:
 
 - define all keys in graph input states *without* defaults, except for documented exceptions, usually in the context of nested subgraphs
-- define all keys that are updated in the graph as *<type> | None = None*, … with the exception of when the key is a list and we expect to add to a list from many nodes.
+- define all keys that are updated in the graph as *\<type\> | None = None*, … with the exception of when the key is a list and we expect to add to a list from many nodes.
 
 ## Graph Components & Considerations
 

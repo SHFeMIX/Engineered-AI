@@ -9,15 +9,20 @@ hero:
   actions:
     - theme: brand
       text: Claude
+      link: /Claude/index.md
     - theme: brand
       text: OpenAI
     - theme: brand
       text: Anthropic
+      link: /Anthropic/index.md
     - theme: brand
       text: LongChain
+      link: /LongChain/index.md
     - theme: brand
       text: Cursor
+      link: /Cursor/index.md
     - theme: brand
       text: PhilSchmid
+      link: /PhilSchmid/index.md
 ---
 

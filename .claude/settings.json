@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 ~/.claude/skills/ui-ux-pro-max/scripts/search.py \"list metadata clean\" --domain style -n 2)",
+      "Read(//Users/alan/.agents/skills/vitepress/**)",
+      "Bash(python3 ~/.claude/skills/ui-ux-pro-max/scripts/search.py \"gradient subtle elevation card\" --domain style -n 2)"
+    ]
+  }
+}

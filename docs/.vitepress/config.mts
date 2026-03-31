@@ -13,8 +13,8 @@ const rewrites = Object.fromEntries(
 
 const nav = dataBase.map(item => ({ 
   text: item.title, 
-  link: `/${item.title}/index.md`,
-  activeMatch: `^/${item.title}/`
+  link: `/${extractPath(item.link)}/index.md`,
+  activeMatch: `^/${extractPath(item.link)}/`
 }))
 
 const sidebar = Object.fromEntries(
@@ -22,7 +22,7 @@ const sidebar = Object.fromEntries(
     .map(item => [
       `/${extractPath(item.link)}/`,
       [
-        { text: 'Overview', link: `/${item.title}/index.md` },
+        { text: 'Overview', link: `/${extractPath(item.link)}/index.md` },
         {
           items: item.posts.map(post => ({ text: post.title, link: `/${extractPath(post.source)}.md` }))
         }

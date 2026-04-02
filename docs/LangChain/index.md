@@ -6,8 +6,6 @@
 
 - [How Kensho built a multi-agent framework with LangGraph to solve trusted financial data retrieval (2026-03-26T19:39:21.000Z)](customers-kensho)
 
-- [How Kensho built a multi-agent framework with LangGraph to solve trusted financial data retrieval](blog.langchain.com)
-
 - [How we build evals for Deep Agents (2026-03-26T15:18:56.000Z)](how-we-build-evals-for-deep-agents)
 - [The Anatomy of an Agent Harness (2026-03-11T02:41:22.000Z)](the-anatomy-of-an-agent-harness)
 - [How we built LangChain’s GTM Agent (2026-03-09T15:30:13.000Z)](how-we-built-langchains-gtm-agent)

@@ -229,4 +229,69 @@ async function main() {
     }
 }
 
-main()
+main().then(() => {
+    buildAndCommit()
+})
+
+// build 测试并自动提交
+async function buildAndCommit() {
+    console.log('\n=== 运行 docs:build 测试 ===')
+    const { spawn } = await import('child_process')
+
+    return new Promise((resolve) => {
+        const buildProcess = spawn('pnpm', ['docs:build'], { shell: true })
+
+        let output = ''
+
+        buildProcess.stdout.on('data', (data) => {
+            output += data.toString()
+            process.stdout.write(data)
+        })
+
+        buildProcess.stderr.on('data', (data) => {
+            output += data.toString()
+            process.stderr.write(data)
+        })
+
+        buildProcess.on('close', async (code) => {
+            if (code === 0) {
+                console.log('\n=== build 成功 ===')
+                console.log('=== 执行 git 提交 ===')
+
+                const today = new Date().toISOString().split('T')[0]
+
+                const gitAdd = spawn('git', ['add', '.'], { shell: true })
+                gitAdd.on('close', async (addCode) => {
+                    if (addCode === 0) {
+                        const commitMsg = `[update]: ${today}`
+                        const gitCommit = spawn('git', ['commit', '-m', commitMsg], { shell: true })
+                        gitCommit.on('close', async (commitCode) => {
+                            if (commitCode === 0) {
+                                console.log('=== 执行 git push ===')
+                                const gitPush = spawn('git', ['push'], { shell: true })
+                                gitPush.on('close', (pushCode) => {
+                                    if (pushCode === 0) {
+                                        console.log('=== push 成功 ===')
+                                        resolve(true)
+                                    } else {
+                                        console.error('push 失败')
+                                        resolve(false)
+                                    }
+                                })
+                            } else {
+                                console.error('commit 失败')
+                                resolve(false)
+                            }
+                        })
+                    } else {
+                        console.error('git add 失败')
+                        resolve(false)
+                    }
+                })
+            } else {
+                console.error('\n=== build 失败，跳过提交 ===')
+                resolve(false)
+            }
+        })
+    })
+}

@@ -1,3 +1,5 @@
+- [A technical report on Composer 2 · Cursor (2026-03-27T12:00:00.000Z, 2026-03-27T12:00:00.000Z)](composer-2-technical-report)
+
 - [Improving Composer through real-time RL · Cursor (2026-03-26T00:00:00.000Z, 2026-03-26T00:00:00.000Z)](real-time-rl-for-composer)
 - [Run cloud agents in your own infrastructure · Cursor (2026-03-25T12:00:00.000Z, 2026-03-25T12:00:00.000Z)](self-hosted-cloud-agents)
 - [Fast regex search: indexing text for agent tools · Cursor (2026-03-23T12:00:00.000Z, 2026-03-23T12:00:00.000Z)](fast-regex-search)

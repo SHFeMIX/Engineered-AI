@@ -1,3 +1,13 @@
+- [March 2026: LangChain Newsletter (2026-04-01T21:24:29.000Z)](march-2026-langchain-newsletter)
+
+- [Announcing the LangChain + MongoDB Partnership: The AI Agent Stack That Runs On The Database You Already Trust (2026-03-31T17:00:21.000Z)](announcing-the-langchain-mongodb-partnership-the-ai-agent-stack-that-runs-on-the-database-you-already-trust)
+
+- [Agent Evaluation Readiness Checklist (2026-03-27T14:00:00.000Z)](agent-evaluation-readiness-checklist)
+
+- [How Kensho built a multi-agent framework with LangGraph to solve trusted financial data retrieval (2026-03-26T19:39:21.000Z)](customers-kensho)
+
+- [How Kensho built a multi-agent framework with LangGraph to solve trusted financial data retrieval](blog.langchain.com)
+
 - [How we build evals for Deep Agents (2026-03-26T15:18:56.000Z)](how-we-build-evals-for-deep-agents)
 - [The Anatomy of an Agent Harness (2026-03-11T02:41:22.000Z)](the-anatomy-of-an-agent-harness)
 - [How we built LangChain’s GTM Agent (2026-03-09T15:30:13.000Z)](how-we-built-langchains-gtm-agent)

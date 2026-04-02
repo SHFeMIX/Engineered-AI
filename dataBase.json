@@ -199,6 +199,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Audit Claude Platform activity with the Compliance API",
+        "site": "Claude",
+        "published": "Mar 30, 2026",
+        "source": "https://claude.com/blog/claude-platform-compliance-api",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 337
+      },
+      {
         "title": "Auto mode for Claude Code",
         "site": "Claude",
         "published": "Mar 24, 2026",
@@ -1123,6 +1132,15 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "A technical report on Composer 2 · Cursor",
+        "site": "Cursor",
+        "published": "2026-03-27T12:00:00.000Z, 2026-03-27T12:00:00.000Z",
+        "source": "https://cursor.com/blog/composer-2-technical-report",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 458
+      },
+      {
         "title": "Improving Composer through real-time RL · Cursor",
         "site": "Cursor",
         "published": "2026-03-26T00:00:00.000Z, 2026-03-26T00:00:00.000Z",
@@ -1683,53 +1701,53 @@
     ]
   },
   {
-    "title": "LongChain",
+    "title": "LangChain",
     "link": "https://blog.langchain.com",
     "posts": [
+      {
+        "title": "March 2026: LangChain Newsletter",
+        "site": "LangChain Blog",
+        "published": "2026-04-01T21:24:29.000Z",
+        "source": "https://blog.langchain.com/march-2026-langchain-newsletter/",
+        "domain": "",
+        "language": "en",
+        "wordCount": 931
+      },
+      {
+        "title": "Announcing the LangChain + MongoDB Partnership: The AI Agent Stack That Runs On The Database You Already Trust",
+        "site": "LangChain Blog",
+        "published": "2026-03-31T17:00:21.000Z",
+        "source": "https://blog.langchain.com/announcing-the-langchain-mongodb-partnership-the-ai-agent-stack-that-runs-on-the-database-you-already-trust/",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1348
+      },
+      {
+        "title": "Agent Evaluation Readiness Checklist",
+        "site": "LangChain Blog",
+        "published": "2026-03-27T14:00:00.000Z",
+        "source": "https://blog.langchain.com/agent-evaluation-readiness-checklist/",
+        "domain": "",
+        "language": "en",
+        "wordCount": 4165
+      },
+      {
+        "title": "How Kensho built a multi-agent framework with LangGraph to solve trusted financial data retrieval",
+        "site": "LangChain Blog",
+        "published": "2026-03-26T19:39:21.000Z",
+        "source": "https://blog.langchain.com/customers-kensho/",
+        "domain": "",
+        "language": "en",
+        "wordCount": 971
+      },
       {
         "title": "How we build evals for Deep Agents",
         "site": "LangChain Blog",
         "published": "2026-03-26T15:18:56.000Z",
         "source": "https://blog.langchain.com/how-we-build-evals-for-deep-agents/",
-        "domain": "blog.langchain.com",
+        "domain": "",
         "language": "en",
         "wordCount": 1910
-      },
-      {
-        "title": "The Anatomy of an Agent Harness",
-        "site": "LangChain Blog",
-        "published": "2026-03-11T02:41:22.000Z",
-        "source": "https://blog.langchain.com/the-anatomy-of-an-agent-harness/",
-        "domain": "blog.langchain.com",
-        "language": "en",
-        "wordCount": 2266
-      },
-      {
-        "title": "How we built LangChain’s GTM Agent",
-        "site": "LangChain Blog",
-        "published": "2026-03-09T15:30:13.000Z",
-        "source": "https://blog.langchain.com/how-we-built-langchains-gtm-agent/",
-        "domain": "blog.langchain.com",
-        "language": "en",
-        "wordCount": 2182
-      },
-      {
-        "title": "Evaluating Skills",
-        "site": "LangChain Blog",
-        "published": "2026-03-05T18:00:49.000Z",
-        "source": "https://blog.langchain.com/evaluating-skills/",
-        "domain": "blog.langchain.com",
-        "language": "en",
-        "wordCount": 1798
-      },
-      {
-        "title": "LangSmith CLI & Skills",
-        "site": "LangChain Blog",
-        "published": "2026-03-04T18:00:31.000Z",
-        "source": "https://blog.langchain.com/langsmith-cli-skills/",
-        "domain": "blog.langchain.com",
-        "language": "en",
-        "wordCount": 581
       },
       {
         "title": "How Middleware Lets You Customize Your Agent Harness",
@@ -3815,89 +3833,7 @@
   {
     "title": "OpenAI",
     "link": "https://openai.com/news/engineering",
-    "posts": [
-      {
-        "title": "",
-        "site": "OpenAI",
-        "published": "",
-        "source": "https://openai.com/index/equip-responses-api-computer-environment/",
-        "domain": "openai.com",
-        "language": "en-US",
-        "wordCount": 0
-      },
-      {
-        "title": "",
-        "site": "OpenAI",
-        "published": "",
-        "source": "https://openai.com/index/beyond-rate-limits/",
-        "domain": "openai.com",
-        "language": "en-US",
-        "wordCount": 0
-      },
-      {
-        "title": "",
-        "site": "OpenAI",
-        "published": "",
-        "source": "https://openai.com/index/harness-engineering/",
-        "domain": "openai.com",
-        "language": "en-US",
-        "wordCount": 0
-      },
-      {
-        "title": "",
-        "site": "OpenAI",
-        "published": "",
-        "source": "https://openai.com/index/unlocking-the-codex-harness/",
-        "domain": "openai.com",
-        "language": "en-US",
-        "wordCount": 0
-      },
-      {
-        "title": "",
-        "site": "OpenAI",
-        "published": "",
-        "source": "https://openai.com/index/inside-our-in-house-data-agent/",
-        "domain": "openai.com",
-        "language": "en-US",
-        "wordCount": 0
-      },
-      {
-        "title": "",
-        "site": "OpenAI",
-        "published": "",
-        "source": "https://openai.com/index/unrolling-the-codex-agent-loop/",
-        "domain": "openai.com",
-        "language": "en-US",
-        "wordCount": 0
-      },
-      {
-        "title": "",
-        "site": "OpenAI",
-        "published": "",
-        "source": "https://openai.com/index/scaling-postgresql/",
-        "domain": "openai.com",
-        "language": "en-US",
-        "wordCount": 0
-      },
-      {
-        "title": "",
-        "site": "OpenAI",
-        "published": "",
-        "source": "https://openai.com/index/shipping-sora-for-android-with-codex/",
-        "domain": "openai.com",
-        "language": "en-US",
-        "wordCount": 0
-      },
-      {
-        "title": "",
-        "site": "OpenAI",
-        "published": "",
-        "source": "https://openai.com/index/building-chatgpt-atlas/",
-        "domain": "openai.com",
-        "language": "en-US",
-        "wordCount": 0
-      }
-    ]
+    "posts": []
   },
   {
     "title": "PhilSchmid",

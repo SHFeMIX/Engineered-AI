@@ -1,3 +1,5 @@
+- [Audit Claude Platform activity with the Compliance API (Mar 30, 2026)](claude-platform-compliance-api)
+
 - [Auto mode for Claude Code (Mar 24, 2026)](auto-mode)
 - [Put Claude to work on your computer (Mar 23, 2026)](dispatch-and-computer-use)
 - [Product management on the AI exponential (Mar 19, 2026)](product-management-on-the-ai-exponential)

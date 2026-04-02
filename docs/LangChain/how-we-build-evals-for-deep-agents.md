@@ -1,9 +1,9 @@
 ---
 title: "How we build evals for Deep Agents"
 site: "LangChain Blog"
-published: 2026-03-26T15:18:56.000Z
+published: "2026-03-26T15:18:56.000Z"
 source: "https://blog.langchain.com/how-we-build-evals-for-deep-agents/"
-domain: "blog.langchain.com"
+domain: ""
 language: "en"
 word_count: 1910
 ---
@@ -18,7 +18,7 @@ word_count: 1910
 
 We’ve been curating evaluations to measure and improve [Deep Agents](https://github.com/langchain-ai/deepagents?ref=blog.langchain.com). Deep Agents is an open source, model agnostic agent harness that powers products like [Fleet](https://www.langchain.com/langsmith/fleet?ref=blog.langchain.com) and [Open SWE](https://github.com/langchain-ai/open-swe?ref=blog.langchain.com). Evals define and shape agent behavior, which is why it’s so important to design them thoughtfully.
 
-Every eval is a vector that shifts the behavior of your agentic system. For example, if an eval for efficient file reading fails, you’ll likely tweak the system prompt or the `read_file` tool description to nudge behavior until it passes. Every eval you keep applies pressure on the overall system over time.
+Every eval is a vector that shifts the behavior of your agentic system. For example, if an eval for efficient file reading fails, you’ll likely tweak the system prompt or the `read\_file` tool description to nudge behavior until it passes. Every eval you keep applies pressure on the overall system over time.
 
 It is crucial to be thoughtful when adding evals. It can be tempting to blindly add hundreds (or thousands) of tests. This leads to an illusion of “improving your agent” by scoring well on an eval suite that may not accurately reflect behaviors you care about in production.
 
@@ -27,7 +27,7 @@ It is crucial to be thoughtful when adding evals. It can be tempting to blindly 
 When building Deep Agents, we catalog the behaviors that matter in production, such as retrieving content across multiple files in the filesystem or accurately composing 5+ tool calls in sequence. Rather than using benchmark tasks in aggregate, we take the following approach to eval curation:
 
 1. Decide which behaviors we want our agent to follow. Then research and curate targeted evals that measure those behaviors in a verifiable way.
-2. For each eval, add a docstring that explains *how* it measures an agent capability. This ensures **each eval is self-documenting.** We also tag each eval with categories like `tool_use` to enable grouped runs.
+2. For each eval, add a docstring that explains *how* it measures an agent capability. This ensures **each eval is self-documenting.** We also tag each eval with categories like `tool\_use` to enable grouped runs.
 3. Review output traces to understand failure modes and update eval coverage.
 
 Because we trace every eval run to a shared [LangSmith](https://docs.langchain.com/langsmith/observability?ref=blog.langchain.com) project, anyone on the team can jump in to analyze issues, make fixes, and reassess the value of a given eval. This creates shared responsibility for adding and maintaining good evals. Running many models across many evals can also get expensive, so targeted evals save money while improving your agent.
@@ -59,7 +59,7 @@ This makes finding mistakes possible. [Traces](https://docs.langchain.com/langsm
 
 For example, a large fraction of bug-fix PRs are now driven through [Open SWE](https://blog.langchain.com/open-swe-an-open-source-framework-for-internal-coding-agents/), our open source background coding agent. Teams using it touch many different codebases with different context, conventions, and goals. This naturally leads to mistakes. Every interaction of Open SWE is traced, so those can easily become evals to make sure the mistake doesn’t happen again.
 
-Other evals are pulled and adjusted from existing benchmarks like [BFCL](https://gorilla.cs.berkeley.edu/leaderboard.html?ref=blog.langchain.com) for function calling. For coding tasks, we integrate with [Harbor](https://github.com/laude-institute/terminal-bench?ref=blog.langchain.com) to run selected tasks from datasets like [Terminal Bench 2.0](https://www.tbench.ai/leaderboard/terminal-bench/2.0?ref=blog.langchain.com) tasks in sandboxed environments. Many evals are written from scratch and act as focused tests to observe isolated behavior, like testing a `read_file` tool.
+Other evals are pulled and adjusted from existing benchmarks like [BFCL](https://gorilla.cs.berkeley.edu/leaderboard.html?ref=blog.langchain.com) for function calling. For coding tasks, we integrate with [Harbor](https://github.com/laude-institute/terminal-bench?ref=blog.langchain.com) to run selected tasks from datasets like [Terminal Bench 2.0](https://www.tbench.ai/leaderboard/terminal-bench/2.0?ref=blog.langchain.com) tasks in sandboxed environments. Many evals are written from scratch and act as focused tests to observe isolated behavior, like testing a `read\_file` tool.
 
 ### We group evals by what they test
 
@@ -75,13 +75,13 @@ Here are some categories we define and what they test:
 
 | Category | What It Tests |
 | --- | --- |
-| `file_operations` | File tools (read, write, edit, ls, grep, glob), parallel invocation, pagination |
+| `file\_operations` | File tools (read, write, edit, ls, grep, glob), parallel invocation, pagination |
 | `retrieval` | Finding information across files, search strategies, multi-hop document synthesis |
-| `tool_use` | Selecting the right tool, chaining multi-step calls, tracking state across turns |
+| `tool\_use` | Selecting the right tool, chaining multi-step calls, tracking state across turns |
 | `memory` | Recalling seeded context, extracting implicit preferences, persisting durable info |
 | `conversation` | Asking clarifying questions for vague requests, sustaining multi-turn dialogue with correct actions |
 | `summarization` | Handling context overflow, triggering summarization, recovering info after compaction |
-| `unit_tests` | SDK plumbing - do our system prompt passthrough, interrupt config, subagent routing, skill path resolution, etc. all work? |
+| `unit\_tests` | SDK plumbing - do our system prompt passthrough, interrupt config, subagent routing, skill path resolution, etc. all work? |
 
 Today, all evals are end-to-end runs of an agent on a task. We intentionally encourage diversity in eval structure. Some tasks finish in a single step from an input prompt, while others take 10+ turns with another model simulating a user.
 
@@ -118,7 +118,7 @@ For simple, well-scoped tasks, the variables are defined tightly enough that the
 
 Consider a simple request:
 
-> "What is the current time and weather where I live?"
+\> "What is the current time and weather where I live?"
 
 An agent’s ideal trajectory might look like this:
 
@@ -158,12 +158,12 @@ From the example above, the inefficient but correct run would score:
 
 We use pytest with GitHub Actions to run evals in CI so changes run in a clean, reproducible environment. Each eval creates a Deep Agent instance with a given model, feeds it a task, and computes correctness and efficiency metrics.
 
-We can also run a subset of eval using tags save costs and measure targeted experiments. For example, if building an agent that requires a lot of local file processing and synthesis, we may focus on the `file_operations` and `tool_use` tagged subsets.
+We can also run a subset of eval using tags save costs and measure targeted experiments. For example, if building an agent that requires a lot of local file processing and synthesis, we may focus on the `file\_operations` and `tool\_use` tagged subsets.
 
 ```bash
-export LANGSMITH_API_KEY="lsv2_..."
+export LANGSMITH\_API\_KEY="lsv2\_..."
 
-uv run pytest tests/evals --eval-category file_operations --eval-category tool_use --model baseten:nvidia/zai-org/GLM-5
+uv run pytest tests/evals --eval-category file\_operations --eval-category tool\_use --model baseten:nvidia/zai-org/GLM-5
 ```
 
 Our eval architecture and implementation is open sourced in the [Deep Agents repository](https://github.com/langchain-ai/deepagents/tree/main/libs/evals?ref=blog.langchain.com).

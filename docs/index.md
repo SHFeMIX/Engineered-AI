@@ -16,7 +16,7 @@ hero:
       text: Anthropic
       link: /www.anthropic.com/engineering/index.md
     - theme: brand
-      text: LongChain
+      text: LangChain
       link: /blog.langchain.com/index.md
     - theme: brand
       text: Cursor

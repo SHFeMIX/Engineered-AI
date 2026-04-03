@@ -199,6 +199,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Harnessing Claude's Intelligence | 3 Key Patterns for Building Apps",
+        "site": "Claude",
+        "published": "Apr 02, 2026",
+        "source": "https://claude.com/blog/harnessing-claudes-intelligence",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1889
+      },
+      {
         "title": "Audit Claude Platform activity with the Compliance API",
         "site": "Claude",
         "published": "Mar 30, 2026",
@@ -1132,6 +1141,15 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "Meet the new Cursor · Cursor",
+        "site": "Cursor",
+        "published": "2026-04-02T00:00:00.000Z, 2026-04-02T00:00:00.000Z",
+        "source": "https://cursor.com/blog/cursor-3",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 642
+      },
+      {
         "title": "A technical report on Composer 2 · Cursor",
         "site": "Cursor",
         "published": "2026-03-27T12:00:00.000Z, 2026-03-27T12:00:00.000Z",
@@ -1704,6 +1722,15 @@
     "title": "LangChain",
     "link": "https://blog.langchain.com",
     "posts": [
+      {
+        "title": "Open Models have crossed a threshold",
+        "site": "LangChain Blog",
+        "published": "2026-04-02T17:51:54.000Z",
+        "source": "https://blog.langchain.com/open-models-have-crossed-a-threshold/",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1441
+      },
       {
         "title": "March 2026: LangChain Newsletter",
         "site": "LangChain Blog",

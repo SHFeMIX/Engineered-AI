@@ -1,3 +1,5 @@
+- [Harnessing Claude's Intelligence | 3 Key Patterns for Building Apps (Apr 02, 2026)](harnessing-claudes-intelligence)
+
 - [Audit Claude Platform activity with the Compliance API (Mar 30, 2026)](claude-platform-compliance-api)
 
 - [Auto mode for Claude Code (Mar 24, 2026)](auto-mode)

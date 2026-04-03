@@ -1,3 +1,5 @@
+- [Open Models have crossed a threshold (2026-04-02T17:51:54.000Z)](open-models-have-crossed-a-threshold)
+
 - [March 2026: LangChain Newsletter (2026-04-01T21:24:29.000Z)](march-2026-langchain-newsletter)
 
 - [Announcing the LangChain + MongoDB Partnership: The AI Agent Stack That Runs On The Database You Already Trust (2026-03-31T17:00:21.000Z)](announcing-the-langchain-mongodb-partnership-the-ai-agent-stack-that-runs-on-the-database-you-already-trust)

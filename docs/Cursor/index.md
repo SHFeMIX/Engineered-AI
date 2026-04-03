@@ -1,3 +1,5 @@
+- [Meet the new Cursor · Cursor (2026-04-02T00:00:00.000Z, 2026-04-02T00:00:00.000Z)](cursor-3)
+
 - [A technical report on Composer 2 · Cursor (2026-03-27T12:00:00.000Z, 2026-03-27T12:00:00.000Z)](composer-2-technical-report)
 
 - [Improving Composer through real-time RL · Cursor (2026-03-26T00:00:00.000Z, 2026-03-26T00:00:00.000Z)](real-time-rl-for-composer)

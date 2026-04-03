@@ -1,16 +1,27 @@
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
 import { useRoute } from 'vitepress'
+import type { Theme } from 'vitepress'
 import FrontmatterDisplay from './components/FrontmatterDisplay.vue'
+import Overview from './components/Overview.vue'
 
-export default {
+const theme: Theme = {
   extends: DefaultTheme,
   Layout() {
     const route = useRoute()
-    const isIndex = route.path.endsWith('/index.md') || route.path === '/'
+    const isIndexPage = route.path.endsWith('/') || route.path === '/'
+
+    // 如果是 index 页面，显示 Overview 组件
+    if (isIndexPage) {
+      return h(DefaultTheme.Layout, null, {
+        'doc-before': () => h(Overview)
+      })
+    }
 
     return h(DefaultTheme.Layout, null, {
-      'doc-before': () => !isIndex ? h(FrontmatterDisplay) : null
+      'doc-before': () => h(FrontmatterDisplay)
     })
   }
 }
+
+export default theme

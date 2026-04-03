@@ -58,39 +58,6 @@ function getFilePathAndWrite(itemTitle: string, fileName: string, content: strin
     return filePath
 }
 
-// 写入 index.md
-function writeIndexMd(itemTitle: string, postTitle: string, fileName: string, published: string): void {
-    const dir = path.join(process.cwd(), 'docs', itemTitle)
-    const indexPath = path.join(dir, 'index.md')
-
-    let indexContent = ''
-    if (fs.existsSync(indexPath)) {
-        indexContent = fs.readFileSync(indexPath, 'utf-8')
-    }
-
-    // 如果有发布日期，格式化为日期字符串
-    const dateStr = published ? `(${published})` : ''
-    const newIndexEntry = `- [${postTitle} ${dateStr}](${fileName})\n`
-
-    // 检查是否已存在
-    if (!indexContent.includes(`(${fileName})`)) {
-        // 添加到文件最前面
-        const lines = indexContent.split('\n')
-        // 找到第一个 list item 的位置（非空行）
-        let insertIndex = 0
-        for (let i = 0; i < lines.length; i++) {
-            if (lines[i].trim().startsWith('- [')) {
-                insertIndex = i
-                break
-            }
-        }
-        lines.splice(insertIndex, 0, newIndexEntry)
-        indexContent = lines.join('\n')
-        fs.writeFileSync(indexPath, indexContent, 'utf-8')
-        console.log(`已更新 index.md: 添加 ${postTitle}`)
-    }
-}
-
 // 写入 database
 function writeDataBase(itemTitle: string, postObj: any): void {
     const dataBasePath = path.join(process.cwd(), 'dataBase.json')
@@ -211,12 +178,8 @@ async function main() {
                 console.log('--- 调试信息 ---')
                 console.log('文件路径:', filePath)
                 console.log('文件名:', fileName)
-                console.log('index.md 内容:', `- [${postObj.title} ${result.published ? `(${result.published})` : ''}](${fileName})\n`)
                 console.log('dataBase.json 内容:', JSON.stringify(postObj, null, 2))
                 console.log('---')
-
-                // 写入 index.md
-                writeIndexMd(item.title, result.title, fileName, result.published || '')
 
                 // 写入 database
                 writeDataBase(item.title, postObj)

@@ -23,6 +23,6 @@ hero:
       link: /cursor.com/blog/index.md
     - theme: brand
       text: PhilSchmid
-      link: /PhilSchmid/index.md
+      link: /www.philschmid.de/index.md
 ---
 

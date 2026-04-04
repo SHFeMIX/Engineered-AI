@@ -1723,6 +1723,15 @@
     "link": "https://blog.langchain.com",
     "posts": [
       {
+        "title": "How My Agents Self-Heal in Production",
+        "site": "LangChain Blog",
+        "published": "2026-04-03T17:01:03.000Z",
+        "source": "https://blog.langchain.com/production-agents-self-heal/",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1325
+      },
+      {
         "title": "Open Models have crossed a threshold",
         "site": "LangChain Blog",
         "published": "2026-04-02T17:51:54.000Z",

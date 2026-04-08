@@ -199,6 +199,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "How and when to use subagents in Claude Code",
+        "site": "Claude",
+        "published": "Apr 07, 2026",
+        "source": "https://claude.com/blog/subagents-in-claude-code",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2969
+      },
+      {
         "title": "Harnessing Claude's Intelligence | 3 Key Patterns for Building Apps",
         "site": "Claude",
         "published": "Apr 02, 2026",
@@ -1731,6 +1740,24 @@
     "title": "LangChain",
     "link": "https://blog.langchain.com",
     "posts": [
+      {
+        "title": "Deep Agents v0.5",
+        "site": "LangChain Blog",
+        "published": "2026-04-07T17:06:51.000Z",
+        "source": "https://blog.langchain.com/deep-agents-v0-5/",
+        "domain": "",
+        "language": "en",
+        "wordCount": 960
+      },
+      {
+        "title": "Arcade.dev tools now in LangSmith Fleet",
+        "site": "LangChain Blog",
+        "published": "2026-04-07T14:59:48.000Z",
+        "source": "https://blog.langchain.com/arcade-dev-tools-now-in-langsmith-fleet/",
+        "domain": "",
+        "language": "en",
+        "wordCount": 663
+      },
       {
         "title": "Continual learning for AI agents",
         "site": "LangChain Blog",

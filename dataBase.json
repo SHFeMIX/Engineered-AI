@@ -199,6 +199,42 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "The advisor strategy: Give Sonnet an intelligence boost with Opus",
+        "site": "Claude",
+        "published": "Apr 09, 2026",
+        "source": "https://claude.com/blog/the-advisor-strategy",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 873
+      },
+      {
+        "title": "Making Claude Cowork ready for enterprise",
+        "site": "Claude",
+        "published": "Apr 09, 2026",
+        "source": "https://claude.com/blog/cowork-for-enterprise",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 677
+      },
+      {
+        "title": "Claude Managed Agents: get to production 10x faster",
+        "site": "Claude",
+        "published": "Apr 08, 2026",
+        "source": "https://claude.com/blog/claude-managed-agents",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 744
+      },
+      {
+        "title": "How Carta Healthcare built clinical AI with Claude",
+        "site": "Claude",
+        "published": "Apr 08, 2026",
+        "source": "https://claude.com/blog/carta-healthcare-clinical-abstractor",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1316
+      },
+      {
         "title": "How and when to use subagents in Claude Code",
         "site": "Claude",
         "published": "Apr 07, 2026",
@@ -1150,6 +1186,15 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "Bugbot now self-improves with learned rules · Cursor",
+        "site": "Cursor",
+        "published": "2026-04-08T12:00:00.000Z, 2026-04-08T12:00:00.000Z",
+        "source": "https://cursor.com/blog/bugbot-learning",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 468
+      },
+      {
         "title": "Better MoE model inference with warp decode · Cursor",
         "site": "Cursor",
         "published": "2026-04-06T12:00:00.000Z, 2026-04-06T12:00:00.000Z",
@@ -1740,6 +1785,42 @@
     "title": "LangChain",
     "link": "https://blog.langchain.com",
     "posts": [
+      {
+        "title": "Previewing Interrupt 2026: Agents at Enterprise Scale",
+        "site": "LangChain Blog",
+        "published": "2026-04-09T17:00:06.000Z",
+        "source": "https://blog.langchain.com/previewing-interrupt-2026-agents-at-enterprise-scale/",
+        "domain": "",
+        "language": "en",
+        "wordCount": 820
+      },
+      {
+        "title": "Deep Agents Deploy: an open alternative to Claude Managed Agents",
+        "site": "LangChain Blog",
+        "published": "2026-04-09T15:40:49.000Z",
+        "source": "https://blog.langchain.com/deep-agents-deploy-an-open-alternative-to-claude-managed-agents/",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1033
+      },
+      {
+        "title": "Human judgment in the agent improvement loop",
+        "site": "LangChain Blog",
+        "published": "2026-04-09T15:00:12.000Z",
+        "source": "https://blog.langchain.com/human-judgment-in-the-agent-improvement-loop/",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2700
+      },
+      {
+        "title": "Better Harness: A Recipe for Harness Hill-Climbing with Evals",
+        "site": "LangChain Blog",
+        "published": "2026-04-08T19:30:20.000Z",
+        "source": "https://blog.langchain.com/better-harness-a-recipe-for-harness-hill-climbing-with-evals/",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2052
+      },
       {
         "title": "Deep Agents v0.5",
         "site": "LangChain Blog",

@@ -199,6 +199,33 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Preparing your security program for AI-accelerated offense",
+        "site": "Claude",
+        "published": "Apr 10, 2026",
+        "source": "https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 3790
+      },
+      {
+        "title": "Seeing like an agent: how we design tools in Claude Code",
+        "site": "Claude",
+        "published": "Apr 10, 2026",
+        "source": "https://claude.com/blog/seeing-like-an-agent",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1575
+      },
+      {
+        "title": "Multi-agent coordination patterns: Five approaches and when to use them",
+        "site": "Claude",
+        "published": "Apr 10, 2026",
+        "source": "https://claude.com/blog/multi-agent-coordination-patterns",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2603
+      },
+      {
         "title": "The advisor strategy: Give Sonnet an intelligence boost with Opus",
         "site": "Claude",
         "published": "Apr 09, 2026",
@@ -1785,6 +1812,15 @@
     "title": "LangChain",
     "link": "https://blog.langchain.com",
     "posts": [
+      {
+        "title": "Your harness, your memory",
+        "site": "LangChain Blog",
+        "published": "2026-04-11T14:52:02.000Z",
+        "source": "https://blog.langchain.com/your-harness-your-memory/",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1582
+      },
       {
         "title": "Previewing Interrupt 2026: Agents at Enterprise Scale",
         "site": "LangChain Blog",

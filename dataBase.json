@@ -1213,6 +1213,15 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "Speeding up GPU kernels by 38% with a multi-agent system · Cursor",
+        "site": "Cursor",
+        "published": "2026-04-13T12:00:00.000Z, 2026-04-13T12:00:00.000Z",
+        "source": "https://cursor.com/blog/multi-agent-kernels",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1443
+      },
+      {
         "title": "Bugbot now self-improves with learned rules · Cursor",
         "site": "Cursor",
         "published": "2026-04-08T12:00:00.000Z, 2026-04-08T12:00:00.000Z",
@@ -4037,6 +4046,15 @@
     "title": "PhilSchmid",
     "link": "https://www.philschmid.de",
     "posts": [
+      {
+        "title": "8 Tips for Writing Agent Skills",
+        "site": "Philipp Schmid",
+        "published": "2026-04-13",
+        "source": "https://www.philschmid.de/agent-skills-tips",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1068
+      },
       {
         "title": "How to use Gemma 4 with the Gemini API and Google AI Studio",
         "site": "Philipp Schmid",

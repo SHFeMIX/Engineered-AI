@@ -199,6 +199,24 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Redesigning Claude Code on desktop for parallel agents",
+        "site": "Claude",
+        "published": "Apr 14, 2026",
+        "source": "https://claude.com/blog/claude-code-desktop-redesign",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 545
+      },
+      {
+        "title": "Introducing routines in Claude Code",
+        "site": "Claude",
+        "published": "Apr 14, 2026",
+        "source": "https://claude.com/blog/introducing-routines-in-claude-code",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 647
+      },
+      {
         "title": "Preparing your security program for AI-accelerated offense",
         "site": "Claude",
         "published": "Apr 10, 2026",

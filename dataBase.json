@@ -199,6 +199,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Using Claude Code: session management and 1M context",
+        "site": "Claude",
+        "published": "Apr 15, 2026",
+        "source": "https://claude.com/blog/using-claude-code-session-management-and-1m-context",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1341
+      },
+      {
         "title": "Redesigning Claude Code on desktop for parallel agents",
         "site": "Claude",
         "published": "Apr 14, 2026",
@@ -1230,6 +1239,24 @@
     "title": "Cursor",
     "link": "https://cursor.com/blog",
     "posts": [
+      {
+        "title": "Better AI models enable more ambitious work · Cursor",
+        "site": "Cursor",
+        "published": "2026-04-16T12:00:00.000Z, 2026-04-16T12:00:00.000Z",
+        "source": "https://cursor.com/blog/better-ai-models-ambitious-work",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 622
+      },
+      {
+        "title": "Interact with agent-created visualizations in canvases · Cursor",
+        "site": "Cursor",
+        "published": "2026-04-15T00:00:00.000Z, 2026-04-15T00:00:00.000Z",
+        "source": "https://cursor.com/blog/canvas",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 578
+      },
       {
         "title": "Speeding up GPU kernels by 38% with a multi-agent system · Cursor",
         "site": "Cursor",

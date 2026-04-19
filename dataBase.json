@@ -199,6 +199,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Best practices for using Claude Opus 4.7 with Claude Code",
+        "site": "Claude",
+        "published": "Apr 16, 2026",
+        "source": "https://claude.com/blog/best-practices-for-using-claude-opus-4-7-with-claude-code",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1193
+      },
+      {
         "title": "Using Claude Code: session management and 1M context",
         "site": "Claude",
         "published": "Apr 15, 2026",

@@ -89,11 +89,10 @@ async function main() {
 
             switch (item.title) {
                 case 'LangChain':
-                    document.querySelectorAll<HTMLAnchorElement>('a.post-card__media').forEach(node => {
-                        const source = item.link + node.href
+                    document.querySelectorAll<HTMLAnchorElement>('a[class="blog-link-absolute w-inline-block"]').forEach(node => {
+                        const source = item.link + '/' + node.href.split('/').pop()
                         newList.push(source)
                     })
-                    newList.splice(1, 4)
                     break
                 case 'Anthropic':
                     document.querySelectorAll<HTMLAnchorElement>('a.ArticleList-module-scss-module___tpu-a__cardLink').forEach(node => {

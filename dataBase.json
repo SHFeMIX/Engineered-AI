@@ -1258,10 +1258,28 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "Cursor partners with SpaceX on model training · Cursor",
+        "site": "Cursor",
+        "published": "2026-04-21T22:17:00.000Z, 2026-04-21T22:17:00.000Z",
+        "source": "https://cursor.com/blog/spacex-model-training",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1731
+      },
+      {
+        "title": "Keeping the Cursor app stable · Cursor",
+        "site": "Cursor",
+        "published": "2026-04-21T12:00:00.000Z, 2026-04-21T12:00:00.000Z",
+        "source": "https://cursor.com/blog/app-stability",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1297
+      },
+      {
         "title": "Better AI models enable more ambitious work · Cursor",
         "site": "Cursor",
         "published": "2026-04-16T12:00:00.000Z, 2026-04-16T12:00:00.000Z",
-        "source": "https://cursor.com/blog/better-ai-models-ambitious-work",
+        "source": "https://cursor.com/blog/better-models-ambitious-work",
         "domain": "",
         "language": "en-US",
         "wordCount": 622
@@ -1882,13 +1900,13 @@
   },
   {
     "title": "LangChain",
-    "link": "https://blog.langchain.com",
+    "link": "https://www.langchain.com/blog",
     "posts": [
       {
         "title": "Your harness, your memory",
         "site": "LangChain Blog",
         "published": "2026-04-11T14:52:02.000Z",
-        "source": "https://blog.langchain.com/your-harness-your-memory/",
+        "source": "https://www.langchain.com/blog/your-harness-your-memory",
         "domain": "",
         "language": "en",
         "wordCount": 1582

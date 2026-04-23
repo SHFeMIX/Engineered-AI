@@ -1,14 +1,26 @@
 ---
 title: "How we built LangChain’s GTM Agent"
 site: "LangChain Blog"
-published: 2026-03-09T15:30:13.000Z
-source: "https://blog.langchain.com/how-we-built-langchains-gtm-agent/"
-domain: "blog.langchain.com"
+published: "2026-03-09T15:30:13.000Z"
+source: "https://www.langchain.com/blog/how-we-built-langchains-gtm-agent"
+domain: ""
 language: "en"
-word_count: 2182
+word_count: 2195
 ---
 
 # How we built LangChain’s GTM Agent
+
+[
+
+Go back to blog
+
+](https://www.langchain.com/blog)
+
+March 9, 2026[Create agents](https://www.langchain.com/blog/how-we-built-langchains-gtm-agent#)
+
+Share
+
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9b9e7ec0692a2d079af\_gtm-agent-diagram-1--6-.png)
 
 *By Vishnu Suresh and Jess Ou*
 
@@ -27,11 +39,17 @@ We built a GTM agent that runs the process end-to-end. It triggers on new Salesf
 
 The GTM agent started as an SDR agent and then became used by the broader GTM team.
 
-![](https://blog.langchain.com/content/images/2026/03/data-src-image-bd0d930c-3f79-45ec-a18f-7f61dcee8f4f.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d079f4\_data-src-image-bd0d930c-3f79-45ec-a18f-7f61dcee8f4f.png)
 
-![](https://blog.langchain.com/content/images/2026/03/data-src-image-8135b29f-2698-4512-b56f-7dc099c75bc9.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d079fa\_data-src-image-8135b29f-2698-4512-b56f-7dc099c75bc9.png)
 
-![](https://blog.langchain.com/content/images/2026/03/data-src-image-4472e2ac-9cd2-48ec-a53b-cb2d8e84e8fa.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d07a03\_data-src-image-4474bd1f-1954-4ea6-81e6-1ff770264f37.png)
+
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d079fd\_data-src-image-c5528a22-ecdd-4d21-a90d-1a4e869bd568.png)
+
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d07a00\_data-src-image-5729db30-b848-48a9-b3aa-fcc0745c3206.png)
+
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d079f7\_data-src-image-4472e2ac-9cd2-48ec-a53b-cb2d8e84e8fa.png)
 
 ## Constraints & success criteria
 
@@ -64,25 +82,25 @@ The GTM agent does two things: (1) it researches leads and writes personalized e
 
 We connected the agent to the following data sources:
 
-![](https://blog.langchain.com/content/images/2026/03/gtm-agent-diagram-1--5-.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d07a06\_gtm-agent-diagram-1--5-.png)
 
 ### Inbound lead processing
 
 When a new lead shows up in Salesforce, the agent takes over immediately. The first thing it does is look for reasons not to send anything. If someone just filed a support ticket, or if a teammate already reached out earlier in the week, sending an automated email would be a mistake. The agent is programmed to be cautious.
 
-![](https://blog.langchain.com/content/images/2026/03/Group-1--3-.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d07a16\_Group-1--3-.png)
 
 Once it clears those checks, it does the same research a rep used to do manually: pulls the full Salesforce record, reads through Gong transcripts, checks the prospect's LinkedIn profile. If there isn't much internal history, it goes to the web with Exa to understand what the company is doing with AI right now.
 
 How it writes the email draft depends on the state of the relationship. The agent follows a defined outbound [skill](https://docs.langchain.com/oss/python/deepagents/skills?ref=blog.langchain.com), a playbook it loads before drafting. The skill is designed to cover both warm and cold cases. An existing customer gets something different than a warm prospect, who gets something different than a cold contact. For cold outreach, the agent keeps it brief and research-backed, following a playbook we've defined in the skill.
 
-![](https://blog.langchain.com/content/images/2026/03/data-src-image-07e8ab2a-6b27-4016-a06e-a3cbf2c00915.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d079f1\_data-src-image-07e8ab2a-6b27-4016-a06e-a3cbf2c00915.png)
 
 The rep sees the finished draft in a Slack DM with buttons to send, edit, or cancel. They can also see the agent's reasoning, so it's clear why it took a particular angle. If they send it, the agent queues up a set of follow-up emails to optionally enroll the prospect in.
 
 As we've refined the agent, we added a 48-hour SLA for silver leads: if a rep hasn't approved or declined the draft within that window, it sends automatically. This has meaningfully increased our follow-up rate for leads that would otherwise slip through without a response.
 
-![](https://blog.langchain.com/content/images/2026/03/lead-processing-engine--3--1--1-.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d07a2f\_lead-processing-engine--3--1--1-.png)
 
 ### Account intelligence
 
@@ -94,7 +112,7 @@ For sales, the agent aggregates signals across product usage, developer ecosyste
 
 For deployed engineers, the focus shifts to account health. The agent pulls product usage from BigQuery, highlights from recent customer calls, upcoming renewal dates, and cases where a customer is close to running out of credits. It also surfaces open questions and unresolved threads from recent calls. The goal is to flag what actually needs a person to step in, so the team isn't spending Sunday evenings digging through dashboards.
 
-![](https://blog.langchain.com/content/images/2026/03/account-intelligence-engine--1--1--1-.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d07a2c\_account-intelligence-engine--1--1--1-.png)
 
 ## How we built it
 
@@ -102,7 +120,7 @@ The agent needed to pull from multiple sources, reason across them, and produce 
 
 We chose Deep Agents for the multi-step orchestration because the inputs are inherently spiky: meeting data, CRM history, and web research vary a lot in size and structure. With Deep Agents, large tool results get offloaded into a virtual filesystem automatically, so we didn't have to build our own truncation and retrieval layer. We also used the harness's native planning tooling to enforce a consistent checklist (do-not-send checks → research → draft → rationale → follow-ups), which made runs easier to debug and reduced agent wandering.
 
-![](https://blog.langchain.com/content/images/2026/03/deep-agents-diagram-1--2-.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d07a0c\_deep-agents-diagram-1--2-.png)
 
 We connected the agent to [LangSmith](https://www.langchain.com/langsmith/observability?ref=blog.langchain.com) so we could understand how sales reps were actually using it and measure whether the agent was improving over time. That meant setting up evaluations from the start rather than retrofitting them later, which turned out to be critical for catching regressions when we iterated on prompts or swapped model versions.
 
@@ -116,7 +134,7 @@ When a rep edits a draft in Slack, the system compares the original against the 
 
 Each rep has stylistic preferences around tone and brevity. The feedback loop is automatic. Every edit teaches the agent, and the next draft reflects it. A weekly cron compacts these memories to keep them from getting bloated over time.
 
-![](https://blog.langchain.com/content/images/2026/03/memory-loop-diagram--6--1--1-.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d07a09\_memory-loop-diagram--6--1--1-.png)
 
 ### Subagent delegation
 
@@ -124,7 +142,9 @@ Account intelligence runs through compiled subagents: lightweight agents with co
 
 The parent agent spawns one subagent per account, keeping tools isolated and outputs predictable. Because subagents run independently, we can execute them in parallel. [LangSmith Deployment](https://www.langchain.com/langsmith/deployment?ref=blog.langchain.com) handles horizontal scaling and durable execution, so the system stays reliable as volume grows.
 
-![](https://blog.langchain.com/content/images/2026/03/account-intelligence-diagram--1--1--1-.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d07a1c\_account-intelligence-diagram--1--1--1-.png)
+
+## Evals and feedback
 
 Before writing any production code for a new workflow, we define what success looks like in [LangSmith](https://smith.langchain.com/?ref=blog.langchain.com). We started with a small library of representative scenarios grounded in the situations our reps actually face, used those to build the initial agent or feature, and made sure the fundamentals work before expanding.
 
@@ -155,4 +175,4 @@ A few things we'd tell someone starting from scratch:
 3. **Connect the agent to your systems of record from the start.** The organic adoption across the company happened because the agent already had access to the data people needed. We didn't plan for engineers or customer success to use it, but that usage spread because the access was already there.
 4. **Long-running workflows need the right infrastructure.** This agent required much more than a simple LLM call with a tool or two. It needed to pull from multiple sources, reason across them, run subagents in parallel, and maintain state across turns. Picking an agent harness, Deep Agents, built for that kind of orchestration saved us from rebuilding infrastructure from scratch.
 5. **We're still early.** The GTM agent handles a real workflow today, but the feedback loops we've built – including memory, evals, and rep actions tied to traces – are what will make it meaningfully better over the next six months.
-![](https://blog.langchain.com/content/images/2026/03/data-src-image-0c420a8f-051d-4256-98ad-7a751c9f063c.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9bbe7ec0692a2d07a19\_data-src-image-0c420a8f-051d-4256-98ad-7a751c9f063c.png)

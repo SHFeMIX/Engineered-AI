@@ -1,18 +1,37 @@
 ---
 title: "The Anatomy of an Agent Harness"
 site: "LangChain Blog"
-published: 2026-03-11T02:41:22.000Z
-source: "https://blog.langchain.com/the-anatomy-of-an-agent-harness/"
-domain: "blog.langchain.com"
+published: "2026-03-11T02:41:22.000Z"
+source: "https://www.langchain.com/blog/the-anatomy-of-an-agent-harness"
+domain: ""
 language: "en"
-word_count: 2266
+word_count: 2321
 ---
 
 # The Anatomy of an Agent Harness
 
+[
+
+Go back to blog
+
+](https://www.langchain.com/blog)
+
+March 10, 2026[Create agents](https://www.langchain.com/blog/the-anatomy-of-an-agent-harness#)
+
+Share
+
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9b278fbdcbc9db30631\_LangSmith-for-Startups--4-.png)
+
+## Key Takeaways
+
+- **Break down complex objectives:** Planning tools let agents decompose tasks, track progress, and adapt as they learn
+- **Delegate work in parallel:** Spawn subagents for independent subtasks, each with isolated context
+
 *By Vivek Trivedy*
 
 **TLDR:** Agent = Model + Harness. Harness engineering is how we build systems around models to turn them into work engines. The model contains the intelligence and the harness makes that intelligence useful.We define what a harness is and derive the core components today's and tomorrow's agents need.
+
+## Can Someone Please Define a "Harness"?
 
 Agent = Model + Harness
 
@@ -32,9 +51,9 @@ There are many messy ways to split the boundaries of an agent system between the
 
 The rest of this post walks through core harness components and derives *why* each piece exists working backwards from the core primitive of a model.
 
-![](https://blog.langchain.com/content/images/2026/03/image.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9b378fbdcbc9db3067e\_image.png)
 
-## Why Do We Need Harnesses…From a Model's Perspective
+## Why Do We Need Harnesses. From a Model's Perspective
 
 **There are things we want an agent to do that a model cannot do out of the box. This is where a harness comes in.**Models (mostly) take in data like text, images, audio, video and they output text. That's it. Out of the box they cannot:
 
@@ -53,7 +72,7 @@ We won’t go over an exhaustive list of every harness feature. The goal is to d
 
 **Behavior we want (or want to fix) → Harness Design to help the model achieve this.**
 
-![](https://blog.langchain.com/content/images/2026/03/image-1.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9b378fbdcbc9db30681\_image-1.png)
 
 ## Filesystems for Durable Storage and Context Management
 
@@ -97,6 +116,8 @@ Tools like browsers, logs, screenshots, and test runners give agents a way to ob
 
 The model doesn’t configure its own execution environment out of the box. Deciding where the agent runs, what tools are available, what it can access, and how it verifies its work are all harness-level design decisions.
 
+## Memory & Search for Continual Learning
+
 **Agents should remember what they've seen and access information that didn't exist when they were trained.**
 
 Models have no additional knowledge beyond their weights and what's in their current context. Without access to edit model weights, the only way to "add knowledge" is via **context injection.**
@@ -137,17 +158,17 @@ This is where the earlier harness primitives start to compound. Long-horizon wor
 
 ## The Future of Harnesses
 
-## The Coupling of Model Training and Harness Design
+### The Coupling of Model Training and Harness Design
 
 Today's agent products like Claude Code and Codex are post-trained with models and harnesses in the loop. This helps models improve at actions that the harness designers think they should be natively good at like filesystem operations, bash execution, planning, or parallelizing work with subagents.
 
 This creates a feedback loop. Useful primitives are discovered, added to the harness, and then used when training the next generation of models. As this cycle repeats, models become more capable within the harness they were trained in.
 
-But this co-evolution has interesting side effects for generalization. It shows up in ways like how changing tool logic leads to worse model performance. A good example is described [here in the Codex-5.3 prompting guide](https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide/?ref=blog.langchain.com#apply_patch) with the apply\_patch tool logic for editing files. A truly intelligent model should have little trouble switching between patch methods, but training with a harness in the loop creates this overfitting.
+But this co-evolution has interesting side effects for generalization. It shows up in ways like how changing tool logic leads to worse model performance. A good example is described [here in the Codex-5.3 prompting guide](https://developers.openai.com/cookbook/examples/gpt-5/codex\_prompting\_guide/?ref=blog.langchain.com#apply\_patch) with the apply\_patch tool logic for editing files. A truly intelligent model should have little trouble switching between patch methods, but training with a harness in the loop creates this overfitting.
 
 **But this doesn't mean that the best harness for your task is the one a model was post-trained with.** [The Terminal Bench 2.0 Leaderboard](https://www.tbench.ai/leaderboard/terminal-bench/2.0?ref=blog.langchain.com) is a good example. Opus 4.6 in Claude Code scores far below Opus 4.6 in other harnesses. [In a previous blog](https://x.com/Vtrivedy10/status/2023805578561060992?s=20&ref=blog.langchain.com), we showed how we improved our coding agent Top 30 to Top 5 on Terminal Bench 2.0 by only changing the harness. There's a lot of juice to be squeezed out of optimizing the harness for your task.
 
-![](https://blog.langchain.com/content/images/2026/03/image-2.png)
+![](https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/69cba9b378fbdcbc9db30684\_image-2.png)
 
 ## Where Harness Engineering is Going
 

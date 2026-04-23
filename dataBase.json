@@ -199,6 +199,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Building agents that reach production systems with MCP",
+        "site": "Claude",
+        "published": "Apr 22, 2026",
+        "source": "https://claude.com/blog/building-agents-that-reach-production-systems-with-mcp",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1753
+      },
+      {
         "title": "Meet the winners of our Built with Opus 4.6 Claude Code hackathon",
         "site": "Claude",
         "published": "Apr 20, 2026",
@@ -1903,6 +1912,69 @@
     "link": "https://www.langchain.com/blog",
     "posts": [
       {
+        "title": "How Credit Genie used Insights Agent to improve their AI financial assistant",
+        "site": "LangChain Blog",
+        "published": "2026-04-20T16:00:00.000Z",
+        "source": "https://www.langchain.com/blog/credit-genie-insights-agent-financial-assistant",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1049
+      },
+      {
+        "title": "The Runtime Behind Production Deep Agents",
+        "site": "LangChain Blog",
+        "published": "2026-04-20T08:03:00.000Z",
+        "source": "https://www.langchain.com/blog/runtime-behind-production-deep-agents",
+        "domain": "",
+        "language": "en",
+        "wordCount": 4805
+      },
+      {
+        "title": "Agentic Engineering: How Swarms of AI Agents Are Redefining Software Engineering",
+        "site": "LangChain Blog",
+        "published": "2026-04-17T17:00:00.000Z",
+        "source": "https://www.langchain.com/blog/agentic-engineering-redefining-software-engineering",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2264
+      },
+      {
+        "title": "Running Subagents in the Background",
+        "site": "LangChain Blog",
+        "published": "2026-04-16T18:16:00.000Z",
+        "source": "https://www.langchain.com/blog/running-subagents-in-the-background",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1343
+      },
+      {
+        "title": "Reusable Evaluators and Evaluator Templates in LangSmith",
+        "site": "LangChain Blog",
+        "published": "2026-04-16T17:00:00.000Z",
+        "source": "https://www.langchain.com/blog/reusable-langsmith-evaluator-templates",
+        "domain": "",
+        "language": "en",
+        "wordCount": 844
+      },
+      {
+        "title": "A Developer’s First 10 Minutes: Secure LangChain Agents with Cisco AI Defense",
+        "site": "LangChain Blog",
+        "published": "2026-04-16T16:00:00.000Z",
+        "source": "https://www.langchain.com/blog/secure-agents-cisco-ai-defense",
+        "domain": "",
+        "language": "en",
+        "wordCount": 744
+      },
+      {
+        "title": "How We Made Our Docs Test Themselves",
+        "site": "LangChain Blog",
+        "published": "2026-04-15T17:05:00.000Z",
+        "source": "https://www.langchain.com/blog/our-docs-test-themselves",
+        "domain": "",
+        "language": "en",
+        "wordCount": 807
+      },
+      {
         "title": "Your harness, your memory",
         "site": "LangChain Blog",
         "published": "2026-04-11T14:52:02.000Z",
@@ -2146,6 +2218,15 @@
         "wordCount": 845
       },
       {
+        "title": "The Anatomy of an Agent Harness",
+        "site": "LangChain Blog",
+        "published": "2026-03-11T02:41:22.000Z",
+        "source": "https://www.langchain.com/blog/the-anatomy-of-an-agent-harness",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2321
+      },
+      {
         "title": "How Coding Agents Are Reshaping Engineering, Product and Design",
         "site": "LangChain Blog",
         "published": "2026-03-10T22:34:07.000Z",
@@ -2153,6 +2234,24 @@
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1985
+      },
+      {
+        "title": "How we built LangChain’s GTM Agent",
+        "site": "LangChain Blog",
+        "published": "2026-03-09T15:30:13.000Z",
+        "source": "https://www.langchain.com/blog/how-we-built-langchains-gtm-agent",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2195
+      },
+      {
+        "title": "Evaluating Skills",
+        "site": "LangChain Blog",
+        "published": "2026-03-05T18:00:49.000Z",
+        "source": "https://www.langchain.com/blog/evaluating-skills",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1808
       },
       {
         "title": "LangChain Skills",

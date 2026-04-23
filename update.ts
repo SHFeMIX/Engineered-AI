@@ -89,7 +89,7 @@ async function main() {
 
             switch (item.title) {
                 case 'LangChain':
-                    document.querySelectorAll<HTMLAnchorElement>('a[class="blog-link-absolute w-inline-block"]').forEach(node => {
+                    document.querySelectorAll<HTMLAnchorElement>('section[blog-element="stories"].blog-section a[class="blog-link-absolute w-inline-block"]').forEach(node => {
                         const source = item.link + '/' + node.href.split('/').pop()
                         newList.push(source)
                     })

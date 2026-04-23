@@ -1996,7 +1996,7 @@
         "title": "Previewing Interrupt 2026: Agents at Enterprise Scale",
         "site": "LangChain Blog",
         "published": "2026-04-09T17:00:06.000Z",
-        "source": "https://blog.langchain.com/previewing-interrupt-2026-agents-at-enterprise-scale/",
+        "source": "https://www.langchain.com/blog/previewing-interrupt-2026-agents-at-enterprise-scale/",
         "domain": "",
         "language": "en",
         "wordCount": 820
@@ -2005,7 +2005,7 @@
         "title": "Deep Agents Deploy: an open alternative to Claude Managed Agents",
         "site": "LangChain Blog",
         "published": "2026-04-09T15:40:49.000Z",
-        "source": "https://blog.langchain.com/deep-agents-deploy-an-open-alternative-to-claude-managed-agents/",
+        "source": "https://www.langchain.com/blog/deep-agents-deploy-an-open-alternative-to-claude-managed-agents/",
         "domain": "",
         "language": "en",
         "wordCount": 1033
@@ -2014,7 +2014,7 @@
         "title": "Human judgment in the agent improvement loop",
         "site": "LangChain Blog",
         "published": "2026-04-09T15:00:12.000Z",
-        "source": "https://blog.langchain.com/human-judgment-in-the-agent-improvement-loop/",
+        "source": "https://www.langchain.com/blog/human-judgment-in-the-agent-improvement-loop/",
         "domain": "",
         "language": "en",
         "wordCount": 2700
@@ -2023,7 +2023,7 @@
         "title": "Better Harness: A Recipe for Harness Hill-Climbing with Evals",
         "site": "LangChain Blog",
         "published": "2026-04-08T19:30:20.000Z",
-        "source": "https://blog.langchain.com/better-harness-a-recipe-for-harness-hill-climbing-with-evals/",
+        "source": "https://www.langchain.com/blog/better-harness-a-recipe-for-harness-hill-climbing-with-evals/",
         "domain": "",
         "language": "en",
         "wordCount": 2052
@@ -2032,7 +2032,7 @@
         "title": "Deep Agents v0.5",
         "site": "LangChain Blog",
         "published": "2026-04-07T17:06:51.000Z",
-        "source": "https://blog.langchain.com/deep-agents-v0-5/",
+        "source": "https://www.langchain.com/blog/deep-agents-v0-5/",
         "domain": "",
         "language": "en",
         "wordCount": 960
@@ -2041,7 +2041,7 @@
         "title": "Arcade.dev tools now in LangSmith Fleet",
         "site": "LangChain Blog",
         "published": "2026-04-07T14:59:48.000Z",
-        "source": "https://blog.langchain.com/arcade-dev-tools-now-in-langsmith-fleet/",
+        "source": "https://www.langchain.com/blog/arcade-dev-tools-now-in-langsmith-fleet/",
         "domain": "",
         "language": "en",
         "wordCount": 663
@@ -2050,7 +2050,7 @@
         "title": "Continual learning for AI agents",
         "site": "LangChain Blog",
         "published": "2026-04-05T21:46:30.000Z",
-        "source": "https://blog.langchain.com/continual-learning-for-ai-agents/",
+        "source": "https://www.langchain.com/blog/continual-learning-for-ai-agents/",
         "domain": "",
         "language": "en",
         "wordCount": 928
@@ -2059,7 +2059,7 @@
         "title": "How My Agents Self-Heal in Production",
         "site": "LangChain Blog",
         "published": "2026-04-03T17:01:03.000Z",
-        "source": "https://blog.langchain.com/production-agents-self-heal/",
+        "source": "https://www.langchain.com/blog/production-agents-self-heal/",
         "domain": "",
         "language": "en",
         "wordCount": 1325
@@ -2068,7 +2068,7 @@
         "title": "Open Models have crossed a threshold",
         "site": "LangChain Blog",
         "published": "2026-04-02T17:51:54.000Z",
-        "source": "https://blog.langchain.com/open-models-have-crossed-a-threshold/",
+        "source": "https://www.langchain.com/blog/open-models-have-crossed-a-threshold/",
         "domain": "",
         "language": "en",
         "wordCount": 1441
@@ -2077,7 +2077,7 @@
         "title": "March 2026: LangChain Newsletter",
         "site": "LangChain Blog",
         "published": "2026-04-01T21:24:29.000Z",
-        "source": "https://blog.langchain.com/march-2026-langchain-newsletter/",
+        "source": "https://www.langchain.com/blog/march-2026-langchain-newsletter/",
         "domain": "",
         "language": "en",
         "wordCount": 931
@@ -2086,7 +2086,7 @@
         "title": "Announcing the LangChain + MongoDB Partnership: The AI Agent Stack That Runs On The Database You Already Trust",
         "site": "LangChain Blog",
         "published": "2026-03-31T17:00:21.000Z",
-        "source": "https://blog.langchain.com/announcing-the-langchain-mongodb-partnership-the-ai-agent-stack-that-runs-on-the-database-you-already-trust/",
+        "source": "https://www.langchain.com/blog/announcing-the-langchain-mongodb-partnership-the-ai-agent-stack-that-runs-on-the-database-you-already-trust/",
         "domain": "",
         "language": "en",
         "wordCount": 1348
@@ -2095,7 +2095,7 @@
         "title": "Agent Evaluation Readiness Checklist",
         "site": "LangChain Blog",
         "published": "2026-03-27T14:00:00.000Z",
-        "source": "https://blog.langchain.com/agent-evaluation-readiness-checklist/",
+        "source": "https://www.langchain.com/blog/agent-evaluation-readiness-checklist/",
         "domain": "",
         "language": "en",
         "wordCount": 4165
@@ -2104,7 +2104,7 @@
         "title": "How Kensho built a multi-agent framework with LangGraph to solve trusted financial data retrieval",
         "site": "LangChain Blog",
         "published": "2026-03-26T19:39:21.000Z",
-        "source": "https://blog.langchain.com/customers-kensho/",
+        "source": "https://www.langchain.com/blog/customers-kensho/",
         "domain": "",
         "language": "en",
         "wordCount": 971
@@ -2113,7 +2113,7 @@
         "title": "How we build evals for Deep Agents",
         "site": "LangChain Blog",
         "published": "2026-03-26T15:18:56.000Z",
-        "source": "https://blog.langchain.com/how-we-build-evals-for-deep-agents/",
+        "source": "https://www.langchain.com/blog/how-we-build-evals-for-deep-agents/",
         "domain": "",
         "language": "en",
         "wordCount": 1910
@@ -2122,7 +2122,7 @@
         "title": "How Middleware Lets You Customize Your Agent Harness",
         "site": "LangChain Blog",
         "published": "2026-03-26T14:53:27.000Z",
-        "source": "https://blog.langchain.com/how-middleware-lets-you-customize-your-agent-harness/",
+        "source": "https://www.langchain.com/blog/how-middleware-lets-you-customize-your-agent-harness/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1171
@@ -2131,7 +2131,7 @@
         "title": "Skills in LangSmith Fleet",
         "site": "LangChain Blog",
         "published": "2026-03-25T16:10:11.000Z",
-        "source": "https://blog.langchain.com/skills-in-langsmith-fleet/",
+        "source": "https://www.langchain.com/blog/skills-in-langsmith-fleet/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 749
@@ -2140,7 +2140,7 @@
         "title": "How Moda Builds Production-Grade AI Design Agents with Deep Agents",
         "site": "LangChain Blog",
         "published": "2026-03-24T17:07:54.000Z",
-        "source": "https://blog.langchain.com/how-moda-builds-production-grade-ai-design-agents-with-deep-agents/",
+        "source": "https://www.langchain.com/blog/how-moda-builds-production-grade-ai-design-agents-with-deep-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1336
@@ -2149,7 +2149,7 @@
         "title": "Join LangChain at Google Cloud Next 2026",
         "site": "LangChain Blog",
         "published": "2026-03-23T21:37:58.000Z",
-        "source": "https://blog.langchain.com/join-langchain-at-google-cloud-next-2026/",
+        "source": "https://www.langchain.com/blog/join-langchain-at-google-cloud-next-2026/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 738
@@ -2158,7 +2158,7 @@
         "title": "Two different types of agent authorization",
         "site": "LangChain Blog",
         "published": "2026-03-23T17:29:28.000Z",
-        "source": "https://blog.langchain.com/two-different-types-of-agent-authorization/",
+        "source": "https://www.langchain.com/blog/two-different-types-of-agent-authorization/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 860
@@ -2167,7 +2167,7 @@
         "title": "Introducing LangSmith Fleet",
         "site": "LangChain Blog",
         "published": "2026-03-19T16:49:42.000Z",
-        "source": "https://blog.langchain.com/introducing-langsmith-fleet/",
+        "source": "https://www.langchain.com/blog/introducing-langsmith-fleet/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1104
@@ -2176,7 +2176,7 @@
         "title": "Polly is generally available everywhere you work in LangSmith",
         "site": "LangChain Blog",
         "published": "2026-03-18T15:38:58.000Z",
-        "source": "https://blog.langchain.com/polly-langsmith-ga/",
+        "source": "https://www.langchain.com/blog/polly-langsmith-ga/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 693
@@ -2185,7 +2185,7 @@
         "title": "Introducing LangSmith Sandboxes: Secure Code Execution for Agents",
         "site": "LangChain Blog",
         "published": "2026-03-17T15:51:07.000Z",
-        "source": "https://blog.langchain.com/introducing-langsmith-sandboxes-secure-code-execution-for-agents/",
+        "source": "https://www.langchain.com/blog/introducing-langsmith-sandboxes-secure-code-execution-for-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 807
@@ -2194,7 +2194,7 @@
         "title": "Open SWE: An Open-Source Framework for Internal Coding Agents",
         "site": "LangChain Blog",
         "published": "2026-03-17T15:30:00.000Z",
-        "source": "https://blog.langchain.com/open-swe-an-open-source-framework-for-internal-coding-agents/",
+        "source": "https://www.langchain.com/blog/open-swe-an-open-source-framework-for-internal-coding-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1855
@@ -2203,7 +2203,7 @@
         "title": "LangChain Announces Enterprise Agentic AI Platform Built with NVIDIA",
         "site": "LangChain Blog",
         "published": "2026-03-16T21:31:28.000Z",
-        "source": "https://blog.langchain.com/nvidia-enterprise/",
+        "source": "https://www.langchain.com/blog/nvidia-enterprise/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1205
@@ -2212,7 +2212,7 @@
         "title": "Introducing deploy cli",
         "site": "LangChain Blog",
         "published": "2026-03-16T17:20:21.000Z",
-        "source": "https://blog.langchain.com/introducing-deploy-cli/",
+        "source": "https://www.langchain.com/blog/introducing-deploy-cli/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 268
@@ -2221,7 +2221,7 @@
         "title": "Autonomous context compression",
         "site": "LangChain Blog",
         "published": "2026-03-11T18:24:27.000Z",
-        "source": "https://blog.langchain.com/autonomous-context-compression/",
+        "source": "https://www.langchain.com/blog/autonomous-context-compression/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 845
@@ -2239,7 +2239,7 @@
         "title": "How Coding Agents Are Reshaping Engineering, Product and Design",
         "site": "LangChain Blog",
         "published": "2026-03-10T22:34:07.000Z",
-        "source": "https://blog.langchain.com/how-coding-agents-are-reshaping-engineering-product-and-design/",
+        "source": "https://www.langchain.com/blog/how-coding-agents-are-reshaping-engineering-product-and-design/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1985
@@ -2266,7 +2266,7 @@
         "title": "LangChain Skills",
         "site": "LangChain Blog",
         "published": "2026-03-04T18:00:19.000Z",
-        "source": "https://blog.langchain.com/langchain-skills/",
+        "source": "https://www.langchain.com/blog/langchain-skills/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 428
@@ -2275,7 +2275,7 @@
         "title": "February 2026: LangChain Newsletter",
         "site": "LangChain Blog",
         "published": "2026-03-04T00:05:00.000Z",
-        "source": "https://blog.langchain.com/febraury-2026-langchain-newsletter/",
+        "source": "https://www.langchain.com/blog/febraury-2026-langchain-newsletter/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 929
@@ -2284,7 +2284,7 @@
         "title": "You don’t know what your agent will do until it’s in production",
         "site": "LangChain Blog",
         "published": "2026-02-26T04:28:00.000Z",
-        "source": "https://blog.langchain.com/you-dont-know-what-your-agent-will-do-until-its-in-production/",
+        "source": "https://www.langchain.com/blog/you-dont-know-what-your-agent-will-do-until-its-in-production/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 2739
@@ -2293,7 +2293,7 @@
         "title": "How we built Agent Builder’s memory system",
         "site": "LangChain Blog",
         "published": "2026-02-22T03:55:36.000Z",
-        "source": "https://blog.langchain.com/how-we-built-agent-builders-memory-system/",
+        "source": "https://www.langchain.com/blog/how-we-built-agent-builders-memory-system/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 2096
@@ -2302,7 +2302,7 @@
         "title": "Agent Observability Powers Agent Evaluation",
         "site": "LangChain Blog",
         "published": "2026-02-22T03:51:44.000Z",
-        "source": "https://blog.langchain.com/agent-observability-powers-agent-evaluation/",
+        "source": "https://www.langchain.com/blog/agent-observability-powers-agent-evaluation/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 3057
@@ -2311,7 +2311,7 @@
         "title": "How to Use Memory in Agent Builder",
         "site": "LangChain Blog",
         "published": "2026-02-19T18:28:14.000Z",
-        "source": "https://blog.langchain.com/how-to-use-memory-in-agent-builder/",
+        "source": "https://www.langchain.com/blog/how-to-use-memory-in-agent-builder/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 928
@@ -2320,7 +2320,7 @@
         "title": "New in Agent Builder: all new agent chat, file uploads + tool registry",
         "site": "LangChain Blog",
         "published": "2026-02-18T15:55:08.000Z",
-        "source": "https://blog.langchain.com/new-in-agent-builder-all-new-agent-chat-file-uploads-tool-registry/",
+        "source": "https://www.langchain.com/blog/new-in-agent-builder-all-new-agent-chat-file-uploads-tool-registry/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 961
@@ -2329,7 +2329,7 @@
         "title": "monday Service + LangSmith: Building a Code-First Evaluation Strategy from Day 1",
         "site": "LangChain Blog",
         "published": "2026-02-18T08:05:53.000Z",
-        "source": "https://blog.langchain.com/customers-monday/",
+        "source": "https://www.langchain.com/blog/customers-monday/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1825
@@ -2338,7 +2338,7 @@
         "title": "Improving Deep Agents with harness engineering",
         "site": "LangChain Blog",
         "published": "2026-02-17T16:15:28.000Z",
-        "source": "https://blog.langchain.com/improving-deep-agents-with-harness-engineering/",
+        "source": "https://www.langchain.com/blog/improving-deep-agents-with-harness-engineering/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1794
@@ -2347,7 +2347,7 @@
         "title": "On Agent Frameworks and Agent Observability",
         "site": "LangChain Blog",
         "published": "2026-02-13T02:23:40.000Z",
-        "source": "https://blog.langchain.com/on-agent-frameworks-and-agent-observability/",
+        "source": "https://www.langchain.com/blog/on-agent-frameworks-and-agent-observability/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 979
@@ -2356,7 +2356,7 @@
         "title": "Join us for Interrupt: The Agent Conference",
         "site": "LangChain Blog",
         "published": "2026-02-12T17:42:03.000Z",
-        "source": "https://blog.langchain.com/join-us-for-interrupt-the-agent-conference/",
+        "source": "https://www.langchain.com/blog/join-us-for-interrupt-the-agent-conference/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 289
@@ -2365,7 +2365,7 @@
         "title": "The two patterns by which agents connect sandboxes",
         "site": "LangChain Blog",
         "published": "2026-02-10T16:32:35.000Z",
-        "source": "https://blog.langchain.com/the-two-patterns-by-which-agents-connect-sandboxes/",
+        "source": "https://www.langchain.com/blog/the-two-patterns-by-which-agents-connect-sandboxes/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1389
@@ -2374,7 +2374,7 @@
         "title": "LangSmith is Now Available in Google Cloud Marketplace",
         "site": "LangChain Blog",
         "published": "2026-02-10T02:47:44.000Z",
-        "source": "https://blog.langchain.com/langsmith-is-now-available-in-google-cloud-marketplace/",
+        "source": "https://www.langchain.com/blog/langsmith-is-now-available-in-google-cloud-marketplace/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 765
@@ -2383,7 +2383,7 @@
         "title": "January 2026: LangChain Newsletter",
         "site": "LangChain Blog",
         "published": "2026-01-30T02:27:28.000Z",
-        "source": "https://blog.langchain.com/january-2026-langchain-newsletter/",
+        "source": "https://www.langchain.com/blog/january-2026-langchain-newsletter/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1041
@@ -2392,7 +2392,7 @@
         "title": "Context Management for Deep Agents",
         "site": "LangChain Blog",
         "published": "2026-01-28T16:11:29.000Z",
-        "source": "https://blog.langchain.com/context-management-for-deepagents/",
+        "source": "https://www.langchain.com/blog/context-management-for-deepagents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1174
@@ -2401,7 +2401,7 @@
         "title": "Deploy agents instantly with Agent Builder templates",
         "site": "LangChain Blog",
         "published": "2026-01-21T17:00:00.000Z",
-        "source": "https://blog.langchain.com/introducing-agent-builder-template-library/",
+        "source": "https://www.langchain.com/blog/introducing-agent-builder-template-library/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 654
@@ -2410,7 +2410,7 @@
         "title": "Building Multi-Agent Applications with Deep Agents",
         "site": "LangChain Blog",
         "published": "2026-01-21T16:30:00.000Z",
-        "source": "https://blog.langchain.com/building-multi-agent-applications-with-deep-agents/",
+        "source": "https://www.langchain.com/blog/building-multi-agent-applications-with-deep-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1125
@@ -2419,7 +2419,7 @@
         "title": "From Traces to Insights: Understanding Agent Behavior at Scale",
         "site": "LangChain Blog",
         "published": "2026-01-20T17:16:56.000Z",
-        "source": "https://blog.langchain.com/from-traces-to-insights-understanding-agent-behavior-at-scale/",
+        "source": "https://www.langchain.com/blog/from-traces-to-insights-understanding-agent-behavior-at-scale/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1179
@@ -2428,7 +2428,7 @@
         "title": "How Remote uses LangChain and LangGraph to onboard thousands of customers with AI",
         "site": "LangChain Blog",
         "published": "2026-01-19T16:00:07.000Z",
-        "source": "https://blog.langchain.com/customers-remote/",
+        "source": "https://www.langchain.com/blog/customers-remote/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1136
@@ -2437,7 +2437,7 @@
         "title": "Choosing the Right Multi-Agent Architecture",
         "site": "LangChain Blog",
         "published": "2026-01-14T18:06:14.000Z",
-        "source": "https://blog.langchain.com/choosing-the-right-multi-agent-architecture/",
+        "source": "https://www.langchain.com/blog/choosing-the-right-multi-agent-architecture/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1575
@@ -2446,7 +2446,7 @@
         "title": "Now GA: LangSmith Agent Builder",
         "site": "LangChain Blog",
         "published": "2026-01-13T16:00:38.000Z",
-        "source": "https://blog.langchain.com/langsmith-agent-builder-generally-available/",
+        "source": "https://www.langchain.com/blog/langsmith-agent-builder-generally-available/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 487
@@ -2455,7 +2455,7 @@
         "title": "In software, the code documents the app. In AI, the traces do.",
         "site": "LangChain Blog",
         "published": "2026-01-10T17:39:27.000Z",
-        "source": "https://blog.langchain.com/in-software-the-code-documents-the-app-in-ai-the-traces-do/",
+        "source": "https://www.langchain.com/blog/in-software-the-code-documents-the-app-in-ai-the-traces-do/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1409
@@ -2464,7 +2464,7 @@
         "title": "Fastweb + Vodafone: Transforming Customer Experience with AI Agents using LangGraph and LangSmith",
         "site": "LangChain Blog",
         "published": "2025-12-16T20:50:55.000Z",
-        "source": "https://blog.langchain.com/customers-vodafone-italy/",
+        "source": "https://www.langchain.com/blog/customers-vodafone-italy/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1537
@@ -2473,7 +2473,7 @@
         "title": "Debugging Deep Agents with LangSmith",
         "site": "LangChain Blog",
         "published": "2025-12-10T17:08:19.000Z",
-        "source": "https://blog.langchain.com/debugging-deep-agents-with-langsmith/",
+        "source": "https://www.langchain.com/blog/debugging-deep-agents-with-langsmith/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1192
@@ -2482,7 +2482,7 @@
         "title": "Introducing LangSmith Fetch: Debug agents from your terminal",
         "site": "LangChain Blog",
         "published": "2025-12-10T17:07:57.000Z",
-        "source": "https://blog.langchain.com/introducing-langsmith-fetch/",
+        "source": "https://www.langchain.com/blog/introducing-langsmith-fetch/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1021
@@ -2491,7 +2491,7 @@
         "title": "Introducing Polly: Your AI Agent Engineer",
         "site": "LangChain Blog",
         "published": "2025-12-10T17:07:48.000Z",
-        "source": "https://blog.langchain.com/introducing-polly-your-ai-agent-engineer/",
+        "source": "https://www.langchain.com/blog/introducing-polly-your-ai-agent-engineer/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 808
@@ -2500,7 +2500,7 @@
         "title": "Agent Engineering: A New Discipline",
         "site": "LangChain Blog",
         "published": "2025-12-09T16:20:35.000Z",
-        "source": "https://blog.langchain.com/agent-engineering-a-new-discipline/",
+        "source": "https://www.langchain.com/blog/agent-engineering-a-new-discipline/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1271
@@ -2509,7 +2509,7 @@
         "title": "Evaluating Deep Agents CLI on Terminal Bench 2.0",
         "site": "LangChain Blog",
         "published": "2025-12-05T17:50:24.000Z",
-        "source": "https://blog.langchain.com/evaluating-deepagents-cli-on-terminal-bench-2-0/",
+        "source": "https://www.langchain.com/blog/evaluating-deepagents-cli-on-terminal-bench-2-0/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 765
@@ -2518,7 +2518,7 @@
         "title": "Evaluating Deep Agents: Our Learnings",
         "site": "LangChain Blog",
         "published": "2025-12-03T17:44:17.000Z",
-        "source": "https://blog.langchain.com/evaluating-deep-agents-our-learnings/",
+        "source": "https://www.langchain.com/blog/evaluating-deep-agents-our-learnings/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1638
@@ -2527,7 +2527,7 @@
         "title": "LangSmith Agent Builder now in Public Beta",
         "site": "LangChain Blog",
         "published": "2025-12-02T16:30:39.000Z",
-        "source": "https://blog.langchain.com/langsmith-agent-builder-now-in-public-beta/",
+        "source": "https://www.langchain.com/blog/langsmith-agent-builder-now-in-public-beta/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1542
@@ -2536,7 +2536,7 @@
         "title": "Using skills with Deep Agents",
         "site": "LangChain Blog",
         "published": "2025-11-25T16:45:09.000Z",
-        "source": "https://blog.langchain.com/using-skills-with-deep-agents/",
+        "source": "https://www.langchain.com/blog/using-skills-with-deep-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 584
@@ -2545,7 +2545,7 @@
         "title": "How agents can use filesystems for context engineering",
         "site": "LangChain Blog",
         "published": "2025-11-21T18:45:13.000Z",
-        "source": "https://blog.langchain.com/how-agents-can-use-filesystems-for-context-engineering/",
+        "source": "https://www.langchain.com/blog/how-agents-can-use-filesystems-for-context-engineering/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1655
@@ -2554,7 +2554,7 @@
         "title": "How Jimdo empower solopreneurs with AI-powered business assistance",
         "site": "LangChain Blog",
         "published": "2025-11-20T01:47:31.000Z",
-        "source": "https://blog.langchain.com/customers-jimdo/",
+        "source": "https://www.langchain.com/blog/customers-jimdo/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 985
@@ -2563,7 +2563,7 @@
         "title": "How ServiceNow uses LangSmith to get visibility into its customer success agents",
         "site": "LangChain Blog",
         "published": "2025-11-17T22:42:50.000Z",
-        "source": "https://blog.langchain.com/customers-servicenow/",
+        "source": "https://www.langchain.com/blog/customers-servicenow/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1018
@@ -2572,7 +2572,7 @@
         "title": "Execute Code with Sandboxes for Deep Agents",
         "site": "LangChain Blog",
         "published": "2025-11-13T16:22:20.000Z",
-        "source": "https://blog.langchain.com/execute-code-with-sandboxes-for-deepagents/",
+        "source": "https://www.langchain.com/blog/execute-code-with-sandboxes-for-deepagents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 712
@@ -2581,7 +2581,7 @@
         "title": "Join LangChain at AWS re:Invent 2025",
         "site": "LangChain Blog",
         "published": "2025-11-11T00:58:44.000Z",
-        "source": "https://blog.langchain.com/join-langchain-at-aws-re-invent-2025/",
+        "source": "https://www.langchain.com/blog/join-langchain-at-aws-re-invent-2025/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 513
@@ -2590,7 +2590,7 @@
         "title": "Why We Rebuilt LangChain’s Chatbot and What We Learned",
         "site": "LangChain Blog",
         "published": "2025-11-05T16:28:53.000Z",
-        "source": "https://blog.langchain.com/rebuilding-chat-langchain/",
+        "source": "https://www.langchain.com/blog/rebuilding-chat-langchain/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 3266
@@ -2599,7 +2599,7 @@
         "title": "Introducing Deep Agents CLI",
         "site": "LangChain Blog",
         "published": "2025-10-30T16:55:35.000Z",
-        "source": "https://blog.langchain.com/introducing-deepagents-cli/",
+        "source": "https://www.langchain.com/blog/introducing-deepagents-cli/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 564
@@ -2608,7 +2608,7 @@
         "title": "Introducing LangSmith’s No Code Agent Builder",
         "site": "LangChain Blog",
         "published": "2025-10-29T14:38:43.000Z",
-        "source": "https://blog.langchain.com/langsmith-agent-builder/",
+        "source": "https://www.langchain.com/blog/langsmith-agent-builder/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 930
@@ -2617,7 +2617,7 @@
         "title": "Doubling down on Deep Agents",
         "site": "LangChain Blog",
         "published": "2025-10-28T17:02:22.000Z",
-        "source": "https://blog.langchain.com/doubling-down-on-deepagents/",
+        "source": "https://www.langchain.com/blog/doubling-down-on-deepagents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 550
@@ -2626,7 +2626,7 @@
         "title": "Agent Frameworks, Runtimes, and Harnesses- oh my!",
         "site": "LangChain Blog",
         "published": "2025-10-25T16:14:35.000Z",
-        "source": "https://blog.langchain.com/agent-frameworks-runtimes-and-harnesses-oh-my/",
+        "source": "https://www.langchain.com/blog/agent-frameworks-runtimes-and-harnesses-oh-my/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 671
@@ -2635,7 +2635,7 @@
         "title": "Improve agent quality with Insights Agent and Multi-turn Evals, now in LangSmith",
         "site": "LangChain Blog",
         "published": "2025-10-23T14:23:55.000Z",
-        "source": "https://blog.langchain.com/insights-agent-multiturn-evals-langsmith/",
+        "source": "https://www.langchain.com/blog/insights-agent-multiturn-evals-langsmith/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 905
@@ -2644,7 +2644,7 @@
         "title": "LangChain and LangGraph Agent Frameworks Reach v1.0 Milestones",
         "site": "LangChain Blog",
         "published": "2025-10-22T14:58:46.000Z",
-        "source": "https://blog.langchain.com/langchain-langgraph-1dot0/",
+        "source": "https://www.langchain.com/blog/langchain-langgraph-1dot0/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1682
@@ -2653,7 +2653,7 @@
         "title": "LangChain raises $125M to build the platform for agent engineering",
         "site": "LangChain Blog",
         "published": "2025-10-20T14:36:50.000Z",
-        "source": "https://blog.langchain.com/series-b/",
+        "source": "https://www.langchain.com/blog/series-b/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 719
@@ -2662,7 +2662,7 @@
         "title": "Reflections on Three Years of Building LangChain",
         "site": "LangChain Blog",
         "published": "2025-10-20T14:34:32.000Z",
-        "source": "https://blog.langchain.com/three-years-langchain/",
+        "source": "https://www.langchain.com/blog/three-years-langchain/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1617
@@ -2671,7 +2671,7 @@
         "title": "Securing your agents with authentication and authorization",
         "site": "LangChain Blog",
         "published": "2025-10-13T21:12:15.000Z",
-        "source": "https://blog.langchain.com/agent-authorization-explainer/",
+        "source": "https://www.langchain.com/blog/agent-authorization-explainer/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1555
@@ -2680,7 +2680,7 @@
         "title": "Not Another Workflow Builder",
         "site": "LangChain Blog",
         "published": "2025-10-07T16:38:16.000Z",
-        "source": "https://blog.langchain.com/not-another-workflow-builder/",
+        "source": "https://www.langchain.com/blog/not-another-workflow-builder/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 977
@@ -2689,7 +2689,7 @@
         "title": "How to turn Claude Code into a domain specific coding agent",
         "site": "LangChain Blog",
         "published": "2025-09-11T16:54:37.000Z",
-        "source": "https://blog.langchain.com/how-to-turn-claude-code-into-a-domain-specific-coding-agent/",
+        "source": "https://www.langchain.com/blog/how-to-turn-claude-code-into-a-domain-specific-coding-agent/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 2256
@@ -2698,7 +2698,7 @@
         "title": "Monte Carlo: Building Data + AI Observability Agents with LangGraph and LangSmith",
         "site": "LangChain Blog",
         "published": "2025-09-11T04:30:49.000Z",
-        "source": "https://blog.langchain.com/customers-monte-carlo/",
+        "source": "https://www.langchain.com/blog/customers-monte-carlo/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 831
@@ -2707,7 +2707,7 @@
         "title": "Agent Middleware",
         "site": "LangChain Blog",
         "published": "2025-09-08T21:11:12.000Z",
-        "source": "https://blog.langchain.com/agent-middleware/",
+        "source": "https://www.langchain.com/blog/agent-middleware/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1072
@@ -2716,7 +2716,7 @@
         "title": "Building LangGraph: Designing an Agent Runtime from first principles",
         "site": "LangChain Blog",
         "published": "2025-09-04T16:26:16.000Z",
-        "source": "https://blog.langchain.com/building-langgraph/",
+        "source": "https://www.langchain.com/blog/building-langgraph/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 4060
@@ -2725,7 +2725,7 @@
         "title": "Standard message content",
         "site": "LangChain Blog",
         "published": "2025-09-03T16:10:02.000Z",
-        "source": "https://blog.langchain.com/standard-message-content/",
+        "source": "https://www.langchain.com/blog/standard-message-content/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 812
@@ -2734,7 +2734,7 @@
         "title": "LangChain & LangGraph 1.0 alpha releases",
         "site": "LangChain Blog",
         "published": "2025-09-02T17:02:02.000Z",
-        "source": "https://blog.langchain.com/langchain-langchain-1-0-alpha-releases/",
+        "source": "https://www.langchain.com/blog/langchain-langchain-1-0-alpha-releases/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 757
@@ -2743,7 +2743,7 @@
         "title": "Introducing Open SWE: An Open-Source Asynchronous Coding Agent",
         "site": "LangChain Blog",
         "published": "2025-08-06T16:53:45.000Z",
-        "source": "https://blog.langchain.com/introducing-open-swe-an-open-source-asynchronous-coding-agent/",
+        "source": "https://www.langchain.com/blog/introducing-open-swe-an-open-source-asynchronous-coding-agent/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1626
@@ -2752,7 +2752,7 @@
         "title": "Deep Agents",
         "site": "LangChain Blog",
         "published": "2025-07-30T15:53:38.000Z",
-        "source": "https://blog.langchain.com/deep-agents/",
+        "source": "https://www.langchain.com/blog/deep-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 775
@@ -2761,7 +2761,7 @@
         "title": "Introducing Align Evals: Streamlining LLM Application Evaluation",
         "site": "LangChain Blog",
         "published": "2025-07-29T20:12:52.000Z",
-        "source": "https://blog.langchain.com/introducing-align-evals/",
+        "source": "https://www.langchain.com/blog/introducing-align-evals/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 594
@@ -2770,7 +2770,7 @@
         "title": "How Bertelsmann Built a Multi-Agent System to Empower Creatives",
         "site": "LangChain Blog",
         "published": "2025-07-29T14:30:45.000Z",
-        "source": "https://blog.langchain.com/customer-bertelsmann/",
+        "source": "https://www.langchain.com/blog/customer-bertelsmann/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1431
@@ -2779,7 +2779,7 @@
         "title": "Why agent infrastructure matters",
         "site": "LangChain Blog",
         "published": "2025-07-28T05:21:48.000Z",
-        "source": "https://blog.langchain.com/why-agent-infrastructure/",
+        "source": "https://www.langchain.com/blog/why-agent-infrastructure/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 960
@@ -2788,7 +2788,7 @@
         "title": "LangSmith and LangGraph Platform are now available in AWS Marketplace",
         "site": "LangChain Blog",
         "published": "2025-07-16T17:30:41.000Z",
-        "source": "https://blog.langchain.com/aws-marketplace-july-2025-announce/",
+        "source": "https://www.langchain.com/blog/aws-marketplace-july-2025-announce/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 704
@@ -2797,7 +2797,7 @@
         "title": "Open Deep Research",
         "site": "LangChain Blog",
         "published": "2025-07-16T15:43:23.000Z",
-        "source": "https://blog.langchain.com/open-deep-research/",
+        "source": "https://www.langchain.com/blog/open-deep-research/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 2055
@@ -2806,7 +2806,7 @@
         "title": "How to Build an Agent",
         "site": "LangChain Blog",
         "published": "2025-07-10T00:01:04.000Z",
-        "source": "https://blog.langchain.com/how-to-build-an-agent/",
+        "source": "https://www.langchain.com/blog/how-to-build-an-agent/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1490
@@ -2815,7 +2815,7 @@
         "title": "Context Engineering",
         "site": "LangChain Blog",
         "published": "2025-07-02T15:52:42.000Z",
-        "source": "https://blog.langchain.com/context-engineering-for-agents/",
+        "source": "https://www.langchain.com/blog/context-engineering-for-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 2647
@@ -2824,7 +2824,7 @@
         "title": "How Exa built a Web Research Multi-Agent System with LangGraph and LangSmith",
         "site": "LangChain Blog",
         "published": "2025-07-01T04:29:33.000Z",
-        "source": "https://blog.langchain.com/exa/",
+        "source": "https://www.langchain.com/blog/exa/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 828
@@ -2833,7 +2833,7 @@
         "title": "How Captide agents running on LangGraph Platform compress investment research from days to seconds",
         "site": "LangChain Blog",
         "published": "2025-06-24T20:54:47.000Z",
-        "source": "https://blog.langchain.com/captide/",
+        "source": "https://www.langchain.com/blog/captide/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 816
@@ -2842,7 +2842,7 @@
         "title": "The rise of \"context engineering\"",
         "site": "LangChain Blog",
         "published": "2025-06-23T16:56:00.000Z",
-        "source": "https://blog.langchain.com/the-rise-of-context-engineering/",
+        "source": "https://www.langchain.com/blog/the-rise-of-context-engineering/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1367
@@ -2851,7 +2851,7 @@
         "title": "How and when to build multi-agent systems",
         "site": "LangChain Blog",
         "published": "2025-06-16T14:52:10.000Z",
-        "source": "https://blog.langchain.com/how-and-when-to-build-multi-agent-systems/",
+        "source": "https://www.langchain.com/blog/how-and-when-to-build-multi-agent-systems/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1527
@@ -2860,7 +2860,7 @@
         "title": "The Hidden Metric That Determines AI Product Success",
         "site": "LangChain Blog",
         "published": "2025-06-12T15:24:39.000Z",
-        "source": "https://blog.langchain.com/the-hidden-metric-that-determines-ai-product-success/",
+        "source": "https://www.langchain.com/blog/the-hidden-metric-that-determines-ai-product-success/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1899
@@ -2869,7 +2869,7 @@
         "title": "Benchmarking Multi-Agent Architectures",
         "site": "LangChain Blog",
         "published": "2025-06-11T01:40:14.000Z",
-        "source": "https://blog.langchain.com/benchmarking-multi-agent-architectures/",
+        "source": "https://www.langchain.com/blog/benchmarking-multi-agent-architectures/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1711
@@ -2878,7 +2878,7 @@
         "title": "LangGraph Release Week Recap",
         "site": "LangChain Blog",
         "published": "2025-06-09T19:17:29.000Z",
-        "source": "https://blog.langchain.com/langgraph-release-week-recap/",
+        "source": "https://www.langchain.com/blog/langgraph-release-week-recap/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 420
@@ -2887,7 +2887,7 @@
         "title": "Why do I need LangGraph Platform for agent deployment?",
         "site": "LangChain Blog",
         "published": "2025-05-22T15:33:45.000Z",
-        "source": "https://blog.langchain.com/why-langgraph-platform/",
+        "source": "https://www.langchain.com/blog/why-langgraph-platform/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 950
@@ -2896,7 +2896,7 @@
         "title": "How Webtoon Entertainment built agentic workflows with LangGraph to scale story understanding",
         "site": "LangChain Blog",
         "published": "2025-05-19T19:00:00.000Z",
-        "source": "https://blog.langchain.com/customers-webtoon/",
+        "source": "https://www.langchain.com/blog/customers-webtoon/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 890
@@ -2905,7 +2905,7 @@
         "title": "Recap of Interrupt 2025: The AI Agent Conference by LangChain",
         "site": "LangChain Blog",
         "published": "2025-05-15T05:47:50.000Z",
-        "source": "https://blog.langchain.com/interrupt-2025-recap/",
+        "source": "https://www.langchain.com/blog/interrupt-2025-recap/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 907
@@ -2914,7 +2914,7 @@
         "title": "LangGraph Platform is now Generally Available: Deploy & manage long-running, stateful Agents",
         "site": "LangChain Blog",
         "published": "2025-05-14T13:55:34.000Z",
-        "source": "https://blog.langchain.com/langgraph-platform-ga/",
+        "source": "https://www.langchain.com/blog/langgraph-platform-ga/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1033
@@ -2923,7 +2923,7 @@
         "title": "How Outshift by Cisco achieved a 10x productivity boost with their Agentic AI Platform Engineer",
         "site": "LangChain Blog",
         "published": "2025-05-04T21:00:12.000Z",
-        "source": "https://blog.langchain.com/cisco-outshift/",
+        "source": "https://www.langchain.com/blog/cisco-outshift/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1046
@@ -2932,7 +2932,7 @@
         "title": "How DocentPro Built a Multi-Agent Travel Companion with LangGraph",
         "site": "LangChain Blog",
         "published": "2025-04-29T20:35:39.000Z",
-        "source": "https://blog.langchain.com/customers-docentpro/",
+        "source": "https://www.langchain.com/blog/customers-docentpro/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 693
@@ -2941,7 +2941,7 @@
         "title": "Catch production failures early with LangSmith Alerts",
         "site": "LangChain Blog",
         "published": "2025-04-22T15:58:23.000Z",
-        "source": "https://blog.langchain.com/langsmith-alerts/",
+        "source": "https://www.langchain.com/blog/langsmith-alerts/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 455
@@ -2950,7 +2950,7 @@
         "title": "How Trellix cut log parsing time from days to minutes with LangGraph Studio and LangSmith",
         "site": "LangChain Blog",
         "published": "2025-04-22T03:00:19.000Z",
-        "source": "https://blog.langchain.com/customers-trellix/",
+        "source": "https://www.langchain.com/blog/customers-trellix/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1031
@@ -2959,7 +2959,7 @@
         "title": "How to think about agent frameworks",
         "site": "LangChain Blog",
         "published": "2025-04-20T17:32:47.000Z",
-        "source": "https://blog.langchain.com/how-to-think-about-agent-frameworks/",
+        "source": "https://www.langchain.com/blog/how-to-think-about-agent-frameworks/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 5136
@@ -2968,7 +2968,7 @@
         "title": "TAMM AI Assistant: Transforming Government Services in Abu Dhabi with LangChain and LangGraph\"",
         "site": "LangChain Blog",
         "published": "2025-04-15T15:00:26.000Z",
-        "source": "https://blog.langchain.com/customers-abu-dhabi-government/",
+        "source": "https://www.langchain.com/blog/customers-abu-dhabi-government/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 837
@@ -2977,7 +2977,7 @@
         "title": "How Harmonic built an investment agent with LangGraph and LangSmith— so VCs can focus on founders",
         "site": "LangChain Blog",
         "published": "2025-04-13T23:14:30.000Z",
-        "source": "https://blog.langchain.com/customers-harmonic/",
+        "source": "https://www.langchain.com/blog/customers-harmonic/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1010
@@ -2986,7 +2986,7 @@
         "title": "Why Definely chose LangGraph for building their multi-agent AI system",
         "site": "LangChain Blog",
         "published": "2025-04-07T19:53:40.000Z",
-        "source": "https://blog.langchain.com/customers-definely/",
+        "source": "https://www.langchain.com/blog/customers-definely/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 678
@@ -2995,7 +2995,7 @@
         "title": "Introducing End-to-End OpenTelemetry Support in LangSmith",
         "site": "LangChain Blog",
         "published": "2025-03-27T06:55:36.000Z",
-        "source": "https://blog.langchain.com/end-to-end-opentelemetry-langsmith/",
+        "source": "https://www.langchain.com/blog/end-to-end-opentelemetry-langsmith/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 658
@@ -3004,7 +3004,7 @@
         "title": "How Lovable uses LangSmith to debug & monitor agents in production",
         "site": "LangChain Blog",
         "published": "2025-03-25T19:35:40.000Z",
-        "source": "https://blog.langchain.com/customers-lovable/",
+        "source": "https://www.langchain.com/blog/customers-lovable/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 422
@@ -3013,7 +3013,7 @@
         "title": "Vodafone transforms data operations with AI using LangChain and LangGraph",
         "site": "LangChain Blog",
         "published": "2025-03-24T04:00:28.000Z",
-        "source": "https://blog.langchain.com/customers-vodafone/",
+        "source": "https://www.langchain.com/blog/customers-vodafone/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1064
@@ -3022,7 +3022,7 @@
         "title": "How Inconvo is improving customer-facing analytics with conversational AI built on LangGraph",
         "site": "LangChain Blog",
         "published": "2025-03-19T18:41:17.000Z",
-        "source": "https://blog.langchain.com/customers-inconvo/",
+        "source": "https://www.langchain.com/blog/customers-inconvo/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 493
@@ -3031,7 +3031,7 @@
         "title": "AI Agent Latency 101: How do I speed up my AI agent?",
         "site": "LangChain Blog",
         "published": "2025-03-15T18:34:47.000Z",
-        "source": "https://blog.langchain.com/how-do-i-speed-up-my-agent/",
+        "source": "https://www.langchain.com/blog/how-do-i-speed-up-my-agent/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 995
@@ -3040,7 +3040,7 @@
         "title": "How C.H. Robinson is transforming the logistics industry with LangChain",
         "site": "LangChain Blog",
         "published": "2025-03-10T21:55:16.000Z",
-        "source": "https://blog.langchain.com/customers-chrobinson/",
+        "source": "https://www.langchain.com/blog/customers-chrobinson/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 579
@@ -3049,7 +3049,7 @@
         "title": "MCP: Flash in the Pan or Future Standard?",
         "site": "LangChain Blog",
         "published": "2025-03-08T16:25:03.000Z",
-        "source": "https://blog.langchain.com/mcp-fad-or-fixture/",
+        "source": "https://www.langchain.com/blog/mcp-fad-or-fixture/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1314
@@ -3058,7 +3058,7 @@
         "title": "LangGraph 0.3 Release: Prebuilt Agents",
         "site": "LangChain Blog",
         "published": "2025-02-27T15:09:15.000Z",
-        "source": "https://blog.langchain.com/langgraph-0-3-release-prebuilt-agents/",
+        "source": "https://www.langchain.com/blog/langgraph-0-3-release-prebuilt-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 363
@@ -3067,7 +3067,7 @@
         "title": "How MUFG Bank increased sales efficiency by 10x with LangChain",
         "site": "LangChain Blog",
         "published": "2025-02-27T07:29:48.000Z",
-        "source": "https://blog.langchain.com/customers-mufgbank/",
+        "source": "https://www.langchain.com/blog/customers-mufgbank/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 665
@@ -3076,7 +3076,7 @@
         "title": "Quickly Start Evaluating LLMs With OpenEvals",
         "site": "LangChain Blog",
         "published": "2025-02-26T18:35:25.000Z",
-        "source": "https://blog.langchain.com/evaluating-llms-with-openevals/",
+        "source": "https://www.langchain.com/blog/evaluating-llms-with-openevals/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 841
@@ -3085,7 +3085,7 @@
         "title": "Beyond RAG: Implementing Agent Search with LangGraph for Smarter Knowledge Retrieval",
         "site": "LangChain Blog",
         "published": "2025-02-22T23:23:08.000Z",
-        "source": "https://blog.langchain.com/beyond-rag-implementing-agent-search-with-langgraph-for-smarter-knowledge-retrieval/",
+        "source": "https://www.langchain.com/blog/beyond-rag-implementing-agent-search-with-langgraph-for-smarter-knowledge-retrieval/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 2615
@@ -3094,7 +3094,7 @@
         "title": "LangMem SDK for agent long-term memory",
         "site": "LangChain Blog",
         "published": "2025-02-18T15:50:31.000Z",
-        "source": "https://blog.langchain.com/langmem-sdk-launch/",
+        "source": "https://www.langchain.com/blog/langmem-sdk-launch/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1457
@@ -3103,7 +3103,7 @@
         "title": "How Klarna's AI assistant redefined customer support at scale for 85 million active users",
         "site": "LangChain Blog",
         "published": "2025-02-12T15:00:55.000Z",
-        "source": "https://blog.langchain.com/customers-klarna/",
+        "source": "https://www.langchain.com/blog/customers-klarna/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 455
@@ -3112,7 +3112,7 @@
         "title": "Benchmarking Single Agent Performance",
         "site": "LangChain Blog",
         "published": "2025-02-10T17:13:25.000Z",
-        "source": "https://blog.langchain.com/react-agent-benchmarking/",
+        "source": "https://www.langchain.com/blog/react-agent-benchmarking/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 2894
@@ -3121,7 +3121,7 @@
         "title": "How Vizient empowers healthcare providers with reliable GenAI insights using LangGraph and LangSmith",
         "site": "LangChain Blog",
         "published": "2025-02-10T16:41:48.000Z",
-        "source": "https://blog.langchain.com/customers-vizient/",
+        "source": "https://www.langchain.com/blog/customers-vizient/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 537
@@ -3130,7 +3130,7 @@
         "title": "How Infor is Transforming Enterprise AI using LangGraph and LangSmith",
         "site": "LangChain Blog",
         "published": "2025-02-06T07:18:26.000Z",
-        "source": "https://blog.langchain.com/customers-infor/",
+        "source": "https://www.langchain.com/blog/customers-infor/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 904
@@ -3139,7 +3139,7 @@
         "title": "Is LangGraph Used In Production?",
         "site": "LangChain Blog",
         "published": "2025-02-05T07:47:42.000Z",
-        "source": "https://blog.langchain.com/is-langgraph-used-in-production/",
+        "source": "https://www.langchain.com/blog/is-langgraph-used-in-production/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 795
@@ -3148,7 +3148,7 @@
         "title": "Introducing Interrupt: The AI Agent Conference by LangChain",
         "site": "LangChain Blog",
         "published": "2025-02-03T16:29:57.000Z",
-        "source": "https://blog.langchain.com/introducing-interrupt-langchain-conference/",
+        "source": "https://www.langchain.com/blog/introducing-interrupt-langchain-conference/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 457
@@ -3157,7 +3157,7 @@
         "title": "Introducing the LangGraph Functional API",
         "site": "LangChain Blog",
         "published": "2025-01-29T16:20:22.000Z",
-        "source": "https://blog.langchain.com/introducing-the-langgraph-functional-api/",
+        "source": "https://www.langchain.com/blog/introducing-the-langgraph-functional-api/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1708
@@ -3166,7 +3166,7 @@
         "title": "Exploring Prompt Optimization",
         "site": "LangChain Blog",
         "published": "2025-01-28T16:29:38.000Z",
-        "source": "https://blog.langchain.com/exploring-prompt-optimization/",
+        "source": "https://www.langchain.com/blog/exploring-prompt-optimization/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 3991
@@ -3175,7 +3175,7 @@
         "title": "Introducing Pytest and Vitest integrations for LangSmith Evaluations",
         "site": "LangChain Blog",
         "published": "2025-01-22T17:54:26.000Z",
-        "source": "https://blog.langchain.com/pytest-and-vitest-for-langsmith-evals/",
+        "source": "https://www.langchain.com/blog/pytest-and-vitest-for-langsmith-evals/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1348
@@ -3184,7 +3184,7 @@
         "title": "How Captide is redefining equity research with agentic workflows running on LangGraph Platform",
         "site": "LangChain Blog",
         "published": "2025-01-20T16:58:57.000Z",
-        "source": "https://blog.langchain.com/how-captide-is-redefining-equity-research-with-agentic-workflows-built-on-langgraph-and-langsmith/",
+        "source": "https://www.langchain.com/blog/how-captide-is-redefining-equity-research-with-agentic-workflows-built-on-langgraph-and-langsmith/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 730
@@ -3193,7 +3193,7 @@
         "title": "How Minimal built a multi-agent customer support system with LangGraph & LangSmith",
         "site": "LangChain Blog",
         "published": "2025-01-20T16:52:14.000Z",
-        "source": "https://blog.langchain.com/how-minimal-built-a-multi-agent-customer-support-system-with-langgraph-langsmith/",
+        "source": "https://www.langchain.com/blog/how-minimal-built-a-multi-agent-customer-support-system-with-langgraph-langsmith/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 807
@@ -3202,7 +3202,7 @@
         "title": "Introducing ambient agents",
         "site": "LangChain Blog",
         "published": "2025-01-14T17:07:02.000Z",
-        "source": "https://blog.langchain.com/introducing-ambient-agents/",
+        "source": "https://www.langchain.com/blog/introducing-ambient-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1512
@@ -3211,7 +3211,7 @@
         "title": "Acxiom's use of LangSmith for enhanced audience segmentation",
         "site": "LangChain Blog",
         "published": "2025-01-13T07:47:34.000Z",
-        "source": "https://blog.langchain.com/customers-acxiom/",
+        "source": "https://www.langchain.com/blog/customers-acxiom/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 837
@@ -3220,7 +3220,7 @@
         "title": "Structured Report Generation Blueprint with NVIDIA AI",
         "site": "LangChain Blog",
         "published": "2025-01-06T18:30:00.000Z",
-        "source": "https://blog.langchain.com/structured-report-generation-blueprint/",
+        "source": "https://www.langchain.com/blog/structured-report-generation-blueprint/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 696
@@ -3229,7 +3229,7 @@
         "title": "Top 5 LangGraph Agents in Production 2024",
         "site": "LangChain Blog",
         "published": "2024-12-31T18:03:10.000Z",
-        "source": "https://blog.langchain.com/top-5-langgraph-agents-in-production-2024/",
+        "source": "https://www.langchain.com/blog/top-5-langgraph-agents-in-production-2024/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 651
@@ -3238,7 +3238,7 @@
         "title": "LangChain State of AI 2024 Report",
         "site": "LangChain Blog",
         "published": "2024-12-19T17:30:11.000Z",
-        "source": "https://blog.langchain.com/langchain-state-of-ai-2024/",
+        "source": "https://www.langchain.com/blog/langchain-state-of-ai-2024/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1157
@@ -3247,7 +3247,7 @@
         "title": "Custom Authentication and Access Control for LangGraph Platform",
         "site": "LangChain Blog",
         "published": "2024-12-19T16:40:26.000Z",
-        "source": "https://blog.langchain.com/custom-authentication-and-access-control-in-langgraph/",
+        "source": "https://www.langchain.com/blog/custom-authentication-and-access-control-in-langgraph/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 754
@@ -3256,7 +3256,7 @@
         "title": "How AppFolio transformed property management workflows with Realm-X, built using LangGraph and LangSmith",
         "site": "LangChain Blog",
         "published": "2024-12-16T17:30:11.000Z",
-        "source": "https://blog.langchain.com/customers-appfolio/",
+        "source": "https://www.langchain.com/blog/customers-appfolio/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 890
@@ -3265,7 +3265,7 @@
         "title": "Making it easier to build human-in-the-loop agents with interrupt",
         "site": "LangChain Blog",
         "published": "2024-12-14T16:37:58.000Z",
-        "source": "https://blog.langchain.com/making-it-easier-to-build-human-in-the-loop-agents-with-interrupt/",
+        "source": "https://www.langchain.com/blog/making-it-easier-to-build-human-in-the-loop-agents-with-interrupt/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 871
@@ -3274,7 +3274,7 @@
         "title": "Command: A new tool for building multi-agent architectures in LangGraph",
         "site": "LangChain Blog",
         "published": "2024-12-10T17:13:42.000Z",
-        "source": "https://blog.langchain.com/command-a-new-tool-for-multi-agent-architectures-in-langgraph/",
+        "source": "https://www.langchain.com/blog/command-a-new-tool-for-multi-agent-architectures-in-langgraph/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 517
@@ -3283,7 +3283,7 @@
         "title": "Introducing OpenTelemetry support for LangSmith",
         "site": "LangChain Blog",
         "published": "2024-12-09T16:44:18.000Z",
-        "source": "https://blog.langchain.com/opentelemetry-langsmith/",
+        "source": "https://www.langchain.com/blog/opentelemetry-langsmith/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 790
@@ -3292,7 +3292,7 @@
         "title": "Easier evaluations with LangSmith SDK v0.2",
         "site": "LangChain Blog",
         "published": "2024-12-05T18:51:25.000Z",
-        "source": "https://blog.langchain.com/easier-evaluations-with-langsmith-sdk-v0-2/",
+        "source": "https://www.langchain.com/blog/easier-evaluations-with-langsmith-sdk-v0-2/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 947
@@ -3301,7 +3301,7 @@
         "title": "Semantic Search for LangGraph Memory",
         "site": "LangChain Blog",
         "published": "2024-12-05T14:08:36.000Z",
-        "source": "https://blog.langchain.com/semantic-search-for-langgraph-memory/",
+        "source": "https://www.langchain.com/blog/semantic-search-for-langgraph-memory/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 729
@@ -3310,7 +3310,7 @@
         "title": "How Cleric’s AI SRE leveled up with continuous learning through LangSmith",
         "site": "LangChain Blog",
         "published": "2024-12-03T05:39:41.000Z",
-        "source": "https://blog.langchain.com/customers-cleric/",
+        "source": "https://www.langchain.com/blog/customers-cleric/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 835
@@ -3319,7 +3319,7 @@
         "title": "How Airtop built web-automation for AI agents powered by the LangChain ecosystem",
         "site": "LangChain Blog",
         "published": "2024-11-26T14:00:45.000Z",
-        "source": "https://blog.langchain.com/customers-airtop/",
+        "source": "https://www.langchain.com/blog/customers-airtop/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 670
@@ -3328,7 +3328,7 @@
         "title": "Agent Protocol: Interoperability for LLM agents",
         "site": "LangChain Blog",
         "published": "2024-11-19T17:00:02.000Z",
-        "source": "https://blog.langchain.com/agent-protocol-interoperability-for-llm-agents/",
+        "source": "https://www.langchain.com/blog/agent-protocol-interoperability-for-llm-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 821
@@ -3337,7 +3337,7 @@
         "title": "LangSmith: Redesigned product homepage and Resource Tags for better organization",
         "site": "LangChain Blog",
         "published": "2024-11-19T15:59:58.000Z",
-        "source": "https://blog.langchain.com/langsmith-homepage-redesign-and-resource-tags/",
+        "source": "https://www.langchain.com/blog/langsmith-homepage-redesign-and-resource-tags/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 875
@@ -3346,7 +3346,7 @@
         "title": "How Dun & Bradstreet’s ChatD&B™ uses LangChain and LangSmith to deliver trusted, data-driven AI insights",
         "site": "LangChain Blog",
         "published": "2024-11-18T15:30:21.000Z",
-        "source": "https://blog.langchain.com/customers-dun-bradstreet/",
+        "source": "https://www.langchain.com/blog/customers-dun-bradstreet/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 954
@@ -3355,7 +3355,7 @@
         "title": "Promptim: an experimental library for prompt optimization",
         "site": "LangChain Blog",
         "published": "2024-11-13T18:09:41.000Z",
-        "source": "https://blog.langchain.com/promptim/",
+        "source": "https://www.langchain.com/blog/promptim/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 884
@@ -3364,7 +3364,7 @@
         "title": "Introducing Prompt Canvas: a Novel UX for Developing Prompts",
         "site": "LangChain Blog",
         "published": "2024-11-12T16:59:11.000Z",
-        "source": "https://blog.langchain.com/introducing-prompt-canvas/",
+        "source": "https://www.langchain.com/blog/introducing-prompt-canvas/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 649
@@ -3373,7 +3373,7 @@
         "title": "Composio’s SWE agent advances open-source on SweBench with a 48.6% score using LangGraph and LangSmith",
         "site": "LangChain Blog",
         "published": "2024-11-11T17:16:31.000Z",
-        "source": "https://blog.langchain.com/composio-swekit/",
+        "source": "https://www.langchain.com/blog/composio-swekit/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1294
@@ -3382,7 +3382,7 @@
         "title": "SCIPE - Systematic Chain Improvement and Problem Evaluation",
         "site": "LangChain Blog",
         "published": "2024-11-07T17:27:18.000Z",
-        "source": "https://blog.langchain.com/scipe-systematic-chain-improvement-and-problem-evaluation/",
+        "source": "https://www.langchain.com/blog/scipe-systematic-chain-improvement-and-problem-evaluation/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1273
@@ -3391,7 +3391,7 @@
         "title": "How Chaos Labs built a multi-agent system for resolution in prediction markets",
         "site": "LangChain Blog",
         "published": "2024-11-06T17:07:30.000Z",
-        "source": "https://blog.langchain.com/how-chaos-labs-built-a-multi-agent-system-for-resolution-in-prediction-markets/",
+        "source": "https://www.langchain.com/blog/how-chaos-labs-built-a-multi-agent-system-for-resolution-in-prediction-markets/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 890
@@ -3400,7 +3400,7 @@
         "title": "LangGraph Platform in beta: New deployment options for scalable agent infrastructure",
         "site": "LangChain Blog",
         "published": "2024-10-31T15:23:29.000Z",
-        "source": "https://blog.langchain.com/langgraph-platform-announce/",
+        "source": "https://www.langchain.com/blog/langgraph-platform-announce/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 941
@@ -3409,7 +3409,7 @@
         "title": "Communication is all you need",
         "site": "LangChain Blog",
         "published": "2024-10-26T16:28:29.000Z",
-        "source": "https://blog.langchain.com/communication-is-all-you-need/",
+        "source": "https://www.langchain.com/blog/communication-is-all-you-need/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1754
@@ -3418,7 +3418,7 @@
         "title": "LangChain's Second Birthday",
         "site": "LangChain Blog",
         "published": "2024-10-24T14:43:53.000Z",
-        "source": "https://blog.langchain.com/langchain-second-birthday/",
+        "source": "https://www.langchain.com/blog/langchain-second-birthday/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1420
@@ -3427,7 +3427,7 @@
         "title": "Memory for agents",
         "site": "LangChain Blog",
         "published": "2024-10-19T17:00:23.000Z",
-        "source": "https://blog.langchain.com/memory-for-agents/",
+        "source": "https://www.langchain.com/blog/memory-for-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1121
@@ -3436,7 +3436,7 @@
         "title": "How Rexera’s AI agents drive quality control with LangGraph",
         "site": "LangChain Blog",
         "published": "2024-10-09T20:14:27.000Z",
-        "source": "https://blog.langchain.com/customers-rexera/",
+        "source": "https://www.langchain.com/blog/customers-rexera/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 955
@@ -3445,7 +3445,7 @@
         "title": "Unify Launches Agents for Account Qualification using LangGraph and LangSmith",
         "site": "LangChain Blog",
         "published": "2024-10-08T17:23:51.000Z",
-        "source": "https://blog.langchain.com/unify-launches-agents-for-account-qualification-using-langgraph-and-langsmith/",
+        "source": "https://www.langchain.com/blog/unify-launches-agents-for-account-qualification-using-langgraph-and-langsmith/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1448
@@ -3454,7 +3454,7 @@
         "title": "Launching Long-Term Memory Support in LangGraph",
         "site": "LangChain Blog",
         "published": "2024-10-08T15:02:03.000Z",
-        "source": "https://blog.langchain.com/launching-long-term-memory-support-in-langgraph/",
+        "source": "https://www.langchain.com/blog/launching-long-term-memory-support-in-langgraph/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 496
@@ -3463,7 +3463,7 @@
         "title": "OpenRecovery: Transforming addiction recovery with LangGraph Platform",
         "site": "LangChain Blog",
         "published": "2024-10-03T16:02:44.000Z",
-        "source": "https://blog.langchain.com/customers-openrecovery/",
+        "source": "https://www.langchain.com/blog/customers-openrecovery/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 708
@@ -3472,7 +3472,7 @@
         "title": "Pushing LangSmith to new limits with Replit Agent's complex workflows",
         "site": "LangChain Blog",
         "published": "2024-09-26T18:22:15.000Z",
-        "source": "https://blog.langchain.com/customers-replit/",
+        "source": "https://www.langchain.com/blog/customers-replit/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 676
@@ -3481,7 +3481,7 @@
         "title": "Introducing Assistant Editor for configuring agents in LangGraph Studio",
         "site": "LangChain Blog",
         "published": "2024-09-25T17:14:19.000Z",
-        "source": "https://blog.langchain.com/asssistant-editor/",
+        "source": "https://www.langchain.com/blog/asssistant-editor/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 569
@@ -3490,7 +3490,7 @@
         "title": "How Tradestack launched their MVP in 6 weeks using LangGraph Cloud",
         "site": "LangChain Blog",
         "published": "2024-09-25T14:00:52.000Z",
-        "source": "https://blog.langchain.com/customers-tradestack/",
+        "source": "https://www.langchain.com/blog/customers-tradestack/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 973
@@ -3499,7 +3499,7 @@
         "title": "Launching LangGraph Templates",
         "site": "LangChain Blog",
         "published": "2024-09-19T15:27:28.000Z",
-        "source": "https://blog.langchain.com/launching-langgraph-templates/",
+        "source": "https://www.langchain.com/blog/launching-langgraph-templates/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 827
@@ -3508,7 +3508,7 @@
         "title": "Announcing LangChain v0.3",
         "site": "LangChain Blog",
         "published": "2024-09-16T16:40:01.000Z",
-        "source": "https://blog.langchain.com/announcing-langchain-v0-3/",
+        "source": "https://www.langchain.com/blog/announcing-langchain-v0-3/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 543
@@ -3517,7 +3517,7 @@
         "title": "Building a Data Visualization Agent with LangGraph Cloud",
         "site": "LangChain Blog",
         "published": "2024-09-12T16:17:24.000Z",
-        "source": "https://blog.langchain.com/data-viz-agent/",
+        "source": "https://www.langchain.com/blog/data-viz-agent/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 4455
@@ -3526,7 +3526,7 @@
         "title": "Build stateful conversational AI agents with LangGraph and assistant-ui",
         "site": "LangChain Blog",
         "published": "2024-09-11T15:44:40.000Z",
-        "source": "https://blog.langchain.com/assistant-ui/",
+        "source": "https://www.langchain.com/blog/assistant-ui/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 910
@@ -3535,7 +3535,7 @@
         "title": "How Paradigm runs and monitors thousands of agents in parallel with LangChain and LangSmith",
         "site": "LangChain Blog",
         "published": "2024-09-04T15:34:34.000Z",
-        "source": "https://blog.langchain.com/customers-paradigm/",
+        "source": "https://www.langchain.com/blog/customers-paradigm/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 695
@@ -3544,7 +3544,7 @@
         "title": "Build reliable agents in JavaScript with LangGraph.js v0.2: Now supporting Cloud and Studio",
         "site": "LangChain Blog",
         "published": "2024-09-03T14:52:36.000Z",
-        "source": "https://blog.langchain.com/javascript-langgraph-v02-cloud-studio/",
+        "source": "https://www.langchain.com/blog/javascript-langgraph-v02-cloud-studio/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 894
@@ -3553,7 +3553,7 @@
         "title": "How Podium optimized agent behavior and reduced engineering intervention by 90% with LangSmith",
         "site": "LangChain Blog",
         "published": "2024-08-15T14:00:04.000Z",
-        "source": "https://blog.langchain.com/customers-podium/",
+        "source": "https://www.langchain.com/blog/customers-podium/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1240
@@ -3562,7 +3562,7 @@
         "title": "LangChain Integration Docs: Find information faster with revamped pages & API references",
         "site": "LangChain Blog",
         "published": "2024-08-14T15:36:14.000Z",
-        "source": "https://blog.langchain.com/langchain-integration-docs-revamped/",
+        "source": "https://www.langchain.com/blog/langchain-integration-docs-revamped/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 532
@@ -3571,7 +3571,7 @@
         "title": "UX for Agents, Part 3: Spreadsheet, Generative, and Collaborative UI/UX",
         "site": "LangChain Blog",
         "published": "2024-08-10T14:00:36.000Z",
-        "source": "https://blog.langchain.com/ux-for-agents-part-3/",
+        "source": "https://www.langchain.com/blog/ux-for-agents-part-3/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 879
@@ -3580,7 +3580,7 @@
         "title": "LangGraph v0.2: Increased customization with new checkpointer libraries",
         "site": "LangChain Blog",
         "published": "2024-08-07T16:16:24.000Z",
-        "source": "https://blog.langchain.com/langgraph-v0-2/",
+        "source": "https://www.langchain.com/blog/langgraph-v0-2/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1036
@@ -3589,7 +3589,7 @@
         "title": "UX for Agents, Part 2: Ambient",
         "site": "LangChain Blog",
         "published": "2024-08-03T00:53:41.000Z",
-        "source": "https://blog.langchain.com/ux-for-agents-part-2-ambient/",
+        "source": "https://www.langchain.com/blog/ux-for-agents-part-2-ambient/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 958
@@ -3598,7 +3598,7 @@
         "title": "LangGraph Studio: The first agent IDE",
         "site": "LangChain Blog",
         "published": "2024-08-01T16:38:17.000Z",
-        "source": "https://blog.langchain.com/langgraph-studio-the-first-agent-ide/",
+        "source": "https://www.langchain.com/blog/langgraph-studio-the-first-agent-ide/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 890
@@ -3607,7 +3607,7 @@
         "title": "Dataset schemas for fast and iterative data curation in LangSmith",
         "site": "LangChain Blog",
         "published": "2024-07-31T12:17:07.000Z",
-        "source": "https://blog.langchain.com/dataset-schemas/",
+        "source": "https://www.langchain.com/blog/dataset-schemas/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 893
@@ -3616,7 +3616,7 @@
         "title": "UX for Agents, Part 1: Chat",
         "site": "LangChain Blog",
         "published": "2024-07-27T01:14:17.000Z",
-        "source": "https://blog.langchain.com/ux-for-agents-part-1-chat-2/",
+        "source": "https://www.langchain.com/blog/ux-for-agents-part-1-chat-2/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1000
@@ -3625,7 +3625,7 @@
         "title": "Few-shot prompting to improve tool-calling performance",
         "site": "LangChain Blog",
         "published": "2024-07-24T14:00:04.000Z",
-        "source": "https://blog.langchain.com/few-shot-prompting-to-improve-tool-calling-performance/",
+        "source": "https://www.langchain.com/blog/few-shot-prompting-to-improve-tool-calling-performance/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1992
@@ -3634,7 +3634,7 @@
         "title": "How Athena Intelligence optimized research reports with LangSmith, LangChain, and LangGraph",
         "site": "LangChain Blog",
         "published": "2024-07-22T02:02:31.000Z",
-        "source": "https://blog.langchain.com/customers-athena-intelligence/",
+        "source": "https://www.langchain.com/blog/customers-athena-intelligence/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 902
@@ -3643,7 +3643,7 @@
         "title": "Planning for Agents",
         "site": "LangChain Blog",
         "published": "2024-07-20T15:02:23.000Z",
-        "source": "https://blog.langchain.com/planning-for-agents/",
+        "source": "https://www.langchain.com/blog/planning-for-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1401
@@ -3652,7 +3652,7 @@
         "title": "Improving core tool interfaces and docs in LangChain",
         "site": "LangChain Blog",
         "published": "2024-07-18T16:55:18.000Z",
-        "source": "https://blog.langchain.com/improving-core-tool-interfaces-and-docs-in-langchain/",
+        "source": "https://www.langchain.com/blog/improving-core-tool-interfaces-and-docs-in-langchain/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 931
@@ -3661,7 +3661,7 @@
         "title": "How We Deployed our Multi-Agent Flow to LangGraph Cloud",
         "site": "LangChain Blog",
         "published": "2024-07-15T15:51:05.000Z",
-        "source": "https://blog.langchain.com/how-we-deployed-our-multi-agent-flow-to-langgraph-cloud-2/",
+        "source": "https://www.langchain.com/blog/how-we-deployed-our-multi-agent-flow-to-langgraph-cloud-2/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1177
@@ -3670,7 +3670,7 @@
         "title": "Why you should outsource your agentic infrastructure, but own your cognitive architecture",
         "site": "LangChain Blog",
         "published": "2024-07-13T13:25:35.000Z",
-        "source": "https://blog.langchain.com/why-you-should-outsource-your-agentic-infrastructure-but-own-your-cognitive-architecture/",
+        "source": "https://www.langchain.com/blog/why-you-should-outsource-your-agentic-infrastructure-but-own-your-cognitive-architecture/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 773
@@ -3679,7 +3679,7 @@
         "title": "[Week of 7/8] LangChain Release Notes",
         "site": "LangChain Blog",
         "published": "2024-07-12T15:15:28.000Z",
-        "source": "https://blog.langchain.com/week-of-7-8-langchain-release-notes/",
+        "source": "https://www.langchain.com/blog/week-of-7-8-langchain-release-notes/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 846
@@ -3688,7 +3688,7 @@
         "title": "LangSmith for the full product lifecycle: How Wordsmith quickly builds, debugs, and evaluates LLM performance in production",
         "site": "LangChain Blog",
         "published": "2024-07-09T04:56:13.000Z",
-        "source": "https://blog.langchain.com/customers-wordsmith/",
+        "source": "https://www.langchain.com/blog/customers-wordsmith/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 937
@@ -3697,7 +3697,7 @@
         "title": "What is a \"cognitive architecture\"?",
         "site": "LangChain Blog",
         "published": "2024-07-06T05:52:03.000Z",
-        "source": "https://blog.langchain.com/what-is-a-cognitive-architecture/",
+        "source": "https://www.langchain.com/blog/what-is-a-cognitive-architecture/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 751
@@ -3706,7 +3706,7 @@
         "title": "Jockey: A Conversational Video Agent Powered by Twelve Labs APIs and LangGraph",
         "site": "LangChain Blog",
         "published": "2024-07-03T18:06:58.000Z",
-        "source": "https://blog.langchain.com/jockey-twelvelabs-langgraph/",
+        "source": "https://www.langchain.com/blog/jockey-twelvelabs-langgraph/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1323
@@ -3715,7 +3715,7 @@
         "title": "Improving Memory Retrieval: How New Computer achieved 50% higher recall with LangSmith",
         "site": "LangChain Blog",
         "published": "2024-07-02T14:59:14.000Z",
-        "source": "https://blog.langchain.com/customers-new-computer/",
+        "source": "https://www.langchain.com/blog/customers-new-computer/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 832
@@ -3724,7 +3724,7 @@
         "title": "What is an AI agent?",
         "site": "LangChain Blog",
         "published": "2024-06-29T01:01:01.000Z",
-        "source": "https://blog.langchain.com/what-is-an-agent/",
+        "source": "https://www.langchain.com/blog/what-is-an-agent/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 922
@@ -3733,7 +3733,7 @@
         "title": "Announcing LangGraph v0.1 & LangGraph Cloud: Running agents at scale, reliably",
         "site": "LangChain Blog",
         "published": "2024-06-27T15:13:05.000Z",
-        "source": "https://blog.langchain.com/langgraph-cloud/",
+        "source": "https://www.langchain.com/blog/langgraph-cloud/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1290
@@ -3742,7 +3742,7 @@
         "title": "Aligning LLM-as-a-Judge with Human Preferences",
         "site": "LangChain Blog",
         "published": "2024-06-26T16:59:06.000Z",
-        "source": "https://blog.langchain.com/aligning-llm-as-a-judge-with-human-preferences/",
+        "source": "https://www.langchain.com/blog/aligning-llm-as-a-judge-with-human-preferences/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1256
@@ -3751,7 +3751,7 @@
         "title": "How Factory used LangSmith to automate their feedback loop and improve iteration speed by 2x",
         "site": "LangChain Blog",
         "published": "2024-06-19T15:16:54.000Z",
-        "source": "https://blog.langchain.com/customers-factory/",
+        "source": "https://www.langchain.com/blog/customers-factory/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 956
@@ -3760,7 +3760,7 @@
         "title": "Workspaces in LangSmith for improved collaboration and organization",
         "site": "LangChain Blog",
         "published": "2024-06-13T14:45:00.000Z",
-        "source": "https://blog.langchain.com/workspaces-in-langsmith/",
+        "source": "https://www.langchain.com/blog/workspaces-in-langsmith/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 773
@@ -3769,7 +3769,7 @@
         "title": "Documentation Refresh for LangChain v0.2",
         "site": "LangChain Blog",
         "published": "2024-05-20T16:19:15.000Z",
-        "source": "https://blog.langchain.com/documentation-refresh-for-langchain-v0-2/",
+        "source": "https://www.langchain.com/blog/documentation-refresh-for-langchain-v0-2/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 708
@@ -3778,7 +3778,7 @@
         "title": "Integrating LangChain with Azure Container Apps dynamic sessions",
         "site": "LangChain Blog",
         "published": "2024-05-16T17:57:28.000Z",
-        "source": "https://blog.langchain.com/integrating-langchain-with-azure-container-apps-dynamic-sessions/",
+        "source": "https://www.langchain.com/blog/integrating-langchain-with-azure-container-apps-dynamic-sessions/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 687
@@ -3787,7 +3787,7 @@
         "title": "Pairwise Evaluations with LangSmith",
         "site": "LangChain Blog",
         "published": "2024-05-15T15:00:44.000Z",
-        "source": "https://blog.langchain.com/pairwise-evaluations-with-langsmith/",
+        "source": "https://www.langchain.com/blog/pairwise-evaluations-with-langsmith/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 965
@@ -3796,7 +3796,7 @@
         "title": "LangChain v0.2: A Leap Towards Stability",
         "site": "LangChain Blog",
         "published": "2024-05-10T16:16:38.000Z",
-        "source": "https://blog.langchain.com/langchain-v02-leap-to-stability/",
+        "source": "https://www.langchain.com/blog/langchain-v02-leap-to-stability/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1123
@@ -3805,7 +3805,7 @@
         "title": "How to Build the Ultimate AI Automation with Multi-Agent Collaboration",
         "site": "LangChain Blog",
         "published": "2024-05-09T18:55:22.000Z",
-        "source": "https://blog.langchain.com/how-to-build-the-ultimate-ai-automation-with-multi-agent-collaboration/",
+        "source": "https://www.langchain.com/blog/how-to-build-the-ultimate-ai-automation-with-multi-agent-collaboration/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1927
@@ -3814,7 +3814,7 @@
         "title": "Role Based Access Control (RBAC) for LangSmith",
         "site": "LangChain Blog",
         "published": "2024-05-08T15:30:00.000Z",
-        "source": "https://blog.langchain.com/access-control-updates-for-langsmith/",
+        "source": "https://www.langchain.com/blog/access-control-updates-for-langsmith/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 506
@@ -3823,7 +3823,7 @@
         "title": "How Dosu Used LangSmith to Achieve a 30% Accuracy Improvement with No Prompt Engineering",
         "site": "LangChain Blog",
         "published": "2024-05-02T15:16:51.000Z",
-        "source": "https://blog.langchain.com/dosu-langsmith-no-prompt-eng/",
+        "source": "https://www.langchain.com/blog/dosu-langsmith-no-prompt-eng/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1605
@@ -3832,7 +3832,7 @@
         "title": "Regression Testing with LangSmith",
         "site": "LangChain Blog",
         "published": "2024-05-01T16:23:06.000Z",
-        "source": "https://blog.langchain.com/regression-testing/",
+        "source": "https://www.langchain.com/blog/regression-testing/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 713
@@ -3841,7 +3841,7 @@
         "title": "Graph-based metadata filtering for improving vector search in RAG applications",
         "site": "LangChain Blog",
         "published": "2024-04-25T15:30:52.000Z",
-        "source": "https://blog.langchain.com/graph-based-metadata-filtering-for-improving-vector-search-in-rag-applications/",
+        "source": "https://www.langchain.com/blog/graph-based-metadata-filtering-for-improving-vector-search-in-rag-applications/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 2574
@@ -3850,7 +3850,7 @@
         "title": "Announcing LangSmith is now a transactable offering in the Azure Marketplace",
         "site": "LangChain Blog",
         "published": "2024-04-24T15:03:59.000Z",
-        "source": "https://blog.langchain.com/announcing-langsmith-is-now-a-transactable-offering-in-the-azure-marketplace/",
+        "source": "https://www.langchain.com/blog/announcing-langsmith-is-now-a-transactable-offering-in-the-azure-marketplace/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 917
@@ -3859,7 +3859,7 @@
         "title": "Empowering Development with FlowTestAI: Bridging APIs and LLMs for Enhanced Testing and Privacy",
         "site": "LangChain Blog",
         "published": "2024-04-22T15:48:58.000Z",
-        "source": "https://blog.langchain.com/empowering-development-with-flowtestai/",
+        "source": "https://www.langchain.com/blog/empowering-development-with-flowtestai/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1635
@@ -3868,7 +3868,7 @@
         "title": "Tool Calling with LangChain",
         "site": "LangChain Blog",
         "published": "2024-04-11T16:46:57.000Z",
-        "source": "https://blog.langchain.com/tool-calling-with-langchain/",
+        "source": "https://www.langchain.com/blog/tool-calling-with-langchain/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1511
@@ -3877,7 +3877,7 @@
         "title": "Rethinking Our Documentation",
         "site": "LangChain Blog",
         "published": "2024-04-05T15:18:25.000Z",
-        "source": "https://blog.langchain.com/langchain-documentation-refresh/",
+        "source": "https://www.langchain.com/blog/langchain-documentation-refresh/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1035
@@ -3886,7 +3886,7 @@
         "title": "LangSmith: Production Monitoring & Automations",
         "site": "LangChain Blog",
         "published": "2024-04-02T15:41:23.000Z",
-        "source": "https://blog.langchain.com/langsmith-production-logging-automations/",
+        "source": "https://www.langchain.com/blog/langsmith-production-logging-automations/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1456
@@ -3895,7 +3895,7 @@
         "title": "LangFriend: a Journal with Long-Term Memory",
         "site": "LangChain Blog",
         "published": "2024-03-28T16:03:00.000Z",
-        "source": "https://blog.langchain.com/langfriend/",
+        "source": "https://www.langchain.com/blog/langfriend/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1282
@@ -3904,7 +3904,7 @@
         "title": "Open Source Extraction Service",
         "site": "LangChain Blog",
         "published": "2024-03-26T15:15:35.000Z",
-        "source": "https://blog.langchain.com/open-source-extraction-service/",
+        "source": "https://www.langchain.com/blog/open-source-extraction-service/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1426
@@ -3913,7 +3913,7 @@
         "title": "Using Feedback to Improve Your Application: Self Learning GPTs",
         "site": "LangChain Blog",
         "published": "2024-03-20T16:38:28.000Z",
-        "source": "https://blog.langchain.com/self-learning-gpts/",
+        "source": "https://www.langchain.com/blog/self-learning-gpts/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1133
@@ -3922,7 +3922,7 @@
         "title": "LangChain Integrates NVIDIA NIM for GPU-optimized LLM Inference in RAG",
         "site": "LangChain Blog",
         "published": "2024-03-18T22:00:45.000Z",
-        "source": "https://blog.langchain.com/nvidia-nim/",
+        "source": "https://www.langchain.com/blog/nvidia-nim/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 868
@@ -3931,7 +3931,7 @@
         "title": "Enhancing RAG-based application accuracy by constructing and leveraging knowledge graphs",
         "site": "LangChain Blog",
         "published": "2024-03-15T18:01:37.000Z",
-        "source": "https://blog.langchain.com/enhancing-rag-based-applications-accuracy-by-constructing-and-leveraging-knowledge-graphs/",
+        "source": "https://www.langchain.com/blog/enhancing-rag-based-applications-accuracy-by-constructing-and-leveraging-knowledge-graphs/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1769
@@ -3940,7 +3940,7 @@
         "title": "Benchmarking Query Analysis in High Cardinality Situations",
         "site": "LangChain Blog",
         "published": "2024-03-15T15:15:19.000Z",
-        "source": "https://blog.langchain.com/high-cardinality/",
+        "source": "https://www.langchain.com/blog/high-cardinality/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1446
@@ -3949,7 +3949,7 @@
         "title": "Multi Needle in a Haystack",
         "site": "LangChain Blog",
         "published": "2024-03-13T16:02:08.000Z",
-        "source": "https://blog.langchain.com/multi-needle-in-a-haystack/",
+        "source": "https://www.langchain.com/blog/multi-needle-in-a-haystack/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1274
@@ -3958,7 +3958,7 @@
         "title": "Iterating Towards LLM Reliability with Evaluation Driven Development",
         "site": "LangChain Blog",
         "published": "2024-03-11T15:11:53.000Z",
-        "source": "https://blog.langchain.com/iterating-towards-llm-reliability-with-evaluation-driven-development/",
+        "source": "https://www.langchain.com/blog/iterating-towards-llm-reliability-with-evaluation-driven-development/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1555
@@ -3967,7 +3967,7 @@
         "title": "Use Case Accelerant: Extraction Service",
         "site": "LangChain Blog",
         "published": "2024-03-06T18:00:35.000Z",
-        "source": "https://blog.langchain.com/use-case-accelerant-extraction-service/",
+        "source": "https://www.langchain.com/blog/use-case-accelerant-extraction-service/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1882
@@ -3976,7 +3976,7 @@
         "title": "LangGraph for Code Generation",
         "site": "LangChain Blog",
         "published": "2024-02-27T16:10:00.000Z",
-        "source": "https://blog.langchain.com/code-execution-with-langgraph/",
+        "source": "https://www.langchain.com/blog/code-execution-with-langgraph/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 980
@@ -3985,7 +3985,7 @@
         "title": "Reflection Agents",
         "site": "LangChain Blog",
         "published": "2024-02-21T09:29:10.000Z",
-        "source": "https://blog.langchain.com/reflection-agents/",
+        "source": "https://www.langchain.com/blog/reflection-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1289
@@ -3994,7 +3994,7 @@
         "title": "JSON agents with Ollama & LangChain",
         "site": "LangChain Blog",
         "published": "2024-02-20T17:24:29.000Z",
-        "source": "https://blog.langchain.com/json-based-agents-with-ollama-and-langchain/",
+        "source": "https://www.langchain.com/blog/json-based-agents-with-ollama-and-langchain/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1731
@@ -4003,7 +4003,7 @@
         "title": "Supercharging If-Statements With Prompt Classification Using Ollama and LangChain",
         "site": "LangChain Blog",
         "published": "2024-02-19T17:16:07.000Z",
-        "source": "https://blog.langchain.com/supercharging-if-statements-with-prompt-classification-using-ollama-and-langchain/",
+        "source": "https://www.langchain.com/blog/supercharging-if-statements-with-prompt-classification-using-ollama-and-langchain/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1431
@@ -4012,7 +4012,7 @@
         "title": "Announcing the General Availability of LangSmith and Our Series A Led By Sequoia Capital",
         "site": "LangChain Blog",
         "published": "2024-02-15T16:00:38.000Z",
-        "source": "https://blog.langchain.com/langsmith-ga/",
+        "source": "https://www.langchain.com/blog/langsmith-ga/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1404
@@ -4021,7 +4021,7 @@
         "title": "Rakuten Group builds with LangChain and LangSmith to deliver premium products for its business clients and employees",
         "site": "LangChain Blog",
         "published": "2024-02-14T20:20:31.000Z",
-        "source": "https://blog.langchain.com/customers-rakuten/",
+        "source": "https://www.langchain.com/blog/customers-rakuten/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 766
@@ -4030,7 +4030,7 @@
         "title": "How Dataherald Makes Natural Language to SQL Easy",
         "site": "LangChain Blog",
         "published": "2024-02-14T17:09:09.000Z",
-        "source": "https://blog.langchain.com/dataherald/",
+        "source": "https://www.langchain.com/blog/dataherald/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 748
@@ -4039,7 +4039,7 @@
         "title": "Plan-and-Execute Agents",
         "site": "LangChain Blog",
         "published": "2024-02-13T16:35:24.000Z",
-        "source": "https://blog.langchain.com/planning-agents/",
+        "source": "https://www.langchain.com/blog/planning-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1192
@@ -4048,7 +4048,7 @@
         "title": "BCG X Releases AgentKit, a Full-Stack Starter Kit for Building Constrained Agents",
         "site": "LangChain Blog",
         "published": "2024-02-12T16:38:19.000Z",
-        "source": "https://blog.langchain.com/bcg-x-releases-agentkit-a-full-stack-starter-kit-for-building-constrained-agents/",
+        "source": "https://www.langchain.com/blog/bcg-x-releases-agentkit-a-full-stack-starter-kit-for-building-constrained-agents/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1125
@@ -4057,7 +4057,7 @@
         "title": "LangChain Partners with CommandBar on their Copilot User Assistant",
         "site": "LangChain Blog",
         "published": "2024-02-08T21:10:49.000Z",
-        "source": "https://blog.langchain.com/langchain-partners-with-commandbar-on-their-copilot-user-assistant/",
+        "source": "https://www.langchain.com/blog/langchain-partners-with-commandbar-on-their-copilot-user-assistant/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 533
@@ -4066,7 +4066,7 @@
         "title": "Human-in-the-loop with OpenGPTs and LangGraph",
         "site": "LangChain Blog",
         "published": "2024-02-08T16:56:41.000Z",
-        "source": "https://blog.langchain.com/human-in-the-loop-with-opengpts-and-langgraph/",
+        "source": "https://www.langchain.com/blog/human-in-the-loop-with-opengpts-and-langgraph/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 671
@@ -4075,7 +4075,7 @@
         "title": "Self-Reflective RAG with LangGraph",
         "site": "LangChain Blog",
         "published": "2024-02-07T16:47:25.000Z",
-        "source": "https://blog.langchain.com/agentic-rag-with-langgraph/",
+        "source": "https://www.langchain.com/blog/agentic-rag-with-langgraph/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1303
@@ -4084,7 +4084,7 @@
         "title": "Meet Connery: An Open-Source Plugin Infrastructure for OpenGPTs and LLM apps",
         "site": "LangChain Blog",
         "published": "2024-02-07T16:41:33.000Z",
-        "source": "https://blog.langchain.com/meet-connery-an-open-source-plugin-infrastructure-for-opengpts-and-llm-apps/",
+        "source": "https://www.langchain.com/blog/meet-connery-an-open-source-plugin-infrastructure-for-opengpts-and-llm-apps/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1835
@@ -4093,7 +4093,7 @@
         "title": "Generating Usable Text with AI",
         "site": "LangChain Blog",
         "published": "2024-02-05T19:47:37.000Z",
-        "source": "https://blog.langchain.com/generating-usable-text-with-ai/",
+        "source": "https://www.langchain.com/blog/generating-usable-text-with-ai/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 2135
@@ -4102,7 +4102,7 @@
         "title": "OpenGPTs",
         "site": "LangChain Blog",
         "published": "2024-01-31T16:47:26.000Z",
-        "source": "https://blog.langchain.com/opengpts/",
+        "source": "https://www.langchain.com/blog/opengpts/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1532
@@ -4111,7 +4111,7 @@
         "title": "LangSmith's Latest Feature: Grouped Monitoring Charts",
         "site": "LangChain Blog",
         "published": "2024-01-30T17:55:48.000Z",
-        "source": "https://blog.langchain.com/grouped-monitoring-charts/",
+        "source": "https://www.langchain.com/blog/grouped-monitoring-charts/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 783
@@ -4120,7 +4120,7 @@
         "title": "LangChain partners with Elastic to launch the Elastic AI Assistant",
         "site": "LangChain Blog",
         "published": "2024-01-30T17:52:47.000Z",
-        "source": "https://blog.langchain.com/langchain-partners-with-elastic-to-launch-the-elastic-ai-assistant/",
+        "source": "https://www.langchain.com/blog/langchain-partners-with-elastic-to-launch-the-elastic-ai-assistant/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 881
@@ -4129,7 +4129,7 @@
         "title": "Mental Health Therapy as an LLM State Machine",
         "site": "LangChain Blog",
         "published": "2024-01-26T16:55:34.000Z",
-        "source": "https://blog.langchain.com/mental-health-therapy-as-an-llm-state-machine/",
+        "source": "https://www.langchain.com/blog/mental-health-therapy-as-an-llm-state-machine/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1457
@@ -4138,7 +4138,7 @@
         "title": "How Mendable leverages LangSmith to debug Tools & Actions",
         "site": "LangChain Blog",
         "published": "2024-01-25T17:38:20.000Z",
-        "source": "https://blog.langchain.com/how-mendable-leverages-langsmith-to-debug-tools-actions/",
+        "source": "https://www.langchain.com/blog/how-mendable-leverages-langsmith-to-debug-tools-actions/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1287
@@ -4147,7 +4147,7 @@
         "title": "LangGraph: Multi-Agent Workflows",
         "site": "LangChain Blog",
         "published": "2024-01-23T17:32:37.000Z",
-        "source": "https://blog.langchain.com/langgraph-multi-agent-workflows/",
+        "source": "https://www.langchain.com/blog/langgraph-multi-agent-workflows/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1261
@@ -4156,7 +4156,7 @@
         "title": "LangGraph",
         "site": "LangChain Blog",
         "published": "2024-01-17T17:46:54.000Z",
-        "source": "https://blog.langchain.com/langgraph/",
+        "source": "https://www.langchain.com/blog/langgraph/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1853
@@ -4165,7 +4165,7 @@
         "title": "Build and deploy a RAG app with Pinecone Serverless",
         "site": "LangChain Blog",
         "published": "2024-01-16T14:16:07.000Z",
-        "source": "https://blog.langchain.com/pinecone-serverless/",
+        "source": "https://www.langchain.com/blog/pinecone-serverless/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 608
@@ -4174,7 +4174,7 @@
         "title": "Ally Financial Collaborates with LangChain to Deliver Critical Coding Module to Mask Personal Identifying Information in a Compliant and Safe Manner",
         "site": "LangChain Blog",
         "published": "2024-01-11T16:33:43.000Z",
-        "source": "https://blog.langchain.com/ally-financial-collaborates-with-langchain-to-deliver-critical-coding-module-to-mask-personal-identifying-information-in-a-compliant-and-safe-manner/",
+        "source": "https://www.langchain.com/blog/ally-financial-collaborates-with-langchain-to-deliver-critical-coding-module-to-mask-personal-identifying-information-in-a-compliant-and-safe-manner/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1305
@@ -4183,7 +4183,7 @@
         "title": "LangChain v0.1.0",
         "site": "LangChain Blog",
         "published": "2024-01-08T16:39:54.000Z",
-        "source": "https://blog.langchain.com/langchain-v0-1-0/",
+        "source": "https://www.langchain.com/blog/langchain-v0-1-0/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 2710
@@ -4192,7 +4192,7 @@
         "title": "LangChain State of AI 2023",
         "site": "LangChain Blog",
         "published": "2023-12-21T16:20:36.000Z",
-        "source": "https://blog.langchain.com/langchain-state-of-ai-2023/",
+        "source": "https://www.langchain.com/blog/langchain-state-of-ai-2023/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1504
@@ -4201,7 +4201,7 @@
         "title": "Benchmarking Agent Tool Use",
         "site": "LangChain Blog",
         "published": "2023-12-20T06:28:18.000Z",
-        "source": "https://blog.langchain.com/benchmarking-agent-tool-use/",
+        "source": "https://www.langchain.com/blog/benchmarking-agent-tool-use/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 2890
@@ -4210,7 +4210,7 @@
         "title": "How Rubric Labs and Graphite leveraged LLMs to create personalized videos at scale",
         "site": "LangChain Blog",
         "published": "2023-12-19T18:27:38.000Z",
-        "source": "https://blog.langchain.com/rubric-labs-graphite-personalized-video-at-scale/",
+        "source": "https://www.langchain.com/blog/rubric-labs-graphite-personalized-video-at-scale/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1603
@@ -4219,7 +4219,7 @@
         "title": "Benchmarking RAG on tables",
         "site": "LangChain Blog",
         "published": "2023-12-13T16:21:48.000Z",
-        "source": "https://blog.langchain.com/benchmarking-rag-on-tables/",
+        "source": "https://www.langchain.com/blog/benchmarking-rag-on-tables/",
         "domain": "blog.langchain.com",
         "language": "en",
         "wordCount": 1130

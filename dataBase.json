@@ -5,12 +5,21 @@
     "posts": [
       {
         "title": "Quantifying infrastructure noise in agentic coding evals",
-        "site": "Anthropic",
+        "site": "",
         "published": "",
         "source": "https://www.anthropic.com/engineering/infrastructure-noise",
-        "domain": "anthropic.com",
+        "domain": "",
         "language": "en",
         "wordCount": 1784
+      },
+      {
+        "title": "Scaling Managed Agents: Decoupling the brain from the hands",
+        "site": "",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/managed-agents",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2065
       },
       {
         "title": "Claude Code auto mode: a safer way to skip permissions",

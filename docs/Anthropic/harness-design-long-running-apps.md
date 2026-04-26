@@ -1,9 +1,9 @@
 ---
 title: "Harness design for long-running application development"
-site: "Anthropic"
-published: 
+site: ""
+published: ""
 source: "https://www.anthropic.com/engineering/harness-design-long-running-apps"
-domain: "anthropic.com"
+domain: ""
 language: "en"
 word_count: 5166
 ---
@@ -16,7 +16,7 @@ word_count: 5166
 
 Over the past several months I’ve been working on two interconnected problems: getting Claude to produce high-quality frontend designs, and getting it to build complete applications without human intervention. This work originated with earlier efforts on our [frontend design skill](https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md) and [long-running coding agent harness](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents), where my colleagues and I were able to improve Claude’s performance well above baseline through prompt engineering and harness design—but both eventually hit ceilings.
 
-To break through, I sought out novel AI engineering approaches that held across two quite different domains, one defined by subjective taste, the other by verifiable correctness and usability. Taking inspiration from [Generative Adversarial Networks](https://en.wikipedia.org/wiki/Generative_adversarial_network) (GANs), I designed a multi-agent structure with a **generator** and **evaluator** agent. Building an evaluator that graded outputs reliably—and with taste—meant first developing a set of criteria that could turn subjective judgments like “is this design good?” into concrete, gradable terms.
+To break through, I sought out novel AI engineering approaches that held across two quite different domains, one defined by subjective taste, the other by verifiable correctness and usability. Taking inspiration from [Generative Adversarial Networks](https://en.wikipedia.org/wiki/Generative\_adversarial\_network) (GANs), I designed a multi-agent structure with a **generator** and **evaluator** agent. Building an evaluator that graded outputs reliably—and with taste—meant first developing a set of criteria that could turn subjective judgments like “is this design good?” into concrete, gradable terms.
 
 I then applied these techniques to long-running autonomous coding, carrying over two lessons from our earlier harness work: decomposing the build into tractable chunks, and using structured artifacts to hand off context between sessions. The final result was a three-agent architecture—planner, generator, and evaluator—that produced rich full-stack applications over multi-hour autonomous coding sessions.
 
@@ -87,7 +87,7 @@ For the first version of this harness, I used Claude Opus 4.5, running user prom
 
 I wrote the following prompt to generate a retro video game maker:
 
-> *Create a 2D retro game maker with features including a level editor, sprite editor, entity behaviors, and a playable test mode.*
+\> *Create a 2D retro game maker with features including a level editor, sprite editor, entity behaviors, and a playable test mode.*
 
 The table below shows the harness type, length it ran for, and the total cost.
 
@@ -102,7 +102,7 @@ I was expecting an interface where I could construct a level and its component p
 
 As I clicked through, however, issues started to emerge. The layout wasted space, with fixed-height panels leaving most of the viewport empty. The workflow was rigid. Trying to populate a level prompted me to create sprites and entities first, but nothing in the UI guided me toward that sequence. More to the point, the actual game was broken. My entities appeared on screen but nothing responded to input. Digging into the code revealed that the wiring between entity definitions and the game runtime was broken, with no surface indication of where.
 
-![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F23c98f1d7ae720bfb39190d50e0706c03b177ad8-1999x1320.png&w=3840&q=75)
+![](https://www.anthropic.com/\_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F23c98f1d7ae720bfb39190d50e0706c03b177ad8-1999x1320.png&w=3840&q=75)
 
 Initial screen when opening the app created by the solo harness.
 
@@ -116,7 +116,7 @@ Working through the editors, the new run's advantages over solo became more appa
 
 Because I'd asked the planner to weave AI features into its specs, the app also came with a built-in Claude integration that let me generate different parts of the game through prompting. This significantly sped up the workflow.
 
-![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fa8bef95425966495629095a5cb38bde4a8b13558-1999x997.png&w=3840&q=75)
+![](https://www.anthropic.com/\_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fa8bef95425966495629095a5cb38bde4a8b13558-1999x997.png&w=3840&q=75)
 
 Initial screen: Creating a new game, in the app built with the full harness
 
@@ -128,7 +128,7 @@ Reading through the logs, it was clear that the evaluator kept the implementatio
 | --- | --- |
 | Rectangle fill tool allows click-drag to fill a rectangular area with selected tile | **FAIL** — Tool only places tiles at drag start/end points instead of filling the region. `fillRectangle` function exists but isn't triggered properly on mouseUp. |
 | User can select and delete placed entity spawn points | **FAIL** — Delete key handler at `LevelEditor.tsx:892` requires both `selection` and `selectedEntityId ` to be set, but clicking an entity only sets `selectedEntityId`. Condition should be `selection \|\| (selectedEntityId && activeLayer === 'entity')`. |
-| User can reorder animation frames via API | **FAIL** — `PUT /frames/reorder` route defined after `/{frame_id}` routes. FastAPI matches 'r `eorder` ' as a frame\_id integer and returns 422: "unable to parse string as an integer." |
+| User can reorder animation frames via API | **FAIL** — `PUT /frames/reorder` route defined after `/{frame\_id}` routes. FastAPI matches 'r `eorder` ' as a frame\_id integer and returns 422: "unable to parse string as an integer." |
 
 Getting the evaluator to perform at this level took work. Out of the box, Claude is a poor QA agent. In early runs, I watched it identify legitimate issues, then talk itself into deciding they weren't a big deal and approve the work anyway. It also tended to test superficially, rather than probing edge cases, so more subtle bugs often slipped through. The tuning loop was to read the evaluator's logs, find examples where its judgment diverged from mine, and update the QAs prompt to solve for those issues. It took several rounds of this development loop before the evaluator was grading in a way that I found reasonable. Even then, the harness output showed the limits of the model’s QAing capabilities: small layout issues, interactions that felt unintuitive in places, and undiscovered bugs in more deeply nested features that the evaluator hadn't exercised thoroughly. There was clearly more verification headroom to capture with further tuning. But compared to the solo run, where the central feature of the application simply didn't work, the lift was obvious.
 
@@ -156,7 +156,7 @@ Alongside the structural simplification, I also added prompting to improve how t
 
 To put the updated harness to the test, I used the following prompt to generate a Digital Audio Workstation (DAW), a music production program for composing, recording, and mixing songs:
 
-> *Build a fully featured DAW in the browser using the Web Audio API.*
+\> *Build a fully featured DAW in the browser using the Web Audio API.*
 
 The run was still lengthy and expensive, at about 4 hours and $124 in token costs.
 
@@ -177,14 +177,14 @@ As with the previous harness, the planner expanded the one-line prompt into a fu
 
 That being said, the QA agent still caught real gaps. In its first-round feedback, it noted:
 
-> This is a strong app with excellent design fidelity, solid AI agent, and good backend. The main failure point is Feature Completeness — while the app looks impressive and the AI integration works well, several core DAW features are display-only without interactive depth: clips can't be dragged/moved on the timeline, there are no instrument UI panels (synth knobs, drum pads), and no visual effect editors (EQ curves, compressor meters). These aren't edge cases — they're the core interactions that make a DAW usable, and the spec explicitly calls for them.
+\> This is a strong app with excellent design fidelity, solid AI agent, and good backend. The main failure point is Feature Completeness — while the app looks impressive and the AI integration works well, several core DAW features are display-only without interactive depth: clips can't be dragged/moved on the timeline, there are no instrument UI panels (synth knobs, drum pads), and no visual effect editors (EQ curves, compressor meters). These aren't edge cases — they're the core interactions that make a DAW usable, and the spec explicitly calls for them.
 
 In its second round feedback, it again caught several functionality gaps:
 
-> Remaining gaps:  
-> \- Audio recording is still stub-only (button toggles but no mic capture)  
-> \- Clip resize by edge drag and clip split not implemented  
-> \- Effect visualizations are numeric sliders, not graphical (no EQ curve)
+\> Remaining gaps:  
+\> \- Audio recording is still stub-only (button toggles but no mic capture)  
+\> \- Clip resize by edge drag and clip split not implemented  
+\> \- Effect visualizations are numeric sliders, not graphical (no EQ curve)
 
 The generator was still liable to miss details or stub features when left to its own devices, and the QA still added value in catching those last mile issues for the generator to fix.
 

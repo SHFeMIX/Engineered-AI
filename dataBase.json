@@ -4,13 +4,13 @@
     "link": "https://www.anthropic.com/engineering",
     "posts": [
       {
-        "title": "Quantifying infrastructure noise in agentic coding evals",
+        "title": "An update on recent Claude Code quality reports",
         "site": "",
         "published": "",
-        "source": "https://www.anthropic.com/engineering/infrastructure-noise",
+        "source": "https://www.anthropic.com/engineering/april-23-postmortem",
         "domain": "",
         "language": "en",
-        "wordCount": 1784
+        "wordCount": 1695
       },
       {
         "title": "Scaling Managed Agents: Decoupling the brain from the hands",
@@ -47,6 +47,15 @@
         "domain": "anthropic.com",
         "language": "en",
         "wordCount": 2046
+      },
+      {
+        "title": "Quantifying infrastructure noise in agentic coding evals",
+        "site": "",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/infrastructure-noise",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1784
       },
       {
         "title": "Building a C compiler with a team of parallel Claudes",
@@ -207,6 +216,24 @@
     "title": "Claude",
     "link": "https://claude.com/blog",
     "posts": [
+      {
+        "title": "New connectors in Claude for everyday life",
+        "site": "Claude",
+        "published": "Apr 23, 2026",
+        "source": "https://claude.com/blog/connectors-for-everyday-life",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 494
+      },
+      {
+        "title": "Built-in memory for Claude Managed Agents",
+        "site": "Claude",
+        "published": "Apr 23, 2026",
+        "source": "https://claude.com/blog/claude-managed-agents-memory",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 451
+      },
       {
         "title": "Building agents that reach production systems with MCP",
         "site": "Claude",

@@ -4263,6 +4263,15 @@
     "link": "https://www.philschmid.de",
     "posts": [
       {
+        "title": "How to correctly use MCP servers with your AI Agents",
+        "site": "Philipp Schmid",
+        "published": "2026-04-27",
+        "source": "https://www.philschmid.de/use-mcp-servers",
+        "domain": "",
+        "language": "en",
+        "wordCount": 525
+      },
+      {
         "title": "8 Tips for Writing Agent Skills",
         "site": "Philipp Schmid",
         "published": "2026-04-13",

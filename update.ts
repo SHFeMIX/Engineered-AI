@@ -17,7 +17,7 @@ async function getDOMFromLink(url: string): Promise<Document> {
     return dom.window.document
 }
 
-// 转义 content 中的 _, <, >，以及 HTML 标签
+// 转义 content 中的 _, <, >
 function escapeContent(content: string): string {
     // 转义 _, <, >
     return content.replace(/(?<!\\)([_<>])/g, '\\$&')

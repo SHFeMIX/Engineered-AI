@@ -217,6 +217,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Onboarding Claude Code like a new developer: Lessons from 17 years of development",
+        "site": "Claude",
+        "published": "Apr 28, 2026",
+        "source": "https://claude.com/blog/onboarding-claude-code-like-a-new-developer-lessons-from-17-years-of-development",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1506
+      },
+      {
         "title": "New connectors in Claude for everyday life",
         "site": "Claude",
         "published": "Apr 23, 2026",
@@ -1302,6 +1311,15 @@
     "title": "Cursor",
     "link": "https://cursor.com/blog",
     "posts": [
+      {
+        "title": "Build programmatic agents with the Cursor SDK · Cursor",
+        "site": "Cursor",
+        "published": "2026-04-29T12:00:00.000Z, 2026-04-29T12:00:00.000Z",
+        "source": "https://cursor.com/blog/typescript-sdk",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 999
+      },
       {
         "title": "Cursor partners with SpaceX on model training · Cursor",
         "site": "Cursor",
@@ -4262,6 +4280,15 @@
     "title": "PhilSchmid",
     "link": "https://www.philschmid.de",
     "posts": [
+      {
+        "title": "How to use Deep Research with the Gemini API",
+        "site": "Philipp Schmid",
+        "published": "2026-04-29",
+        "source": "https://www.philschmid.de/deep-research-update",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1201
+      },
       {
         "title": "How to correctly use MCP servers with your AI Agents",
         "site": "Philipp Schmid",

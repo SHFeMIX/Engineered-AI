@@ -217,6 +217,33 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Deploying Claude across the enterprise with Claude Cowork",
+        "site": "Claude",
+        "published": "Apr 29, 2026",
+        "source": "https://claude.com/blog/new-guide-deploying-claude-across-the-enterprise-with-claude-cowork",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 323
+      },
+      {
+        "title": "Claude API skill now in CodeRabbit, JetBrains, Resolve AI, and Warp",
+        "site": "Claude",
+        "published": "Apr 29, 2026",
+        "source": "https://claude.com/blog/claude-api-skill",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 332
+      },
+      {
+        "title": "Product development in the agentic era",
+        "site": "Claude",
+        "published": "Apr 29, 2026",
+        "source": "https://claude.com/blog/product-development-in-the-agentic-era",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 941
+      },
+      {
         "title": "Onboarding Claude Code like a new developer: Lessons from 17 years of development",
         "site": "Claude",
         "published": "Apr 28, 2026",
@@ -1312,6 +1339,15 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "Continually improving our agent harness · Cursor",
+        "site": "Cursor",
+        "published": "2026-04-29T12:00:00.000Z, 2026-04-29T12:00:00.000Z",
+        "source": "https://cursor.com/blog/continually-improving-our-agent-harness",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1923
+      },
+      {
         "title": "Build programmatic agents with the Cursor SDK · Cursor",
         "site": "Cursor",
         "published": "2026-04-29T12:00:00.000Z, 2026-04-29T12:00:00.000Z",
@@ -1965,6 +2001,51 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Tuning Deep Agents to Work Well with Different Models",
+        "site": "LangChain Blog",
+        "published": "2026-04-29T17:00:00.000Z",
+        "source": "https://www.langchain.com/blog/tuning-deep-agents-different-models",
+        "domain": "",
+        "language": "en",
+        "wordCount": 979
+      },
+      {
+        "title": "How Madrigal Built a Flexible and Scalable Multi-Agent Research and Intelligence Platform for Pharma with LangChain and LangSmith",
+        "site": "LangChain Blog",
+        "published": "2026-04-29T16:00:00.000Z",
+        "source": "https://www.langchain.com/blog/customers-madrigal",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2344
+      },
+      {
+        "title": "Interrupt Preview: Meet the MC",
+        "site": "LangChain Blog",
+        "published": "2026-04-28T17:00:00.000Z",
+        "source": "https://www.langchain.com/blog/interrupt-preview-meet-the-mc",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1288
+      },
+      {
+        "title": "How LangSmith and LangChain OSS Help You Meet EU AI Act Requirements",
+        "site": "LangChain Blog",
+        "published": "2026-04-27T17:00:00.000Z",
+        "source": "https://www.langchain.com/blog/langsmith-langchain-oss-eu-ai-act",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1216
+      },
+      {
+        "title": "April 2026: LangChain Newsletter",
+        "site": "LangChain Blog",
+        "published": "2026-04-27T16:00:00.000Z",
+        "source": "https://www.langchain.com/blog/april-2026-langchain-newsletter",
+        "domain": "",
+        "language": "en",
+        "wordCount": 741
+      },
       {
         "title": "How Credit Genie used Insights Agent to improve their AI financial assistant",
         "site": "LangChain Blog",

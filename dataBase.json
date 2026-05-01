@@ -217,6 +217,42 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Building AI agents for the enterprise",
+        "site": "Claude",
+        "published": "Apr 30, 2026",
+        "source": "https://claude.com/blog/building-ai-agents-for-the-enterprise",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 312
+      },
+      {
+        "title": "Claude Security is now in public beta",
+        "site": "Claude",
+        "published": "Apr 30, 2026",
+        "source": "https://claude.com/blog/claude-security-public-beta",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1020
+      },
+      {
+        "title": "Lessons from building Claude Code: Prompt caching is everything",
+        "site": "Claude",
+        "published": "Apr 30, 2026",
+        "source": "https://claude.com/blog/lessons-from-building-claude-code-prompt-caching-is-everything",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1451
+      },
+      {
+        "title": "How Kepler built verifiable AI for financial services with Claude",
+        "site": "Claude",
+        "published": "Apr 30, 2026",
+        "source": "https://claude.com/blog/how-kepler-built-verifiable-ai-for-financial-services-with-claude",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1432
+      },
+      {
         "title": "Deploying Claude across the enterprise with Claude Cowork",
         "site": "Claude",
         "published": "Apr 29, 2026",

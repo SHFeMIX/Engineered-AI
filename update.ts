@@ -195,84 +195,31 @@ main().then(() => {
     buildAndCommit()
 })
 
-// build 测试并自动提交
+// build 测试
 async function buildAndCommit() {
     const { spawn } = await import('child_process')
 
-    // 检查 git 状态
-    console.log('\n=== 检查 git 状态 ===')
-    const statusProcess = spawn('git', ['status', '--porcelain'], { shell: true })
+    console.log('\n=== 运行 docs:build ===')
 
-    let statusOutput = ''
-    statusProcess.stdout.on('data', (data) => { statusOutput += data.toString() })
-    statusProcess.stderr.on('data', (data) => { statusOutput += data.toString() })
+    return new Promise((resolve) => {
+        const buildProcess = spawn('pnpm', ['docs:build'], { shell: true })
 
-    statusProcess.on('close', (_code) => {
-        if (!statusOutput.trim()) {
-            console.log('=== 无改动，跳过 build 和提交 ===')
-            return
-        }
+        buildProcess.stdout.on('data', (data) => {
+            process.stdout.write(data)
+        })
 
-        console.log('=== 检测到改动，继续 build ===')
-        console.log(statusOutput)
+        buildProcess.stderr.on('data', (data) => {
+            process.stderr.write(data)
+        })
 
-        console.log('\n=== 运行 docs:build 测试 ===')
-
-        new Promise((resolve) => {
-            const buildProcess = spawn('pnpm', ['docs:build'], { shell: true })
-
-            let output = ''
-
-            buildProcess.stdout.on('data', (data) => {
-                output += data.toString()
-                process.stdout.write(data)
-            })
-
-            buildProcess.stderr.on('data', (data) => {
-                output += data.toString()
-                process.stderr.write(data)
-            })
-
-            buildProcess.on('close', async (code) => {
-                if (code === 0) {
-                    console.log('\n=== build 成功 ===')
-                    console.log('=== 执行 git 提交 ===')
-
-                    const today = new Date().toISOString().split('T')[0]
-
-                    const gitAdd = spawn('git', ['add', '.'], { shell: true })
-                    gitAdd.on('close', async (addCode) => {
-                        if (addCode === 0) {
-                            const commitMsg = `[update]: ${today}`
-                            const gitCommit = spawn('git', ['commit', '-m', commitMsg], { shell: true })
-                            gitCommit.on('close', async (commitCode) => {
-                                if (commitCode === 0) {
-                                    console.log('=== 执行 git push ===')
-                                    const gitPush = spawn('git', ['push'], { shell: true })
-                                    gitPush.on('close', (pushCode) => {
-                                        if (pushCode === 0) {
-                                            console.log('=== push 成功 ===')
-                                            resolve(true)
-                                        } else {
-                                            console.error('push 失败')
-                                            resolve(false)
-                                        }
-                                    })
-                                } else {
-                                    console.error('commit 失败')
-                                    resolve(false)
-                                }
-                            })
-                        } else {
-                            console.error('git add 失败')
-                            resolve(false)
-                        }
-                    })
-                } else {
-                    console.error('\n=== build 失败，跳过提交 ===')
-                    resolve(false)
-                }
-            })
+        buildProcess.on('close', (code) => {
+            if (code === 0) {
+                console.log('\n=== build 完成 ===')
+                resolve(true)
+            } else {
+                console.error('\n=== build 失败 ===')
+                resolve(false)
+            }
         })
     })
 }

@@ -217,6 +217,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Deploying Claude across financial services",
+        "site": "Claude",
+        "published": "May 05, 2026",
+        "source": "https://claude.com/blog/deploying-claude-across-financial-services",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 294
+      },
+      {
         "title": "How a non-technical project manager built and shipped a stress management app with Claude Code in six weeks",
         "site": "Claude",
         "published": "May 01, 2026",
@@ -2046,6 +2055,15 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Agent observability needs feedback to power learning",
+        "site": "LangChain Blog",
+        "published": "2026-05-05T13:03:00.000Z",
+        "source": "https://www.langchain.com/blog/agent-observability-needs-feedback-to-power-learning",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1456
+      },
       {
         "title": "Tuning Deep Agents to Work Well with Different Models",
         "site": "LangChain Blog",
@@ -4406,6 +4424,15 @@
     "title": "PhilSchmid",
     "link": "https://www.philschmid.de",
     "posts": [
+      {
+        "title": "How Agents Manage Other Agents: Four Subagents Patterns in 2026",
+        "site": "Philipp Schmid",
+        "published": "2026-05-05",
+        "source": "https://www.philschmid.de/subagent-patterns-2026",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2460
+      },
       {
         "title": "How to use Deep Research with the Gemini API",
         "site": "Philipp Schmid",

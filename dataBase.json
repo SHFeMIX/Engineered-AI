@@ -2074,6 +2074,15 @@
     "link": "https://www.langchain.com/blog",
     "posts": [
       {
+        "title": "Building a company due diligence agent with Deep Agents, LangSmith and Parallel",
+        "site": "LangChain Blog",
+        "published": "2026-05-08T18:49:00.000Z",
+        "source": "https://www.langchain.com/blog/building-a-company-due-diligence-agent-with-deep-agents-langsmith-and-parallel",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2430
+      },
+      {
         "title": "Agent observability needs feedback to power learning",
         "site": "LangChain Blog",
         "published": "2026-05-05T13:03:00.000Z",

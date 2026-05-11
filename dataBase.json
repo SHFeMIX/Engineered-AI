@@ -2074,6 +2074,15 @@
     "link": "https://www.langchain.com/blog",
     "posts": [
       {
+        "title": "The Agent Development Lifecycle",
+        "site": "LangChain Blog",
+        "published": "2026-05-09T17:15:00.000Z",
+        "source": "https://www.langchain.com/blog/the-agent-development-lifecycle",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2719
+      },
+      {
         "title": "Building a company due diligence agent with Deep Agents, LangSmith and Parallel",
         "site": "LangChain Blog",
         "published": "2026-05-08T18:49:00.000Z",

@@ -217,6 +217,51 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Code w/ Claude SF 2026: Building on the AI exponential",
+        "site": "Claude",
+        "published": "May 12, 2026",
+        "source": "https://claude.com/blog/code-w-claude-sf-2026-sf",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 462
+      },
+      {
+        "title": "Claude for the legal industry",
+        "site": "Claude",
+        "published": "May 12, 2026",
+        "source": "https://claude.com/blog/claude-for-the-legal-industry",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1987
+      },
+      {
+        "title": "How Anthropic's cybersecurity team built a threat detection platform with Claude Code",
+        "site": "Claude",
+        "published": "May 12, 2026",
+        "source": "https://claude.com/blog/how-anthropic-uses-claude-cybersecurity",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1671
+      },
+      {
+        "title": "Agent view in Claude Code",
+        "site": "Claude",
+        "published": "May 11, 2026",
+        "source": "https://claude.com/blog/agent-view-in-claude-code",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 403
+      },
+      {
+        "title": "Introducing the Claude Platform on AWS",
+        "site": "Claude",
+        "published": "May 11, 2026",
+        "source": "https://claude.com/blog/claude-platform-on-aws",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 563
+      },
+      {
         "title": "Collaborate with Claude across Excel, PowerPoint, Word and Outlook",
         "site": "Claude",
         "published": "May 07, 2026",
@@ -2073,6 +2118,15 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Delta Channels: How We’re Evolving our Runtime for Long-Running Agents",
+        "site": "LangChain Blog",
+        "published": "2026-05-12T19:00:00.000Z",
+        "source": "https://www.langchain.com/blog/delta-channels-evolving-agent-runtime",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1432
+      },
       {
         "title": "The Agent Development Lifecycle",
         "site": "LangChain Blog",

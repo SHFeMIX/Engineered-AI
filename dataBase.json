@@ -217,6 +217,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Best practices for computer and browser use with Claude",
+        "site": "Claude",
+        "published": "May 13, 2026",
+        "source": "https://claude.com/blog/best-practices-for-computer-and-browser-use-with-claude",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 8507
+      },
+      {
         "title": "Code w/ Claude SF 2026: Building on the AI exponential",
         "site": "Claude",
         "published": "May 12, 2026",
@@ -2118,6 +2127,69 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Introducing Langsmith Engine",
+        "site": "LangChain Blog",
+        "published": "2026-05-13T17:40:00.000Z",
+        "source": "https://www.langchain.com/blog/introducing-langsmith-engine",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1106
+      },
+      {
+        "title": "We built SmithDB, the data layer for agent observability",
+        "site": "LangChain Blog",
+        "published": "2026-05-13T17:39:00.000Z",
+        "source": "https://www.langchain.com/blog/introducing-smithdb",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2180
+      },
+      {
+        "title": "Introducing LangSmith Context Hub",
+        "site": "LangChain Blog",
+        "published": "2026-05-13T17:37:00.000Z",
+        "source": "https://www.langchain.com/blog/introducing-context-hub",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1958
+      },
+      {
+        "title": "LangSmith Sandboxes are Generally Available",
+        "site": "LangChain Blog",
+        "published": "2026-05-13T17:36:00.000Z",
+        "source": "https://www.langchain.com/blog/langsmith-sandboxes-generally-available",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1165
+      },
+      {
+        "title": "Managed Deep Agents: the fastest way to ship a production deep agent",
+        "site": "LangChain Blog",
+        "published": "2026-05-13T17:35:00.000Z",
+        "source": "https://www.langchain.com/blog/introducing-managed-deep-agents",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1096
+      },
+      {
+        "title": "New in Deep Agents v0.6",
+        "site": "LangChain Blog",
+        "published": "2026-05-13T17:34:00.000Z",
+        "source": "https://www.langchain.com/blog/deep-agents-0-6",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2186
+      },
+      {
+        "title": "LangSmith LLM Gateway: runtime governance built into the agent lifecycle",
+        "site": "LangChain Blog",
+        "published": "2026-05-13T17:33:00.000Z",
+        "source": "https://www.langchain.com/blog/introducing-llm-gateway",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1197
+      },
       {
         "title": "Delta Channels: How We’re Evolving our Runtime for Long-Running Agents",
         "site": "LangChain Blog",

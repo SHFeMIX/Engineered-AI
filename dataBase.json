@@ -217,6 +217,24 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "The founder's playbook: Building an AI-native startup",
+        "site": "Claude",
+        "published": "May 14, 2026",
+        "source": "https://claude.com/blog/the-founders-playbook",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 271
+      },
+      {
+        "title": "How Claude Code works in large codebases: Best practices and where to start",
+        "site": "Claude",
+        "published": "May 14, 2026",
+        "source": "https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2766
+      },
+      {
         "title": "Best practices for computer and browser use with Claude",
         "site": "Claude",
         "published": "May 13, 2026",
@@ -2127,6 +2145,24 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Everything we shipped at Interrupt",
+        "site": "LangChain Blog",
+        "published": "2026-05-14T17:31:00.000Z",
+        "source": "https://www.langchain.com/blog/interrupt-2026-overview",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2270
+      },
+      {
+        "title": "Introducing LangChain Labs",
+        "site": "LangChain Blog",
+        "published": "2026-05-14T17:30:00.000Z",
+        "source": "https://www.langchain.com/blog/introducing-langchain-labs",
+        "domain": "",
+        "language": "en",
+        "wordCount": 643
+      },
       {
         "title": "Introducing Langsmith Engine",
         "site": "LangChain Blog",

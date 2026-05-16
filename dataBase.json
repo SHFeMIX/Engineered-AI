@@ -217,6 +217,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Deploying Claude across the legal industry",
+        "site": "Claude",
+        "published": "May 15, 2026",
+        "source": "https://claude.com/blog/deploying-claude-across-the-legal-industry",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 338
+      },
+      {
         "title": "The founder's playbook: Building an AI-native startup",
         "site": "Claude",
         "published": "May 14, 2026",

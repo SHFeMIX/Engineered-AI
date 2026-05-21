@@ -217,6 +217,24 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Using Claude Code: The unreasonable effectiveness of HTML",
+        "site": "Claude",
+        "published": "May 20, 2026",
+        "source": "https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2154
+      },
+      {
+        "title": "New in Claude Managed Agents: self-hosted sandboxes and MCP tunnels",
+        "site": "Claude",
+        "published": "May 19, 2026",
+        "source": "https://claude.com/blog/claude-managed-agents-updates",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 635
+      },
+      {
         "title": "Deploying Claude across the legal industry",
         "site": "Claude",
         "published": "May 15, 2026",
@@ -2154,6 +2172,24 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Interpreters in Deep Agents: Code Between Tool Calls and Sandboxes",
+        "site": "LangChain Blog",
+        "published": "2026-05-20T18:00:00.000Z",
+        "source": "https://www.langchain.com/blog/give-your-agents-an-interpreter",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2437
+      },
+      {
+        "title": "How We Built LangSmith Engine, Our Agent for Improving Agents",
+        "site": "LangChain Blog",
+        "published": "2026-05-19T16:00:00.000Z",
+        "source": "https://www.langchain.com/blog/how-we-built-langsmith-engine-our-agent-for-improving-agents",
+        "domain": "",
+        "language": "en",
+        "wordCount": 3396
+      },
       {
         "title": "Everything we shipped at Interrupt",
         "site": "LangChain Blog",

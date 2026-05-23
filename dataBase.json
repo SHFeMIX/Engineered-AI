@@ -217,6 +217,33 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "How Anthropic's finance team uses Claude to shape the narrative behind the numbers",
+        "site": "Claude",
+        "published": "May 22, 2026",
+        "source": "https://claude.com/blog/how-anthropics-finance-team-uses-claude-to-shape-the-narrative-behind-the-numbers",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1324
+      },
+      {
+        "title": "Claude now works with more security and compliance tools",
+        "site": "Claude",
+        "published": "May 21, 2026",
+        "source": "https://claude.com/blog/compliance-api-security-partners",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 345
+      },
+      {
+        "title": "How our partners are putting Opus to work for cybersecurity",
+        "site": "Claude",
+        "published": "May 21, 2026",
+        "source": "https://claude.com/blog/how-our-partners-are-putting-opus-to-work-for-cybersecurity",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1120
+      },
+      {
         "title": "Using Claude Code: The unreasonable effectiveness of HTML",
         "site": "Claude",
         "published": "May 20, 2026",
@@ -2172,6 +2199,24 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "From Token Streams to Agent Streams",
+        "site": "LangChain Blog",
+        "published": "2026-05-21T17:00:00.000Z",
+        "source": "https://www.langchain.com/blog/token-streams-to-agent-streams",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1973
+      },
+      {
+        "title": "How Auth Proxy secures LangSmith agent sandboxes",
+        "site": "LangChain Blog",
+        "published": "2026-05-21T16:45:00.000Z",
+        "source": "https://www.langchain.com/blog/how-auth-proxy-secures-network-access-for-langsmith-agent-sandboxes",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1710
+      },
       {
         "title": "Interpreters in Deep Agents: Code Between Tool Calls and Sandboxes",
         "site": "LangChain Blog",

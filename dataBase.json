@@ -2200,6 +2200,15 @@
     "link": "https://www.langchain.com/blog",
     "posts": [
       {
+        "title": "Mission Control for Self-Hosted LangSmith on Kubernetes",
+        "site": "LangChain Blog",
+        "published": "2026-05-26T17:05:00.000Z",
+        "source": "https://www.langchain.com/blog/mission-control-operating-self-hosted-langsmith-on-kubernetes",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1162
+      },
+      {
         "title": "From Token Streams to Agent Streams",
         "site": "LangChain Blog",
         "published": "2026-05-21T17:00:00.000Z",
@@ -4712,6 +4721,15 @@
     "title": "PhilSchmid",
     "link": "https://www.philschmid.de",
     "posts": [
+      {
+        "title": "Gemini Managed Agents: Developer Guide",
+        "site": "Philipp Schmid",
+        "published": "2026-05-26",
+        "source": "https://www.philschmid.de/gemini-managed-agents-developer-guide",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1305
+      },
       {
         "title": "How Agents Manage Other Agents: Four Subagents Patterns in 2026",
         "site": "Philipp Schmid",

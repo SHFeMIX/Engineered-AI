@@ -4,6 +4,15 @@
     "link": "https://www.anthropic.com/engineering",
     "posts": [
       {
+        "title": "How we contain Claude across products",
+        "site": "",
+        "published": "",
+        "source": "https://www.anthropic.com/engineering/how-we-contain-claude",
+        "domain": "",
+        "language": "en",
+        "wordCount": 4290
+      },
+      {
         "title": "An update on recent Claude Code quality reports",
         "site": "",
         "published": "",
@@ -216,6 +225,15 @@
     "title": "Claude",
     "link": "https://claude.com/blog",
     "posts": [
+      {
+        "title": "Code w/ Claude London 2026: Rethinking how we build",
+        "site": "Claude",
+        "published": "May 26, 2026",
+        "source": "https://claude.com/blog/code-w-claude-london-2026-rethinking-how-we-build",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 536
+      },
       {
         "title": "How Anthropic's finance team uses Claude to shape the narrative behind the numbers",
         "site": "Claude",

@@ -226,6 +226,42 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Introducing dynamic workflows",
+        "site": "Claude",
+        "published": "May 28, 2026",
+        "source": "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 805
+      },
+      {
+        "title": "Using LLMs to secure source code",
+        "site": "Claude",
+        "published": "May 27, 2026",
+        "source": "https://claude.com/blog/using-llms-to-secure-source-code",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 4617
+      },
+      {
+        "title": "How CodeRabbit used Claude to build an agent orchestration system",
+        "site": "Claude",
+        "published": "May 27, 2026",
+        "source": "https://claude.com/blog/how-coderabbit-used-claude-to-build-an-agent-orchestration-system",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1179
+      },
+      {
+        "title": "Zero Trust for AI agents",
+        "site": "Claude",
+        "published": "May 27, 2026",
+        "source": "https://claude.com/blog/zero-trust-for-ai-agents",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 387
+      },
+      {
         "title": "Code w/ Claude London 2026: Rethinking how we build",
         "site": "Claude",
         "published": "May 26, 2026",
@@ -2217,6 +2253,24 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Fixing agent failures in production: Interrupt 2026 recap | LangChain Newsletter",
+        "site": "LangChain Blog",
+        "published": "2026-05-27T20:57:00.000Z",
+        "source": "https://www.langchain.com/blog/may-2026-langchain-newsletter",
+        "domain": "",
+        "language": "en",
+        "wordCount": 588
+      },
+      {
+        "title": "How Lyft Built a Self-Serve AI Agent Platform with LangGraph and LangSmith",
+        "site": "LangChain Blog",
+        "published": "2026-05-27T15:25:00.000Z",
+        "source": "https://www.langchain.com/blog/lyft-built-a-self-serve-ai-agent-platform-for-customer-support-with-langgraph-and-langsmith",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2067
+      },
       {
         "title": "Mission Control for Self-Hosted LangSmith on Kubernetes",
         "site": "LangChain Blog",

@@ -2254,6 +2254,15 @@
     "link": "https://www.langchain.com/blog",
     "posts": [
       {
+        "title": "Interpreter Skills: Building Workflows for Agents",
+        "site": "LangChain Blog",
+        "published": "2026-05-29T17:00:00.000Z",
+        "source": "https://www.langchain.com/blog/interpreter-skills",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2804
+      },
+      {
         "title": "Fixing agent failures in production: Interrupt 2026 recap | LangChain Newsletter",
         "site": "LangChain Blog",
         "published": "2026-05-27T20:57:00.000Z",

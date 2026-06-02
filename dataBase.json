@@ -2254,6 +2254,15 @@
     "link": "https://www.langchain.com/blog",
     "posts": [
       {
+        "title": "How Rippling built production AI in 6 months with Deep Agents and LangSmith",
+        "site": "LangChain Blog",
+        "published": "2026-06-01T16:00:00.000Z",
+        "source": "https://www.langchain.com/blog/how-rippling-went-ai-native-across-every-product-in-6-months-with-deep-agents-and-langsmith",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1238
+      },
+      {
         "title": "Interpreter Skills: Building Workflows for Agents",
         "site": "LangChain Blog",
         "published": "2026-05-29T17:00:00.000Z",

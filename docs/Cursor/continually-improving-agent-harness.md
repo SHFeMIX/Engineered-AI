@@ -2,7 +2,7 @@
 title: "Continually improving our agent harness · Cursor"
 site: "Cursor"
 published: "2026-04-29T12:00:00.000Z, 2026-04-29T12:00:00.000Z"
-source: "https://cursor.com/blog/continually-improving-our-agent-harness"
+source: "https://cursor.com/blog/continually-improving-agent-harness"
 domain: ""
 language: "en-US"
 word_count: 1923

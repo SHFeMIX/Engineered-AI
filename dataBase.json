@@ -226,6 +226,24 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Running an AI-native engineering org",
+        "site": "Claude",
+        "published": "Jun 03, 2026",
+        "source": "https://claude.com/blog/running-an-ai-native-engineering-org",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1538
+      },
+      {
+        "title": "A harness for every task: dynamic workflows in Claude Code",
+        "site": "Claude",
+        "published": "Jun 02, 2026",
+        "source": "https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2353
+      },
+      {
         "title": "Introducing dynamic workflows",
         "site": "Claude",
         "published": "May 28, 2026",
@@ -1591,10 +1609,73 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "What we’ve learned building cloud agents · Cursor",
+        "site": "Cursor",
+        "published": "2026-06-02T12:00:00.000Z, 2026-06-02T12:00:00.000Z",
+        "source": "https://cursor.com/blog/cloud-agent-lessons",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1412
+      },
+      {
+        "title": "Improvements to Teams Pricing · Cursor",
+        "site": "Cursor",
+        "published": "2026-06-01T07:00:00.000Z, 2026-06-01T07:00:00.000Z",
+        "source": "https://cursor.com/blog/teams-pricing-june-2026",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 418
+      },
+      {
+        "title": "Cursor named a Leader in the 2026 Gartner® Magic Quadrant™ for Enterprise AI Coding Agents · Cursor",
+        "site": "Cursor",
+        "published": "2026-05-22T12:00:00.000Z, 2026-05-22T12:00:00.000Z",
+        "source": "https://cursor.com/blog/cursor-leads-gartner-mq-2026",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 416
+      },
+      {
+        "title": "Introducing Composer 2.5 · Cursor",
+        "site": "Cursor",
+        "published": "2026-05-18T00:00:00.000Z, 2026-05-18T00:00:00.000Z",
+        "source": "https://cursor.com/blog/composer-2-5",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1082
+      },
+      {
+        "title": "Development environments for your cloud agents · Cursor",
+        "site": "Cursor",
+        "published": "2026-05-13T12:00:00.000Z, 2026-05-13T12:00:00.000Z",
+        "source": "https://cursor.com/blog/cloud-agent-development-environments",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 716
+      },
+      {
+        "title": "Updates to Bugbot for Teams and Individuals · Cursor",
+        "site": "Cursor",
+        "published": "2026-05-11T12:00:00.000Z, 2026-05-11T12:00:00.000Z",
+        "source": "https://cursor.com/blog/may-2026-bugbot-changes",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 211
+      },
+      {
+        "title": "Bootstrapping Composer with autoinstall · Cursor",
+        "site": "Cursor",
+        "published": "2026-05-06T00:00:00.000Z, 2026-05-06T00:00:00.000Z",
+        "source": "https://cursor.com/blog/bootstrapping-composer-with-autoinstall",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 975
+      },
+      {
         "title": "Continually improving our agent harness · Cursor",
         "site": "Cursor",
         "published": "2026-04-29T12:00:00.000Z, 2026-04-29T12:00:00.000Z",
-        "source": "https://cursor.com/blog/continually-improving-our-agent-harness",
+        "source": "https://cursor.com/blog/continually-improving-agent-harness",
         "domain": "",
         "language": "en-US",
         "wordCount": 1923
@@ -2253,6 +2334,24 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Designing Efficient Verifiers for Legal Agents",
+        "site": "LangChain Blog",
+        "published": "2026-06-02T16:45:00.000Z",
+        "source": "https://www.langchain.com/blog/designing-efficient-verifiers-for-legal-agents",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1377
+      },
+      {
+        "title": "Introducing Rubrics: Build Agents that Evaluate and Correct Their Work",
+        "site": "LangChain Blog",
+        "published": "2026-06-02T16:30:00.000Z",
+        "source": "https://www.langchain.com/blog/introducing-rubrics-for-deepagents",
+        "domain": "",
+        "language": "en",
+        "wordCount": 876
+      },
       {
         "title": "How Rippling built production AI in 6 months with Deep Agents and LangSmith",
         "site": "LangChain Blog",

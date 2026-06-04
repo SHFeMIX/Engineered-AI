@@ -226,6 +226,33 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "How Anthropic enables self-service data analytics with Claude",
+        "site": "Claude",
+        "published": "Jun 03, 2026",
+        "source": "https://claude.com/blog/how-anthropic-enables-self-service-data-analytics-with-claude",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 4904
+      },
+      {
+        "title": "Lessons from building Claude Code: How we use skills",
+        "site": "Claude",
+        "published": "Jun 03, 2026",
+        "source": "https://claude.com/blog/lessons-from-building-claude-code-how-we-use-skills",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2572
+      },
+      {
+        "title": "Best practices for getting started with Claude Cowork",
+        "site": "Claude",
+        "published": "Jun 03, 2026",
+        "source": "https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1935
+      },
+      {
         "title": "Running an AI-native engineering org",
         "site": "Claude",
         "published": "Jun 03, 2026",
@@ -1609,6 +1636,15 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "Introducing organizations for Cursor Enterprise · Cursor",
+        "site": "Cursor",
+        "published": "2026-06-03T12:00:00.000Z, 2026-06-03T12:00:00.000Z",
+        "source": "https://cursor.com/blog/organizations",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 718
+      },
+      {
         "title": "What we’ve learned building cloud agents · Cursor",
         "site": "Cursor",
         "published": "2026-06-02T12:00:00.000Z, 2026-06-02T12:00:00.000Z",
@@ -2334,6 +2370,42 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Model Neutrality: Why Avoiding AI Vendor Lock-In Matters",
+        "site": "LangChain Blog",
+        "published": "2026-06-04T17:00:00.000Z",
+        "source": "https://www.langchain.com/blog/model-neutrality",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1231
+      },
+      {
+        "title": "Fault Tolerance in LangGraph: Retries, Timeouts and Error Handlers",
+        "site": "LangChain Blog",
+        "published": "2026-06-04T10:00:00.000Z",
+        "source": "https://www.langchain.com/blog/fault-tolerance-in-langgraph",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1700
+      },
+      {
+        "title": "How to Build a Custom Agent Harness",
+        "site": "LangChain Blog",
+        "published": "2026-06-03T17:00:00.000Z",
+        "source": "https://www.langchain.com/blog/how-to-build-a-custom-agent-harness",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1096
+      },
+      {
+        "title": "How Harmonic Rebuilt Scout on Deep Agents and 4x'd Retention with LangSmith",
+        "site": "LangChain Blog",
+        "published": "2026-06-03T16:00:00.000Z",
+        "source": "https://www.langchain.com/blog/how-harmonic-rebuilt-scout-on-deep-agents-and-4xd-retention-with-langsmith",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1509
+      },
       {
         "title": "Designing Efficient Verifiers for Legal Agents",
         "site": "LangChain Blog",

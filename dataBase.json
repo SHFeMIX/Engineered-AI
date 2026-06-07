@@ -226,6 +226,24 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "The Claude Cowork product guide",
+        "site": "Claude",
+        "published": "Jun 05, 2026",
+        "source": "https://claude.com/blog/the-claude-cowork-product-guide",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 285
+      },
+      {
+        "title": "How one Anthropic seller rebuilt his team's workflows with Claude Code",
+        "site": "Claude",
+        "published": "Jun 05, 2026",
+        "source": "https://claude.com/blog/how-anthropic-uses-claude-gtm-engineering",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1516
+      },
+      {
         "title": "How Anthropic enables self-service data analytics with Claude",
         "site": "Claude",
         "published": "Jun 03, 2026",
@@ -1636,6 +1654,15 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "Direct agents with visual prompts in Design Mode · Cursor",
+        "site": "Cursor",
+        "published": "2026-06-05T00:00:00.000Z, 2026-06-05T00:00:00.000Z",
+        "source": "https://cursor.com/blog/design-mode",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 668
+      },
+      {
         "title": "Introducing organizations for Cursor Enterprise · Cursor",
         "site": "Cursor",
         "published": "2026-06-03T12:00:00.000Z, 2026-06-03T12:00:00.000Z",
@@ -2370,6 +2397,15 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Give your agent its own computer",
+        "site": "LangChain Blog",
+        "published": "2026-06-05T17:00:00.000Z",
+        "source": "https://www.langchain.com/blog/give-your-ai-agent-its-own-computer",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1369
+      },
       {
         "title": "Model Neutrality: Why Avoiding AI Vendor Lock-In Matters",
         "site": "LangChain Blog",

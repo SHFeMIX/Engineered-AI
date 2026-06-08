@@ -226,6 +226,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Connector Observability and In-App Directory Submission",
+        "site": "Claude",
+        "published": "Jun 08, 2026",
+        "source": "https://claude.com/blog/observability-for-developers-building-connectors",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 222
+      },
+      {
         "title": "The Claude Cowork product guide",
         "site": "Claude",
         "published": "Jun 05, 2026",

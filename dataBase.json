@@ -226,6 +226,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Claude support for Apple's Foundation Models framework",
+        "site": "Claude",
+        "published": "Jun 08, 2026",
+        "source": "https://claude.com/blog/claude-for-foundation-models",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 347
+      },
+      {
         "title": "Connector Observability and In-App Directory Submission",
         "site": "Claude",
         "published": "Jun 08, 2026",

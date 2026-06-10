@@ -226,6 +226,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "New in Claude Managed Agents: run agents on a schedule and store environment variables in vaults",
+        "site": "Claude",
+        "published": "Jun 09, 2026",
+        "source": "https://claude.com/blog/whats-new-in-claude-managed-agents",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 581
+      },
+      {
         "title": "Claude support for Apple's Foundation Models framework",
         "site": "Claude",
         "published": "Jun 08, 2026",
@@ -5036,6 +5045,15 @@
     "title": "PhilSchmid",
     "link": "https://www.philschmid.de",
     "posts": [
+      {
+        "title": "How Gemini Managed Agents Works under the Hood",
+        "site": "Philipp Schmid",
+        "published": "2026-06-10",
+        "source": "https://www.philschmid.de/how-managed-agents-work",
+        "domain": "",
+        "language": "en",
+        "wordCount": 616
+      },
       {
         "title": "Gemini Managed Agents: Developer Guide",
         "site": "Philipp Schmid",

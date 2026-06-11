@@ -226,6 +226,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
+        "site": "Claude",
+        "published": "Jun 10, 2026",
+        "source": "https://claude.com/blog/building-with-claude-managed-agents",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2659
+      },
+      {
         "title": "New in Claude Managed Agents: run agents on a schedule and store environment variables in vaults",
         "site": "Claude",
         "published": "Jun 09, 2026",
@@ -1681,6 +1690,15 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "Bugbot is now over 3x faster, 22% cheaper, and finds 10% more bugs · Cursor",
+        "site": "Cursor",
+        "published": "2026-06-10T12:00:00.000Z, 2026-06-10T12:00:00.000Z",
+        "source": "https://cursor.com/blog/bugbot-updates-june-2026",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 332
+      },
+      {
         "title": "Direct agents with visual prompts in Design Mode · Cursor",
         "site": "Cursor",
         "published": "2026-06-05T00:00:00.000Z, 2026-06-05T00:00:00.000Z",
@@ -2424,6 +2442,24 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "The Missing Link Between Agents and Applications",
+        "site": "LangChain Blog",
+        "published": "2026-06-10T18:00:00.000Z",
+        "source": "https://www.langchain.com/blog/agents-and-applications",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1272
+      },
+      {
+        "title": "Full Text Search in SmithDB: Designing an Inverted Index for Object Storage",
+        "site": "LangChain Blog",
+        "published": "2026-06-10T16:15:00.000Z",
+        "source": "https://www.langchain.com/blog/full-text-search-in-smithdb-designing-an-inverted-index-for-object-storage",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2946
+      },
       {
         "title": "Give your agent its own computer",
         "site": "LangChain Blog",

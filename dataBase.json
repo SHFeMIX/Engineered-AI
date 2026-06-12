@@ -1690,6 +1690,15 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "Governing agent autonomy with Auto-review · Cursor",
+        "site": "Cursor",
+        "published": "2026-06-11T12:00:00.000Z, 2026-06-11T12:00:00.000Z",
+        "source": "https://cursor.com/blog/agent-autonomy-auto-review",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1302
+      },
+      {
         "title": "Bugbot is now over 3x faster, 22% cheaper, and finds 10% more bugs · Cursor",
         "site": "Cursor",
         "published": "2026-06-10T12:00:00.000Z, 2026-06-10T12:00:00.000Z",
@@ -2442,6 +2451,24 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "How to Choose the Right Sandbox for AI Agents",
+        "site": "LangChain Blog",
+        "published": "2026-06-12T15:00:00.000Z",
+        "source": "https://www.langchain.com/blog/how-to-choose-the-right-sandbox-for-your-agent",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1182
+      },
+      {
+        "title": "How Benchling builds agents when the smartest AI isn't smart enough",
+        "site": "LangChain Blog",
+        "published": "2026-06-11T19:41:00.000Z",
+        "source": "https://www.langchain.com/blog/benchling-max-agency-podcast",
+        "domain": "",
+        "language": "en",
+        "wordCount": 667
+      },
       {
         "title": "The Missing Link Between Agents and Applications",
         "site": "LangChain Blog",

@@ -2452,6 +2452,15 @@
     "link": "https://www.langchain.com/blog",
     "posts": [
       {
+        "title": "How Box AI built enterprise content agents with Deep Agents",
+        "site": "LangChain Blog",
+        "published": "2026-06-12T16:00:00.000Z",
+        "source": "https://www.langchain.com/blog/building-box-ai-how-an-enterprise-content-platform-went-ai-native-with-deep-agents",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1097
+      },
+      {
         "title": "How to Choose the Right Sandbox for AI Agents",
         "site": "LangChain Blog",
         "published": "2026-06-12T15:00:00.000Z",

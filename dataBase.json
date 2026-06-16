@@ -226,6 +226,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Meet the winners of the Built with Opus 4.7 Claude Code hackathon",
+        "site": "Claude",
+        "published": "Jun 15, 2026",
+        "source": "https://claude.com/blog/meet-the-winners-of-built-with-opus-4-7-claude-code-hackathon",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2652
+      },
+      {
         "title": "The evolution of agentic surfaces: building with Claude Managed Agents",
         "site": "Claude",
         "published": "Jun 10, 2026",
@@ -2451,6 +2460,24 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Building a 100x Cheaper Trace Judge with Fireworks",
+        "site": "LangChain Blog",
+        "published": "2026-06-15T16:55:00.000Z",
+        "source": "https://www.langchain.com/blog/building-a-100x-cheaper-trace-judge-with-fireworks",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1409
+      },
+      {
+        "title": "How LangChain Made Coding Agent Spend Predictable",
+        "site": "LangChain Blog",
+        "published": "2026-06-15T15:00:00.000Z",
+        "source": "https://www.langchain.com/blog/how-we-made-coding-agent-spend-predictable",
+        "domain": "",
+        "language": "en",
+        "wordCount": 938
+      },
       {
         "title": "How Box AI built enterprise content agents with Deep Agents",
         "site": "LangChain Blog",

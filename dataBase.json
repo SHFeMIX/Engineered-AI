@@ -2461,6 +2461,24 @@
     "link": "https://www.langchain.com/blog",
     "posts": [
       {
+        "title": "The Art of Loop Engineering",
+        "site": "LangChain Blog",
+        "published": "2026-06-16T17:00:00.000Z",
+        "source": "https://www.langchain.com/blog/the-art-of-loop-engineering",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1226
+      },
+      {
+        "title": "Why Fleet Has General Purpose Chat and Specialized Agents",
+        "site": "LangChain Blog",
+        "published": "2026-06-16T14:45:00.000Z",
+        "source": "https://www.langchain.com/blog/why-fleet-has-both-general-purpose-chat-and-specialized-agents",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1344
+      },
+      {
         "title": "Building a 100x Cheaper Trace Judge with Fireworks",
         "site": "LangChain Blog",
         "published": "2026-06-15T16:55:00.000Z",

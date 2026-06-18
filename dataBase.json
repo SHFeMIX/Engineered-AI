@@ -226,6 +226,33 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Meet the winners of our Claude Opus 4.8 Build Day hackathon",
+        "site": "Claude",
+        "published": "Jun 17, 2026",
+        "source": "https://claude.com/blog/meet-the-winners-of-our-claude-opus-4-8-build-day-hackathon",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1312
+      },
+      {
+        "title": "Claude Design now stays on brand for daily work",
+        "site": "Claude",
+        "published": "Jun 17, 2026",
+        "source": "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 612
+      },
+      {
+        "title": "Workload Identity Federation (WIF) is now generally available on the Claude Platform.",
+        "site": "Claude",
+        "published": "Jun 17, 2026",
+        "source": "https://claude.com/blog/workload-identity-federation",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 381
+      },
+      {
         "title": "Meet the winners of the Built with Opus 4.7 Claude Code hackathon",
         "site": "Claude",
         "published": "Jun 15, 2026",

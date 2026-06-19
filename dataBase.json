@@ -226,6 +226,33 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Steering Claude Code: skills, hooks, subagents and more",
+        "site": "Claude",
+        "published": "Jun 18, 2026",
+        "source": "https://claude.com/blog/steering-claude-code-skills-hooks-rules-subagents-and-more",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2538
+      },
+      {
+        "title": "Centrally manage authorization for MCP connectors",
+        "site": "Claude",
+        "published": "Jun 18, 2026",
+        "source": "https://claude.com/blog/enterprise-managed-auth",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 481
+      },
+      {
+        "title": "Claude Code now supports artifacts",
+        "site": "Claude",
+        "published": "Jun 18, 2026",
+        "source": "https://claude.com/blog/artifacts-in-claude-code",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 847
+      },
+      {
         "title": "Meet the winners of our Claude Opus 4.8 Build Day hackathon",
         "site": "Claude",
         "published": "Jun 17, 2026",

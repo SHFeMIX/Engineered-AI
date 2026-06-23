@@ -226,6 +226,24 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Agent identity: a new access model for autonomous, team-wide AI",
+        "site": "Claude",
+        "published": "Jun 24, 2026",
+        "source": "https://claude.com/blog/agent-identity-access-model",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1385
+      },
+      {
+        "title": "Claude Desktop on AWS, Google Cloud, and Microsoft Foundry",
+        "site": "Claude",
+        "published": "Jun 22, 2026",
+        "source": "https://claude.com/blog/the-full-claude-desktop-experience-on-aws-google-cloud-and-microsoft-foundry",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 506
+      },
+      {
         "title": "Steering Claude Code: skills, hooks, subagents and more",
         "site": "Claude",
         "published": "Jun 18, 2026",
@@ -5216,6 +5234,15 @@
     "title": "PhilSchmid",
     "link": "https://www.philschmid.de",
     "posts": [
+      {
+        "title": "Getting started with the Gemini Interactions API",
+        "site": "Philipp Schmid",
+        "published": "2026-06-23",
+        "source": "https://www.philschmid.de/interactions-api-developer-guide",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1071
+      },
       {
         "title": "How Gemini Managed Agents Works under the Hood",
         "site": "Philipp Schmid",

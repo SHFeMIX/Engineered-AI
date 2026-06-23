@@ -1,9 +1,9 @@
 ---
 title: "The importance of Agent Harness in 2026"
 site: "Philipp Schmid"
-published: 2026-01-05
+published: "2026-01-05"
 source: "https://www.philschmid.de/agent-harness-2026"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 1031
 ---
@@ -53,7 +53,7 @@ The ability to improve a system is proportional to how easily you can verify its
 
 Rich Sutton wrote an essay called [the Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html). He argued that general methods that use computation beat hand-coded human knowledge every time. We see this lesson playing out in agent development right now.
 
-- Manus refactored [their harness five times in six months](https://www.youtube.com/watch?v=6_BcCthVvb8) to remove rigid assumptions.
+- Manus refactored [their harness five times in six months](https://www.youtube.com/watch?v=6\_BcCthVvb8) to remove rigid assumptions.
 - LangChain [re-architected their "Open Deep Research" agent three times](https://www.youtube.com/watch?v=2Muxy3wE-E0) in a single year.
 - [Vercel removed 80% their agents tool](https://vercel.com/blog/we-removed-80-percent-of-our-agents-tools) leading to fewer steps, fewer tokens, faster responses
 
@@ -73,4 +73,4 @@ As builders and developers the focus should shift:
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

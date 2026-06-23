@@ -1,16 +1,16 @@
 ---
 title: "Introducing MCP CLI: A way to call MCP Servers Efficiently"
 site: "Philipp Schmid"
-published: 2026-01-09
+published: "2026-01-09"
 source: "https://www.philschmid.de/mcp-cli"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 1510
 ---
 
 # Introducing MCP CLI: A way to call MCP Servers Efficiently
 
-> **Updated January 2026 for v0.3.0** — New 3-subcommand architecture (`info`, `grep`, `call`), connection pooling daemon, and tool filtering support.
+\> **Updated January 2026 for v0.3.0** — New 3-subcommand architecture (`info`, `grep`, `call`), connection pooling daemon, and tool filtering support.
 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro) is an open standard for connecting AI agents to external tools, APIs, and data sources. However, as the ecosystem grows with more powerful MCP servers, developers and agent builders are hitting a scaling bottleneck: **context window bloat**.
 
@@ -58,8 +58,8 @@ The solution is dynamic context discovery. Instead of loading everything upfront
 `mcp-cli` implements this pattern for MCP:
 
 - Step 1: "What servers exist?" → `mcp-cli`
-- Step 2: "What are the params for tool X?" → `mcp-cli info github search_repositories`
-- Step 3: Execute → `mcp-cli call github search_repositories '{"query": "mcp"}'`
+- Step 2: "What are the params for tool X?" → `mcp-cli info github search\_repositories`
+- Step 3: Execute → `mcp-cli call github search\_repositories '{"query": "mcp"}'`
 
 Most Interactions only use a handful of tools, yet static loading consumes tokens for every tool definition. Dynamic discovery inverts this, you pay only for what you use.
 
@@ -79,7 +79,7 @@ bun install -g https://github.com/philschmid/mcp-cli
 
 ### 2\. Create a config file
 
-Create `mcp_servers.json` in your current directory or `~/.config/mcp/`:
+Create `mcp\_servers.json` in your current directory or `~/.config/mcp/`:
 
 ```json
 {
@@ -105,15 +105,15 @@ Create `mcp_servers.json` in your current directory or `~/.config/mcp/`:
 # List all servers and tools
 mcp-cli
 # deepwiki
-#  • read_wiki_structure
-#  • read_wiki_contents
-#  • ask_question
+#  • read\_wiki\_structure
+#  • read\_wiki\_contents
+#  • ask\_question
 #
 # filesystem
-#  • read_file
-#  • read_text_file
-#  • read_media_file
-#  • read_multiple_files
+#  • read\_file
+#  • read\_text\_file
+#  • read\_media\_file
+#  • read\_multiple\_files
 # ...
  
 # With descriptions
@@ -124,8 +124,8 @@ mcp-cli
 
 ```bash
 # View tool schema first
-mcp-cli info filesystem read_file
-# Tool: read_file
+mcp-cli info filesystem read\_file
+# Tool: read\_file
 # Server: filesystem
 #
 # Description:
@@ -142,7 +142,7 @@ mcp-cli info filesystem read_file
 
 ```bash
 # Call the tool
-mcp-cli call filesystem read_file '{"path": "./README.md"}'
+mcp-cli call filesystem read\_file '{"path": "./README.md"}'
 ```
 
 ### 6\. Complex commands
@@ -151,7 +151,7 @@ MCP CLI allows the model to generate commands that chain multiple tool calls tog
 
 ```bash
 # Using a heredoc (no '-' needed with call subcommand)
-mcp-cli call server tool <<EOF
+mcp-cli call server tool \<\<EOF
 {"content": "Text with 'single quotes' and \"double quotes\""}
 EOF
  
@@ -162,9 +162,9 @@ cat args.json | mcp-cli call server tool
 jq -n '{query: "mcp", filters: ["active", "starred"]}' | mcp-cli call github search
  
 # Find all TypeScript files and read the first one
-mcp-cli call filesystem search_files '{"path": "src/", "pattern": "*.ts"}' \
+mcp-cli call filesystem search\_files '{"path": "src/", "pattern": "*.ts"}' \
   | jq -r '.content[0].text | split("\n")[0]' \
-  | xargs -I {} mcp-cli call filesystem read_file '{"path": "{}"}'
+  | xargs -I {} mcp-cli call filesystem read\_file '{"path": "{}"}'
 ```
 
 ## Tool Filtering
@@ -177,8 +177,8 @@ You can restrict which tools are available from a server using `allowedTools` an
     "filesystem": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
-      "allowedTools": ["read_file", "list_directory"],
-      "disabledTools": ["delete_file"]
+      "allowedTools": ["read\_file", "list\_directory"],
+      "disabledTools": ["delete\_file"]
     }
   }
 }
@@ -195,14 +195,14 @@ You can restrict which tools are available from a server using `allowedTools` an
 
 ```bash
 # Only allow read operations
-"allowedTools": ["read_*", "list_*", "search_*"]
+"allowedTools": ["read\_*", "list\_*", "search\_*"]
  
 # Allow all except destructive operations
-"disabledTools": ["delete_*", "write_*", "create_*"]
+"disabledTools": ["delete\_*", "write\_*", "create\_*"]
  
 # Combine: allow file operations but disable delete
 "allowedTools": ["*file*"],
-"disabledTools": ["delete_file"]
+"disabledTools": ["delete\_file"]
 ```
 
 ## Connection Pooling
@@ -212,13 +212,13 @@ By default, `mcp-cli` uses lazy-spawn connection pooling to avoid repeated MCP s
 - **Automatic**: No manual start/stop needed
 - **Per-server**: Each MCP server gets its own daemon
 - **Stale detection**: Config changes trigger re-spawn
-- **60s idle timeout**: Configurable via `MCP_DAEMON_TIMEOUT`
+- **60s idle timeout**: Configurable via `MCP\_DAEMON\_TIMEOUT`
 
 Control via environment:
 
 ```bash
-MCP_NO_DAEMON=1 mcp-cli info      # Force fresh connection
-MCP_DAEMON_TIMEOUT=120 mcp-cli    # 2 minute idle timeout
+MCP\_NO\_DAEMON=1 mcp-cli info      # Force fresh connection
+MCP\_DAEMON\_TIMEOUT=120 mcp-cli    # 2 minute idle timeout
 ```
 
 ## Integrating with AI Agents
@@ -238,32 +238,32 @@ Commands:
  
 \`\`\`bash
 mcp-cli info                        # List all servers
-mcp-cli info <server>               # Show server tools  
-mcp-cli info <server> <tool>        # Get tool schema
-mcp-cli grep "<pattern>"            # Search tools
-mcp-cli call <server> <tool>        # Call tool (stdin auto-detected)
-mcp-cli call <server> <tool> '{}'   # Call with JSON args
+mcp-cli info \<server\>               # Show server tools  
+mcp-cli info \<server\> \<tool\>        # Get tool schema
+mcp-cli grep "\<pattern\>"            # Search tools
+mcp-cli call \<server\> \<tool\>        # Call tool (stdin auto-detected)
+mcp-cli call \<server\> \<tool\> '{}'   # Call with JSON args
 \`\`\`
  
-**Both formats work:** \`info <server> <tool>\` or \`info <server>/<tool>\`
+**Both formats work:** \`info \<server\> \<tool\>\` or \`info \<server\>/\<tool\>\`
  
 Workflow:
  
 1. **Discover**: \`mcp-cli info\` to see available servers
-2. **Inspect**: \`mcp-cli info <server> <tool>\` to get the schema
-3. **Execute**: \`mcp-cli call <server> <tool> '{}'\` with arguments
+2. **Inspect**: \`mcp-cli info \<server\> \<tool\>\` to get the schema
+3. **Execute**: \`mcp-cli call \<server\> \<tool\> '{}'\` with arguments
  
 ### Examples
  
 \`\`\`bash
 # Call with inline JSON
-mcp-cli call github search_repositories '{"query": "mcp server"}'
+mcp-cli call github search\_repositories '{"query": "mcp server"}'
  
 # Pipe from stdin (no '-' needed)
-echo '{"path": "./file"}' | mcp-cli call filesystem read_file
+echo '{"path": "./file"}' | mcp-cli call filesystem read\_file
  
 # Heredoc for complex JSON
-mcp-cli call server tool <<EOF
+mcp-cli call server tool \<\<EOF
 {"content": "Text with 'quotes'"}
 EOF
 \`\`\`
@@ -278,7 +278,7 @@ Create `mcp-cli/SKILL.md` in your agent's skills directory:
 ```markdown
 ---
 name: mcp-cli
-description: "Interface for MCP (Model Context Protocol) servers via CLI. Use when you need to interact with external tools, APIs, or data sources through MCP servers."
+description: Interface for MCP (Model Context Protocol) servers via CLI. Use when you need to interact with external tools, APIs, or data sources through MCP servers.
 ---
  
 # MCP-CLI
@@ -290,21 +290,21 @@ Access MCP servers through the command line. MCP enables interaction with extern
 | Command | Output |
 |---------|--------|
 | \`mcp-cli\` | List all servers and tool names |
-| \`mcp-cli info <server>\` | Show tools with parameters |
-| \`mcp-cli info <server> <tool>\` | Get tool JSON schema |
-| \`mcp-cli grep "<pattern>"\` | Search tools by name |
-| \`mcp-cli call <server> <tool> '{}'\` | Call tool with arguments |
+| \`mcp-cli info \<server\>\` | Show tools with parameters |
+| \`mcp-cli info \<server\> \<tool\>\` | Get tool JSON schema |
+| \`mcp-cli grep "\<pattern\>"\` | Search tools by name |
+| \`mcp-cli call \<server\> \<tool\> '{}'\` | Call tool with arguments |
  
-**Both formats work:** \`info <server> <tool>\` or \`info <server>/<tool>\`
+**Both formats work:** \`info \<server\> \<tool\>\` or \`info \<server\>/\<tool\>\`
  
 **Add \`-d\` to include descriptions** (e.g., \`mcp-cli info filesystem -d\`)
  
 ## Workflow
  
 1. **Discover**: \`mcp-cli\` → see available servers and tools
-2. **Explore**: \`mcp-cli info <server>\` → see tools with parameters
-3. **Inspect**: \`mcp-cli info <server> <tool>\` → get full JSON input schema
-4. **Execute**: \`mcp-cli call <server> <tool> '{}'\` → run with arguments
+2. **Explore**: \`mcp-cli info \<server\>\` → see tools with parameters
+3. **Inspect**: \`mcp-cli info \<server\> \<tool\>\` → get full JSON input schema
+4. **Execute**: \`mcp-cli call \<server\> \<tool\> '{}'\` → run with arguments
  
 ## Examples
  
@@ -319,16 +319,16 @@ mcp-cli info filesystem
 mcp-cli info filesystem -d
  
 # Get JSON schema for specific tool
-mcp-cli info filesystem read_file
+mcp-cli info filesystem read\_file
  
 # Call the tool
-mcp-cli call filesystem read_file '{"path": "./README.md"}'
+mcp-cli call filesystem read\_file '{"path": "./README.md"}'
  
 # Search for tools
 mcp-cli grep "*file*"
  
 # Complex JSON with quotes (use heredoc or stdin)
-mcp-cli call server tool <<EOF
+mcp-cli call server tool \<\<EOF
 {"content": "Text with 'quotes' inside"}
 EOF
  
@@ -336,9 +336,9 @@ EOF
 cat args.json | mcp-cli call server tool
  
 # Chain: search and read first result
-mcp-cli call filesystem search_files '{"path": "src/", "pattern": "*.ts"}' \
+mcp-cli call filesystem search\_files '{"path": "src/", "pattern": "*.ts"}' \
   | jq -r '.content[0].text | split("\n")[0]' \
-  | xargs -I {} mcp-cli call filesystem read_file '{"path": "{}"}'
+  | xargs -I {} mcp-cli call filesystem read\_file '{"path": "{}"}'
 \`\`\`
  
 ## Options
@@ -346,7 +346,7 @@ mcp-cli call filesystem search_files '{"path": "src/", "pattern": "*.ts"}' \
 | Flag | Purpose |
 |------|---------|
 | \`-d\` | Include descriptions |
-| \`-c <path>\` | Custom config file path |
+| \`-c \<path\>\` | Custom config file path |
  
 ## Exit Codes
  
@@ -364,4 +364,4 @@ The project is open source and designed to fit into existing workflows. Give it 
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

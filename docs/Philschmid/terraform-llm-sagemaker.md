@@ -1,11 +1,11 @@
 ---
 title: "Deploy open LLMs with Terraform and Amazon SageMaker"
 site: "Philipp Schmid"
-published: 2024-08-05
+published: "2024-08-05"
 source: "https://www.philschmid.de/terraform-llm-sagemaker"
-domain: "philschmid.de"
+domain: ""
 language: "en"
-word_count: 1157
+word_count: 1173
 ---
 
 # Deploy open LLMs with Terraform and Amazon SageMaker
@@ -37,20 +37,22 @@ It handles the creation of all necessary resources, including:
 
 With this module, you can easily deploy popular models like Llama 3, Mistral, Mixtral, and Command from Hugging Face to Amazon SageMaker.
 
+Hcl
+
 ```hcl
 module "sagemaker-huggingface" {
   source               = "philschmid/llm-sagemaker/aws"
   version              = "0.1.0"
-  endpoint_name_prefix = "llama3"
-  hf_model_id          = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-  hf_token             = "YOUR_HF_TOKEN_WITH_ACCESS_TO_THE_MODEL"
-  instance_type        = "ml.g5.2xlarge"
-  instance_count       = 1 # default is 1
+  endpoint\_name\_prefix = "llama3"
+  hf\_model\_id          = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+  hf\_token             = "YOUR\_HF\_TOKEN\_WITH\_ACCESS\_TO\_THE\_MODEL"
+  instance\_type        = "ml.g5.2xlarge"
+  instance\_count       = 1 # default is 1
  
-  tgi_config = {
-    max_input_tokens       = 4000
-    max_total_tokens       = 4096
-    max_batch_total_tokens = 6144
+  tgi\_config = {
+    max\_input\_tokens       = 4000
+    max\_total\_tokens       = 4096
+    max\_batch\_total\_tokens = 6144
   }
 }
 ```
@@ -62,6 +64,8 @@ Before we get started, make sure you have the [Terraform](https://learn.hashicor
 ### Create a new Terraform configuration
 
 Each Terraform configuration must be in its own directory including a `main.tf` file. Our first step is to create the `llama-terraform` directory with a `main.tf` file.
+
+Bash
 
 ```bash
 mkdir llama-terraform
@@ -77,6 +81,8 @@ Next, we open the `main.tf` in a text editor and add the `aws` provider as well 
 
 *Note: the snippet below assumes that you have an AWS profile `default` configured with the needed permissions*
 
+Hcl
+
 ```hcl
 provider "aws" {
   profile = "default"
@@ -87,27 +93,29 @@ provider "aws" {
 module "sagemaker-huggingface" {
   source               = "philschmid/llm-sagemaker/aws"
   version              = "0.1.0"
-  endpoint_name_prefix = "llama3"
-  hf_model_id          = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-  hf_token             = "YOUR_HF_TOKEN_WITH_ACCESS_TO_THE_MODEL"
-  instance_type        = "ml.g5.2xlarge"
-  instance_count       = 1# default is 1
+  endpoint\_name\_prefix = "llama3"
+  hf\_model\_id          = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+  hf\_token             = "YOUR\_HF\_TOKEN\_WITH\_ACCESS\_TO\_THE\_MODEL"
+  instance\_type        = "ml.g5.2xlarge"
+  instance\_count       = 1# default is 1
  
-  tgi_config = {
-    max_input_tokens       = 4000
-    max_total_tokens       = 4096
-    max_batch_total_tokens = 6144
+  tgi\_config = {
+    max\_input\_tokens       = 4000
+    max\_total\_tokens       = 4096
+    max\_batch\_total\_tokens = 6144
   }
 }
  
-output "endpoint_name" {
-  value = module.sagemaker-huggingface.sagemaker_endpoint_name
+output "endpoint\_name" {
+  value = module.sagemaker-huggingface.sagemaker\_endpoint\_name
 }
 ```
 
-*Note: Make sure to replace the* `YOUR_HF_TOKEN_WITH_ACCESS_TO_THE_MODEL` with a valid Hugging Face Token that has access to Llama 3.1.
+*Note: Make sure to replace the* `YOUR\_HF\_TOKEN\_WITH\_ACCESS\_TO\_THE\_MODEL` with a valid Hugging Face Token that has access to Llama 3.1.
 
 When we create a new configuration — or check out an existing configuration from version control — we need to initialize the directory with `terraform init`. Initializing will download and install our AWS provider as well as the `sagemaker-llm` module.
+
+Bash
 
 ```bash
 terraform init
@@ -126,6 +134,8 @@ terraform init
 
 To deploy/apply our configuration we run `terraform apply` command. Terraform will then print out which resources are going to be created and ask us if we want to continue, which can we confirm with `yes`.
 
+Bash
+
 ```bash
 terraform apply
 ```
@@ -134,13 +144,15 @@ Now Terraform will deploy our model to Amazon SageMaker as a real-time endpoint.
 
 ### Test the endpoint and run inference
 
-To test our deployed endpoint we can use the [aws sdk](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html#API_runtime_InvokeEndpoint_SeeAlso) in our example we are going to use the Python SDK (`boto3`), but you can easily switch this to use Java, Javascript, .NET, or Go SDK to invoke the Amazon SageMaker endpoint.
+To test our deployed endpoint we can use the [aws sdk](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API\_runtime\_InvokeEndpoint.html#API\_runtime\_InvokeEndpoint\_SeeAlso) in our example we are going to use the Python SDK (`boto3`), but you can easily switch this to use Java, Javascript, .NET, or Go SDK to invoke the Amazon SageMaker endpoint.
 
-To be able to invoke our endpoint we need the endpoint name. You can get the endpoint name by inspecting the output of Terraform with `terraform output endpoint_name` or going to the SageMaker service in the AWS Management console.
+To be able to invoke our endpoint we need the endpoint name. You can get the endpoint name by inspecting the output of Terraform with `terraform output endpoint\_name` or going to the SageMaker service in the AWS Management console.
 
 We create a new file `request.py` with the following snippet.
 
 *Make sure you have configured your credentials (and region) correctly*
+
+Python
 
 ```python
 import boto3
@@ -148,20 +160,20 @@ import json
  
 client = boto3.client("sagemaker-runtime")
  
-ENDPOINT_NAME = "YOUR_ENDPOINT_NAME"
+ENDPOINT\_NAME = "YOUR\_ENDPOINT\_NAME"
  
 body = {
     "messages": [
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": "What is deep learning?"},
     ],
-    "top_p": 0.6,
+    "top\_p": 0.6,
     "temperature": 0.9,
-    "max_tokens": 512,
+    "max\_tokens": 512,
 }
  
-response = client.invoke_endpoint(
-    EndpointName=ENDPOINT_NAME,
+response = client.invoke\_endpoint(
+    EndpointName=ENDPOINT\_NAME,
     ContentType="application/json",
     Accept="application/json",
     Body=json.dumps(body),
@@ -171,6 +183,8 @@ print(response["choices"][0]["message"]["content"])
 ```
 
 Now we can execute our request.
+
+Bash
 
 ```bash
 python3 request.py
@@ -196,4 +210,4 @@ Give it a try and tell me know what you think about the module. Its still a very
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

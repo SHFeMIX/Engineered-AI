@@ -5,7 +5,7 @@ published: "2026-04-29"
 source: "https://www.philschmid.de/deep-research-update"
 domain: ""
 language: "en"
-word_count: 1201
+word_count: 1243
 ---
 
 # How to use Deep Research with the Gemini API
@@ -31,11 +31,15 @@ Two new versions are available:
 
 Install the Python SDK:
 
+Shell
+
 ```shell
 pip install google-genai
 ```
 
 Set your API key as an environment variable. You can create one at [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
+
+Shell
 
 ```shell
 export GEMINI\_API\_KEY="your-api-key"
@@ -44,6 +48,8 @@ export GEMINI\_API\_KEY="your-api-key"
 ## Run your first Deep Research task
 
 Start a research task with `background=True` and poll for the result. Deep Research is asynchronous as tasks can take several minutes to complete.
+
+Python
 
 ```py
 import time
@@ -74,6 +80,8 @@ Set `collaborative\_planning=True` to get a research plan back instead of runnin
 
 Step 1: Request a plan
 
+Python
+
 ```py
 import time
 from google import genai
@@ -95,6 +103,8 @@ print(result.outputs[-1].text)
 
 **Refine the plan:** Use `previous\_interaction\_id` to continue the conversation. Keep `collaborative\_planning=True` to stay in planning mode. Repeat as needed.
 
+Python
+
 ```py
 refined = client.interactions.create(
     agent="deep-research-preview-04-2026",
@@ -114,6 +124,8 @@ print(result.outputs[-1].text)
 
 **Important:** You must explicitly set `collaborative\_planning=False` on the final turn. Simply sending "go ahead" without flipping the flag will not trigger report generation.
 
+Python
+
 ```py
 report = client.interactions.create(
     agent="deep-research-preview-04-2026",
@@ -132,6 +144,8 @@ print(result.outputs[-1].text)
 ## Native charts and infographics
 
 Set `visualization="auto"` and ask for visuals in your prompt. The agent generates charts and infographics returned as base64-encoded images.
+
+Python
 
 ```py
 import base64
@@ -163,6 +177,8 @@ for output in result.outputs:
 
 Connect remote MCP servers to give the agent access to external tools. Pass the server `name`, `url`, and optional auth headers.
 
+Python
+
 ```py
 interaction = client.interactions.create(
     agent="deep-research-preview-04-2026",
@@ -193,6 +209,8 @@ By default the agent uses Google Search, URL Context, and Code Execution. You ca
 | MCP Server | `mcp\_server` | — | Connect remote MCP servers |
 | File Search | `file\_search` | — | Search uploaded document corpora |
 
+Python
+
 ```py
 # Only web search allowed
 interaction = client.interactions.create(
@@ -209,6 +227,8 @@ interaction = client.interactions.create(
 
 Pass images, PDFs, and documents alongside your text prompt to ground the research.
 
+Python
+
 ```py
 interaction = client.interactions.create(
     agent="deep-research-preview-04-2026",
@@ -223,6 +243,8 @@ interaction = client.interactions.create(
 ## Real-time streaming with visuals and thought summaries
 
 Stream research progress in real time. Enable `thinking\_summaries="auto"` to receive the agent's intermediate reasoning alongside text and generated images.
+
+Python
 
 ```py
 import base64

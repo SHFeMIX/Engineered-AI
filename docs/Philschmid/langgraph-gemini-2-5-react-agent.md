@@ -1,18 +1,18 @@
 ---
 title: "ReAct agent from scratch with Gemini 2.5 and LangGraph"
 site: "Philipp Schmid"
-published: 2025-03-31
+published: "2025-03-31"
 source: "https://www.philschmid.de/langgraph-gemini-2-5-react-agent"
-domain: "philschmid.de"
+domain: ""
 language: "en"
-word_count: 2394
+word_count: 2450
 ---
 
 # ReAct agent from scratch with Gemini 2.5 and LangGraph
 
 AI applications are evolving from simple chatbots to (semi-)autonomous systems capable of complex reasoning, planning, and interaction with the real world. We call these system agents.
 
-> An AI Agent is a system that uses LLMs to decide the control flow of an application.
+\> An AI Agent is a system that uses LLMs to decide the control flow of an application.
 
 Agents are not just theoretical concepts; they are and will be deployed in production across various verticals, tackling increasingly more complex and longer-running tasks. In this blog post, we'll explore how to create a ReAct agent using Google's Gemini 2.5 Pro or Gemini 2.0 Flash and LangGraph from scratch.
 
@@ -44,6 +44,8 @@ These first-generation ReAct agents used a simple but effective prompting techni
 
 Here's a pseudo-code example demonstrating the flow of an early ReAct agent.
 
+Xml
+
 ```xml
 User: Who is Olivia Wilde's boyfriend? What is his current age raised to the 0.23 power?
  
@@ -68,6 +70,8 @@ Final Answer: Harry Styles, Olivia Wilde's boyfriend, is 29 years old and his ag
 Since the introduction of ReAct Agent the capabilities of LLMs has evolved. One of the most important improvements we made is function calling. Function calling allows us to to connect LLMs to external tools in a structured way, which is more reliable than parsing raw text and reduces the likelihood of errors and hallucinations.
 
 Here's a pseudo-code example demonstrating the flow of an ReAct agent using function calling
+
+Xml
 
 ```xml
 User: Who is Olivia Wilde's boyfriend? What is his current age raised to the 0.23 power?
@@ -96,7 +100,7 @@ Assistant: Harry Styles, Olivia Wilde's boyfriend, is 29 years old. His age rais
 
 ## How to create a ReAct agent from scratch with LangGraph
 
-We know have base understanding on how ReAct agents work. Now, let's build our own from scratch. We are going to use LangGraph and Gemini 2.5 Pro. LangGraph is framework for building controllable agents. LangGraph comes already with prebuilt ReAct agent [create\_react\_agent](https://langchain-ai.github.io/langgraph/reference/prebuilt/#langgraph.prebuilt.chat_agent_executor.create_react_agent), but sometimes you might want more control and customization. Additionally, It is good to understand the underlying concepts and how to build your own ReAct agent from scratch.
+We know have base understanding on how ReAct agents work. Now, let's build our own from scratch. We are going to use LangGraph and Gemini 2.5 Pro. LangGraph is framework for building controllable agents. LangGraph comes already with prebuilt ReAct agent [create\_react\_agent](https://langchain-ai.github.io/langgraph/reference/prebuilt/#langgraph.prebuilt.chat\_agent\_executor.create\_react\_agent), but sometimes you might want more control and customization. Additionally, It is good to understand the underlying concepts and how to build your own ReAct agent from scratch.
 
 LangGraph models agent as graphs. You define the behavior of agents using three key components:
 
@@ -106,82 +110,92 @@ LangGraph models agent as graphs. You define the behavior of agents using three 
 
 First, we installed required packages and set our API keys. If you don't have an API Key yet you can get one for free in the [Google AI Studio](https://aistudio.google.com/app/apikey).
 
+Python
+
 ```python
 %pip install langgraph langchain-google-genai geopy requests
 ```
+
+Python
 
 ```python
 import os 
  
 # Read your API key from the environment variable or set it manually
-api_key = os.getenv("GEMINI_API_KEY","xxx")
+api\_key = os.getenv("GEMINI\_API\_KEY","xxx")
 ```
 
-We are going to create the most basic ReAct agents, which uses mocked 1 tool to retrieve the weather for a given location. For this we need to store the conversation history as a list of messages in our graph state. We are going to use the [add\_messages](https://langchain-ai.github.io/langgraph/reference/graphs/#langgraph.graph.message.add_messages) helper function to add messages to the state. The `add_messages` function is a [reducer](https://langchain-ai.github.io/langgraph/concepts/low_level/#reducers) that merges two lists of messages, updating existing messages by ID and ensures the state is "append-only", unless the new message has the same ID as an existing message. For demonstration purposes we also store the number of steps in the state.
+We are going to create the most basic ReAct agents, which uses mocked 1 tool to retrieve the weather for a given location. For this we need to store the conversation history as a list of messages in our graph state. We are going to use the [add\_messages](https://langchain-ai.github.io/langgraph/reference/graphs/#langgraph.graph.message.add\_messages) helper function to add messages to the state. The `add\_messages` function is a [reducer](https://langchain-ai.github.io/langgraph/concepts/low\_level/#reducers) that merges two lists of messages, updating existing messages by ID and ensures the state is "append-only", unless the new message has the same ID as an existing message. For demonstration purposes we also store the number of steps in the state.
 
 Note: Since having a list of messages in the state is so common, there exists a prebuilt state called `MessagesState` which makes it easy to use messages.
+
+Python
 
 ```python
 from typing import Annotated,Sequence, TypedDict
  
-from langchain_core.messages import BaseMessage 
-from langgraph.graph.message import add_messages # helper function to add messages to the state
+from langchain\_core.messages import BaseMessage 
+from langgraph.graph.message import add\_messages # helper function to add messages to the state
  
  
 class AgentState(TypedDict):
     """The state of the agent."""
-    messages: Annotated[Sequence[BaseMessage], add_messages]
-    number_of_steps: int
+    messages: Annotated[Sequence[BaseMessage], add\_messages]
+    number\_of\_steps: int
 ```
 
 Next, we define our weather tool.
 
+Python
+
 ```python
-from langchain_core.tools import tool
+from langchain\_core.tools import tool
 from geopy.geocoders import Nominatim
 from pydantic import BaseModel, Field
 import requests
  
-geolocator = Nominatim(user_agent="weather-app") 
+geolocator = Nominatim(user\_agent="weather-app") 
  
 class SearchInput(BaseModel):
     location:str = Field(description="The city and state, e.g., San Francisco")
     date:str = Field(description="the forecasting date for when to get the weather format (yyyy-mm-dd)")
  
-@tool("get_weather_forecast", args_schema=SearchInput, return_direct=True)
-def get_weather_forecast(location: str, date: str):
+@tool("get\_weather\_forecast", args\_schema=SearchInput, return\_direct=True)
+def get\_weather\_forecast(location: str, date: str):
     """Retrieves the weather using Open-Meteo API for a given location (city) and a date (yyyy-mm-dd). Returns a list dictionary with the time and temperature for each hour."""
     location = geolocator.geocode(location)
     if location:
         try:
-            response = requests.get(f"https://api.open-meteo.com/v1/forecast?latitude={location.latitude}&longitude={location.longitude}&hourly=temperature_2m&start_date={date}&end_date={date}")
+            response = requests.get(f"https://api.open-meteo.com/v1/forecast?latitude={location.latitude}&longitude={location.longitude}&hourly=temperature\_2m&start\_date={date}&end\_date={date}")
             data = response.json()
-            return {time: temp for time, temp in zip(data["hourly"]["time"], data["hourly"]["temperature_2m"])}
+            return {time: temp for time, temp in zip(data["hourly"]["time"], data["hourly"]["temperature\_2m"])}
         except Exception as e:
             return {"error": str(e)}
     else:
         return {"error": "Location not found"}
  
-tools = [get_weather_forecast]
+tools = [get\_weather\_forecast]
 ```
 
 Next, we initalize our model and bind the tools to the model.
 
+Python
+
 ```python
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain\_google\_genai import ChatGoogleGenerativeAI
   
 # Create LLM class 
 llm = ChatGoogleGenerativeAI(
     model= "gemini-2.5-pro-exp-03-25", # replace with "gemini-2.0-flash"
     temperature=1.0,
-    max_tokens=None,
+    max\_tokens=None,
     timeout=None,
-    max_retries=2,
-    google_api_key=api_key,
+    max\_retries=2,
+    google\_api\_key=api\_key,
 )
  
 # Bind tools to the model
-model = llm.bind_tools([get_weather_forecast])
+model = llm.bind\_tools([get\_weather\_forecast])
  
 # Test the model with tools
 model.invoke("What is the weather in Berlin on 12th of March 2025?")
@@ -189,61 +203,65 @@ model.invoke("What is the weather in Berlin on 12th of March 2025?")
 
 The last step before we can run our agent is to define our nodes and edges. In our examples we have two nodes and 1 edge.
 
-- `call_tool` node that executes our tool method. LangGraph has a prebuilt node for this called [ToolNode](https://langchain-ai.github.io/langgraph/how-tos/tool-calling/).
-- `call_model` node that uses the `model_with_tools` to call the model.
-- `should_continue` edge that decides whether to call the tool or the model.
+- `call\_tool` node that executes our tool method. LangGraph has a prebuilt node for this called [ToolNode](https://langchain-ai.github.io/langgraph/how-tos/tool-calling/).
+- `call\_model` node that uses the `model\_with\_tools` to call the model.
+- `should\_continue` edge that decides whether to call the tool or the model.
 
 The number of nodes and edges is not fixed. You can add as many nodes and edges as you want to your graph. For example, you could add a node for adding structured output or self-verification/reflection node to check the model output before calling the tool or the model.
 
+Python
+
 ```python
 import json
-from langchain_core.messages import ToolMessage, SystemMessage
-from langchain_core.runnables import RunnableConfig
+from langchain\_core.messages import ToolMessage, SystemMessage
+from langchain\_core.runnables import RunnableConfig
  
-tools_by_name = {tool.name: tool for tool in tools}
+tools\_by\_name = {tool.name: tool for tool in tools}
  
-# this is similar to customizing the create_react_agent with 'prompt' parameter, but is more flexible
-# system_prompt = SystemMessage(
+# this is similar to customizing the create\_react\_agent with 'prompt' parameter, but is more flexible
+# system\_prompt = SystemMessage(
 #     "You are a helpful assistant that use tools to access and retrieve information from a weather API. Today is 2025-03-04. Help the user with their questions. Use the history to answer the question."
 # )
  
 # Define our tool node
-def call_tool(state: AgentState):
+def call\_tool(state: AgentState):
     outputs = []
     # Iterate over the tool calls in the last message
-    for tool_call in state["messages"][-1].tool_calls:
+    for tool\_call in state["messages"][-1].tool\_calls:
         # Get the tool by name
-        tool_result = tools_by_name[tool_call["name"]].invoke(tool_call["args"])
+        tool\_result = tools\_by\_name[tool\_call["name"]].invoke(tool\_call["args"])
         outputs.append(
             ToolMessage(
-                content=tool_result,
-                name=tool_call["name"],
-                tool_call_id=tool_call["id"],
+                content=tool\_result,
+                name=tool\_call["name"],
+                tool\_call\_id=tool\_call["id"],
             )
         )
     return {"messages": outputs}
  
-def call_model(
+def call\_model(
     state: AgentState,
     config: RunnableConfig,
 ):
     # Invoke the model with the system prompt and the messages
     response = model.invoke(state["messages"], config)
-    # We return a list, because this will get added to the existing messages state using the add_messages reducer
+    # We return a list, because this will get added to the existing messages state using the add\_messages reducer
     return {"messages": [response]}
  
  
 # Define the conditional edge that determines whether to continue or not
-def should_continue(state: AgentState):
+def should\_continue(state: AgentState):
     messages = state["messages"]
     # If the last message is not a tool call, then we finish
-    if not messages[-1].tool_calls:
+    if not messages[-1].tool\_calls:
         return "end"
     # default to continue
     return "continue"
 ```
 
 Awesome, now we have all the components to build our agent. Let's put them together.
+
+Python
 
 ```python
 from langgraph.graph import StateGraph, END
@@ -252,16 +270,16 @@ from langgraph.graph import StateGraph, END
 workflow = StateGraph(AgentState)
  
 # 1. Add our nodes 
-workflow.add_node("llm", call_model)
-workflow.add_node("tools",  call_tool)
+workflow.add\_node("llm", call\_model)
+workflow.add\_node("tools",  call\_tool)
 # 2. Set the entrypoint as \`agent\`, this is the first node called
-workflow.set_entry_point("llm")
+workflow.set\_entry\_point("llm")
 # 3. Add a conditional edge after the \`llm\` node is called.
-workflow.add_conditional_edges(
+workflow.add\_conditional\_edges(
     # Edge is used after the \`llm\` node is called.
     "llm",
     # The function that will determine which node is called next.
-    should_continue,
+    should\_continue,
     # Mapping for where to go next, keys are strings from the function return, and the values are other nodes.
     # END is a special node marking that the graph is finish.
     {
@@ -272,23 +290,27 @@ workflow.add_conditional_edges(
     },
 )
 # 4. Add a normal edge after \`tools\` is called, \`llm\` node is called next.
-workflow.add_edge("tools", "llm")
+workflow.add\_edge("tools", "llm")
  
 # Now we can compile and visualize our graph
 graph = workflow.compile()
 ```
 
-We can visualize our graph using the `draw_mermaid_png` method.
+We can visualize our graph using the `draw\_mermaid\_png` method.
+
+Python
 
 ```python
 from IPython.display import Image, display
  
-display(Image(graph.get_graph().draw_mermaid_png()))
+display(Image(graph.get\_graph().draw\_mermaid\_png()))
 ```
 
-![png](https://www.philschmid.de/static/blog/langgraph-gemini-2-5-react-agent/langgraph-react-agent_16_0.png)
+![png](https://www.philschmid.de/static/blog/langgraph-gemini-2-5-react-agent/langgraph-react-agent\_16\_0.png)
 
 Awesome, now lets our agent.
+
+Python
 
 ```python
 # Create our initial message dictionary
@@ -296,70 +318,72 @@ inputs = {"messages": [("user", "How is the weather in Berlin on 12th of March 2
  
 # call our graph with streaming to see the steps
  
-for state in graph.stream(inputs, stream_mode="values"):
-    last_message = state["messages"][-1]
-    last_message.pretty_print()
+for state in graph.stream(inputs, stream\_mode="values"):
+    last\_message = state["messages"][-1]
+    last\_message.pretty\_print()
 ```
 
 Result:
 
-```
+```plaintext
 ================================[1m Human Message [0m=================================
-
+ 
 How is the weather in Berlin on 12th of March 2025?
 ==================================[1m Ai Message [0m==================================
 Tool Calls:
-    get_weather_forecast (162a0f9f-352f-4b06-b6be-e071d6eee35b)
+    get\_weather\_forecast (162a0f9f-352f-4b06-b6be-e071d6eee35b)
     Call ID: 162a0f9f-352f-4b06-b6be-e071d6eee35b
     Args:
     date: 2025-03-12
     location: Berlin
 =================================[1m Tool Message [0m=================================
-Name: get_weather_forecast
-
+Name: get\_weather\_forecast
+ 
 {'2025-03-12T00:00': 4.5, '2025-03-12T01:00': 4.5, '2025-03-12T02:00': 4.8, '2025-03-12T03:00': 5.2, '2025-03-12T04:00': 5.2, '2025-03-12T05:00': 5.1, '2025-03-12T06:00': 5.0, '2025-03-12T07:00': 5.1, '2025-03-12T08:00': 5.6, '2025-03-12T09:00': 6.2, '2025-03-12T10:00': 7.0, '2025-03-12T11:00': 7.3, '2025-03-12T12:00': 7.5, '2025-03-12T13:00': 7.8, '2025-03-12T14:00': 8.2, '2025-03-12T15:00': 8.1, '2025-03-12T16:00': 7.9, '2025-03-12T17:00': 7.6, '2025-03-12T18:00': 7.1, '2025-03-12T19:00': 6.9, '2025-03-12T20:00': 5.5, '2025-03-12T21:00': 6.0, '2025-03-12T22:00': 5.0, '2025-03-12T23:00': 4.7}
 ==================================[1m Ai Message [0m==================================
-
+ 
 OK. Here is the weather forecast for Berlin on March 12th, 2025:
-
+ 
 The temperature will range from 4.5°C in the early morning to a high of 8.2°C in the afternoon. Temperatures will start around 4.5°C at midnight, rise through the morning to reach the peak in the early afternoon (around 2 PM), and then cool down again in the evening, dropping to around 4.7°C by 11 PM.
 ```
 
 We can now continue with our conversation and for example ask for the weather in another city or let it compare it.
 
+Python
+
 ```python
 state["messages"].append(("user", "Would it be in Munich warmer?"))
  
  
-for state in graph.stream(state, stream_mode="values"):
-    last_message = state["messages"][-1]
-    last_message.pretty_print()
+for state in graph.stream(state, stream\_mode="values"):
+    last\_message = state["messages"][-1]
+    last\_message.pretty\_print()
 ```
 
 Result:
 
-```
+```plaintext
 ================================[1m Human Message [0m=================================
     
 Would it be in Munich warmer?
 ==================================[1m Ai Message [0m==================================
 Tool Calls:
-    get_weather_forecast (1736dcae-c173-4b90-8c07-3751b6fd848d)
+    get\_weather\_forecast (1736dcae-c173-4b90-8c07-3751b6fd848d)
     Call ID: 1736dcae-c173-4b90-8c07-3751b6fd848d
     Args:
     date: 2025-03-12
     location: Munich
 =================================[1m Tool Message [0m=================================
-Name: get_weather_forecast
-
+Name: get\_weather\_forecast
+ 
 {'2025-03-12T00:00': 5.3, '2025-03-12T01:00': 5.0, '2025-03-12T02:00': 4.7, '2025-03-12T03:00': 3.8, '2025-03-12T04:00': 3.5, '2025-03-12T05:00': 3.4, '2025-03-12T06:00': 3.5, '2025-03-12T07:00': 4.5, '2025-03-12T08:00': 4.9, '2025-03-12T09:00': 5.7, '2025-03-12T10:00': 6.6, '2025-03-12T11:00': 8.0, '2025-03-12T12:00': 9.2, '2025-03-12T13:00': 10.1, '2025-03-12T14:00': 10.6, '2025-03-12T15:00': 9.9, '2025-03-12T16:00': 9.6, '2025-03-12T17:00': 9.3, '2025-03-12T18:00': 8.9, '2025-03-12T19:00': 8.2, '2025-03-12T20:00': 7.5, '2025-03-12T21:00': 6.9, '2025-03-12T22:00': 6.3, '2025-03-12T23:00': 5.6}
 ==================================[1m Ai Message [0m==================================
-
+ 
 Yes, it looks like Munich will be warmer than Berlin on March 12th, 2025, especially during the afternoon.
-
+ 
 *   **Munich:** The temperature is expected to reach a high of about 10.6°C around 2 PM. The lowest temperature will be around 3.4°C in the early morning.
 *   **Berlin:** The high is predicted to be 8.2°C, also around 2 PM, with a low of 4.5°C.
-
+ 
 So, while Munich might start a bit colder in the very early morning, its daytime high will be noticeably warmer than Berlin's.
 ```
 
@@ -369,4 +393,4 @@ Building ReAct agents with LangGraph and Gemini 2.5 Pro or Gemini 2.0 Flash enab
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

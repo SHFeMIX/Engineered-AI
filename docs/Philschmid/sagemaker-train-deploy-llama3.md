@@ -1,11 +1,11 @@
 ---
 title: "Fine-tune Llama 3 with PyTorch FSDP and Q-Lora on Amazon SageMaker"
 site: "Philipp Schmid"
-published: 2024-06-11
+published: "2024-06-11"
 source: "https://www.philschmid.de/sagemaker-train-deploy-llama3"
-domain: "philschmid.de"
+domain: ""
 language: "en"
-word_count: 2967
+word_count: 2994
 ---
 
 # Fine-tune Llama 3 with PyTorch FSDP and Q-Lora on Amazon SageMaker
@@ -34,47 +34,55 @@ This blog post walks you thorugh how to fine-tune open LLMs from Hugging Face us
 
 Our first step is to install Hugging Face Libraries we need on the client to correctly prepare our dataset and start our training/evaluations jobs.
 
+Python
+
 ```python
-!pip install transformers "datasets[s3]==2.18.0" "sagemaker>=2.190.0" "huggingface_hub[cli]" --upgrade --quiet
+!pip install transformers "datasets[s3]==2.18.0" "sagemaker\>=2.190.0" "huggingface\_hub[cli]" --upgrade --quiet
 ```
 
 Next we need to login into Hugging Face to access the Llama 3 70b model and store our trained model on Hugging Face. If you don't have an account yet and accepted the terms, you can create one [here](https://huggingface.co/join).
 
+Python
+
 ```python
-!huggingface-cli login --token YOUR_TOKEN
+!huggingface-cli login --token YOUR\_TOKEN
 ```
 
 If you are going to use Sagemaker in a local environment. You need access to an IAM Role with the required permissions for Sagemaker. You can find [here](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html) more about it.
+
+Python
 
 ```python
 import sagemaker
 import boto3
 sess = sagemaker.Session()
-# sagemaker session bucket -> used for uploading data, models and logs
+# sagemaker session bucket -\> used for uploading data, models and logs
 # sagemaker will automatically create this bucket if it not exists
-sagemaker_session_bucket=None
-if sagemaker_session_bucket is None and sess is not None:
+sagemaker\_session\_bucket=None
+if sagemaker\_session\_bucket is None and sess is not None:
     # set to default bucket if a bucket name is not given
-    sagemaker_session_bucket = sess.default_bucket()
+    sagemaker\_session\_bucket = sess.default\_bucket()
  
 try:
-    role = sagemaker.get_execution_role()
+    role = sagemaker.get\_execution\_role()
 except ValueError:
     iam = boto3.client('iam')
-    role = iam.get_role(RoleName='sagemaker_execution_role')['Role']['Arn']
+    role = iam.get\_role(RoleName='sagemaker\_execution\_role')['Role']['Arn']
  
-sess = sagemaker.Session(default_bucket=sagemaker_session_bucket)
+sess = sagemaker.Session(default\_bucket=sagemaker\_session\_bucket)
  
 print(f"sagemaker role arn: {role}")
-print(f"sagemaker bucket: {sess.default_bucket()}")
-print(f"sagemaker session region: {sess.boto_region_name}")
+print(f"sagemaker bucket: {sess.default\_bucket()}")
+print(f"sagemaker session region: {sess.boto\_region\_name}")
 ```
 
 ## 2\. Create and prepare the dataset
 
 After our environment is set up, we can start creating and preparing our dataset. A fine-tuning dataset should have a diverse set of demonstrations of the task you want to solve. If you want to learn more about how to create a dataset, take a look at the [How to Fine-Tune LLMs in 2024 with Hugging Face](https://www.philschmid.de/fine-tune-llms-in-2024-with-trl#3-create-and-prepare-the-dataset).
 
-We will use the [HuggingFaceH4/no\_robots](https://huggingface.co/datasets/HuggingFaceH4/no_robots) dataset a high-quality dataset of 10,000 instructions and demonstrations created by skilled human annotators. This data can be used for supervised fine-tuning (SFT) to make language models follow instructions better. No Robots was modelled after the instruction dataset described in OpenAI's [InstructGPT paper](https://huggingface.co/papers/2203.02155), and is comprised mostly of single-turn instructions.
+We will use the [HuggingFaceH4/no\_robots](https://huggingface.co/datasets/HuggingFaceH4/no\_robots) dataset a high-quality dataset of 10,000 instructions and demonstrations created by skilled human annotators. This data can be used for supervised fine-tuning (SFT) to make language models follow instructions better. No Robots was modelled after the instruction dataset described in OpenAI's [InstructGPT paper](https://huggingface.co/papers/2203.02155), and is comprised mostly of single-turn instructions.
+
+JSON
 
 ```json
 {"messages": [{"role": "system", "content": "You are..."}, {"role": "user", "content": "..."}, {"role": "assistant", "content": "..."}]}
@@ -82,55 +90,59 @@ We will use the [HuggingFaceH4/no\_robots](https://huggingface.co/datasets/Huggi
 {"messages": [{"role": "system", "content": "You are..."}, {"role": "user", "content": "..."}, {"role": "assistant", "content": "..."}]}
 ```
 
-The [no\_robots](https://huggingface.co/datasets/HuggingFaceH4/no_robots) dataset has 10,000 split into 9,500 training and 500 test examples. Some samples are not including a `system` message. We will load the dataset with the `datasets` library, add a missing `system` message and save them to separate json files.
+The [no\_robots](https://huggingface.co/datasets/HuggingFaceH4/no\_robots) dataset has 10,000 split into 9,500 training and 500 test examples. Some samples are not including a `system` message. We will load the dataset with the `datasets` library, add a missing `system` message and save them to separate json files.
+
+Python
 
 ```python
-from datasets import load_dataset
+from datasets import load\_dataset
  
 # Convert dataset to OAI messages
-system_message = """You are Llama, an AI assistant created by Philipp to be helpful and honest. Your knowledge spans a wide range of topics, allowing you to engage in substantive conversations and provide analysis on complex subjects."""
+system\_message = """You are Llama, an AI assistant created by Philipp to be helpful and honest. Your knowledge spans a wide range of topics, allowing you to engage in substantive conversations and provide analysis on complex subjects."""
  
-def create_conversation(sample):
+def create\_conversation(sample):
     if sample["messages"][0]["role"] == "system":
         return sample
     else:
-      sample["messages"] = [{"role": "system", "content": system_message}] + sample["messages"]
+      sample["messages"] = [{"role": "system", "content": system\_message}] + sample["messages"]
       return sample
  
 # Load dataset from the hub
-dataset = load_dataset("HuggingFaceH4/no_robots")
+dataset = load\_dataset("HuggingFaceH4/no\_robots")
  
 # Add system message to each conversation
-columns_to_remove = list(dataset["train"].features)
-columns_to_remove.remove("messages")
-dataset = dataset.map(create_conversation, remove_columns=columns_to_remove,batched=False)
+columns\_to\_remove = list(dataset["train"].features)
+columns\_to\_remove.remove("messages")
+dataset = dataset.map(create\_conversation, remove\_columns=columns\_to\_remove,batched=False)
  
 # Filter out conversations which are corrupted with wrong turns, keep which have even number of turns after adding system message
 dataset["train"] = dataset["train"].filter(lambda x: len(x["messages"][1:]) % 2 == 0)
 dataset["test"] = dataset["test"].filter(lambda x: len(x["messages"][1:]) % 2 == 0)
 ```
 
-After we processed the datasets we are going to use the [FileSystem integration](https://huggingface.co/docs/datasets/filesystems) to upload our dataset to S3. We are using the `sess.default_bucket()`, adjust this if you want to store the dataset in a different S3 bucket. We will use the S3 path later in our training script.
+After we processed the datasets we are going to use the [FileSystem integration](https://huggingface.co/docs/datasets/filesystems) to upload our dataset to S3. We are using the `sess.default\_bucket()`, adjust this if you want to store the dataset in a different S3 bucket. We will use the S3 path later in our training script.
+
+Python
 
 ```python
-# save train_dataset to s3 using our SageMaker session
-input_path = f's3://{sess.default_bucket()}/datasets/llama3'
+# save train\_dataset to s3 using our SageMaker session
+input\_path = f's3://{sess.default\_bucket()}/datasets/llama3'
  
 # save datasets to s3
-dataset["train"].to_json(f"{input_path}/train/dataset.json", orient="records")
-train_dataset_s3_path = f"{input_path}/train/dataset.json"
-dataset["test"].to_json(f"{input_path}/test/dataset.json", orient="records")
-test_dataset_s3_path = f"{input_path}/test/dataset.json"
+dataset["train"].to\_json(f"{input\_path}/train/dataset.json", orient="records")
+train\_dataset\_s3\_path = f"{input\_path}/train/dataset.json"
+dataset["test"].to\_json(f"{input\_path}/test/dataset.json", orient="records")
+test\_dataset\_s3\_path = f"{input\_path}/test/dataset.json"
  
 print(f"Training data uploaded to:")
-print(train_dataset_s3_path)
-print(test_dataset_s3_path)
-print(f"https://s3.console.aws.amazon.com/s3/buckets/{sess.default_bucket()}/?region={sess.boto_region_name}&prefix={input_path.split('/', 3)[-1]}/")
+print(train\_dataset\_s3\_path)
+print(test\_dataset\_s3\_path)
+print(f"https://s3.console.aws.amazon.com/s3/buckets/{sess.default\_bucket()}/?region={sess.boto\_region\_name}&prefix={input\_path.split('/', 3)[-1]}/")
 ```
 
 ## 3\. Fine-tune Llama 3 on Amazon SageMaker
 
-We are now ready to fine-tune our model. We will use the [SFTTrainer](https://huggingface.co/docs/trl/sft_trainer) from `trl` to fine-tune our model. The `SFTTrainer` makes it straightfoward to supervise fine-tune open LLMs. The `SFTTrainer` is a subclass of the `Trainer` from the `transformers`. We prepared a script [run\_fsdp\_qlora.py](https://github.com/philschmid/llm-sagemaker-sample/blob/main/scripts/fsdp/run_fsdp_qlora.py) which will loads the dataset from disk, prepare the model, tokenizer and start the training. It usees the [SFTTrainer](https://huggingface.co/docs/trl/sft_trainer) from `trl` to fine-tune our model. The `SFTTrainer` makes it straightfoward to supervise fine-tune open LLMs supporting:
+We are now ready to fine-tune our model. We will use the [SFTTrainer](https://huggingface.co/docs/trl/sft\_trainer) from `trl` to fine-tune our model. The `SFTTrainer` makes it straightfoward to supervise fine-tune open LLMs. The `SFTTrainer` is a subclass of the `Trainer` from the `transformers`. We prepared a script [run\_fsdp\_qlora.py](https://github.com/philschmid/llm-sagemaker-sample/blob/main/scripts/fsdp/run\_fsdp\_qlora.py) which will loads the dataset from disk, prepare the model, tokenizer and start the training. It usees the [SFTTrainer](https://huggingface.co/docs/trl/sft\_trainer) from `trl` to fine-tune our model. The `SFTTrainer` makes it straightfoward to supervise fine-tune open LLMs supporting:
 
 - Dataset formatting, including conversational and instruction format (✅ used)
 - Training on completions only, ignoring prompts (❌ not used)
@@ -138,126 +150,136 @@ We are now ready to fine-tune our model. We will use the [SFTTrainer](https://hu
 - PEFT (parameter-efficient fine-tuning) support including Q-LoRA (✅ used)
 - Preparing the model and tokenizer for conversational fine-tuning (❌ not used, see below)
 
-For configuration we use the new `TrlParser`, that allows us to provide hyperparameters in a yaml file. This `yaml` will be uploaded and provided to Amazon SageMaker similar to our datasets. Below is the config file for fine-tuning Llama 3 70B on 8x A100 GPUs or 4x24GB GPUs. We are saving the config file as `fsdp_qlora_llama3_70b.yaml` and upload it to S3.
+For configuration we use the new `TrlParser`, that allows us to provide hyperparameters in a yaml file. This `yaml` will be uploaded and provided to Amazon SageMaker similar to our datasets. Below is the config file for fine-tuning Llama 3 70B on 8x A100 GPUs or 4x24GB GPUs. We are saving the config file as `fsdp\_qlora\_llama3\_70b.yaml` and upload it to S3.
 
-For the chat template we use the Anthropic/Vicuna template, not the official one. Since we then would need to train and save the embedding layer as well leading to more memory requirements. If you wnat to use the official Llama 3 template comment in the `LLAMA_3_CHAT_TEMPLATE` in the `run_fsdp_qlora.py` script and make sure to add modules\_to\_save. The template used will look like this.
+For the chat template we use the Anthropic/Vicuna template, not the official one. Since we then would need to train and save the embedding layer as well leading to more memory requirements. If you wnat to use the official Llama 3 template comment in the `LLAMA\_3\_CHAT\_TEMPLATE` in the `run\_fsdp\_qlora.py` script and make sure to add modules\_to\_save. The template used will look like this.
 
-```
+```plaintext
 You are a helpful Assistant. 
-
+ 
 Human: What is 2+2? 
-
+ 
 Assistant: 2+2 equals 4.
 ```
 
+Python
+
 ```python
-%%writefile llama_3_70b_fsdp_qlora.yaml
+%%writefile llama\_3\_70b\_fsdp\_qlora.yaml
 # script parameters
-model_id: "meta-llama/Meta-Llama-3-70b"# Hugging Face model id
-max_seq_len:  3072 # 2048              # max sequence length for model and packing of the dataset
+model\_id: "meta-llama/Meta-Llama-3-70b"# Hugging Face model id
+max\_seq\_len:  3072 # 2048              # max sequence length for model and packing of the dataset
 # sagemaker specific parameters
-train_dataset_path: "/opt/ml/input/data/train/" # path to where SageMaker saves train dataset
-test_dataset_path: "/opt/ml/input/data/test/"   # path to where SageMaker saves test dataset
-# output_dir: "/opt/ml/model"            # path to where SageMaker will upload the model 
-output_dir: "/tmp/llama3"            # path to where SageMaker will upload the model 
+train\_dataset\_path: "/opt/ml/input/data/train/" # path to where SageMaker saves train dataset
+test\_dataset\_path: "/opt/ml/input/data/test/"   # path to where SageMaker saves test dataset
+# output\_dir: "/opt/ml/model"            # path to where SageMaker will upload the model 
+output\_dir: "/tmp/llama3"            # path to where SageMaker will upload the model 
 # training parameters
-report_to: "tensorboard"               # report metrics to tensorboard
-learning_rate: 0.0002                  # learning rate 2e-4
-lr_scheduler_type: "constant"          # learning rate scheduler
-num_train_epochs: 2                    # number of training epochs
-per_device_train_batch_size: 8         # batch size per device during training
-per_device_eval_batch_size: 1          # batch size for evaluation
-gradient_accumulation_steps: 2         # number of steps before performing a backward/update pass
-optim: adamw_torch                     # use torch adamw optimizer
-logging_steps: 10                      # log every 10 steps
-save_strategy: epoch                   # save checkpoint every epoch
-evaluation_strategy: epoch             # evaluate every epoch
-max_grad_norm: 0.3                     # max gradient norm
-warmup_ratio: 0.03                     # warmup ratio
+report\_to: "tensorboard"               # report metrics to tensorboard
+learning\_rate: 0.0002                  # learning rate 2e-4
+lr\_scheduler\_type: "constant"          # learning rate scheduler
+num\_train\_epochs: 2                    # number of training epochs
+per\_device\_train\_batch\_size: 8         # batch size per device during training
+per\_device\_eval\_batch\_size: 1          # batch size for evaluation
+gradient\_accumulation\_steps: 2         # number of steps before performing a backward/update pass
+optim: adamw\_torch                     # use torch adamw optimizer
+logging\_steps: 10                      # log every 10 steps
+save\_strategy: epoch                   # save checkpoint every epoch
+evaluation\_strategy: epoch             # evaluate every epoch
+max\_grad\_norm: 0.3                     # max gradient norm
+warmup\_ratio: 0.03                     # warmup ratio
 bf16: true                             # use bfloat16 precision
 tf32: true                             # use tf32 precision
-gradient_checkpointing: true           # use gradient checkpointing to save memory
+gradient\_checkpointing: true           # use gradient checkpointing to save memory
 # FSDP parameters: https://huggingface.co/docs/transformers/main/en/fsdp
-fsdp: "full_shard auto_wrap offload" # remove offload if enough GPU memory
-fsdp_config:
-  backward_prefetch: "backward_pre"
-  forward_prefetch: "false"
-  use_orig_params: "false"
+fsdp: "full\_shard auto\_wrap offload" # remove offload if enough GPU memory
+fsdp\_config:
+  backward\_prefetch: "backward\_pre"
+  forward\_prefetch: "false"
+  use\_orig\_params: "false"
 ```
 
 Lets upload the config file to S3.
+
+Python
 
 ```python
 from sagemaker.s3 import S3Uploader
  
 # upload the model yaml file to s3
-model_yaml = "llama_3_70b_fsdp_qlora.yaml"
-train_config_s3_path = S3Uploader.upload(local_path=model_yaml, desired_s3_uri=f"{input_path}/config")
+model\_yaml = "llama\_3\_70b\_fsdp\_qlora.yaml"
+train\_config\_s3\_path = S3Uploader.upload(local\_path=model\_yaml, desired\_s3\_uri=f"{input\_path}/config")
  
 print(f"Training config uploaded to:")
-print(train_config_s3_path)
+print(train\_config\_s3\_path)
 ```
 
 In order to create a sagemaker training job we need an `HuggingFace` Estimator. The Estimator handles end-to-end Amazon SageMaker training and deployment tasks. The Estimator manages the infrastructure use. Amazon SagMaker takes care of starting and managing all the required ec2 instances for us, provides the correct huggingface container, uploads the provided scripts and downloads the data from our S3 bucket into the container at `/opt/ml/input/data`. Then, it starts the training job by running.
 
-> Note: Make sure that you include the `requirements.txt` in the `source_dir` if you are using a custom training script. We recommend to just clone the whole repository.
+\> Note: Make sure that you include the `requirements.txt` in the `source\_dir` if you are using a custom training script. We recommend to just clone the whole repository.
 
-To use `torchrun` to execute our scripts, we only have to define the `distribution` parameter in our Estimator and set it to `{"torch_distributed": {"enabled": True}}`. This tells SageMaker to launch our training job with.
+To use `torchrun` to execute our scripts, we only have to define the `distribution` parameter in our Estimator and set it to `{"torch\_distributed": {"enabled": True}}`. This tells SageMaker to launch our training job with.
+
+Python
 
 ```python
-torchrun --nnodes 2 --nproc_per_node 8 --master_addr algo-1 --master_port 7777 --node_rank 1 run_fsdp_qlora.py --config /opt/ml/input/data/config/config.yaml
+torchrun --nnodes 2 --nproc\_per\_node 8 --master\_addr algo-1 --master\_port 7777 --node\_rank 1 run\_fsdp\_qlora.py --config /opt/ml/input/data/config/config.yaml
 ```
 
-The `HuggingFace` configuration below will start a training job on 1x `p4d.24xlarge` using 8x A100 GPUs. The amazing part about SageMaker is that you can easily scale up to 2x `p4d.24xlarge` by modifying the `instance_count`. SageMaker will take care of the rest for you.
+The `HuggingFace` configuration below will start a training job on 1x `p4d.24xlarge` using 8x A100 GPUs. The amazing part about SageMaker is that you can easily scale up to 2x `p4d.24xlarge` by modifying the `instance\_count`. SageMaker will take care of the rest for you.
+
+Python
 
 ```python
 from sagemaker.huggingface import HuggingFace
-from huggingface_hub import HfFolder
+from huggingface\_hub import HfFolder
  
 # define Training Job Name 
-job_name = f'llama3-70b-exp1'
+job\_name = f'llama3-70b-exp1'
  
 # create the Estimator
-huggingface_estimator = HuggingFace(
-    entry_point          = 'run_fsdp_qlora.py',      # train script
-    source_dir           = '../scripts/fsdp',  # directory which includes all the files needed for training
-    instance_type        = 'ml.p4d.24xlarge',  # instances type used for the training job
-    instance_count       = 1,                 # the number of instances used for training
-    max_run              = 2*24*60*60,        # maximum runtime in seconds (days * hours * minutes * seconds)
-    base_job_name        = job_name,          # the name of the training job
+huggingface\_estimator = HuggingFace(
+    entry\_point          = 'run\_fsdp\_qlora.py',      # train script
+    source\_dir           = '../scripts/fsdp',  # directory which includes all the files needed for training
+    instance\_type        = 'ml.p4d.24xlarge',  # instances type used for the training job
+    instance\_count       = 1,                 # the number of instances used for training
+    max\_run              = 2*24*60*60,        # maximum runtime in seconds (days * hours * minutes * seconds)
+    base\_job\_name        = job\_name,          # the name of the training job
     role                 = role,              # Iam role used in training job to access AWS ressources, e.g. S3
-    volume_size          = 500,               # the size of the EBS volume in GB
-    transformers_version = '4.36.0',          # the transformers version used in the training job
-    pytorch_version      = '2.1.0',           # the pytorch_version version used in the training job
-    py_version           = 'py310',           # the python version used in the training job
+    volume\_size          = 500,               # the size of the EBS volume in GB
+    transformers\_version = '4.36.0',          # the transformers version used in the training job
+    pytorch\_version      = '2.1.0',           # the pytorch\_version version used in the training job
+    py\_version           = 'py310',           # the python version used in the training job
     hyperparameters      =  {
-        "config": "/opt/ml/input/data/config/llama_3_70b_fsdp_qlora.yaml" # path to TRL config which was uploaded to s3
+        "config": "/opt/ml/input/data/config/llama\_3\_70b\_fsdp\_qlora.yaml" # path to TRL config which was uploaded to s3
     },
-    disable_output_compression = True,        # not compress output to save training time and cost
-    distribution={"torch_distributed": {"enabled": True}},   # enables torchrun
+    disable\_output\_compression = True,        # not compress output to save training time and cost
+    distribution={"torch\_distributed": {"enabled": True}},   # enables torchrun
     environment  = {
-        "HUGGINGFACE_HUB_CACHE": "/tmp/.cache", # set env variable to cache models in /tmp
-        "HF_TOKEN": HfFolder.get_token(),       # huggingface token to access gated models, e.g. llama 3
-        "ACCELERATE_USE_FSDP": "1",             # enable FSDP
-        "FSDP_CPU_RAM_EFFICIENT_LOADING": "1"   # enable CPU RAM efficient loading
+        "HUGGINGFACE\_HUB\_CACHE": "/tmp/.cache", # set env variable to cache models in /tmp
+        "HF\_TOKEN": HfFolder.get\_token(),       # huggingface token to access gated models, e.g. llama 3
+        "ACCELERATE\_USE\_FSDP": "1",             # enable FSDP
+        "FSDP\_CPU\_RAM\_EFFICIENT\_LOADING": "1"   # enable CPU RAM efficient loading
     }, 
 )
 ```
 
-*Note: When using QLoRA, we only train adapters and not the full model. The [run\_fsdp\_qlora.py](https://www.philschmid.de/scripts/fsdp/run_fsdp_qlora.py) merges the `base_model`with the `adapter` at the end of the training to directly be able to deploy to Amazon SageMaker.*
+*Note: When using QLoRA, we only train adapters and not the full model. The [run\_fsdp\_qlora.py](https://www.philschmid.de/scripts/fsdp/run\_fsdp\_qlora.py) merges the `base\_model`with the `adapter` at the end of the training to directly be able to deploy to Amazon SageMaker.*
 
 We can now start our training job, with the `.fit()` method passing our S3 path to the training script.
+
+Python
 
 ```python
 # define a data input dictonary with our uploaded s3 uris
 data = {
-  'train': train_dataset_s3_path,
-  'test': test_dataset_s3_path,
-  'config': train_config_s3_path
+  'train': train\_dataset\_s3\_path,
+  'test': test\_dataset\_s3\_path,
+  'config': train\_config\_s3\_path
   }
  
 # starting the train job with our uploaded datasets as input
-huggingface_estimator.fit(data, wait=True)
+huggingface\_estimator.fit(data, wait=True)
 ```
 
 In our example the training Llama 3 70B with Flash Attention for 2 epochs with a dataset of 10k samples takes 5052 seconds (~84minutes) on a `ml.p4d.24xlarge` or ~$50.
@@ -270,63 +292,71 @@ Evaluating LLMs is crucial for understanding their capabilities and limitations,
 
 We are going to use the [Hugging Face LLM Inference DLC](https://huggingface.co/blog/sagemaker-huggingface-llm#what-is-hugging-face-llm-inference-dlc) a purpose-built Inference Container to easily deploy LLMs in a secure and managed environment. The DLC is powered by [Text Generation Inference (TGI)](https://huggingface.co/docs/text-generation-inference/index) solution for deploying and serving Large Language Models (LLMs).
 
+Python
+
 ```python
-from sagemaker.huggingface import get_huggingface_llm_image_uri
+from sagemaker.huggingface import get\_huggingface\_llm\_image\_uri
  
 # retrieve the llm image uri
-llm_image = get_huggingface_llm_image_uri(
+llm\_image = get\_huggingface\_llm\_image\_uri(
   "huggingface",
   session=sess,
   version="2.0.2",
 )
  
 # print ecr image uri
-print(f"llm image uri: {llm_image}")
+print(f"llm image uri: {llm\_image}")
 ```
 
-We can now create a `HuggingFaceModel` using the container uri and the S3 path to our model. We also need to set our TGI configuration including the number of GPUs, max input tokens. You can find a full list of configuration options [here](https://huggingface.co/docs/text-generation-inference/basic_tutorials/launcher).
+We can now create a `HuggingFaceModel` using the container uri and the S3 path to our model. We also need to set our TGI configuration including the number of GPUs, max input tokens. You can find a full list of configuration options [here](https://huggingface.co/docs/text-generation-inference/basic\_tutorials/launcher).
+
+Python
 
 ```python
-from huggingface_hub import HfFolder
+from huggingface\_hub import HfFolder
 from sagemaker.huggingface import HuggingFaceModel
  
 # sagemaker config
-instance_type = "ml.p4d.24xlarge"
-health_check_timeout = 1200 # 20 minutes
+instance\_type = "ml.p4d.24xlarge"
+health\_check\_timeout = 1200 # 20 minutes
  
 # Define Model and Endpoint configuration parameter
 config = {
-  'HF_MODEL_ID': "/opt/ml/model",       # Path to the model in the container
-  'SM_NUM_GPUS': "8",                   # Number of GPU used per replica
-  'MAX_INPUT_LENGTH': "8000",           # Max length of input text
-  'MAX_TOTAL_TOKENS': "8096",           # Max length of the generation (including input text)
-  'MAX_BATCH_PREFILL_TOKENS': "16182",  # Limits the number of tokens that can be processed in parallel during the generation
-  'MESSAGES_API_ENABLED': "true",       # Enable the OpenAI Messages API
+  'HF\_MODEL\_ID': "/opt/ml/model",       # Path to the model in the container
+  'SM\_NUM\_GPUS': "8",                   # Number of GPU used per replica
+  'MAX\_INPUT\_LENGTH': "8000",           # Max length of input text
+  'MAX\_TOTAL\_TOKENS': "8096",           # Max length of the generation (including input text)
+  'MAX\_BATCH\_PREFILL\_TOKENS': "16182",  # Limits the number of tokens that can be processed in parallel during the generation
+  'MESSAGES\_API\_ENABLED': "true",       # Enable the OpenAI Messages API
 }
  
 # create HuggingFaceModel with the image uri
-llm_model = HuggingFaceModel(
+llm\_model = HuggingFaceModel(
   role=role,
   # path to s3 bucket with model, we are not using a compressed model
   # {'S3DataSource':{'S3Uri': "s3://...",'S3DataType': 'S3Prefix','CompressionType': 'None'}},
-  model_data=huggingface_estimator.model_data,
-  image_uri=llm_image,
+  model\_data=huggingface\_estimator.model\_data,
+  image\_uri=llm\_image,
   env=config
 )
 ```
 
 After we have created the HuggingFaceModel we can deploy it to Amazon SageMaker using the deploy method.
 
+Python
+
 ```python
 # Deploy model to an endpoint
-llm = llm_model.deploy(
-  initial_instance_count=1,
-  instance_type=instance_type,
-  container_startup_health_check_timeout=health_check_timeout, # 20 minutes to give SageMaker the time to download and merge model
+llm = llm\_model.deploy(
+  initial\_instance\_count=1,
+  instance\_type=instance\_type,
+  container\_startup\_health\_check\_timeout=health\_check\_timeout, # 20 minutes to give SageMaker the time to download and merge model
 )
 ```
 
 SageMaker will now create our endpoint and deploy the model to it. This can takes a 15-20 minutes. Afterwards, we can test our model by sending some example inputs to the endpoint. We will use the `predict` method of the predictor to send the input to the model and get the output.
+
+Python
 
 ```python
 # Prompt to generate
@@ -338,12 +368,14 @@ messages=[
 # Generation arguments
 parameters = {
     "model": "meta-llama-3-fine-tuned", # placeholder, needed
-    "top_p": 0.6,
+    "top\_p": 0.6,
     "temperature": 0.9,
-    "max_tokens": 512,
-    "stop": ["<|eot_id|>"],
+    "max\_tokens": 512,
+    "stop": ["\<|eot\_id|\>"],
 }
 ```
+
+Python
 
 ```python
 chat = llm.predict({"messages" :messages, **parameters})
@@ -355,11 +387,13 @@ print(chat["choices"][0]["message"]["content"].strip())
 
 To clean up, we can delete the model and endpoint.
 
+Python
+
 ```python
-llm.delete_model()
-llm.delete_endpoint()
+llm.delete\_model()
+llm.delete\_endpoint()
 ```
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

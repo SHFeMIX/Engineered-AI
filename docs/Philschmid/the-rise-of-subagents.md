@@ -1,11 +1,11 @@
 ---
 title: "The Rise of Subagents"
 site: "Philipp Schmid"
-published: 2025-09-15
+published: "2025-09-15"
 source: "https://www.philschmid.de/the-rise-of-subagents"
-domain: "philschmid.de"
+domain: ""
 language: "en"
-word_count: 979
+word_count: 970
 ---
 
 # The Rise of Subagents
@@ -15,6 +15,8 @@ There is an increasing use of Subagents to reliably handle specific user goals. 
 ## What are Subagents?
 
 Subagents are specialized AI agents. They are most of the time used in combination with an orchestrator, which delegates tasks to them. A subagent is just like a normal agent and has the same components. This includes a name for identification, a description of its capabilities, system instructions and a set of tools to interact with environments. It also has its own isolated context window.
+
+Python
 
 ```python
 ┌───────────────────┐
@@ -73,24 +75,29 @@ Explicit, User-defined Subagents are a permanent team of reusable specialists. S
 
 Here is a pseudo-code snippet of a definition file, inspired from Claude Code:
 
+YAML
+
 ```yaml
 ---
 name: "Code-Reviewer"
-description: "MUST BE USED for reviewing code against style guides and security practices.\"tools: ['file_read', 'search_code']"
+description: "MUST BE USED for reviewing code against style guides and security practices."
+tools: ['file\_read', 'search\_code']
 ---
 You are an expert security code reviewer. Your purpose is to analyze code and identify vulnerabilities. Provide feedback in a numbered list.
 ```
 
 ### Implicit, On-the-Fly Subagents
 
-Implicit, On-the-Fly Subagents can be created temporary by an orchestrator to handle tasks as they come up. The orchestrator uses a tool (`send_message_to_agent`) to create and interact with the agent. The system dynamically assigns tools based on the user's natural language request from pre-defined pool which are needed to solve the task. Poke.com uses this method to created unlimited agents for specific user request. A key feature is that these agents can be stateful, e.g. keep context from previous runs when called with the same `agent_name`.
+Implicit, On-the-Fly Subagents can be created temporary by an orchestrator to handle tasks as they come up. The orchestrator uses a tool (`send\_message\_to\_agent`) to create and interact with the agent. The system dynamically assigns tools based on the user's natural language request from pre-defined pool which are needed to solve the task. Poke.com uses this method to created unlimited agents for specific user request. A key feature is that these agents can be stateful, e.g. keep context from previous runs when called with the same `agent\_name`.
 
 Here is a pseudo-code snippet for how the orchestrator calls the agent:
 
+Python
+
 ```python
 # The orchestrator calls this tool to create or reuse a subagent
-send_message_to_agent(
-    agent_name="q3_report_email_draft",
+send\_message\_to\_agent(
+    agent\_name="q3\_report\_email\_draft",
     description="An agent specializing in drafting internal company communications, specifically for report summaries and team updates.",
     message=f"""Draft an email to the marketing team about the Q3 report.
  

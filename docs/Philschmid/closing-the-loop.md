@@ -1,9 +1,9 @@
 ---
 title: "Can We Close the Loop in 2026?"
 site: "Philipp Schmid"
-published: 2026-02-17
+published: "2026-02-17"
 source: "https://www.philschmid.de/closing-the-loop"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 804
 ---
@@ -53,4 +53,4 @@ We will see an increase in consistency. Self-awareness that's trained in. Loop-c
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

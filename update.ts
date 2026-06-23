@@ -1,6 +1,9 @@
 import dataBase from './dataBase.json' with { type: 'json' }
 import { JSDOM } from 'jsdom'
 import { Defuddle } from 'defuddle/node'
+// Defuddle 未公开导出 HTML→markdown 转换器，但它对 HTML 输入的转换规则
+//（表格、代码块、脚注等）已经过大量定制，直接复用比从头配置 turndown 更稳妥。
+import { createMarkdownContent } from './node_modules/defuddle/dist/markdown.js'
 import fs from 'fs'
 import path from 'path'
 
@@ -23,12 +26,83 @@ function escapeContent(content: string): string {
     return content.replace(/(?<!\\)([_<>])/g, '\\$&')
 }
 
+// 判断一段内容是否已经像是 markdown（来自 schema.org articleBody 等）
+function isMarkdown(content: string): boolean {
+    const trimmed = content.trim()
+    // 如果以块级 HTML 标签开头，大概率是 Defuddle 从 DOM 提取的 HTML
+    const startsWithBlockHtml = /^\s*<(article|section|main|div|html|body|p)\b/i.test(trimmed)
+    if (startsWithBlockHtml) {
+        return false
+    }
+
+    // markdown 标题和代码块是最强的信号
+    const hasMarkdownHeadings = /^#{1,6}\s/m.test(content)
+    const hasMarkdownCodeBlocks = /```[\s\S]*?```/.test(content)
+    if (hasMarkdownHeadings || hasMarkdownCodeBlocks) {
+        return true
+    }
+
+    // 兜底：有 markdown 语法且去掉代码后没有真实 HTML 标签
+    const markdownSignals = [
+        /\*\*[^*\n]+\*\*/,      // 粗体
+        /\[[^\]]+\]\([^)]+\)/,  // 链接
+        /^\s*[-*+]\s/m,         // 无序列表
+        /^\s*\d+\.\s/m,         // 有序列表
+    ]
+    const hasMarkdownSignals = markdownSignals.some(pattern => pattern.test(content))
+
+    const contentWithoutCode = content
+        .replace(/```[\s\S]*?```/g, '')
+        .replace(/`[^`\n]+`/g, '')
+    const hasHtmlTags = /<[a-zA-Z][^>]*>/.test(contentWithoutCode)
+
+    return hasMarkdownSignals && !hasHtmlTags
+}
+
+// 把 Defuddle 返回的原始内容转成可用的 markdown：
+// 如果已经是 markdown（schema.org 回退），直接复用；否则用 Defuddle 的转换器处理 HTML。
+function toMarkdownContent(rawContent: string, url: string): string {
+    let markdown: string
+    if (isMarkdown(rawContent)) {
+        markdown = rawContent.trim()
+    } else {
+        // 对于 HTML 内容，先去掉内联 SVG 图，避免 turndown 把大量 path/text 节点全 dump 出来
+        const htmlWithoutSvg = rawContent.replace(/<svg[\s\S]*?<\/svg>/gi, '')
+        markdown = createMarkdownContent(htmlWithoutSvg, url)
+    }
+    // VitePress 用 Vue 编译 markdown，{{ }} 会被当成模板插值解析，
+    // 但代码块里应该保留原样，所以只处理代码块以外的区域。
+    return escapeVueBracesOutsideCode(escapeContent(markdown))
+}
+
+// 转义代码块外的 {{ 和 }}，防止 VitePress/Vue 把它们当模板插值解析。
+// 用 HTML 实体 &#123;/&#125; 而不是反斜杠，因为反斜杠在 markdown 中会被渲染回普通字符。
+function escapeVueBracesOutsideCode(content: string): string {
+    const parts = content.split(/(```[\s\S]*?```|`[^`\n]+`)/g)
+    for (let i = 0; i < parts.length; i += 2) {
+        parts[i] = parts[i]
+            .replace(/{{/g, '&#123;&#123;')
+            .replace(/}}/g, '&#125;&#125;')
+    }
+    return parts.join('')
+}
+
+// PhilSchmid 文章里的图片使用 /static/... 或 ./static/... 相对路径，VitePress 构建时会尝试本地解析失败。
+// 把这些相对路径补全为 https://www.philschmid.de/static/... 的绝对 URL。
+function fixPhilSchmidImagePaths(content: string, url: string): string {
+    const origin = new URL(url).origin
+    return content.replace(/!\[([^\]]*)\]\(((?:\.\/|\/)?static\/[^)]+)\)/g, (_, alt, imgPath) => {
+        const normalizedPath = imgPath.replace(/^\.?\//, '/')
+        return `![${alt}](${origin}${normalizedPath})`
+    })
+}
+
 // 从 URL 生成文件名
 function getFileNameFromUrl(url: string): string | undefined {
     return url.split('/').filter(p => p).pop()
 }
 
-// 组装 md 文件内容
+// 组装 md 文件内容（content 已在调用前完成转义/转换）
 function assembleMdContent(result: any, link: string): string {
     return `---
 title: "${result.title}"
@@ -42,7 +116,7 @@ word_count: ${result.wordCount}
 
 # ${result.title}
 
-${escapeContent(result.content || '')}
+${result.content || ''}
 `
 }
 
@@ -152,7 +226,18 @@ async function main() {
             // 从旧到新
             for (const link of unHaved.reverse()) {
                 const document = await getDOMFromLink(link)
-                const result = await Defuddle(document, link, { markdown: true })
+                // PhilSchmid 新文章（Next.js）DOM 提取会回退到 schema.org articleBody，
+                // 该字段本身已是 markdown；若再让 Defuddle 转一次会把换行和标记全破坏。
+                // 其他来源目前用 Defuddle 的 { markdown: true } 表现正常，保持原逻辑。
+                const isPhilSchmid = item.title === 'PhilSchmid'
+                const result = await Defuddle(document, link, { markdown: !isPhilSchmid })
+
+                if (isPhilSchmid) {
+                    result.content = toMarkdownContent(result.content || '', link)
+                    result.content = fixPhilSchmidImagePaths(result.content, link)
+                } else {
+                    result.content = escapeContent(result.content || '')
+                }
 
                 const fileName = getFileNameFromUrl(link)
 

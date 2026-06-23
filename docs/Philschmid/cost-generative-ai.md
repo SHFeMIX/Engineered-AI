@@ -1,9 +1,9 @@
 ---
 title: "Understanding the Cost of Generative AI Models in Production"
 site: "Philipp Schmid"
-published: 2024-05-27
+published: "2024-05-27"
 source: "https://www.philschmid.de/cost-generative-ai"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 635
 ---
@@ -60,4 +60,4 @@ Whether you are an individual, a startup or a company, don't let you fool by raw
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

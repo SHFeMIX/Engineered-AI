@@ -1,11 +1,11 @@
 ---
 title: "Code Sandbox MCP: A Simple Code Interpreter for Your AI Agents"
 site: "Philipp Schmid"
-published: 2025-07-22
+published: "2025-07-22"
 source: "https://www.philschmid.de/code-sandbox-mcp"
-domain: "philschmid.de"
+domain: ""
 language: "en"
-word_count: 683
+word_count: 694
 ---
 
 # Code Sandbox MCP: A Simple Code Interpreter for Your AI Agents
@@ -14,7 +14,7 @@ Code agents are transforming software development. But how do we safely let them
 
 Today, I'm launching **[Code Sandbox MCP](https://github.com/philschmid/code-sandbox-mcp)**, a lightweight, STDIO-based Model Context Protocol (MCP) Server, allowing AI assistants and LLM applications to safely execute code snippets using containerized environments. It is uses the [llm-sandbox](https://github.com/vndee/llm-sandbox) package for the containerization and execution of the code snippets.
 
-It exposes `run_python_code` and `run_javascript_code` tools, giving your AI agent the ability to execute code on your own infrastructure.
+It exposes `run\_python\_code` and `run\_javascript\_code` tools, giving your AI agent the ability to execute code on your own infrastructure.
 
 ## How it works
 
@@ -33,11 +33,15 @@ This entire workflow happens on your machine, locally or on your own server, kee
 
 Integrating Code Sandbox MCP with your Python application using the Gemini SDK is incredibly straightforward. First, install the package:
 
+Bash
+
 ```bash
 pip install git+https://github.com/philschmid/code-sandbox-mcp.git
 ```
 
 Then, you can use `fastmcp` to connect your Gemini client to the local code execution tool:
+
+Python
 
 ```python
 from fastmcp import Client
@@ -45,35 +49,37 @@ from google import genai
 import asyncio
  
 # Configure the MCP client to use the local server
-mcp_client = Client(
+mcp\_client = Client(
     {
-        "local_server": {
+        "local\_server": {
             "transport": "stdio",
             "command": "code-sandbox-mcp",
         }
     }
 )
-gemini_client = genai.Client()
+gemini\_client = genai.Client()
  
 async def main():
-    async with mcp_client:
-        response = await gemini_client.aio.models.generate_content(
+    async with mcp\_client:
+        response = await gemini\_client.aio.models.generate\_content(
             model="gemini-1.5-flash",
             contents="Use Python to ping google.com and return the response.",
             config=genai.types.GenerateContentConfig(
-                tools=[mcp_client.session],  # Pass the FastMCP client session
+                tools=[mcp\_client.session],  # Pass the FastMCP client session
             ),
         )
         # The model's response will include the output from the code execution
         print(response.text)
  
-if __name__ == "__main__":
+if \_\_name\_\_ == "\_\_main\_\_":
     asyncio.run(main())
 ```
 
 ## Empower the Gemini CLI
 
 You can also supercharge the Gemini CLI with code execution capabilities. Simply add the server configuration to your `~/.gemini/settings.json` file:
+
+JSON
 
 ```json
 {
@@ -85,7 +91,7 @@ You can also supercharge the Gemini CLI with code execution capabilities. Simply
 }
 ```
 
-Now, when you use the Gemini CLI, it can automatically discover and use the `run_python_code` tool to answer your questions!
+Now, when you use the Gemini CLI, it can automatically discover and use the `run\_python\_code` tool to answer your questions!
 
 ## Security
 
@@ -111,4 +117,4 @@ I mean:
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

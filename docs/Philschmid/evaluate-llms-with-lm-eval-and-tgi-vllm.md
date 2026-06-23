@@ -1,11 +1,11 @@
 ---
 title: "Evaluate LLMs using Evaluation Harness and Hugging Face TGI/vLLM"
 site: "Philipp Schmid"
-published: 2024-09-19
+published: "2024-09-19"
 source: "https://www.philschmid.de/evaluate-llms-with-lm-eval-and-tgi-vllm"
-domain: "philschmid.de"
+domain: ""
 language: "en"
-word_count: 1016
+word_count: 990
 ---
 
 # Evaluate LLMs using Evaluation Harness and Hugging Face TGI/vLLM
@@ -18,7 +18,7 @@ In this blog post, we will learn how to evaluate LLMs hosten using TGI or vLLM b
 
 **Evaluation Harness**
 
-[Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) is a open-source framework to evaluate language models on a wide range of tasks and benchmarks. It supports various models and provides tools to streamline the evaluation process. It is used for the [Hugging Face Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard)
+[Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) is a open-source framework to evaluate language models on a wide range of tasks and benchmarks. It supports various models and provides tools to streamline the evaluation process. It is used for the [Hugging Face Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open\_llm\_leaderboard)
 
 **Hugging Face Text Generation Inference (TGI)**
 
@@ -36,13 +36,15 @@ First, we'll use TGI to serve the Llama 3.1 8B Instruct model. Ensure you have D
 
 **Run Command:**
 
+Bash
+
 ```bash
 docker run --gpus all -ti --shm-size 1g --ipc=host --rm -p 8000:80 \
-  -e MODEL_ID=meta-llama/Meta-Llama-3.1-8B-Instruct \
-  -e NUM_SHARD=1 \
-  -e MAX_INPUT_TOKENS=8000 \
-  -e MAX_TOTAL_TOKENS=8192 \
-  -e HF_TOKEN=$(cat ~/.cache/huggingface/token) \
+  -e MODEL\_ID=meta-llama/Meta-Llama-3.1-8B-Instruct \
+  -e NUM\_SHARD=1 \
+  -e MAX\_INPUT\_TOKENS=8000 \
+  -e MAX\_TOTAL\_TOKENS=8192 \
+  -e HF\_TOKEN=$(cat ~/.cache/huggingface/token) \
   ghcr.io/huggingface/text-generation-inference:2.2.0
 ```
 
@@ -52,40 +54,44 @@ docker run --gpus all -ti --shm-size 1g --ipc=host --rm -p 8000:80 \
 - **MAX\_TOTAL\_TOKENS**: Maximum number of tokens in the input and output, you might need to adjust based on the GPU you use
 - **HF\_TOKEN**: Your Hugging Face access token, you need to first run `huggingface-cli login`
 
-> **Note**: Alternatively, you can use vLLM's OpenAI-compatible API server to serve the model. vLLM is another efficient serving library that supports high-throughput inference.
+\> **Note**: Alternatively, you can use vLLM's OpenAI-compatible API server to serve the model. vLLM is another efficient serving library that supports high-throughput inference.
 
-### 2\. Evaluate LLM with `lm_eval` through OpenAI API Endpoints
+### 2\. Evaluate LLM with `lm\_eval` through OpenAI API Endpoints
 
 Evaluation Harness provides a CLI tool to evaluate models on various tasks and benchmarks. We can run 1 or more tasks in parallel and evaluate the model's performance using a `,` separated list of tasks. `lm-eval` and supports many different configurations and options to evaluate models. A full list can be found in the [documentation](https://github.com/EleutherAI/lm-evaluation-harness/blob/main/docs/interface.md).
 
-Most important parameters are `model`, `tasks` and `model_args` those used to tell the harness which [model (strategy)](https://github.com/EleutherAI/lm-evaluation-harness/tree/main?tab=readme-ov-file#model-apis-and-inference-servers) with what [arguments to use and on which tasks](https://github.com/EleutherAI/lm-evaluation-harness/blob/main/docs/API_guide.md#templateapi-arguments) to evaluate. We are using LLMs hosted through a OpenAI compatbile API, so we will use `local-chat-completions` model interface, that allows us to evaluate models using the OpenAI `messages` API format. This comes with benefits as that we can easily switch between models or run the evaluation on a different host, but this also comes with requirements as the `local-chat-completions` is not supporting `loglikelihood` which is needed for some tasks. Important CLI flags for this are:
+Most important parameters are `model`, `tasks` and `model\_args` those used to tell the harness which [model (strategy)](https://github.com/EleutherAI/lm-evaluation-harness/tree/main?tab=readme-ov-file#model-apis-and-inference-servers) with what [arguments to use and on which tasks](https://github.com/EleutherAI/lm-evaluation-harness/blob/main/docs/API\_guide.md#templateapi-arguments) to evaluate. We are using LLMs hosted through a OpenAI compatbile API, so we will use `local-chat-completions` model interface, that allows us to evaluate models using the OpenAI `messages` API format. This comes with benefits as that we can easily switch between models or run the evaluation on a different host, but this also comes with requirements as the `local-chat-completions` is not supporting `loglikelihood` which is needed for some tasks. Important CLI flags for this are:
 
 - `--model`: Specifies the model interface. We'll use `local-chat-completions`.
-- `--tasks`: Comma-separated list of tasks to evaluate (e.g., `gsm8k_cot_llama,ifeval`).
-- `--model_args`: Additional model arguments like `model`, `base_url`, and `num_concurrent`.
+- `--tasks`: Comma-separated list of tasks to evaluate (e.g., `gsm8k\_cot\_llama,ifeval`).
+- `--model\_args`: Additional model arguments like `model`, `base\_url`, and `num\_concurrent`.
 	- **model**: The model identifier, for tokenizer and other model-specific configurations.
 		- **base\_url**: The API endpoint where the model is served, `http://localhost:8000/v1/chat/completions`
 		- **num\_concurrent**: Number of concurrent requests, e.g. `32`.
 		- **max\_retries**: Number of retries for failed requests, e.g. `3`.
 		- **tokenized\_requests**: Set to `False` for chat models.
-- `--apply_chat_template`: Applies the chat template for formatting prompts.
-- `--fewshot_as_multiturn`: Treats few-shot examples as multiple turns (useful for instruct models).
+- `--apply\_chat\_template`: Applies the chat template for formatting prompts.
+- `--fewshot\_as\_multiturn`: Treats few-shot examples as multiple turns (useful for instruct models).
 
 As mentioned in the beginning, we are evaluating the Llama 3.1 8B Instruct model on IFEval and GSM8K benchmarks with Chain of Thought reasoning.
 
+Python
+
 ```python
-# install lm_eval and openai
-!pip install "lm_eval[ifeval]==0.4.4"
+# install lm\_eval and openai
+!pip install "lm\_eval[ifeval]==0.4.4"
 ```
 
 After we installed the CLI we can evaluate the model with the following command:
 
+Python
+
 ```python
-!lm_eval --model local-chat-completions \
-  --tasks gsm8k_cot_llama,ifeval \
-  --model_args model=meta-llama/Meta-Llama-3.1-8B-Instruct,base_url=http://localhost:8000/v1/chat/completions,num_concurrent=32,max_retries=3,tokenized_requests=False \
-  --apply_chat_template \
-  --fewshot_as_multiturn
+!lm\_eval --model local-chat-completions \
+  --tasks gsm8k\_cot\_llama,ifeval \
+  --model\_args model=meta-llama/Meta-Llama-3.1-8B-Instruct,base\_url=http://localhost:8000/v1/chat/completions,num\_concurrent=32,max\_retries=3,tokenized\_requests=False \
+  --apply\_chat\_template \
+  --fewshot\_as\_multiturn
 ```
 
 Running the evaluation on IFEval and GSM8K with Chain of Thought reasoning took ~10 min on a AWS g6e.2xlarge instance with 1x NVIDIA L40S GPU.
@@ -109,4 +115,4 @@ Leveraging Evaluation Harness and a optimized serving solution like TGI or vLLM,
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

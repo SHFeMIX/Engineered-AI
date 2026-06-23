@@ -1,9 +1,9 @@
 ---
 title: "Zero to One: Learning Agentic Patterns"
 site: "Philipp Schmid"
-published: 2025-05-05
+published: "2025-05-05"
 source: "https://www.philschmid.de/agentic-pattern"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 3067
 ---
@@ -66,15 +66,15 @@ Use Cases:
 import os
 from google import genai
  
-# Configure the client (ensure GEMINI_API_KEY is set in your environment)
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+# Configure the client (ensure GEMINI\_API\_KEY is set in your environment)
+client = genai.Client(api\_key=os.environ["GEMINI\_API\_KEY"])
  
 # --- Step 1: Summarize Text ---
-original_text = "Large language models are powerful AI systems trained on vast amounts of text data. They can generate human-like text, translate languages, write different kinds of creative content, and answer your questions in an informative way."
-prompt1 = f"Summarize the following text in one sentence: {original_text}"
+original\_text = "Large language models are powerful AI systems trained on vast amounts of text data. They can generate human-like text, translate languages, write different kinds of creative content, and answer your questions in an informative way."
+prompt1 = f"Summarize the following text in one sentence: {original\_text}"
  
-# Use client.models.generate_content
-response1 = client.models.generate_content(
+# Use client.models.generate\_content
+response1 = client.models.generate\_content(
     model='gemini-2.0-flash',
     contents=prompt1
 )
@@ -84,8 +84,8 @@ print(f"Summary: {summary}")
 # --- Step 2: Translate the Summary ---
 prompt2 = f"Translate the following summary into French, only return the translation, no other text: {summary}"
  
-# Use client.models.generate_content
-response2 = client.models.generate_content(
+# Use client.models.generate\_content
+response2 = client.models.generate\_content(
     model='gemini-2.0-flash',
     contents=prompt2
 )
@@ -112,8 +112,8 @@ from google import genai
 from pydantic import BaseModel
 import enum
  
-# Configure the client (ensure GEMINI_API_KEY is set in your environment)
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+# Configure the client (ensure GEMINI\_API\_KEY is set in your environment)
+client = genai.Client(api\_key=os.environ["GEMINI\_API\_KEY"])
  
 # Define Routing Schema
 class Category(enum.Enum):
@@ -126,53 +126,53 @@ class RoutingDecision(BaseModel):
     reasoning: str
  
 # Step 1: Route the Query
-user_query = "What's the weather like in Paris?"
-# user_query = "Explain quantum physics simply."
-# user_query = "What is the capital of France?"
+user\_query = "What's the weather like in Paris?"
+# user\_query = "Explain quantum physics simply."
+# user\_query = "What is the capital of France?"
  
-prompt_router = f"""
+prompt\_router = f"""
 Analyze the user query below and determine its category.
 Categories:
 - weather: For questions about weather conditions.
 - science: For questions about science.
 - unknown: If the category is unclear.
  
-Query: {user_query}
+Query: {user\_query}
 """
  
-# Use client.models.generate_content with config for structured output
-response_router = client.models.generate_content(
+# Use client.models.generate\_content with config for structured output
+response\_router = client.models.generate\_content(
     model= 'gemini-2.0-flash-lite',
-    contents=prompt_router,
+    contents=prompt\_router,
     config={
-        'response_mime_type': 'application/json',
-        'response_schema': RoutingDecision,
+        'response\_mime\_type': 'application/json',
+        'response\_schema': RoutingDecision,
     },
 )
-print(f"Routing Decision: Category={response_router.parsed.category}, Reasoning={response_router.parsed.reasoning}")
+print(f"Routing Decision: Category={response\_router.parsed.category}, Reasoning={response\_router.parsed.reasoning}")
  
 # Step 2: Handoff based on Routing
-final_response = ""
-if response_router.parsed.category == Category.WEATHER:
-    weather_prompt = f"Provide a brief weather forecast for the location mentioned in: '{user_query}'"
-    weather_response = client.models.generate_content(
+final\_response = ""
+if response\_router.parsed.category == Category.WEATHER:
+    weather\_prompt = f"Provide a brief weather forecast for the location mentioned in: '{user\_query}'"
+    weather\_response = client.models.generate\_content(
         model='gemini-2.0-flash',
-        contents=weather_prompt
+        contents=weather\_prompt
     )
-    final_response = weather_response.text
-elif response_router.parsed.category == Category.SCIENCE:
-    science_response = client.models.generate_content(
+    final\_response = weather\_response.text
+elif response\_router.parsed.category == Category.SCIENCE:
+    science\_response = client.models.generate\_content(
         model="gemini-2.5-flash-preview-04-17",
-        contents=user_query
+        contents=user\_query
     )
-    final_response = science_response.text
+    final\_response = science\_response.text
 else:
-    unknown_response = client.models.generate_content(
+    unknown\_response = client.models.generate\_content(
         model="gemini-2.0-flash-lite",
-        contents=f"The user query is: {prompt_router}, but could not be answered. Here is the reasoning: {response_router.parsed.reasoning}. Write a helpful response to the user for him to try again."
+        contents=f"The user query is: {prompt\_router}, but could not be answered. Here is the reasoning: {response\_router.parsed.reasoning}. Write a helpful response to the user for him to try again."
     )
-    final_response = unknown_response.text
-print(f"\nFinal Response: {final_response}")
+    final\_response = unknown\_response.text
+print(f"\nFinal Response: {final\_response}")
 ```
 
 ## Workflow: Parallelization
@@ -194,17 +194,17 @@ import asyncio
 import time
 from google import genai
  
-# Configure the client (ensure GEMINI_API_KEY is set in your environment)
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+# Configure the client (ensure GEMINI\_API\_KEY is set in your environment)
+client = genai.Client(api\_key=os.environ["GEMINI\_API\_KEY"])
  
-async def generate_content(prompt: str) -> str:
-        response = await client.aio.models.generate_content(
+async def generate\_content(prompt: str) -\> str:
+        response = await client.aio.models.generate\_content(
             model="gemini-2.0-flash",
             contents=prompt
         )
         return response.text.strip()
  
-async def parallel_tasks():
+async def parallel\_tasks():
     # Define Parallel Tasks
     topic = "a friendly robot exploring a jungle"
     prompts = [
@@ -213,27 +213,27 @@ async def parallel_tasks():
         f"Write a short, mysterious story idea about {topic}."
     ]
     # Run tasks concurrently and gather results
-    start_time = time.time()
-    tasks = [generate_content(prompt) for prompt in prompts]
+    start\_time = time.time()
+    tasks = [generate\_content(prompt) for prompt in prompts]
     results = await asyncio.gather(*tasks)
-    end_time = time.time()
-    print(f"Time taken: {end_time - start_time} seconds")
+    end\_time = time.time()
+    print(f"Time taken: {end\_time - start\_time} seconds")
  
     print("\n--- Individual Results ---")
     for i, result in enumerate(results):
         print(f"Result {i+1}: {result}\n")
  
     # Aggregate results and generate final story
-    story_ideas = '\n'.join([f"Idea {i+1}: {result}" for i, result in enumerate(results)])
-    aggregation_prompt = f"Combine the following three story ideas into a single, cohesive summary paragraph:{story_ideas}"
-    aggregation_response = await client.aio.models.generate_content(
+    story\_ideas = '\n'.join([f"Idea {i+1}: {result}" for i, result in enumerate(results)])
+    aggregation\_prompt = f"Combine the following three story ideas into a single, cohesive summary paragraph:{story\_ideas}"
+    aggregation\_response = await client.aio.models.generate\_content(
         model="gemini-2.5-flash-preview-04-17",
-        contents=aggregation_prompt
+        contents=aggregation\_prompt
     )
-    return aggregation_response.text
+    return aggregation\_response.text
     
  
-result = await parallel_tasks()
+result = await parallel\_tasks()
 print(f"\n--- Aggregated Summary ---\n{result}")
 ```
 
@@ -257,8 +257,8 @@ from google import genai
 from pydantic import BaseModel
 import enum
  
-# Configure the client (ensure GEMINI_API_KEY is set in your environment)
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+# Configure the client (ensure GEMINI\_API\_KEY is set in your environment)
+client = genai.Client(api\_key=os.environ["GEMINI\_API\_KEY"])
  
 class EvaluationStatus(enum.Enum):
     PASS = "PASS"
@@ -270,12 +270,12 @@ class Evaluation(BaseModel):
     reasoning: str
  
 # --- Initial Generation Function ---
-def generate_poem(topic: str, feedback: str = None) -> str:
+def generate\_poem(topic: str, feedback: str = None) -\> str:
     prompt = f"Write a short, four-line poem about {topic}."
     if feedback:
         prompt += f"\nIncorporate this feedback: {feedback}"
     
-    response = client.models.generate_content(
+    response = client.models.generate\_content(
         model='gemini-2.0-flash',
         contents=prompt
     )
@@ -284,49 +284,49 @@ def generate_poem(topic: str, feedback: str = None) -> str:
     return poem
  
 # --- Evaluation Function ---
-def evaluate(poem: str) -> Evaluation:
+def evaluate(poem: str) -\> Evaluation:
     print("\n--- Evaluating Poem ---")
-    prompt_critique = f"""Critique the following poem. Does it rhyme well? Is it exactly four lines? 
+    prompt\_critique = f"""Critique the following poem. Does it rhyme well? Is it exactly four lines? 
 Is it creative? Respond with PASS or FAIL and provide feedback.
  
 Poem:
 {poem}
 """
-    response_critique = client.models.generate_content(
+    response\_critique = client.models.generate\_content(
         model='gemini-2.0-flash',
-        contents=prompt_critique,
+        contents=prompt\_critique,
         config={
-            'response_mime_type': 'application/json',
-            'response_schema': Evaluation,
+            'response\_mime\_type': 'application/json',
+            'response\_schema': Evaluation,
         },
     )
-    critique = response_critique.parsed
+    critique = response\_critique.parsed
     print(f"Evaluation Status: {critique.evaluation}")
     print(f"Evaluation Feedback: {critique.feedback}")
     return critique
  
 # Reflection Loop   
-max_iterations = 3
-current_iteration = 0
+max\_iterations = 3
+current\_iteration = 0
 topic = "a robot learning to paint"
  
 # simulated poem which will not pass the evaluation
-current_poem = "With circuits humming, cold and bright,\nA metal hand now holds a brush"
+current\_poem = "With circuits humming, cold and bright,\nA metal hand now holds a brush"
  
-while current_iteration < max_iterations:
-    current_iteration += 1
-    print(f"\n--- Iteration {current_iteration} ---")
-    evaluation_result = evaluate(current_poem)
+while current\_iteration \< max\_iterations:
+    current\_iteration += 1
+    print(f"\n--- Iteration {current\_iteration} ---")
+    evaluation\_result = evaluate(current\_poem)
  
-    if evaluation_result.evaluation == EvaluationStatus.PASS:
+    if evaluation\_result.evaluation == EvaluationStatus.PASS:
         print("\nFinal Poem:")
-        print(current_poem)
+        print(current\_poem)
         break
     else:
-        current_poem = generate_poem(topic, feedback=evaluation_result.feedback)
-        if current_iteration == max_iterations:
+        current\_poem = generate\_poem(topic, feedback=evaluation\_result.feedback)
+        if current\_iteration == max\_iterations:
             print("\nMax iterations reached. Last attempt:")
-            print(current_poem)
+            print(current\_poem)
 ```
 
 ## Tool Use Pattern
@@ -348,12 +348,12 @@ import os
 from google import genai
 from google.genai import types
  
-# Configure the client (ensure GEMINI_API_KEY is set in your environment)
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+# Configure the client (ensure GEMINI\_API\_KEY is set in your environment)
+client = genai.Client(api\_key=os.environ["GEMINI\_API\_KEY"])
  
 # Define the function declaration for the model
-weather_function = {
-    "name": "get_current_temperature",
+weather\_function = {
+    "name": "get\_current\_temperature",
     "description": "Gets the current temperature for a given location.",
     "parameters": {
         "type": "object",
@@ -368,47 +368,47 @@ weather_function = {
 }
  
 # Placeholder function to simulate API call
-def get_current_temperature(location: str) -> dict:
+def get\_current\_temperature(location: str) -\> dict:
     return {"temperature": "15", "unit": "Celsius"}
  
 # Create the config object as shown in the user's example
-# Use client.models.generate_content with model, contents, and config
-tools = types.Tool(function_declarations=[weather_function])
+# Use client.models.generate\_content with model, contents, and config
+tools = types.Tool(function\_declarations=[weather\_function])
 contents = ["What's the temperature in London right now?"]
-response = client.models.generate_content(
+response = client.models.generate\_content(
     model='gemini-2.0-flash',
     contents=contents,
     config = types.GenerateContentConfig(tools=[tools])
 )
  
 # Process the Response (Check for Function Call)
-response_part = response.candidates[0].content.parts[0]
-if response_part.function_call:
-    function_call = response_part.function_call
-    print(f"Function to call: {function_call.name}")
-    print(f"Arguments: {dict(function_call.args)}")
+response\_part = response.candidates[0].content.parts[0]
+if response\_part.function\_call:
+    function\_call = response\_part.function\_call
+    print(f"Function to call: {function\_call.name}")
+    print(f"Arguments: {dict(function\_call.args)}")
  
     # Execute the Function
-    if function_call.name == "get_current_temperature":        
+    if function\_call.name == "get\_current\_temperature":        
         # Call the actual function
-        api_result = get_current_temperature(*function_call.args)
+        api\_result = get\_current\_temperature(*function\_call.args)
         # Append function call and result of the function execution to contents
-        follow_up_contents = [
-            types.Part(function_call=function_call),
-            types.Part.from_function_response(
-                name="get_current_temperature",
-                response=api_result
+        follow\_up\_contents = [
+            types.Part(function\_call=function\_call),
+            types.Part.from\_function\_response(
+                name="get\_current\_temperature",
+                response=api\_result
             )
         ]
         # Generate final response
-        response_final = client.models.generate_content(
+        response\_final = client.models.generate\_content(
             model="gemini-2.0-flash",
-            contents=contents + follow_up_contents,
+            contents=contents + follow\_up\_contents,
             config=types.GenerateContentConfig(tools=[tools])
         )
-        print(response_final.text)
+        print(response\_final.text)
     else:
-        print(f"Error: Unknown function call requested: {function_call.name}")
+        print(f"Error: Unknown function call requested: {function\_call.name}")
 else:
     print("No function call found in the response.")
     print(response.text)
@@ -433,45 +433,45 @@ from google import genai
 from pydantic import BaseModel, Field
 from typing import List
  
-# Configure the client (ensure GEMINI_API_KEY is set in your environment)
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+# Configure the client (ensure GEMINI\_API\_KEY is set in your environment)
+client = genai.Client(api\_key=os.environ["GEMINI\_API\_KEY"])
  
 # Define the Plan Schema
 class Task(BaseModel):
-    task_id: int
+    task\_id: int
     description: str
-    assigned_to: str = Field(description="Which worker type should handle this? E.g., Researcher, Writer, Coder")
+    assigned\_to: str = Field(description="Which worker type should handle this? E.g., Researcher, Writer, Coder")
  
 class Plan(BaseModel):
     goal: str
     steps: List[Task]
  
 # Step 1: Generate the Plan (Planner LLM)
-user_goal = "Write a short blog post about the benefits of AI agents."
+user\_goal = "Write a short blog post about the benefits of AI agents."
  
-prompt_planner = f"""
+prompt\_planner = f"""
 Create a step-by-step plan to achieve the following goal. 
 Assign each step to a hypothetical worker type (Researcher, Writer).
  
-Goal: {user_goal}
+Goal: {user\_goal}
 """
  
-print(f"Goal: {user_goal}")
+print(f"Goal: {user\_goal}")
 print("Generating plan...")
  
 # Use a model capable of planning and structured output
-response_plan = client.models.generate_content(
+response\_plan = client.models.generate\_content(
     model='gemini-2.5-pro-preview-03-25',
-    contents=prompt_planner,
+    contents=prompt\_planner,
     config={
-        'response_mime_type': 'application/json',
-        'response_schema': Plan,
+        'response\_mime\_type': 'application/json',
+        'response\_schema': Plan,
     },
 )
  
 # Step 2: Execute the Plan (Orchestrator/Workers - Omitted for brevity) 
-for step in response_plan.parsed.steps:
-    print(f"Step {step.task_id}: {step.description} (Assignee: {step.assigned_to})")
+for step in response\_plan.parsed.steps:
+    print(f"Step {step.task\_id}: {step.description} (Assignee: {step.assigned\_to})")
 ```
 
 ## Multi-Agent Pattern
@@ -493,8 +493,8 @@ Note: The example below a simplified example on how to use the Multi-Agent patte
 from google import genai
 from pydantic import BaseModel, Field
  
-# Configure the client (ensure GEMINI_API_KEY is set in your environment)
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+# Configure the client (ensure GEMINI\_API\_KEY is set in your environment)
+client = genai.Client(api\_key=os.environ["GEMINI\_API\_KEY"])
  
 # Define Structured Output Schemas
 class Response(BaseModel):
@@ -502,33 +502,33 @@ class Response(BaseModel):
     message: str = Field(description="The response message to the user or context for the next agent")
  
 # Agent Function
-def run_agent(agent_name: str, system_prompt: str, prompt: str) -> Response:
-    response = client.models.generate_content(
+def run\_agent(agent\_name: str, system\_prompt: str, prompt: str) -\> Response:
+    response = client.models.generate\_content(
         model='gemini-2.0-flash',
         contents=prompt,
-        config = {'system_instruction': f'You are {agent_name}. {system_prompt}', 'response_mime_type': 'application/json', 'response_schema': Response}
+        config = {'system\_instruction': f'You are {agent\_name}. {system\_prompt}', 'response\_mime\_type': 'application/json', 'response\_schema': Response}
     )
     return response.parsed
  
  
 # Define System Prompts for the agents
-hotel_system_prompt = "You are a Hotel Booking Agent. You ONLY handle hotel bookings. If the user asks about restaurants, flights, or anything else, respond with a short handoff message containing the original request and set the 'handoff' field to 'Restaurant Agent'. Otherwise, handle the hotel request and leave 'handoff' empty."
-restaurant_system_prompt = "You are a Restaurant Booking Agent. You handle restaurant recommendations and bookings based on the user's request provided in the prompt."
+hotel\_system\_prompt = "You are a Hotel Booking Agent. You ONLY handle hotel bookings. If the user asks about restaurants, flights, or anything else, respond with a short handoff message containing the original request and set the 'handoff' field to 'Restaurant Agent'. Otherwise, handle the hotel request and leave 'handoff' empty."
+restaurant\_system\_prompt = "You are a Restaurant Booking Agent. You handle restaurant recommendations and bookings based on the user's request provided in the prompt."
  
 # Prompt to be about a restaurant
-initial_prompt = "Can you book me a table at an Italian restaurant for 2 people tonight?"
-print(f"Initial User Request: {initial_prompt}")
+initial\_prompt = "Can you book me a table at an Italian restaurant for 2 people tonight?"
+print(f"Initial User Request: {initial\_prompt}")
  
 # Run the first agent (Hotel Agent) to force handoff logic
-output = run_agent("Hotel Agent", hotel_system_prompt, initial_prompt)
+output = run\_agent("Hotel Agent", hotel\_system\_prompt, initial\_prompt)
  
 # simulate a user interaction to change the prompt and handoff
 if output.handoff == "Restaurant Agent":
     print("Handoff Triggered: Hotel to Restaurant")
-    output = run_agent("Restaurant Agent", restaurant_system_prompt, initial_prompt)
+    output = run\_agent("Restaurant Agent", restaurant\_system\_prompt, initial\_prompt)
 elif output.handoff == "Hotel Agent":
     print("Handoff Triggered: Restaurant to Hotel")
-    output = run_agent("Hotel Agent", hotel_system_prompt, initial_prompt)
+    output = run\_agent("Hotel Agent", hotel\_system\_prompt, initial\_prompt)
  
 print(output.message)
 ```
@@ -549,10 +549,10 @@ This overview was created with the help of deep and manual research, drawing ins
 - [How Agents Can Improve LLM Performance](https://www.deeplearning.ai/the-batch/how-agents-can-improve-llm-performance)
 - [Agentic Design Patterns](https://medium.com/@bijit211987/agentic-design-patterns-cbd0aae2962f)
 - [Agent Recipes](https://www.agentrecipes.com/)
-- [LangGraph Agentic Concepts](https://langchain-ai.github.io/langgraph/concepts/agentic_concepts/)
-- [OpenAI Agents Python Examples](https://github.com/openai/openai-agents-python/tree/main/examples/agent_patterns)
+- [LangGraph Agentic Concepts](https://langchain-ai.github.io/langgraph/concepts/agentic\_concepts/)
+- [OpenAI Agents Python Examples](https://github.com/openai/openai-agents-python/tree/main/examples/agent\_patterns)
 - [Anthropic Cookbook](https://github.com/anthropics/anthropic-cookbook/blob/main/patterns/agents)
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

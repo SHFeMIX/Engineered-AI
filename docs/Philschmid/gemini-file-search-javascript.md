@@ -1,11 +1,11 @@
 ---
 title: "Gemini API File Search: A Web Developer Tutorial"
 site: "Philipp Schmid"
-published: 2025-11-07
+published: "2025-11-07"
 source: "https://www.philschmid.de/gemini-file-search-javascript"
-domain: "philschmid.de"
+domain: ""
 language: "en"
-word_count: 1356
+word_count: 1577
 ---
 
 # Gemini API File Search: A Web Developer Tutorial
@@ -28,11 +28,15 @@ This tutorial will walk you through the complete lifecycle of using File Search 
 
 Before we start, make sure you have an [API key from Google AI Studio](https://aistudio.google.com/api-keys) and have installed the latest SDK:
 
+Bash
+
 ```bash
 npm install @google/genai
 ```
 
 Initialize your client in your JavaScript environment:
+
+JavaScript
 
 ```js
 import { GoogleGenAI } from '@google/genai';
@@ -45,6 +49,8 @@ const ai = new GoogleGenAI({});
 ### 1) Create a File Search Store
 
 A **File Search Store** is a persistent container for your document chunks and embeddings. It's distinct from raw file storage and can hold gigabytes of data.
+
+JavaScript
 
 ```js
 const fileStoreName = 'my-example-store';
@@ -59,6 +65,8 @@ console.log(\`Store created with Name: ${createStoreOp.name}\`);
 ### 2) Find a Store by Display Name
 
 Often the creation of a store and the use are in a different application session. Since the API assigns a unique ID (`fileSearchStores/xyz...`), you need to look it up by the human-readable `displayName`.
+
+JavaScript
 
 ```js
 let fileStore = null;
@@ -90,11 +98,13 @@ Speed matters. When ingesting a folder of documents, don't process them sequenti
 
 We'll use the helper method `uploadToFileSearchStore`, which handles uploading the raw file and initiating the indexing process in one step. We then monitor `operation.done` to ensure processing completes before moving on.
 
+JavaScript
+
 ```js
 const docsDir = "docs"; // Ensure you have a 'docs' folder with some text files
-const files = fs.readdirSync(docsDir).map(file => path.join(docsDir, file));
+const files = fs.readdirSync(docsDir).map(file =\> path.join(docsDir, file));
  
-await Promise.all(files.map(async (filePath) => {
+await Promise.all(files.map(async (filePath) =\> {
   // 1. Initiate upload and indexing
   let operation = await ai.fileSearchStores.uploadToFileSearchStore({
     file: filePath,
@@ -106,7 +116,7 @@ await Promise.all(files.map(async (filePath) => {
  
   // 2. Poll until the document is fully processed
   while (!operation.done) {
-    await new Promise(resolve => setTimeout(resolve, 1000)); // wait 1s
+    await new Promise(resolve =\> setTimeout(resolve, 1000)); // wait 1s
     operation = await ai.operations.get({ operation });
   }
   console.log(\`Processing complete for: ${path.basename(filePath)}\`);
@@ -120,6 +130,8 @@ By default, Gemini handles chunking intelligently. However, for specific use cas
 
 You can define a `chunkingConfig` during upload to specify parameters like `maxTokensPerChunk` and `maxOverlapTokens` and `customMetadata` to attach key-value pairs to the document.
 
+JavaScript
+
 ```js
 const specialDocPath = 'special-docs/technical-manual.txt';
  
@@ -129,7 +141,7 @@ let advancedUploadOp = await ai.fileSearchStores.uploadToFileSearchStore({
   config: {
     displayName: 'technical-manual.txt',
     customMetadata: [
-      { key: "doc_type", stringValue: "manual" },
+      { key: "doc\_type", stringValue: "manual" },
     ],
     chunkingConfig: {
       whiteSpaceConfig: {
@@ -142,7 +154,7 @@ let advancedUploadOp = await ai.fileSearchStores.uploadToFileSearchStore({
  
 // Wait for the file to process
 while (!advancedUploadOp.done) {
-  await new Promise(resolve => setTimeout(resolve, 1000));
+  await new Promise(resolve =\> setTimeout(resolve, 1000));
   advancedUploadOp = await ai.operations.get({ operation: advancedUploadOp });
 }
 console.log("Advanced file processed.");
@@ -151,6 +163,8 @@ console.log("Advanced file processed.");
 ### 5) Run a Generation Query using File Search (RAG)
 
 We don't need to manually retrieve chunks. We just tell the Gemini model to use the `fileSearch` tool and point it to our store name. Gemini understands it needs more information, searches the store, and grounds its response automatically.
+
+JavaScript
 
 ```js
 const response = await ai.models.generateContent({
@@ -171,6 +185,8 @@ console.log("Model response:", response.text);
 
 Because we tagged our technical manual in Step 4, we can now force Gemini to *only* look at documents matching that tag by using a metadataFilter.
 
+JavaScript
+
 ```js
 const responseFiltered = await ai.models.generateContent({
   model: "gemini-2.5-flash",
@@ -179,7 +195,7 @@ const responseFiltered = await ai.models.generateContent({
     tools: [{
       fileSearch: {
         fileSearchStoreNames: [fileStore.name],
-        metadataFilter: 'doc_type="manual"'
+        metadataFilter: 'doc\_type="manual"'
       }
     }]
   }
@@ -191,6 +207,8 @@ console.log("Filtered response:", responseFiltered.text);
 ### 6) Find a Specific Document within a Store
 
 You'll often need to manage individual documents within your store. You can find a specific document by its display name.
+
+JavaScript
 
 ```js
 const docToFind = 'doc1.txt';
@@ -219,6 +237,8 @@ if (!targetDoc) throw new Error(\`Document '${docToFind}' not found.\`);
 
 Currently, the standard flow to update a document in File Search is to delete the old version and upload a new one.
 
+JavaScript
+
 ```js
 await ai.fileSearchStores.documents.delete({
     name: targetDoc.name,
@@ -229,6 +249,8 @@ await ai.fileSearchStores.documents.delete({
 ### 8) Update a Document
 
 File Search documents are immutable once indexed. To "update" a document, you must find it, delete it, and upload the new version. In this step, we will automate this entire loop to update `doc1.txt` with new information.
+
+JavaScript
 
 ```js
 const docToUpdate = 'doc1.txt'; // assuming it has new content
@@ -263,7 +285,7 @@ let updateOp = await ai.fileSearchStores.uploadToFileSearchStore({
   config: { displayName: docToUpdate }
 });
 while (!updateOp.done) {
-   await new Promise(resolve => setTimeout(resolve, 1000));
+   await new Promise(resolve =\> setTimeout(resolve, 1000));
    updateOp = await ai.operations.get({ operation: updateOp });
 }
  
@@ -274,6 +296,8 @@ console.log("Revision uploaded and indexed successfully.");
 
 You are currently limited to 10 File Search Stores per project, so it's important to clean up resources when you are finished with development.
 
+JavaScript
+
 ```js
 await ai.fileSearchStores.delete({
     name: fileStore.name,
@@ -283,4 +307,4 @@ await ai.fileSearchStores.delete({
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

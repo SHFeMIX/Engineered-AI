@@ -1,11 +1,11 @@
 ---
 title: "LLM Evaluation doesn't need to be complicated"
 site: "Philipp Schmid"
-published: 2024-07-11
+published: "2024-07-11"
 source: "https://www.philschmid.de/llm-evaluation"
-domain: "philschmid.de"
+domain: ""
 language: "en"
-word_count: 2150
+word_count: 2181
 ---
 
 # LLM Evaluation doesn't need to be complicated
@@ -57,18 +57,20 @@ Request the evaluation results in a structured format (e.g., JSON) with fields f
 
 Here is an example of how this would look if you put it all together.
 
+Python
+
 ```python
-EVALUATION_PROMPT_TEMPLATE = """
+EVALUATION\_PROMPT\_TEMPLATE = """
 You are an expert judge evaluating the Retrieval Augmented Generation applications. Your task is to evaluate a given answer based on a context and question using the criteria provided below.
  
 Evaluation Criteria (Additive Score, 0-5):
-{additive_criteria}
+{additive\_criteria}
  
 Evaluation Steps:
-{evaluation_steps}
+{evaluation\_steps}
  
 Output format:
-{json_schema}
+{json\_schema}
  
 Examples:
 {examples}
@@ -92,25 +94,27 @@ This 3-point additive metric evaluates RAG system responses based on their adher
 
 *Note: This is a completely made-up metric for demonstration purposes only. It is important you define the metrics and criteria based on your use case and importance.*
 
-To evaluate our model, we need to define the `additive_criteria`, `evaluation_steps`, `json_schema`.
+To evaluate our model, we need to define the `additive\_criteria`, `evaluation\_steps`, `json\_schema`.
+
+Python
 
 ```python
-ADDITIVE_CRITERIA = """1. Context: Award 1 point if the answer uses only information provided in the context, without introducing external or fabricated details.
+ADDITIVE\_CRITERIA = """1. Context: Award 1 point if the answer uses only information provided in the context, without introducing external or fabricated details.
 2. Completeness: Add 1 point if the answer addresses all key elements of the question based on the available context, without omissions.
 3. Conciseness: Add a final point if the answer uses the fewest words possible to address the question and avoids redundancy."""
  
-EVALUATION_STEPS="""1. Read provided context, question and answer carefully.
+EVALUATION\_STEPS="""1. Read provided context, question and answer carefully.
 2. Go through each evaluation criterion one by one and assess whether the answer meets the criteria.
 3. Compose your reasoning for each critera, explaining why you did or did not award a point. You can only award full points. 
 4. Calculate the total score by summing the points awarded.
-5. Format your evaluation response according to the specified Output format, ensuring proper JSON syntax with a "reasoning" field for your step-by-step explanation and a "total_score" field for the calculated total. Review your formatted response. It needs to be valid JSON."""
+5. Format your evaluation response according to the specified Output format, ensuring proper JSON syntax with a "reasoning" field for your step-by-step explanation and a "total\_score" field for the calculated total. Review your formatted response. It needs to be valid JSON."""
  
-JSON_SCHEMA="""{
+JSON\_SCHEMA="""{
   "reasoning": "Your step-by-step explanation for the Evaluation Criteria, why you awarded a point or not."
-  "total_score": sum of criteria scores,
+  "total\_score": sum of criteria scores,
 }"""
  
-def format_examples(examples):
+def format\_examples(examples):
     return "\n".join([
         f'Question: {ex["question"]}\nContext: {ex["context"]}\nAnswer: {ex["answer"]}\nEvaluation:{ex["eval"]}' 
         for ex in examples
@@ -121,46 +125,50 @@ To help improve the model's performance, we define three few-shot examples: a 0-
 
 We are going to use the async client `AsyncOpenAI` client to score multiple examples in parallel.
 
+Python
+
 ```python
 import asyncio
 from openai import AsyncOpenAI
-import huggingface_hub
-from tqdm.asyncio import tqdm_asyncio
+import huggingface\_hub
+from tqdm.asyncio import tqdm\_asyncio
  
 # max concurrency
 sem = asyncio.Semaphore(5)
  
 # Initialize the client using the Hugging Face Inference API
 client = AsyncOpenAI(
-    base_url="https://api-inference.huggingface.co/v1/",
-    api_key=huggingface_hub.get_token(),
+    base\_url="https://api-inference.huggingface.co/v1/",
+    api\_key=huggingface\_hub.get\_token(),
 )
  
 # Combined async helper method to handle concurrent scoring and
-async def limited_get_score(dataset):
+async def limited\_get\_score(dataset):
     async def gen(sample):
         async with sem:
-            res = await get_eval_score(sample)
-            progress_bar.update(1)
+            res = await get\_eval\_score(sample)
+            progress\_bar.update(1)
             return res
  
-    progress_bar = tqdm_asyncio(total=len(dataset), desc="Scoring", unit="sample")
+    progress\_bar = tqdm\_asyncio(total=len(dataset), desc="Scoring", unit="sample")
     tasks = [gen(text) for text in dataset]
-    responses = await tqdm_asyncio.gather(*tasks)
-    progress_bar.close()
+    responses = await tqdm\_asyncio.gather(*tasks)
+    progress\_bar.close()
     return responses
 ```
 
-Then, we define our `get_eval_score` method.
+Then, we define our `get\_eval\_score` method.
+
+Python
 
 ```python
 import json 
-async def get_eval_score(sample):
-    prompt = EVALUATION_PROMPT_TEMPLATE.format(
-        additive_criteria=ADDITIVE_CRITERIA,
-        evaluation_steps=EVALUATION_STEPS,
-        json_schema=JSON_SCHEMA,
-        examples=format_examples(few_shot_examples),
+async def get\_eval\_score(sample):
+    prompt = EVALUATION\_PROMPT\_TEMPLATE.format(
+        additive\_criteria=ADDITIVE\_CRITERIA,
+        evaluation\_steps=EVALUATION\_STEPS,
+        json\_schema=JSON\_SCHEMA,
+        examples=format\_examples(few\_shot\_examples),
         question=sample["question"],
         context=sample["context"],
         answer=sample["answer"]
@@ -171,7 +179,7 @@ async def get_eval_score(sample):
         model="meta-llama/Meta-Llama-3-70B-Instruct",
         messages=[{"role": "user", "content": prompt}],
         temperature=0,
-        max_tokens=512,
+        max\_tokens=512,
     )
     results = response.choices[0].message.content
     # Add the evaluation results to the sample
@@ -180,59 +188,69 @@ async def get_eval_score(sample):
 
 The last missing piece is the data. We use the `datasets` library to load our samples.
 
+Python
+
 ```python
-from datasets import load_dataset
+from datasets import load\_dataset
  
-eval_ds = load_dataset("zeitgeist-ai/financial-rag-nvidia-sec", split="train").shuffle(seed=42).select(range(50))
-print(f"Limited evaluation of {len(eval_ds)} samples")
-few_shot_examples = load_dataset("zeitgeist-ai/financial-rag-nvidia-sec","few-shot-examples" ,split="train")
-print(f"Limited evaluation of {len(few_shot_examples)} few-shot examples")
+eval\_ds = load\_dataset("zeitgeist-ai/financial-rag-nvidia-sec", split="train").shuffle(seed=42).select(range(50))
+print(f"Limited evaluation of {len(eval\_ds)} samples")
+few\_shot\_examples = load\_dataset("zeitgeist-ai/financial-rag-nvidia-sec","few-shot-examples" ,split="train")
+print(f"Limited evaluation of {len(few\_shot\_examples)} few-shot examples")
 ```
 
 Let's test an example.
 
+Python
+
 ```python
 import json
  
-sample = [sample for sample in eval_ds.select(range(1))]
+sample = [sample for sample in eval\_ds.select(range(1))]
 print(f"Question: {sample[0]['question']}\nContext: {sample[0]['context']}\nAnswer: {sample[0]['answer']}")
 print("---" * 10)
 # change in if you are not in a jupyter notebook
-# responses = asyncio.run(limited_get_score(sample))
-responses = await limited_get_score(sample)
-print(f"Reasoing: {responses[0]['reasoning']}\nTotal Score: {responses[0]['total_score']}")
+# responses = asyncio.run(limited\_get\_score(sample))
+responses = await limited\_get\_score(sample)
+print(f"Reasoing: {responses[0]['reasoning']}\nTotal Score: {responses[0]['total\_score']}")
 ```
 
 Awesome, it works and looks good now. Let's evaluate all 50 examples and then calculate our average score.
 
+Python
+
 ```python
-results = await limited_get_score(eval_ds)
-# Scoring:  80%|████████  | 40/50 [00:22<00:04,  2.36sample/s]
+results = await limited\_get\_score(eval\_ds)
+# Scoring:  80%|████████  | 40/50 [00:22\<00:04,  2.36sample/s]
  
 # calculate the average score
-total_score = sum([r["total_score"] for r in results]) / len(results)
-print(f"Average Score: {total_score}")
+total\_score = sum([r["total\_score"] for r in results]) / len(results)
+print(f"Average Score: {total\_score}")
  
 # extract and sample with score 0
-score_0 = [r for r in results if r["total_score"] == 0]
-print(f"Samples with score 0: {len(score_0)}")
+score\_0 = [r for r in results if r["total\_score"] == 0]
+print(f"Samples with score 0: {len(score\_0)}")
 ```
 
 Great. We achieved and average score of 2.78! To better understand why only 2.78 lets look at an example which scored poorly and if that's correct.
 
+Python
+
 ```python
 # extract and sample with score 0
-score_0 = [r for r in results if r["total_score"] == 0]
-print(f"Samples with score 0: {len(score_0)}")
+score\_0 = [r for r in results if r["total\_score"] == 0]
+print(f"Samples with score 0: {len(score\_0)}")
 # Samples with score 0: 2
 ```
 
 In my test, I got 2 samples with a score of 0. Lets look at the first.
 
+Python
+
 ```python
-print(f"Question: {score_0[0]['question']}\nContext: {score_0[0]['context']}\nAnswer: {score_0[0]['answer']}")
+print(f"Question: {score\_0[0]['question']}\nContext: {score\_0[0]['context']}\nAnswer: {score\_0[0]['answer']}")
 print("---" * 10)
-print(f"Reasoing: {score_0[0]['reasoning']}\nTotal Score: {score_0[0]['total_score']}")
+print(f"Reasoing: {score\_0[0]['reasoning']}\nTotal Score: {score\_0[0]['total\_score']}")
  
 # Question: What was the total dollar value of outstanding commercial real estate loans at the end of 2023?
 # Context: The total outstanding commercial real estate loans amounted to $72,878 million at the end of December 2022.
@@ -268,4 +286,4 @@ I can also recommend reading Hamels [Your AI Product Needs Evals](https://hamel.
 
 ---
 
-Thanks for reading! If you have any questions, feel free to contact me on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions, feel free to contact me on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

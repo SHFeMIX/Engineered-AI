@@ -1,9 +1,9 @@
 ---
 title: "8 Predictions for 2026. What comes next in AI?"
 site: "Philipp Schmid"
-published: 2025-12-31
+published: "2025-12-31"
 source: "https://www.philschmid.de/2026-predictions"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 497
 ---
@@ -38,4 +38,4 @@ However, the bar has raised. To separate yourself from the crowd in 2026, you ne
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

@@ -5,7 +5,7 @@ published: "2026-04-27"
 source: "https://www.philschmid.de/use-mcp-servers"
 domain: ""
 language: "en"
-word_count: 525
+word_count: 543
 ---
 
 # How to correctly use MCP servers with your AI Agents
@@ -26,6 +26,8 @@ Writing `@github` or `@slack` in a prompt triggers the agent to:
 4. **Forward** everything to the model, which decides what to call
 
 Nothing loads unless requested. The tool surface stays small.
+
+TypeScript
 
 ```typescript
 // Pseudo-code
@@ -61,6 +63,8 @@ MCP servers are declared in subagents definition and automatically available at 
 
 Each subagent has its own configuration that declares its model, tools,... and optional MCP servers. You can scope MCP servers to specific tools using `allowed\_tools`.
 
+YAML
+
 ```yaml
 # Pseudo-code: code\_reviewer.md
 ---
@@ -77,6 +81,8 @@ You are a code reviewer. Review open PRs...
 ```
 
 The main agent registers subagents. When invoked, each subagent connects to its declared MCP servers and merges those tools with native ones.
+
+TypeScript
 
 ```typescript
 // Pseudo-code

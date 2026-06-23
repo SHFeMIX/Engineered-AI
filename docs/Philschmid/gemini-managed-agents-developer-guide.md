@@ -5,7 +5,7 @@ published: "2026-05-26"
 source: "https://www.philschmid.de/gemini-managed-agents-developer-guide"
 domain: ""
 language: "en"
-word_count: 1305
+word_count: 1332
 ---
 
 # Gemini Managed Agents: Developer Guide
@@ -24,12 +24,16 @@ You can use the [Antigravity agent](https://ai.google.dev/gemini-api/docs/antigr
 
 Install the SDK and set your API key:
 
+Bash
+
 ```bash
 pip install google-genai
 export GEMINI\_API\_KEY="your-key"
 ```
 
 Then:
+
+Python
 
 ```python
 from google import genai
@@ -56,6 +60,8 @@ The first interaction returns an `environment\_id` and `interaction.id`. The API
 - If you pass the `environment\_id` as `environment` in a follow-up interaction, the sandbox persists.
 - If you pass `previous\_interaction\_id` with the last `interaction.id`, the conversation history persists.
 
+Python
+
 ```python
 interaction\_2 = client.interactions.create(
     agent="antigravity-preview-05-2026",
@@ -70,6 +76,8 @@ Omit `previous\_interaction\_id` to start a fresh conversation in the same works
 ## Streaming
 
 Stream responses to see the agent's work as it happens:
+
+Python
 
 ```python
 stream = client.interactions.create(
@@ -93,6 +101,8 @@ Mount files from Git repos, Cloud Storage, or inline content at environment crea
 - **`gcs`**: copies from a Google Cloud Storage bucket.
 - **`inline`**: writes text content to a file path.
 
+Python
+
 ```python
 interaction = client.interactions.create(
     agent="antigravity-preview-05-2026",
@@ -111,6 +121,8 @@ interaction = client.interactions.create(
 ## Downloading files from the sandbox
 
 Download the full environment as a tar archive:
+
+Python
 
 ```python
 import os, requests, tarfile
@@ -133,7 +145,7 @@ with tarfile.open("snapshot.tar") as tar:
 
 Save your configuration as a managed agent when you want the same behavior across runs. Agents are defined through files the runtime auto-discovers:
 
-```
+```plaintext
 .agents/
 ├── AGENTS.md                    # Loaded as system instructions on startup
 └── skills/
@@ -144,6 +156,8 @@ Save your configuration as a managed agent when you want the same behavior acros
 ### From sources
 
 Define instructions, skills, and data declaratively. Each invocation provisions a fresh sandbox with your files:
+
+Python
 
 ```python
 agent = client.agents.create(
@@ -165,6 +179,8 @@ agent = client.agents.create(
 
 Set up the environment interactively, then freeze it:
 
+Python
+
 ```python
 # Step 1: set up the environment
 interaction = client.interactions.create(
@@ -185,6 +201,8 @@ agent = client.agents.create(
 
 Each invocation forks the base environment. Every run starts clean:
 
+Python
+
 ```python
 result = client.interactions.create(
     agent="my-data-analyst",
@@ -199,6 +217,8 @@ Full agent definition format, CRUD operations, and per-invocation overrides in [
 ## Secure networking and credentials
 
 Environments have unrestricted outbound access by default. Use a network allowlist to restrict it. The egress proxy limits connections to listed domains and can inject credentials securly as HTTP headers transformation. Secrets never exist inside the sandbox:
+
+Python
 
 ```python
 agent = client.agents.create(
@@ -225,6 +245,8 @@ Full allowlist schema, credential patterns, and private repo access in [Network 
 ## Gemini API CLI
 
 We open-sourced the [Gemini API CLI](https://github.com/google-gemini/gemini-api-cli) (experimental) as a terminal-first interface to the Gemini API. It works for both humans and coding agents, covering everything from quick prompts to the full managed agent lifecycle:
+
+Bash
 
 ```bash
 # Run a prompt

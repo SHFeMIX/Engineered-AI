@@ -1,11 +1,11 @@
 ---
 title: "Why (Senior) Engineers Struggle to Build AI Agents"
 site: "Philipp Schmid"
-published: 2025-11-26
+published: "2025-11-26"
 source: "https://www.philschmid.de/why-engineers-struggle-building-agents"
-domain: "philschmid.de"
+domain: ""
 language: "en"
-word_count: 1154
+word_count: 1156
 ---
 
 # Why (Senior) Engineers Struggle to Build AI Agents
@@ -26,29 +26,33 @@ In traditional engineering, we model the world with data structures. We define s
 
 **Text is the new State.** We must abandon the comfort of booleans in favor of semantic meaning.
 
-Imagine a Deep Research plan approval use case where the user says, *"This plan looks good, but please focus on the US market."* A deterministic system forces this into `is_approved: true/false` and we lobotomize the context.
+Imagine a Deep Research plan approval use case where the user says, *"This plan looks good, but please focus on the US market."* A deterministic system forces this into `is\_approved: true/false` and we lobotomize the context.
 
 **Software Engineering:**
 
+JSON
+
 ```json
 {
-  "plan_id": "123",
+  "plan\_id": "123",
   "status": "APPROVED" // Nuance is lost here
 }
 ```
 
 **Agent Engineering:**
 
+JSON
+
 ```json
 {
-  "plan_id": "123",
+  "plan\_id": "123",
   "text": "This plan looks good, but please focus on the US market."
 }
 ```
 
 By preserving the text, the downstream agent can read the feedback ("Approved, but focus on US market") and adjust its behavior dynamically.
 
-Another example is user preferences. A deterministic system might store `is_celsius: true`. An agentic system stores *"I prefer Celsius for weather, but use Fahrenheit for cooking".* The agent can dynamically switch contexts based on the task.
+Another example is user preferences. A deterministic system might store `is\_celsius: true`. An agentic system stores *"I prefer Celsius for weather, but use Fahrenheit for cooking".* The agent can dynamically switch contexts based on the task.
 
 ## 2\. Hand over Control
 
@@ -90,14 +94,14 @@ If our agent succeeds 45/50 times with a quality score of 4.5/5, it can be produ
 
 In the past, we designed APIs for human developers, relying on implicit context and "clean" interfaces. Humans infer context. Agents do not. Agents are Literalists. If an ID format is ambiguous, the agent will hallucinate one.
 
-**The Trap:** We often build "Human-Grade" APIs—endpoints that rely on implicit context. For example, a variable named `id` is obviously the `user_unique_identifier` (UUID) to us, and can be used in `get_user(id)`. An Agent might not have this context and might try to use the email or name in `get_user(id)`.
+**The Trap:** We often build "Human-Grade" APIs—endpoints that rely on implicit context. For example, a variable named `id` is obviously the `user\_unique\_identifier` (UUID) to us, and can be used in `get\_user(id)`. An Agent might not have this context and might try to use the email or name in `get\_user(id)`.
 
-Agents require verbose, **"Idiot-Proof" semantic typing** (e.g., `"user_email_address"` instead of `"email"`) and highly descriptive docstrings that act as "context".
+Agents require verbose, **"Idiot-Proof" semantic typing** (e.g., `"user\_email\_address"` instead of `"email"`) and highly descriptive docstrings that act as "context".
 
-- **Bad:** `delete_item(id)` (Is ID an integer? A UUID? What happens if it's not found?)
-- **Good:** `delete_item_by_uuid(uuid: str)` with a docstring/description: *"Deletes an item. If the item is not found, return a descriptive error string."*
+- **Bad:** `delete\_item(id)` (Is ID an integer? A UUID? What happens if it's not found?)
+- **Good:** `delete\_item\_by\_uuid(uuid: str)` with a docstring/description: *"Deletes an item. If the item is not found, return a descriptive error string."*
 
-Furthermore, Agents allow for Just-in-Time adaptation. Normal APIs are promises to developers; we commit code that relies on those APIs, and then walk away. If we change an API from `get_user_by_id(id)` to `get_user_by_email(email)`, we break that promise and everything breaks immediately. An agent, however, reads the new tool definition and can adjust to it.
+Furthermore, Agents allow for Just-in-Time adaptation. Normal APIs are promises to developers; we commit code that relies on those APIs, and then walk away. If we change an API from `get\_user\_by\_id(id)` to `get\_user\_by\_email(email)`, we break that promise and everything breaks immediately. An agent, however, reads the new tool definition and can adjust to it.
 
 ## Conclusion: Trust, but Verify
 
@@ -111,4 +115,4 @@ This also means knowing when to use workflows over agents. I go into detail on h
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

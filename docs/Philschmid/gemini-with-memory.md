@@ -1,11 +1,11 @@
 ---
 title: "Integrating Long-Term Memory with Gemini 2.5"
 site: "Philipp Schmid"
-published: 2025-07-03
+published: "2025-07-03"
 source: "https://www.philschmid.de/gemini-with-memory"
-domain: "philschmid.de"
+domain: ""
 language: "en"
-word_count: 2709
+word_count: 2738
 ---
 
 # Integrating Long-Term Memory with Gemini 2.5
@@ -39,6 +39,8 @@ It uses vector embeddings to store and retrieve semantic information, maintainin
 
 The first task is to install the `google-genai` [Python SDK](https://googleapis.github.io/python-genai/) and `mem0ai` and obtain an [API key](https://aistudio.google.com/app/apikey).
 
+Python
+
 ```python
 !uv pip install google-genai mem0ai --upgrade
 ```
@@ -51,6 +53,8 @@ For building Memory we need to configure two main components:
 - **Embedding Model:** This model takes the extracted text memories and converts them into numerical representations (vectors). This allows `mem0` to efficiently search and retrieve relevant memories based on their meaning when you ask a question.
 
 In this example, we will use Google's Gemini models for both tasks. We will use `gemini-2.5-flash` as our LLM and `text-embedding-004` as our embedding model. We are going to use a local Qdrant instance as our vector store. Mem0 supports multiple vector stores incuding MongoDB, OpenSearch, Elasticsearch, Pgvector and more.
+
+Python
 
 ```python
 from google import genai
@@ -71,22 +75,24 @@ config = {
         "config": {
             "model": "gemini-2.5-flash",
             "temperature": 0.0,
-            "max_tokens": 2000,
+            "max\_tokens": 2000,
         }
     },
-    "vector_store": {
+    "vector\_store": {
         "config": {
-            "embedding_model_dims": 768,
+            "embedding\_model\_dims": 768,
         }
     }
 }
  
-memory = Memory.from_config(config)
+memory = Memory.from\_config(config)
 ```
 
 ## Store Memories about the user
 
 To simulate and simplify the process of adding memory. We will use dummy conversations between me (Philipp Schmid) and Gemini based on what can be seen on my blog. Conversations need to be in the `messages` format to be added.
+
+Python
 
 ```python
 conv1 = [
@@ -95,7 +101,7 @@ conv1 = [
     {"role": "user", "content": "Innsbruck is a great suggestion! I've heard the trails there are epic. I've already read Endurance, but The Goldfinch sounds intriguing. Can you tell me a bit more about the plot without giving too much away? Also, are there any good sci-fi or tech-related non-fiction books you'd recommend?"},
     {"role": "assistant", "content": "Of course. The Goldfinch begins with a young boy who survives a terrorist bombing at an art museum. In the aftermath, he takes a famous painting, and the story follows his life as he navigates grief, love, and the criminal underworld, all while secretly holding onto the artwork. It's a beautifully written and complex story.\n\nFor a sci-fi recommendation, you might enjoy Project Hail Mary by Andy Weir. It's a thrilling story of a lone astronaut on a mission to save humanity, filled with clever problem-solving and scientific detail. As for tech non-fiction, given your professional background, you might find The Age of AI: And Our Human Future by Henry Kissinger, Eric Schmidt, and Daniel Huttenlocher to be a thought-provoking read. It explores the societal implications of AI from a policy and philosophical perspective."}
 ]
-result = memory.add(conv1, user_id="philipp")
+result = memory.add(conv1, user\_id="philipp")
  
 conv2 =  [
     {"role": "user", "content": "I want to write a new post for my blog, but I want it to be more personal this time. I was thinking of drawing parallels between my experiences with mountain climbing and the challenges of developing and deploying large language models. What do you think of that idea?"},
@@ -103,7 +109,7 @@ conv2 =  [
     {"role": "user", "content": "I love that structure! 'The Ascent as the Training Process' is a particularly strong analogy. For a title, I was thinking of something like 'Climbing the AI Mountain' or 'Lessons from the Summit: AI and the Art of the Climb.' What do you think?"},
     {"role": "assistant", "content": "Both are great titles! 'Lessons from the Summit: AI and the Art of the Climb' is particularly evocative and captures the reflective and personal tone you're aiming for. It suggests that you'll be sharing hard-won insights. You could even open the blog post with a short, vivid anecdote from one of your climbs to immediately draw the reader in."}
 ]
-result = memory.add(conv2, user_id="philipp")
+result = memory.add(conv2, user\_id="philipp")
  
 conv3 = [
     {"role": "user", "content": "I'm preparing a talk for an upcoming AI conference. The topic is 'The Future of Agentic AI in the Enterprise'. I want to cover the current landscape, key challenges, and a forward-looking perspective. Can you help me brainstorm a compelling narrative and structure for the talk?"},
@@ -112,16 +118,18 @@ conv3 = [
     {"role": "assistant", "content": "Excellent addition. Focusing on evaluation and responsible AI is crucial. Here are a few highly-cited papers on evaluating agentic AI that you could explore:\n\n* 'A Survey on Evaluation of Large Language Models': While not exclusively on agents, it provides a comprehensive overview of evaluation metrics that are highly relevant.\n* 'AgentBench: Evaluating LLMs as Agents': This paper introduces a benchmark specifically designed for evaluating LLMs as agents across a variety of tasks.\n* 'On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜': A foundational paper on the ethical considerations of large language models, which is very relevant to responsible AI in agentic systems.\n\nI can also help you find more specific papers if you have a particular aspect of evaluation in mind."},
     {"role": "user", "content": "Perfect, this is exactly what I was looking for. I'll start with these and let you know if I need more."}
 ]
-result = memory.add(conv3, user_id="philipp")
+result = memory.add(conv3, user\_id="philipp")
 ```
 
 We can manually search throught the memory to find relevant information. Let's try to find information about me.
 
+Python
+
 ```python
-related_memories = memory.search(query="What do you know about me?", user_id="philipp")
+related\_memories = memory.search(query="What do you know about me?", user\_id="philipp")
  
 # Print the first 3 memories
-for m in related_memories["results"][:3]:
+for m in related\_memories["results"][:3]:
     print(m["memory"])
  
 # Has a professional background
@@ -133,16 +141,18 @@ Great! Now let's do some test on how including memory into our conversation chan
 
 Let see what Gemini will do when we ask it to help brainstorm about the upcoming talk.
 
+Python
+
 ```python
-system_prompt = "You are a helpful AI Assistant."
+system\_prompt = "You are a helpful AI Assistant."
  
 prompt = "Can you help me brainstorm a title and a key visual for my upcoming conference talk on 'The Future of Agentic AI in the Enterprise'? I'd like it to subtly connect to my personal interests in a way that feels authentic."
  
-response = client.models.generate_content(
+response = client.models.generate\_content(
     model="gemini-2.5-flash",
     contents=prompt,
     config={
-        "system_instruction": system_prompt
+        "system\_instruction": system\_prompt
     }
 )
  
@@ -152,19 +162,21 @@ print(response.text)
 
 As expected, Gemini has no idea about the upcoming talk and my interests. Now lets add the memory to the conversation.
 
+Python
+
 ```python
 # retrieve memories
-helpful_memories = memory.search(query=prompt, user_id="philipp")
-memories_str = "\n".join(f"- {entry['memory']}" for entry in helpful_memories["results"])
+helpful\_memories = memory.search(query=prompt, user\_id="philipp")
+memories\_str = "\n".join(f"- {entry['memory']}" for entry in helpful\_memories["results"])
 # extend system prompt
-extended_system_prompt = f"You are a helpful AI Assistant. You have the following memories about the user:\n{helpful_memories}"
+extended\_system\_prompt = f"You are a helpful AI Assistant. You have the following memories about the user:\n{helpful\_memories}"
  
 # generate response
-response = client.models.generate_content(
+response = client.models.generate\_content(
     model="gemini-2.5-flash",
     contents=prompt,
     config={
-        "system_instruction": extended_system_prompt
+        "system\_instruction": extended\_system\_prompt
     }
 )
  
@@ -178,6 +190,8 @@ Awesome! Instead of needing to follow up with the user, Gemini generated two res
 
 Now, lets combine all of this into an interactive chatbot. We separate the chatbot into two notebook cells, that we chat with Gemini, stop and start the chatbot again, but it has all the memories from the previous chat.
 
+Python
+
 ```python
 from google import genai
 from mem0 import Memory
@@ -185,34 +199,36 @@ from mem0 import Memory
 client = genai.Client()
 config = {
     "embedder": {"provider": "gemini", "config": {"model": "models/text-embedding-004"}},
-    "llm": {"provider": "gemini", "config": {"model": "gemini-2.5-flash", "temperature": 0.0, "max_tokens": 2000}},
-    "vector_store": {"config": {"embedding_model_dims": 768}}
+    "llm": {"provider": "gemini", "config": {"model": "gemini-2.5-flash", "temperature": 0.0, "max\_tokens": 2000}},
+    "vector\_store": {"config": {"embedding\_model\_dims": 768}}
 }
-memory = Memory.from_config(config)
+memory = Memory.from\_config(config)
  
-system_prompt = "You are a helpful AI. Answer the question based on query and memories."
+system\_prompt = "You are a helpful AI. Answer the question based on query and memories."
 ```
 
 An example to test is you can start with saying something about you and where you are, e.g. "I am live in Nuremberg and today we have 30°C, how can i cool down?". Then stop (type 'exit'), restart (rerun the cell) the conversation and ask about "what the closest swimming pool is".
 
+Python
+
 ```python
-def chat_with_memories(history: list[dict], user_id: str = "default_user") -> str:
+def chat\_with\_memories(history: list[dict], user\_id: str = "default\_user") -\> str:
     # Retrieve relevant memories
     print(history[-1]["parts"][0]["text"])
-    relevant_memories = memory.search(query=history[-1]["parts"][0]["text"], user_id=user_id, limit=5)
-    memories_str = "\n".join(f"- {entry['memory']}" for entry in relevant_memories["results"])
+    relevant\_memories = memory.search(query=history[-1]["parts"][0]["text"], user\_id=user\_id, limit=5)
+    memories\_str = "\n".join(f"- {entry['memory']}" for entry in relevant\_memories["results"])
  
     # Generate Assistant response
-    memory_system_prompt = f"{system_prompt}\nUser Memories:\n{memories_str}"
-    response = client.models.generate_content(
+    memory\_system\_prompt = f"{system\_prompt}\nUser Memories:\n{memories\_str}"
+    response = client.models.generate\_content(
         model="gemini-2.5-flash",
         contents=history,
-        config={"system_instruction": memory_system_prompt}
+        config={"system\_instruction": memory\_system\_prompt}
     )
     history.append({"role": "model", "parts": [{"text": response.text}]})
     # Create new memories from the conversation we need to convert the history to a list of messages
     messages = [{"role": "user" if i % 2 == 0 else "assistant", "content": part["parts"][0]["text"]} for i, part in enumerate(history)]
-    memory.add(messages, user_id=user_id)
+    memory.add(messages, user\_id=user\_id)
  
     return history
  
@@ -220,12 +236,12 @@ def main():
     print("Chat with Gemini (type 'exit' to quit)")
     history = []
     while True:
-        user_input = input("You: ").strip()
-        if user_input.lower() == 'exit':
+        user\_input = input("You: ").strip()
+        if user\_input.lower() == 'exit':
             print("Goodbye!")
             break
-        history.append({"role": "user", "parts": [{"text": user_input}]})
-        response = chat_with_memories(history)
+        history.append({"role": "user", "parts": [{"text": user\_input}]})
+        response = chat\_with\_memories(history)
         print(f"Gemini: {response[-1]['parts'][0]['text']}")
  
  
@@ -238,4 +254,4 @@ We've seen how to overcome the stateless nature of LLMs by integrating long-term
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

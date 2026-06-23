@@ -1,9 +1,9 @@
 ---
 title: "Agents 2.0: From Shallow Loops to Deep Agents"
 site: "Philipp Schmid"
-published: 2025-10-12
+published: "2025-10-12"
 source: "https://www.philschmid.de/agents-2.0-deep-agents"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 861
 ---
@@ -85,4 +85,4 @@ This overview was created with the help of deep and manual research. The term [*
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

@@ -1,9 +1,9 @@
 ---
 title: "Pass@k vs Pass^k: Understanding Agent Reliability"
 site: "Philipp Schmid"
-published: 2025-03-24
+published: "2025-03-24"
 source: "https://www.philschmid.de/agents-pass-at-k-pass-power-k"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 627
 ---
@@ -20,7 +20,7 @@ Pass@k measures the probability that at least one of k independent solution atte
 
 The formal calculation for Pass@k is:
 
-$\text{Pass@k} = 1 - \frac{\binom{n-c}{k}}{\binom{n}{k}}$
+$\text{Pass@k} = 1 - \frac{\binom{n-c}{k&#125;&#125;{\binom{n}{k&#125;&#125;$
 
 Where:
 
@@ -46,7 +46,7 @@ Imagine a customer support agent to help travelers rebook flights. A customer su
 
 Let's say our agent has a 70% success rate on individual requests (meaning it correctly processes the update 70% of the time). We'll use k=3 (three attempts).
 
-**Using Pass@3:** $\text{Pass@3} = 1 - \frac{\binom{30}{3}}{\binom{100}{3}} \approx 0.97 \text{ or } 97\%$
+**Using Pass@3:** $\text{Pass@3} = 1 - \frac{\binom{30}{3&#125;&#125;{\binom{100}{3&#125;&#125; \approx 0.97 \text{ or } 97\%$
 
 This looks impressive! It suggests that if we give the agent three chances to rebook a flight, it will almost certainly succeed at least once.
 
@@ -70,4 +70,4 @@ In contrast, `pass^k` provides a much more realistic and demanding measure. It r
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

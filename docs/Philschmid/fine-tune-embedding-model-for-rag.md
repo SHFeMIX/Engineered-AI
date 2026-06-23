@@ -1,11 +1,11 @@
 ---
 title: "Fine-tune Embedding models for Retrieval Augmented Generation (RAG)"
 site: "Philipp Schmid"
-published: 2024-06-04
+published: "2024-06-04"
 source: "https://www.philschmid.de/fine-tune-embedding-model-for-rag"
-domain: "philschmid.de"
+domain: ""
 language: "en"
-word_count: 2379
+word_count: 2413
 ---
 
 # Fine-tune Embedding models for Retrieval Augmented Generation (RAG)
@@ -32,23 +32,27 @@ For example, a Matryoshka model can preserve ~99.9% of its performance while nee
 
 Before we can get started we need to install Hugging Face Libraries and Pytorch, including Sentence Transformers, transformers and datasets.
 
+Python
+
 ```python
 # Install Pytorch & other libraries
 !pip install "torch==2.1.2" tensorboard
  
 # Install Hugging Face libraries
 !pip install --upgrade \
-  "sentence-transformers>=3" \
+  "sentence-transformers\>=3" \
   "datasets==2.19.1"  \
   "transformers==4.41.2"
 ```
 
-We will use the [Hugging Face Hub](https://huggingface.co/models) as a remote model versioning service. This means we will automatically push our model, logs and information to the Hub during training. You must register on the [Hugging Face](https://huggingface.co/join) for this. After you have an account, we will use the `login` util from the `huggingface_hub` package to log into our account and store our token (access key) on the disk.
+We will use the [Hugging Face Hub](https://huggingface.co/models) as a remote model versioning service. This means we will automatically push our model, logs and information to the Hub during training. You must register on the [Hugging Face](https://huggingface.co/join) for this. After you have an account, we will use the `login` util from the `huggingface\_hub` package to log into our account and store our token (access key) on the disk.
+
+Python
 
 ```python
-from huggingface_hub import login
+from huggingface\_hub import login
  
-login(token="", add_to_git_credential=True)  # ADD YOUR TOKEN HERE
+login(token="", add\_to\_git\_credential=True)  # ADD YOUR TOKEN HERE
 ```
 
 ## 1\. Create & Prepare embedding dataset
@@ -57,41 +61,45 @@ An embedding dataset typically consists of text pairs (question, answer/context)
 
 - **Positive Pair**: Text Pairs of related sentences (query, context | query, answer), suitable for tasks like similarity or semantic search, example datasets: `sentence-transformers/sentence-compression`, `sentence-transformers/natural-questions`.
 - **Triplets**: Text triplets consisting of (anchor, positive, negative), example datasets `sentence-transformers/quora-duplicates`, `nirantk/triplets`.
-- **Pair with Similarity Score**: Sentence pairs with a similarity score indicating how related they are, example datasets: `sentence-transformers/stsb`, `PhilipMay/stsb_multi_mt`
+- **Pair with Similarity Score**: Sentence pairs with a similarity score indicating how related they are, example datasets: `sentence-transformers/stsb`, `PhilipMay/stsb\_multi\_mt`
 
-Learn more at [Dataset Overview](https://sbert.net/docs/sentence_transformer/dataset_overview.html).
+Learn more at [Dataset Overview](https://sbert.net/docs/sentence\_transformer/dataset\_overview.html).
 
 We are going to use [philschmid/finanical-rag-embedding-dataset](https://huggingface.co/datasets/philschmid/finanical-rag-embedding-dataset), which includes 7,000 positive text pairs of questions and corresponding context from the [2023\_10 NVIDIA SEC Filing](https://stocklight.com/stocks/us/nasdaq-nvda/nvidia/annual-reports/nasdaq-nvda-2023-10K-23668751.pdf).
 
 The dataset has the following format
 
+JSON
+
 ```json
-{"question": "<question>", "context": "<relevant context to answer>"}
-{"question": "<question>", "context": "<relevant context to answer>"}
-{"question": "<question>", "context": "<relevant context to answer>"}
+{"question": "\<question\>", "context": "\<relevant context to answer\>"}
+{"question": "\<question\>", "context": "\<relevant context to answer\>"}
+{"question": "\<question\>", "context": "\<relevant context to answer\>"}
 ```
 
 We are going to load our open-source dataset using the 🤗 Datasets library, rename the colums to match what `sentence-transforemrs` expects and then split our dataset into a train and test spilt to be able to evaluate our model.
 
+Python
+
 ```python
-from datasets import load_dataset
+from datasets import load\_dataset
  
 # Load dataset from the hub
-dataset = load_dataset("philschmid/finanical-rag-embedding-dataset", split="train")
+dataset = load\_dataset("philschmid/finanical-rag-embedding-dataset", split="train")
  
 # rename columns
-dataset = dataset.rename_column("question", "anchor")
-dataset = dataset.rename_column("context", "positive")
+dataset = dataset.rename\_column("question", "anchor")
+dataset = dataset.rename\_column("context", "positive")
  
 # Add an id column to the dataset
-dataset = dataset.add_column("id", range(len(dataset)))
+dataset = dataset.add\_column("id", range(len(dataset)))
  
 # split dataset into a 10% test set
-dataset = dataset.train_test_split(test_size=0.1)
+dataset = dataset.train\_test\_split(test\_size=0.1)
  
 # save datasets to disk
-dataset["train"].to_json("train_dataset.json", orient="records")
-dataset["test"].to_json("test_dataset.json", orient="records")
+dataset["train"].to\_json("train\_dataset.json", orient="records")
+dataset["test"].to\_json("test\_dataset.json", orient="records")
 ```
 
 ## 2\. Create baseline and evaluate pretrained model
@@ -100,67 +108,71 @@ After we created our dataset we want to create a baseline. A baseline provides u
 
 For our example, we will use the [BAAI/bge-base-en-v1.5](https://huggingface.co/BAAI/bge-base-en-v1.5) model as our starting point. [BAAI/bge-base-en-v1.5](https://huggingface.co/BAAI/bge-base-en-v1.5) is one of the strongest open embedding models for it size, with only 109M parameters and a hidden dimension of 768 it achieves `63.55` on the [MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard).
 
-We are going to use the [InformationRetrievalEvaluator](https://sbert.net/docs/package_reference/sentence_transformer/evaluation.html#sentence_transformers.evaluation.InformationRetrievalEvaluator) to evaluate the performance of our model on a given set of queries and corpus set. It will retrieve for each query the top-k most similar document. It measures Mean Reciprocal Rank (MRR), Recall@k, Mean Average Precision (MAP) and Normalized Discounted Cumulative Gain (NDCG).
+We are going to use the [InformationRetrievalEvaluator](https://sbert.net/docs/package\_reference/sentence\_transformer/evaluation.html#sentence\_transformers.evaluation.InformationRetrievalEvaluator) to evaluate the performance of our model on a given set of queries and corpus set. It will retrieve for each query the top-k most similar document. It measures Mean Reciprocal Rank (MRR), Recall@k, Mean Average Precision (MAP) and Normalized Discounted Cumulative Gain (NDCG).
 
 For us the most important metric will be Normalized Discounted Cumulative Gain (NDCG) as it is a measure of ranking quality. It takes into account the position of the relevant document in the ranking and discounts it. The discounted value is logarithmic, which means that relevant documents are more important if they are ranked higher.
 
 For our evaluation corpus we will use all "documents" for potential retrieval from the train and test split and the queries from the test set. As mentioned in the beginning we are going to use Matryoshka Representation Learning to boost efficiency. We are going to create a baseline for the following dimensions `64`, `128`, `256`, `512`, `768`. Since those are the dimensions we are going to use for our Matryoshka Representation Learning.
 
+Python
+
 ```python
 import torch
-from sentence_transformers import SentenceTransformer
-from sentence_transformers.evaluation import (
+from sentence\_transformers import SentenceTransformer
+from sentence\_transformers.evaluation import (
     InformationRetrievalEvaluator,
     SequentialEvaluator,
 )
-from sentence_transformers.util import cos_sim
-from datasets import load_dataset, concatenate_datasets
+from sentence\_transformers.util import cos\_sim
+from datasets import load\_dataset, concatenate\_datasets
  
-model_id = "BAAI/bge-base-en-v1.5"  # Hugging Face model ID
-matryoshka_dimensions = [768, 512, 256, 128, 64] # Important: large to small
+model\_id = "BAAI/bge-base-en-v1.5"  # Hugging Face model ID
+matryoshka\_dimensions = [768, 512, 256, 128, 64] # Important: large to small
  
 # Load a model
 model = SentenceTransformer(
-    model_id, device="cuda" if torch.cuda.is_available() else "cpu"
+    model\_id, device="cuda" if torch.cuda.is\_available() else "cpu"
 )
  
 # load test dataset
-test_dataset = load_dataset("json", data_files="test_dataset.json", split="train")
-train_dataset = load_dataset("json", data_files="train_dataset.json", split="train")
-corpus_dataset = concatenate_datasets([train_dataset, test_dataset])
+test\_dataset = load\_dataset("json", data\_files="test\_dataset.json", split="train")
+train\_dataset = load\_dataset("json", data\_files="train\_dataset.json", split="train")
+corpus\_dataset = concatenate\_datasets([train\_dataset, test\_dataset])
  
 # Convert the datasets to dictionaries
 corpus = dict(
-    zip(corpus_dataset["id"], corpus_dataset["positive"])
-)  # Our corpus (cid => document)
+    zip(corpus\_dataset["id"], corpus\_dataset["positive"])
+)  # Our corpus (cid =\> document)
 queries = dict(
-    zip(test_dataset["id"], test_dataset["anchor"])
-)  # Our queries (qid => question)
+    zip(test\_dataset["id"], test\_dataset["anchor"])
+)  # Our queries (qid =\> question)
  
 # Create a mapping of relevant document (1 in our case) for each query
-relevant_docs = {}  # Query ID to relevant documents (qid => set([relevant_cids])
-for q_id in queries:
-    relevant_docs[q_id] = [q_id]
+relevant\_docs = {}  # Query ID to relevant documents (qid =\> set([relevant\_cids])
+for q\_id in queries:
+    relevant\_docs[q\_id] = [q\_id]
  
  
-matryoshka_evaluators = []
+matryoshka\_evaluators = []
 # Iterate over the different dimensions
-for dim in matryoshka_dimensions:
-    ir_evaluator = InformationRetrievalEvaluator(
+for dim in matryoshka\_dimensions:
+    ir\_evaluator = InformationRetrievalEvaluator(
         queries=queries,
         corpus=corpus,
-        relevant_docs=relevant_docs,
-        name=f"dim_{dim}",
-        truncate_dim=dim,  # Truncate the embeddings to a certain dimension
-        score_functions={"cosine": cos_sim},
+        relevant\_docs=relevant\_docs,
+        name=f"dim\_{dim}",
+        truncate\_dim=dim,  # Truncate the embeddings to a certain dimension
+        score\_functions={"cosine": cos\_sim},
     )
-    matryoshka_evaluators.append(ir_evaluator)
+    matryoshka\_evaluators.append(ir\_evaluator)
  
 # Create a sequential evaluator
-evaluator = SequentialEvaluator(matryoshka_evaluators)
+evaluator = SequentialEvaluator(matryoshka\_evaluators)
 ```
 
 We are going to use the `evaluator` also for evaluation during training. But first lets create our baseline.
+
+Python
 
 ```python
 # Evaluate the model
@@ -170,8 +182,8 @@ results = evaluator(model)
 # print(results)
  
 # Print the main score
-for dim in matryoshka_dimensions:
-    key = f"dim_{dim}_cosine_ndcg@10"
+for dim in matryoshka\_dimensions:
+    key = f"dim\_{dim}\_cosine\_ndcg@10"
     print
     print(f"{key}: {results[key]}")
 ```
@@ -188,103 +200,113 @@ Now, let's see if we can improve this score by fine-tuning the model on our spec
 
 ## 3\. Define loss function with Matryoshka Representation
 
-When fine-tuning embedding models we select a [loss function based on our dataset format](https://sbert.net/docs/sentence_transformer/loss_overview.html). For Positive Text pairs we can use the `MultipleNegativesRankingLoss` in combination with the `MatryoshkaLoss`. This approach allows us to leverage the efficiency and flexibility of Matryoshka embeddings, enabling different embedding dimensions to be utilized without significant performance trade-offs. The `MultipleNegativesRankingLoss` is a great loss function if you only have positive pairs as it adds in batch negative samples to the loss function to have per sample n-1 negative samples.
+When fine-tuning embedding models we select a [loss function based on our dataset format](https://sbert.net/docs/sentence\_transformer/loss\_overview.html). For Positive Text pairs we can use the `MultipleNegativesRankingLoss` in combination with the `MatryoshkaLoss`. This approach allows us to leverage the efficiency and flexibility of Matryoshka embeddings, enabling different embedding dimensions to be utilized without significant performance trade-offs. The `MultipleNegativesRankingLoss` is a great loss function if you only have positive pairs as it adds in batch negative samples to the loss function to have per sample n-1 negative samples.
 
-Lets reload our model using `SDPA` or Flash Attention 2 as `attn_implementation` and define a model card.
+Lets reload our model using `SDPA` or Flash Attention 2 as `attn\_implementation` and define a model card.
+
+Python
 
 ```python
-from sentence_transformers import SentenceTransformerModelCardData, SentenceTransformer
+from sentence\_transformers import SentenceTransformerModelCardData, SentenceTransformer
  
 # Hugging Face model ID: https://huggingface.co/BAAI/bge-base-en-v1.5
-model_id = "BAAI/bge-base-en-v1.5"
+model\_id = "BAAI/bge-base-en-v1.5"
  
 # load model with SDPA for using Flash Attention 2
 model = SentenceTransformer(
-    model_id,
-    model_kwargs={"attn_implementation": "sdpa"},
-    model_card_data=SentenceTransformerModelCardData(
+    model\_id,
+    model\_kwargs={"attn\_implementation": "sdpa"},
+    model\_card\_data=SentenceTransformerModelCardData(
         language="en",
         license="apache-2.0",
-        model_name="BGE base Financial Matryoshka",
+        model\_name="BGE base Financial Matryoshka",
     ),
 )
 ```
 
 After we loaded our model we can initialize our loss function.
 
+Python
+
 ```python
-from sentence_transformers.losses import MatryoshkaLoss, MultipleNegativesRankingLoss
+from sentence\_transformers.losses import MatryoshkaLoss, MultipleNegativesRankingLoss
  
-matryoshka_dimensions = [768, 512, 256, 128, 64]  # Important: large to small
-inner_train_loss = MultipleNegativesRankingLoss(model)
-train_loss = MatryoshkaLoss(
-    model, inner_train_loss, matryoshka_dims=matryoshka_dimensions
+matryoshka\_dimensions = [768, 512, 256, 128, 64]  # Important: large to small
+inner\_train\_loss = MultipleNegativesRankingLoss(model)
+train\_loss = MatryoshkaLoss(
+    model, inner\_train\_loss, matryoshka\_dims=matryoshka\_dimensions
 )
 ```
 
 ## 4\. Fine-tune embedding model with `SentenceTransformersTrainer`
 
-We are now ready to fine-tune our model. We will use the [SentenceTransformersTrainer](https://sbert.net/docs/package_reference/sentence_transformer/trainer.html#sentencetransformertrainer) a subclass of the `Trainer` from the `transformers` library, which supports all the same features, including logging, evaluation, and checkpointing.
+We are now ready to fine-tune our model. We will use the [SentenceTransformersTrainer](https://sbert.net/docs/package\_reference/sentence\_transformer/trainer.html#sentencetransformertrainer) a subclass of the `Trainer` from the `transformers` library, which supports all the same features, including logging, evaluation, and checkpointing.
 
 In addition to this there is a `SentenceTransformerTrainingArguments` class that allows us to specify all the training parameters.
 
+Python
+
 ```python
-from sentence_transformers import SentenceTransformerTrainingArguments
-from sentence_transformers.training_args import BatchSamplers
+from sentence\_transformers import SentenceTransformerTrainingArguments
+from sentence\_transformers.training\_args import BatchSamplers
  
 # load train dataset again
-train_dataset = load_dataset("json", data_files="train_dataset.json", split="train")
+train\_dataset = load\_dataset("json", data\_files="train\_dataset.json", split="train")
  
 # define training arguments
 args = SentenceTransformerTrainingArguments(
-    output_dir="bge-base-financial-matryoshka", # output directory and hugging face model ID
-    num_train_epochs=4,                         # number of epochs
-    per_device_train_batch_size=32,             # train batch size
-    gradient_accumulation_steps=16,             # for a global batch size of 512
-    per_device_eval_batch_size=16,              # evaluation batch size
-    warmup_ratio=0.1,                           # warmup ratio
-    learning_rate=2e-5,                         # learning rate, 2e-5 is a good value
-    lr_scheduler_type="cosine",                 # use constant learning rate scheduler
-    optim="adamw_torch_fused",                  # use fused adamw optimizer
+    output\_dir="bge-base-financial-matryoshka", # output directory and hugging face model ID
+    num\_train\_epochs=4,                         # number of epochs
+    per\_device\_train\_batch\_size=32,             # train batch size
+    gradient\_accumulation\_steps=16,             # for a global batch size of 512
+    per\_device\_eval\_batch\_size=16,              # evaluation batch size
+    warmup\_ratio=0.1,                           # warmup ratio
+    learning\_rate=2e-5,                         # learning rate, 2e-5 is a good value
+    lr\_scheduler\_type="cosine",                 # use constant learning rate scheduler
+    optim="adamw\_torch\_fused",                  # use fused adamw optimizer
     tf32=True,                                  # use tf32 precision
     bf16=True,                                  # use bf16 precision
-    batch_sampler=BatchSamplers.NO_DUPLICATES,  # MultipleNegativesRankingLoss benefits from no duplicate samples in a batch
-    eval_strategy="epoch",                      # evaluate after each epoch
-    save_strategy="epoch",                      # save after each epoch
-    logging_steps=10,                           # log every 10 steps
-    save_total_limit=3,                         # save only the last 3 models
-    load_best_model_at_end=True,                # load the best model when training ends
-    metric_for_best_model="eval_dim_128_cosine_ndcg@10",  # Optimizing for the best ndcg@10 score for the 128 dimension
+    batch\_sampler=BatchSamplers.NO\_DUPLICATES,  # MultipleNegativesRankingLoss benefits from no duplicate samples in a batch
+    eval\_strategy="epoch",                      # evaluate after each epoch
+    save\_strategy="epoch",                      # save after each epoch
+    logging\_steps=10,                           # log every 10 steps
+    save\_total\_limit=3,                         # save only the last 3 models
+    load\_best\_model\_at\_end=True,                # load the best model when training ends
+    metric\_for\_best\_model="eval\_dim\_128\_cosine\_ndcg@10",  # Optimizing for the best ndcg@10 score for the 128 dimension
 )
 ```
 
 We now have every building block we need to create our `SentenceTransformersTrainer` to start then training our model.
 
+Python
+
 ```python
-from sentence_transformers import SentenceTransformerTrainer
+from sentence\_transformers import SentenceTransformerTrainer
  
 trainer = SentenceTransformerTrainer(
     model=model, # bg-base-en-v1
     args=args,  # training arguments
-    train_dataset=train_dataset.select_columns(
+    train\_dataset=train\_dataset.select\_columns(
         ["positive", "anchor"]
     ),  # training dataset
-    loss=train_loss,
+    loss=train\_loss,
     evaluator=evaluator,
 )
 ```
 
 Start training our model by calling the `train()` method on our `SentenceTransformerTrainer` instance. This will start the training loop and train our model for 4 epochs.
 
+Python
+
 ```python
 # start training, the model will be automatically saved to the hub and the output directory
 trainer.train()
  
 # save the best model
-trainer.save_model()
+trainer.save\_model()
  
 # push model to hub
-trainer.model.push_to_hub("bge-base-financial-matryoshka")
+trainer.model.push\_to\_hub("bge-base-financial-matryoshka")
 ```
 
 The training with Flash Attention (SDPA) for 4 epochs on 6.3k samples took ~00:03:26 on a `g5.2xlarge`. The instance costs `1.212$/h` which brings us to a total cost of only `0.07$` for the training.
@@ -293,21 +315,23 @@ The training with Flash Attention (SDPA) for 4 epochs on 6.3k samples took ~00:0
 
 We evaluated our model during training, but we also want to evaluate it against our baseline at the end. We use the same `InformationRetrievalEvaluator` to evaluate the performance of our model on a given set of queries and corpus set.
 
+Python
+
 ```python
-from sentence_transformers import SentenceTransformer
+from sentence\_transformers import SentenceTransformer
  
-fine_tuned_model = SentenceTransformer(
-    args.output_dir, device="cuda" if torch.cuda.is_available() else "cpu"
+fine\_tuned\_model = SentenceTransformer(
+    args.output\_dir, device="cuda" if torch.cuda.is\_available() else "cpu"
 )
 # Evaluate the model
-results = evaluator(fine_tuned_model)
+results = evaluator(fine\_tuned\_model)
  
 # # COMMENT IN for full results
 # print(results)
  
 # Print the main score
-for dim in matryoshka_dimensions:
-    key = f"dim_{dim}_cosine_ndcg@10"
+for dim in matryoshka\_dimensions:
+    key = f"dim\_{dim}\_cosine\_ndcg@10"
     print(f"{key}: {results[key]}")
 ```
 
@@ -333,7 +357,7 @@ Lets try to understand this:
 
 - Fine-tuned model outperforms the baseline model in all dimensions.
 - BGE base is already a very strong base model but fine-tuning it on only 6.3k samples still improves performance by ~7.4%.
-- Matryoshka representation learning works and keeps 95% performance at 64 dimensions (12x size reduction), 99% at 128 dimensions (6x size reduction), >99.5% at 256 dimensions (3x size reduction).
+- Matryoshka representation learning works and keeps 95% performance at 64 dimensions (12x size reduction), 99% at 128 dimensions (6x size reduction), \>99.5% at 256 dimensions (3x size reduction).
 - The Fine-tuned model with lowest dimension (64) outperforms the baseline model with highest dimensions (768).
 - Optimizing the model dimension of 128 allows us to keep 99% of the performance of the 768 dimension model but reducing the storing cost by 6x and improving the cosine similarity search.
 - The fine-tuned model with 128 dimensions outperforms the baseline model with 768 dimensions by 6.51%, while being 6x smaller.
@@ -346,4 +370,4 @@ Our results show that fine-tuning can boost performance by ~7% with only 6.3k sa
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

@@ -1,9 +1,9 @@
 ---
 title: "How Autoresearch will change Small Language Models adoption"
 site: "Philipp Schmid"
-published: 2026-03-10
+published: "2026-03-10"
 source: "https://www.philschmid.de/autoresearch"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 655
 ---
@@ -73,4 +73,4 @@ For teams building domain SLMs, both layers compound.
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

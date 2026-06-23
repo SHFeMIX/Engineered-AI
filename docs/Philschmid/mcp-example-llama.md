@@ -1,11 +1,11 @@
 ---
 title: "How to use Anthropic MCP Server with open LLMs, OpenAI or Google Gemini"
 site: "Philipp Schmid"
-published: 2025-01-17
+published: "2025-01-17"
 source: "https://www.philschmid.de/mcp-example-llama"
-domain: "philschmid.de"
+domain: ""
 language: "en"
-word_count: 2253
+word_count: 2291
 ---
 
 # How to use Anthropic MCP Server with open LLMs, OpenAI or Google Gemini
@@ -28,7 +28,7 @@ MCP allows AI Agents to interact with multiple resources through a unified proto
 
 However, there are still limitations and missing features, including remote MCP Servers or how to handle authentication correctly. The good news is that this is being worked on!
 
-*Note: If you want to see a Google Gemini example, check out the [repository](https://github.com/philschmid/mcp-openai-gemini-llama-example/blob/master/sqlite_gemini_mcp_agent.py).*
+*Note: If you want to see a Google Gemini example, check out the [repository](https://github.com/philschmid/mcp-openai-gemini-llama-example/blob/master/sqlite\_gemini\_mcp\_agent.py).*
 
 ## How to use Anthropic MCP Server with open LLMs, OpenAI, or Google Gemini
 
@@ -45,32 +45,38 @@ In our example, we are going to use [Meta Llama 3.3 70B instruct](https://huggin
 
 Note: Before we can start make sure you have `docker` setup and are logged into your Hugging Face account:
 
+Bash
+
 ```bash
-huggingface-cli login --token YOUR_TOKEN
+huggingface-cli login --token YOUR\_TOKEN
 ```
 
 Before we can start coding we need to install our required libraries. We are going to use the `openai` SDK to interact with the Hugging Face Inference API and we need the official python `mcp` SDK.
 
+Bash
+
 ```bash
-pip install huggingface_hub openai "mcp==1.1.2"
+pip install huggingface\_hub openai "mcp==1.1.2"
 ```
 
 **Note: Different from other blog posts, you will find the full code below as a file, including detailed code comments on the different sections.**
 
+Python
+
 ```python
 import json
-from huggingface_hub import get_token
+from huggingface\_hub import get\_token
 from openai import AsyncOpenAI
 from mcp import ClientSession, StdioServerParameters
-from mcp.client.stdio import stdio_client
+from mcp.client.stdio import stdio\_client
 from typing import Any, List
 import asyncio
  
-MODEL_ID = "meta-llama/Llama-3.3-70B-Instruct"
+MODEL\_ID = "meta-llama/Llama-3.3-70B-Instruct"
  
 # System prompt that guides the LLM's behavior and capabilities
 # This helps the model understand its role and available tools
-SYSTEM_PROMPT = """You are a helpful assistant capable of accessing external functions and engaging in casual chat. Use the responses from these function calls to provide accurate and informative answers. The answers should be natural and hide the fact that you are using tools to access real-time information. Guide the user about available tools and their capabilities. Always utilize tools to access real-time information when required. Engage in a friendly manner to enhance the chat experience.
+SYSTEM\_PROMPT = """You are a helpful assistant capable of accessing external functions and engaging in casual chat. Use the responses from these function calls to provide accurate and informative answers. The answers should be natural and hide the fact that you are using tools to access real-time information. Guide the user about available tools and their capabilities. Always utilize tools to access real-time information when required. Engage in a friendly manner to enhance the chat experience.
  
 # Tools
  
@@ -86,8 +92,8 @@ SYSTEM_PROMPT = """You are a helpful assistant capable of accessing external fun
 # Initialize OpenAI client with HuggingFace inference API
 # This allows us to use Llama models through HuggingFace's API
 client = AsyncOpenAI(
-    base_url="https://api-inference.huggingface.co/v1/",
-    api_key=get_token(),
+    base\_url="https://api-inference.huggingface.co/v1/",
+    api\_key=get\_token(),
 )
  
  
@@ -97,51 +103,51 @@ class MCPClient:
     This class manages the connection and communication with the SQLite database through MCP.
     """
  
-    def __init__(self, server_params: StdioServerParameters):
+    def \_\_init\_\_(self, server\_params: StdioServerParameters):
         """Initialize the MCP client with server parameters"""
-        self.server_params = server_params
+        self.server\_params = server\_params
         self.session = None
-        self._client = None
+        self.\_client = None
  
-    async def __aenter__(self):
+    async def \_\_aenter\_\_(self):
         """Async context manager entry"""
         await self.connect()
         return self
  
-    async def __aexit__(self, exc_type, exc_val, exc_tb):
+    async def \_\_aexit\_\_(self, exc\_type, exc\_val, exc\_tb):
         """Async context manager exit"""
         if self.session:
-            await self.session.__aexit__(exc_type, exc_val, exc_tb)
-        if self._client:
-            await self._client.__aexit__(exc_type, exc_val, exc_tb)
+            await self.session.\_\_aexit\_\_(exc\_type, exc\_val, exc\_tb)
+        if self.\_client:
+            await self.\_client.\_\_aexit\_\_(exc\_type, exc\_val, exc\_tb)
  
     async def connect(self):
         """Establishes connection to MCP server"""
-        self._client = stdio_client(self.server_params)
-        self.read, self.write = await self._client.__aenter__()
+        self.\_client = stdio\_client(self.server\_params)
+        self.read, self.write = await self.\_client.\_\_aenter\_\_()
         session = ClientSession(self.read, self.write)
-        self.session = await session.__aenter__()
+        self.session = await session.\_\_aenter\_\_()
         await self.session.initialize()
  
-    async def get_available_tools(self) -> List[Any]:
+    async def get\_available\_tools(self) -\> List[Any]:
         """
         Retrieve a list of available tools from the MCP server.
         """
         if not self.session:
             raise RuntimeError("Not connected to MCP server")
  
-        tools = await self.session.list_tools()
-        _, tools_list = tools
-        _, tools_list = tools_list
-        return tools_list
+        tools = await self.session.list\_tools()
+        \_, tools\_list = tools
+        \_, tools\_list = tools\_list
+        return tools\_list
  
-    def call_tool(self, tool_name: str) -> Any:
+    def call\_tool(self, tool\_name: str) -\> Any:
         """
         Create a callable function for a specific tool.
         This allows us to execute database operations through the MCP server.
  
         Args:
-            tool_name: The name of the tool to create a callable for
+            tool\_name: The name of the tool to create a callable for
  
         Returns:
             A callable async function that executes the specified tool
@@ -150,13 +156,13 @@ class MCPClient:
             raise RuntimeError("Not connected to MCP server")
  
         async def callable(*args, **kwargs):
-            response = await self.session.call_tool(tool_name, arguments=kwargs)
+            response = await self.session.call\_tool(tool\_name, arguments=kwargs)
             return response.content[0].text
  
         return callable
  
  
-async def agent_loop(query: str, tools: dict, messages: List[dict] = None):
+async def agent\_loop(query: str, tools: dict, messages: List[dict] = None):
     """
     Main interaction loop that processes user queries using the LLM and available tools.
  
@@ -174,7 +180,7 @@ async def agent_loop(query: str, tools: dict, messages: List[dict] = None):
         [
             {
                 "role": "system",
-                "content": SYSTEM_PROMPT.format(
+                "content": SYSTEM\_PROMPT.format(
                     tools="\n- ".join(
                         [
                             f"{t['name']}: {t['schema']['function']['description']}"
@@ -191,62 +197,62 @@ async def agent_loop(query: str, tools: dict, messages: List[dict] = None):
     messages.append({"role": "user", "content": query})
  
     # Query LLM with the system prompt, user query, and available tools
-    first_response = await client.chat.completions.create(
-        model=MODEL_ID,
+    first\_response = await client.chat.completions.create(
+        model=MODEL\_ID,
         messages=messages,
-        tools=([t["schema"] for t in tools.values()] if len(tools) > 0 else None),
-        max_tokens=4096,
+        tools=([t["schema"] for t in tools.values()] if len(tools) \> 0 else None),
+        max\_tokens=4096,
         temperature=0,
     )
     # detect how the LLM call was completed:
-    # tool_calls: if the LLM used a tool
+    # tool\_calls: if the LLM used a tool
     # stop: If the LLM generated a general response, e.g. "Hello, how can I help you today?"
-    stop_reason = (
-        "tool_calls"
-        if first_response.choices[0].message.tool_calls is not None
-        else first_response.choices[0].finish_reason
+    stop\_reason = (
+        "tool\_calls"
+        if first\_response.choices[0].message.tool\_calls is not None
+        else first\_response.choices[0].finish\_reason
     )
  
-    if stop_reason == "tool_calls":
+    if stop\_reason == "tool\_calls":
         # Extract tool use details from response
-        for tool_call in first_response.choices[0].message.tool_calls:
+        for tool\_call in first\_response.choices[0].message.tool\_calls:
             arguments = (
-                json.loads(tool_call.function.arguments)
-                if isinstance(tool_call.function.arguments, str)
-                else tool_call.function.arguments
+                json.loads(tool\_call.function.arguments)
+                if isinstance(tool\_call.function.arguments, str)
+                else tool\_call.function.arguments
             )
             # Call the tool with the arguments using our callable initialized in the tools dict
-            tool_result = await tools[tool_call.function.name]["callable"](**arguments)
+            tool\_result = await tools[tool\_call.function.name]["callable"](**arguments)
             # Add the tool result to the messages list
             messages.append(
                 {
                     "role": "tool",
-                    "tool_call_id": tool_call.id,
-                    "name": tool_call.function.name,
-                    "content": json.dumps(tool_result),
+                    "tool\_call\_id": tool\_call.id,
+                    "name": tool\_call.function.name,
+                    "content": json.dumps(tool\_result),
                 }
             )
  
         # Query LLM with the user query and the tool results
-        new_response = await client.chat.completions.create(
-            model=MODEL_ID,
+        new\_response = await client.chat.completions.create(
+            model=MODEL\_ID,
             messages=messages,
         )
  
-    elif stop_reason == "stop":
+    elif stop\_reason == "stop":
         # If the LLM stopped on its own, use the first response
-        new_response = first_response
+        new\_response = first\_response
  
     else:
-        raise ValueError(f"Unknown stop reason: {stop_reason}")
+        raise ValueError(f"Unknown stop reason: {stop\_reason}")
  
     # Add the LLM response to the messages list
     messages.append(
-        {"role": "assistant", "content": new_response.choices[0].message.content}
+        {"role": "assistant", "content": new\_response.choices[0].message.content}
     )
  
     # Return the LLM response and messages
-    return new_response.choices[0].message.content, messages
+    return new\_response.choices[0].message.content, messages
  
  
 async def main():
@@ -255,7 +261,7 @@ async def main():
     The server is run in a Docker container to ensure isolation and consistency.
     """
     # Configure Docker-based MCP server for SQLite
-    server_params = StdioServerParameters(
+    server\_params = StdioServerParameters(
         command="docker",
         args=[
             "run",
@@ -271,14 +277,14 @@ async def main():
     )
  
     # Start MCP client and create interactive session
-    async with MCPClient(server_params) as mcp_client:
+    async with MCPClient(server\_params) as mcp\_client:
         # Get available database tools and prepare them for the LLM
-        mcp_tools = await mcp_client.get_available_tools()
+        mcp\_tools = await mcp\_client.get\_available\_tools()
         # Convert MCP tools into a format the LLM can understand and use
         tools = {
             tool.name: {
                 "name": tool.name,
-                "callable": mcp_client.call_tool(
+                "callable": mcp\_client.call\_tool(
                     tool.name
                 ),  # returns a callable function for the rpc call
                 "schema": {
@@ -290,9 +296,9 @@ async def main():
                     },
                 },
             }
-            for tool in mcp_tools
+            for tool in mcp\_tools
             if tool.name
-            != "list_tables"  # Excludes list_tables tool as it has an incorrect schema
+            != "list\_tables"  # Excludes list\_tables tool as it has an incorrect schema
         }
  
         # Start interactive prompt loop for user queries
@@ -300,12 +306,12 @@ async def main():
         while True:
             try:
                 # Get user input and check for exit commands
-                user_input = input("\nEnter your prompt (or 'quit' to exit): ")
-                if user_input.lower() in ["quit", "exit", "q"]:
+                user\_input = input("\nEnter your prompt (or 'quit' to exit): ")
+                if user\_input.lower() in ["quit", "exit", "q"]:
                     break
  
                 # Process the prompt and run agent loop
-                response, messages = await agent_loop(user_input, tools, messages)
+                response, messages = await agent\_loop(user\_input, tools, messages)
                 print("\nResponse:", response)
                 # print("\nMessages:", messages)
             except KeyboardInterrupt:
@@ -315,31 +321,33 @@ async def main():
                 print(f"\nError occurred: {e}")
  
  
-if __name__ == "__main__":
+if \_\_name\_\_ == "\_\_main\_\_":
     asyncio.run(main())
 ```
 
 You can run the agent and start chatting with
 
+Python
+
 ```python
-python sqlite_llama_mcp_agent.py
+python sqlite\_llama\_mcp\_agent.py
 ```
 
 Below is an example conversation of what you can do and how it response.
 
-```
+```plaintext
 Enter your prompt (or 'quit' to exit): HEllo 
 Response: Hello! How can 1 assist you today?
-
+ 
 Enter your prompt (or 'quit' to exit): Who are you?
-Response: I am a helpful assistant capable of accessing external functions and engaging in casual chat. I can use the available tools to provide accurate and infor mative answers. The available tools include read_query,
-write_query, create_table, describe_table, and append_insight. I can guide you about these tools and their capabilities, and I will utilize them to access real-time information when required. 
-
+Response: I am a helpful assistant capable of accessing external functions and engaging in casual chat. I can use the available tools to provide accurate and infor mative answers. The available tools include read\_query,
+write\_query, create\_table, describe\_table, and append\_insight. I can guide you about these tools and their capabilities, and I will utilize them to access real-time information when required. 
+ 
 Enter your prompt (or 'quit' to exit): Cool! Create a new table for fake products. Each product should have a name and a price. Generate 10 fake products based on video games.
 Response: The table has been created successfully with the following schema:
 - name (TEXT): The name of the product.
 - price (REAL): The price of the product.
-
+ 
 Here are 10 fake products based on video games:
 1. "The Last of Us" T-shirt - $19.99
 2. Minecraft Creeper Plush Toy - $14.99
@@ -351,13 +359,13 @@ Here are 10 fake products based on video games:
 8. Fortnite Monopoly Board Game - $29.99    
 9. Resident Evil 2 Remake Collector's Edition - $99.99
 10. Pokemon Sword and Shield Nintendo Switch Bundle - $399.99
-
+ 
 Let me know if you'd like to add more products or perform any other operations on the table!
 ```
 
 Feel free to change the code, include debugging statements to better understand the outputs from each step.
 
-- [Google Gemini Example](https://github.com/philschmid/mcp-openai-gemini-llama-example/blob/master/sqlite_gemini_mcp_agent.py)
+- [Google Gemini Example](https://github.com/philschmid/mcp-openai-gemini-llama-example/blob/master/sqlite\_gemini\_mcp\_agent.py)
 
 ## Conclusion
 
@@ -365,4 +373,4 @@ This simple example illustrates how you can get started with building an AI Agen
 
 I’m working on a small toolkit to make implementing AI Agents via MCP easier, so stay tuned for more updates.
 
-If you have any questions, feedback, or ideas, please dm me on [X](https://x.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/). I am excited to hear about how you are experimenting and pushing the boundaries of AI agents.
+If you have any questions, feedback, or ideas, please dm me on [X](https://x.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/). I am excited to hear about how you are experimenting and pushing the boundaries of AI agents.

@@ -1,9 +1,9 @@
 ---
 title: "Bite: How Deepseek R1 was trained"
 site: "Philipp Schmid"
-published: 2025-01-17
+published: "2025-01-17"
 source: "https://www.philschmid.de/deepseek-r1"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 712
 ---

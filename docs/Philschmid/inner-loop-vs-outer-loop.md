@@ -1,9 +1,9 @@
 ---
 title: "Agents: Inner Loop vs Outer Loop"
 site: "Philipp Schmid"
-published: 2026-02-20
+published: "2026-02-20"
 source: "https://www.philschmid.de/inner-loop-vs-outer-loop"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 592
 ---
@@ -64,4 +64,4 @@ The inner loop is about reliability within a task. The outer loop is about getti
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

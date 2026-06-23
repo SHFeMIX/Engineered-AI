@@ -1,9 +1,9 @@
 ---
 title: "Memory in Agents, Make LLMs remember."
 site: "Philipp Schmid"
-published: 2025-08-04
+published: "2025-08-04"
 source: "https://www.philschmid.de/memory-in-agents"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 978
 ---
@@ -95,4 +95,4 @@ This overview was created with the help of deep and manual research, drawing ins
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

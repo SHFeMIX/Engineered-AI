@@ -1,11 +1,11 @@
 ---
 title: "Gemini 3 Prompting: Best Practices for General Usage"
 site: "Philipp Schmid"
-published: 2025-11-19
+published: "2025-11-19"
 source: "https://www.philschmid.de/gemini-3-prompt-practices"
-domain: "philschmid.de"
+domain: ""
 language: "en"
-word_count: 1180
+word_count: 1181
 ---
 
 # Gemini 3 Prompting: Best Practices for General Usage
@@ -28,7 +28,7 @@ Gemini 3 favors directness over persuasion and logic over verbosity. To maximize
 
 **Explicit Planning & Decomposition**
 
-```
+```plaintext
 Before providing the final answer, please:
 1. Parse the stated goal into distinct sub-tasks.
 2. Is the input information complete? If not, stop and ask for it.
@@ -39,9 +39,9 @@ Before providing the final answer, please:
 
 **Self-updating TODO Tracker**
 
-```
+```plaintext
 Create a TODO list to track progress:
-
+ 
 - [ ] Primary objective
 - [ ] Task 1
 - [ ] Task 2
@@ -51,9 +51,9 @@ Create a TODO list to track progress:
 
 **Critique its own output**
 
-```
+```plaintext
 Before returning your final response, review your generated output against the user's original constraints. 
-
+ 
 1. Did I answer the user's *intent*, not just their literal words?
 2. Is the tone authentic to the requested persona?
 3. If I made an assumption due to missing data, did I flag it?
@@ -65,41 +65,43 @@ Use XML-style tagging or Markdown to structure prompts. This provides unambiguou
 
 **XML Example:**
 
+Xml
+
 ```xml
-<rules>
+\<rules\>
     1. Be objective.
     2. Cite sources.
-</rules>
+\</rules\>
  
-<planning_process>
+\<planning\_process\>
     1. Analyze the Request: Identify the core goal and all explicit constraints.
     2. Decompose: Break the problem into logical sub-tasks or variables.
     3. Strategize: Outline the step-by-step methodology to solve each sub-task.
     4. Verify: Check your plan for logical gaps or edge cases.
-</planning_process>
+\</planning\_process\>
  
-<error_handling>
-    IF <context> is empty, missing code, or lacks necessary data:
+\<error\_handling\>
+    IF \<context\> is empty, missing code, or lacks necessary data:
     DO NOT attempt to generate a solution.
     DO NOT make up data.
     Output a polite request for the missing information.
-</error_handling>
+\</error\_handling\>
  
-<context>
+\<context\>
     [Insert User Input Here - The model knows this is data, not instructions]
-</context>
+\</context\>
 ```
 
 **Markdown Example:**
 
-```
+```plaintext
 # Identity
 You are a senior solution architect.
-
+ 
 # Constraints
 - No external libraries allowed.
 - Python 3.11+ syntax only.
-
+ 
 # Output Format
 Return a single code block.
 ```
@@ -108,7 +110,7 @@ Return a single code block.
 
 **The Persistence Directive**
 
-```
+```plaintext
 You are an autonomous agent.
 - Continue working until the user's query is COMPLETELY resolved.
 - If a tool fails, analyze the error and try a different approach.
@@ -117,7 +119,7 @@ You are an autonomous agent.
 
 **Pre-Computation Reflection**
 
-```
+```plaintext
 Before calling any tool, explicitly state:
 1. Why you are calling this tool.
 2. What specific data you expect to retrieve.
@@ -128,7 +130,7 @@ Before calling any tool, explicitly state:
 
 **Research and Analysis**
 
-```
+```plaintext
 1. Decompose the topic into key research questions
 2. Search for/Analyze provided sources for each question independently
 3. Synthesize findings into a cohesive report
@@ -137,7 +139,7 @@ Before calling any tool, explicitly state:
 
 **Creative Writing**
 
-```
+```plaintext
 1. Identify the target audience and the specific goal (e.g., empathy vs. authority).
 2. If the task requires empathy or casualness, strictly avoid corporate jargon (e.g., "synergy," "protocols," "ensure").
 3. Draft the content.
@@ -146,7 +148,7 @@ Before calling any tool, explicitly state:
 
 **Problem-Solving**
 
-```
+```plaintext
 1. Restate the problem in your own words.
 2. Identify the "Standard Solution."
 3. Identify the "Power User Solution" (Is there a trick, a specific tool, or a nuance most people miss?).
@@ -156,7 +158,7 @@ Before calling any tool, explicitly state:
 
 **Education Content**
 
-```
+```plaintext
 1. Assess the user's current knowledge level based on their query.
 2. Define key terms before using them.
 3. Explain the concept using a relevant analogy.
@@ -172,48 +174,48 @@ There is no "perfect" template or context structure. Context engineering is an e
 
 **System Instruction**
 
-```
-<role>
+```plaintext
+\<role\>
 You are Gemini 3, a specialized assistant for [Insert Domain, e.g., Data Science].
 You are precise, analytical, and persistent.
-</role>
-
-<instructions>
+\</role\>
+ 
+\<instructions\>
 1. **Plan**: Analyze the task and create a step-by-step plan into distinct sub tasks.  tags. 
 2. **Execute**: Carry out the plan. If using tools, reflect before every call. Track you progress in TODO List use [ ] for pending, [x] for complete. 
 3. **Validate**: Review your output against the user's task. 
 4. **Format**: Present the final answer in the requested structure.
-</instructions>
-
-<constraints>
+\</instructions\>
+ 
+\<constraints\>
 - Verbosity: [Low/Medium/High]
 - Tone: [Formal/Casual/Technical]
 - Handling Ambiguity: Ask clarifying questions ONLY if critical info is missing; otherwise, make reasonable assumptions and state them.
-</constraints>
-
-<output_format>
+\</constraints\>
+ 
+\<output\_format\>
 Structure your response as follows:
 2. **Executive Summary**: [2 sentence overview]
 3. **Detailed Response**: [The main content]
-</output_format>
+\</output\_format\>
 ```
 
 **User Prompt**
 
-```
-<context>
+```plaintext
+\<context\>
 [Insert relevant documents, code snippets, or background info here]
-</context>
-
-<task>
+\</context\>
+ 
+\<task\>
 [Insert specific user request here]
-</task>
-
-<final_instruction>
+\</task\>
+ 
+\<final\_instruction\>
 Remember to think step-by-step before answering.
-</final_instruction>
+\</final\_instruction\>
 ```
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

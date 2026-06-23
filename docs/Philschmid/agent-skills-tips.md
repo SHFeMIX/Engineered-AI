@@ -20,7 +20,7 @@ I have been using skills extensively with many of them in active use. Here are s
 
 A skill is a folder with a **`SKILL.md`** file and, optionally, some helper files:
 
-```
+```plaintext
 my-skill/
 ├── SKILL.md          ← The only required file
 ├── scripts/          ← Reusable code the agent can run

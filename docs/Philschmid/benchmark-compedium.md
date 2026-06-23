@@ -1,9 +1,9 @@
 ---
 title: "AI Agent Benchmark Compendium"
 site: "Philipp Schmid"
-published: 2025-10-15
+published: "2025-10-15"
 source: "https://www.philschmid.de/benchmark-compedium"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 2349
 ---
@@ -68,7 +68,7 @@ Links: [Blog](https://huggingface.co/blog/andthattoo/dpab-a)
 
 A benchmark designed to evaluate the proficiency of LLMs in single-turn function calling tasks. It assesses various complexities, including simple, parallel, and nested function calls, where the output of one function serves as an input for another.
 
-Links: [GitHub](https://github.com/nexusflowai/NexusRaven-V2) | [Leaderboard](https://huggingface.co/spaces/Nexusflow/Nexus_Function_Calling_Leaderboard)
+Links: [GitHub](https://github.com/nexusflowai/NexusRaven-V2) | [Leaderboard](https://huggingface.co/spaces/Nexusflow/Nexus\_Function\_Calling\_Leaderboard)
 
 ### xLAM: A Family of Large Action Models for Function Calling and AI Agent Systems
 
@@ -184,7 +184,7 @@ Links: [Blog](https://openai.com/index/introducing-swe-bench-verified/) | [Leade
 
 A benchmark for evaluating LLMs and AI agents on their ability to resolve real-world software engineering issues. It comprises 1,865 problems sourced from 41 diverse professional repositories. The task is to generate a patch that resolves the issue. Hidden Test set with 276 additional private tasks.
 
-Links: [Paper](https://t.co/5ArWF1bKmS) | [GitHub](https://github.com/scaleapi/SWE-bench_Pro-os/tree/main?tab=readme-ov-file) | [Leaderboard](https://scale.com/leaderboard/swe_bench_pro_public) | [Dataset](https://huggingface.co/datasets/ScaleAI/SWE-bench_Pro)
+Links: [Paper](https://t.co/5ArWF1bKmS) | [GitHub](https://github.com/scaleapi/SWE-bench\_Pro-os/tree/main?tab=readme-ov-file) | [Leaderboard](https://scale.com/leaderboard/swe\_bench\_pro\_public) | [Dataset](https://huggingface.co/datasets/ScaleAI/SWE-bench\_Pro)
 
 ### LiveCodeBench
 
@@ -248,7 +248,7 @@ Links: [Paper](https://arxiv.org/abs/2504.12516) | [GitHub](https://github.com/o
 
 A comprehensive benchmark for developing and evaluating generalist web agents. The original dataset includes over 2,000 open-ended tasks collected from 137 real-world websites, with variants for evaluating performance on live websites.
 
-Links: [Paper](https://arxiv.org/abs/2306.06070) | [GitHub](https://github.com/osu-nlp-group/Mind2Web) | [Leaderboard](https://huggingface.co/spaces/osunlp/Online_Mind2Web_Leaderboard) | [Dataset](https://huggingface.co/datasets/osunlp/Mind2Web)
+Links: [Paper](https://arxiv.org/abs/2306.06070) | [GitHub](https://github.com/osu-nlp-group/Mind2Web) | [Leaderboard](https://huggingface.co/spaces/osunlp/Online\_Mind2Web\_Leaderboard) | [Dataset](https://huggingface.co/datasets/osunlp/Mind2Web)
 
 ### WebGames Benchmark
 
@@ -290,7 +290,7 @@ Links: [Paper](https://arxiv.org/abs/2407.05291)
 
 A dynamic benchmarking environment for autonomous agents that control mobile devices. It operates on a live Android emulator and features 116 hand-crafted tasks across 20 real-world Android applications, with millions of unique task variations.
 
-Links: [Paper](https://arxiv.org/abs/2405.14573) | [GitHub](https://github.com/google-research/android_world)
+Links: [Paper](https://arxiv.org/abs/2405.14573) | [GitHub](https://github.com/google-research/android\_world)
 
 ### WorldGUI
 
@@ -314,7 +314,7 @@ Links: [Paper](https://arxiv.org/abs/2407.19056) | [GitHub](https://github.com/z
 
 Evaluates AI agents in realistic enterprise scenarios that require them to go beyond simple browser interaction, intelligently selecting tools like APIs and combining web UI interaction with API calls.
 
-Links: [Paper](https://github.com/EmergenceAI/emergence-benchmarks/blob/main/papers/e-web/e-web-v0.pdf) | [GitHub](https://github.com/EmergenceAI/emergence-benchmarks) | [Dataset](https://github.com/EmergenceAI/emergence-benchmarks/blob/main/benchmarks/e-web/e-web_benchmark_lite.csv)
+Links: [Paper](https://github.com/EmergenceAI/emergence-benchmarks/blob/main/papers/e-web/e-web-v0.pdf) | [GitHub](https://github.com/EmergenceAI/emergence-benchmarks) | [Dataset](https://github.com/EmergenceAI/emergence-benchmarks/blob/main/benchmarks/e-web/e-web\_benchmark\_lite.csv)
 
 ### ALFRED: A Benchmark for Interpreting Grounded Instructions for Everyday Tasks
 
@@ -330,4 +330,4 @@ Links: [Paper](https://arxiv.org/abs/2502.09560) | [GitHub](https://github.com/E
 
 ---
 
-Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).
+Thanks for reading! If you have any questions or feedback, please let me know on [Twitter](https://twitter.com/\_philschmid) or [LinkedIn](https://www.linkedin.com/in/philipp-schmid-a6a2bb196/).

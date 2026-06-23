@@ -1,9 +1,9 @@
 ---
 title: "How to fine-tune open LLMs in 2025 with Hugging Face"
 site: "Philipp Schmid"
-published: 2024-12-20
+published: "2024-12-20"
 source: "https://www.philschmid.de/fine-tune-llms-in-2025"
-domain: "philschmid.de"
+domain: ""
 language: "en"
 word_count: 3421
 ---
@@ -53,7 +53,7 @@ However, fine-tuning can be particularly valuable in several scenarios. When you
 
 As an example, we are going to use the following use case:
 
-> We want to fine-tune a model, which can solve high-school math problems to teach students how to solve math problems.
+\> We want to fine-tune a model, which can solve high-school math problems to teach students how to solve math problems.
 
 This can be a good use case for fine-tuning, as it requires a lot of domain-specific knowledge about math and how to solve math problems.
 
@@ -65,7 +65,7 @@ Our first step is to install Hugging Face Libraries and Pyroch, including trl, t
 
 ```python
 # Install Pytorch & other libraries
-%pip install "torch==2.4.1" tensorboard flash-attn "liger-kernel==0.4.2" "setuptools<71.0.0" "deepspeed==0.15.4" openai "lm-eval[api]==0.4.5"
+%pip install "torch==2.4.1" tensorboard flash-attn "liger-kernel==0.4.2" "setuptools\<71.0.0" "deepspeed==0.15.4" openai "lm-eval[api]==0.4.5"
  
 # Install Hugging Face libraries
 %pip install  --upgrade \
@@ -79,12 +79,12 @@ Our first step is to install Hugging Face Libraries and Pyroch, including trl, t
   "hf-transfer==0.1.8"
 ```
 
-We will use the [Hugging Face Hub](https://huggingface.co/models) as a remote model versioning service. This means we will automatically push our model, logs and information to the Hub during training. You must register on the [Hugging Face](https://huggingface.co/join) for this. After you have an account, we will use the `login` util from the `huggingface_hub` package to log into our account and store our token (access key) on the disk.
+We will use the [Hugging Face Hub](https://huggingface.co/models) as a remote model versioning service. This means we will automatically push our model, logs and information to the Hub during training. You must register on the [Hugging Face](https://huggingface.co/join) for this. After you have an account, we will use the `login` util from the `huggingface\_hub` package to log into our account and store our token (access key) on the disk.
 
 ```python
-from huggingface_hub import login
+from huggingface\_hub import login
  
-login(token="", add_to_git_credential=True) # ADD YOUR TOKEN HERE
+login(token="", add\_to\_git\_credential=True) # ADD YOUR TOKEN HERE
 ```
 
 ## 3\. Create and prepare the dataset
@@ -109,7 +109,7 @@ Modern fine-tuning frameworks like `trl` support standard formats:
     ]
 }
 // Instruction format
-{"prompt": "<prompt text>", "completion": "<ideal generated text>"}
+{"prompt": "\<prompt text\>", "completion": "\<ideal generated text\>"}
 ```
 
 *Note: If you are interested in a guide on how to create high-quality datasets, let me know.*
@@ -119,10 +119,10 @@ To prepare our datasets we will use the Datasets library and then convert it int
 *Note: This step can be different for your use case. For example, if you have already a dataset from, e.g. working with OpenAI, you can skip this step and go directly to the fine-tuning step.*
 
 ```python
-from datasets import load_dataset
+from datasets import load\_dataset
  
 # Create system prompt
-system_message = """Solve the given high school math problem by providing a clear explanation of each step leading to the final solution.
+system\_message = """Solve the given high school math problem by providing a clear explanation of each step leading to the final solution.
  
 Provide a detailed breakdown of your calculations, beginning with an explanation of the problem and describing how you derive each formula, value, or conclusion. Use logical steps that build upon one another, to arrive at the final answer in a systematic manner.
  
@@ -142,30 +142,30 @@ Provide a detailed breakdown of your calculations, beginning with an explanation
 """
  
 # convert to messages 
-def create_conversation(sample):
+def create\_conversation(sample):
   return {
     "messages": [
-      {"role": "system", "content": system_message},
+      {"role": "system", "content": system\_message},
       {"role": "user", "content": sample["question"]},
       {"role": "assistant", "content": sample["answer"]}
     ]
   }  
  
 # Load dataset from the hub
-dataset = load_dataset("microsoft/orca-math-word-problems-200k", split="train")
+dataset = load\_dataset("microsoft/orca-math-word-problems-200k", split="train")
  
 # Convert dataset to OAI messages
-dataset = dataset.map(create_conversation, remove_columns=dataset.features, batched=False)
+dataset = dataset.map(create\_conversation, remove\_columns=dataset.features, batched=False)
  
 print(dataset[345]["messages"])
  
 # save datasets to disk 
-dataset.to_json("train_dataset.json", orient="records")
+dataset.to\_json("train\_dataset.json", orient="records")
 ```
 
 ## 4\. Fine-tune the model using trl and the SFTTrainer with QLoRA
 
-We are now ready to fine-tune our model. We will use the [SFTTrainer](https://huggingface.co/docs/trl/sft_trainer) from `trl` to fine-tune our model. The `SFTTrainer` makes it straightfoward to supervise fine-tune open LLMs. The `SFTTrainer` is a subclass of the `Trainer` from the `transformers` library and supports all the same features, including logging, evaluation, and checkpointing, but adds additiional quality of life features, including:
+We are now ready to fine-tune our model. We will use the [SFTTrainer](https://huggingface.co/docs/trl/sft\_trainer) from `trl` to fine-tune our model. The `SFTTrainer` makes it straightfoward to supervise fine-tune open LLMs. The `SFTTrainer` is a subclass of the `Trainer` from the `transformers` library and supports all the same features, including logging, evaluation, and checkpointing, but adds additiional quality of life features, including:
 
 - Dataset formatting, including conversational and instruction format
 - Training on completions only, ignoring prompts
@@ -174,25 +174,25 @@ We are now ready to fine-tune our model. We will use the [SFTTrainer](https://hu
 - Preparing the model and tokenizer for conversational fine-tuning (e.g. adding special tokens)
 - distributed training with `accelerate` and FSDP/DeepSpeed
 
-We prepared a [run\_sft.py](https://github.com/philschmid/deep-learning-pytorch-huggingface/blob/main/training/scripts/run_sft.py) scripts, which supports providing a yaml configuration file to run the fine-tuning. This allows you to easily change the model, dataset, hyperparameters, and other settings. This is done by using the `TrlParser`, which parses the yaml file and converts it into the `TrainingArguments` arguments. That way we can support Q-LoRA, Spectrum, and other PEFT methods with the same script. See Appendix A for execution examples for different models and PEFT methods and distributed training.
+We prepared a [run\_sft.py](https://github.com/philschmid/deep-learning-pytorch-huggingface/blob/main/training/scripts/run\_sft.py) scripts, which supports providing a yaml configuration file to run the fine-tuning. This allows you to easily change the model, dataset, hyperparameters, and other settings. This is done by using the `TrlParser`, which parses the yaml file and converts it into the `TrainingArguments` arguments. That way we can support Q-LoRA, Spectrum, and other PEFT methods with the same script. See Appendix A for execution examples for different models and PEFT methods and distributed training.
 
-> Question: Why don't we use frameworks like [axolotl](https://github.com/axolotl-ai-cloud/axolotl)?
+\> Question: Why don't we use frameworks like [axolotl](https://github.com/axolotl-ai-cloud/axolotl)?
 
 That's a great question! Axolotl is a fantastic framework, it is used by many open source builders and is well tested. However, it is good to know how to do things manually. This will give you a better understanding of the inner workings and how it can be customized. Especially when you ran into an issue or want to extend the scripts and add new features.
 
-Before we can start our training lets take a look at our [training script](https://github.com/philschmid/deep-learning-pytorch-huggingface/blob/main/training/scripts/run_sft.py). The script is kept very simple and is easy to understand. This should help you understand, customize and extend the script for your own use case. We define `dataclasses` for our arguments. Every argument can then be provided either via the command line or by providing a yaml configuration file. That way we have better type safety and intellisense support.
+Before we can start our training lets take a look at our [training script](https://github.com/philschmid/deep-learning-pytorch-huggingface/blob/main/training/scripts/run\_sft.py). The script is kept very simple and is easy to understand. This should help you understand, customize and extend the script for your own use case. We define `dataclasses` for our arguments. Every argument can then be provided either via the command line or by providing a yaml configuration file. That way we have better type safety and intellisense support.
 
 ```python
 # ....
  
 @dataclass
 class ScriptArguments:
-    dataset_id_or_path: str
+    dataset\_id\_or\_path: str
     ...
 # ....
 ```
 
-We can customize behavior for different training methods and use them in our script with `script_args`. The training script is separated by `#######` blocks for the different parts of the script. The main training function:
+We can customize behavior for different training methods and use them in our script with `script\_args`. The training script is separated by `#######` blocks for the different parts of the script. The main training function:
 
 1. Logs all hyperperparameters
 2. Loads the dataset from Hugging Face Hub or local disk
@@ -205,59 +205,59 @@ Below is an example recipe of how we can fine-tune a [Llama-3.1-8B model with Q-
 
 ```yaml
 # Model arguments
-model_name_or_path: Meta-Llama/Meta-Llama-3.1-8B
-tokenizer_name_or_path: Meta-Llama/Meta-Llama-3.1-8B-Instruct
-model_revision: main
-torch_dtype: bfloat16
-attn_implementation: flash_attention_2
-use_liger: true
+model\_name\_or\_path: Meta-Llama/Meta-Llama-3.1-8B
+tokenizer\_name\_or\_path: Meta-Llama/Meta-Llama-3.1-8B-Instruct
+model\_revision: main
+torch\_dtype: bfloat16
+attn\_implementation: flash\_attention\_2
+use\_liger: true
 bf16: true
 tf32: true
-output_dir: runs/llama-3-1-8b-math-orca-qlora-10k-ep1
+output\_dir: runs/llama-3-1-8b-math-orca-qlora-10k-ep1
  
 # Dataset arguments
-dataset_id_or_path: train_dataset.json
-max_seq_length: 1024
+dataset\_id\_or\_path: train\_dataset.json
+max\_seq\_length: 1024
 packing: true
  
 # LoRA arguments
-use_peft: true
-load_in_4bit: true
-lora_target_modules: "all-linear"
+use\_peft: true
+load\_in\_4bit: true
+lora\_target\_modules: "all-linear"
 # important as we need to train the special tokens for the chat template of llama 
-lora_modules_to_save: ["lm_head", "embed_tokens"] # you might need to change this for qwen or other models
-lora_r: 16
-lora_alpha: 16
+lora\_modules\_to\_save: ["lm\_head", "embed\_tokens"] # you might need to change this for qwen or other models
+lora\_r: 16
+lora\_alpha: 16
  
 # Training arguments
-num_train_epochs: 1
-per_device_train_batch_size: 8
-gradient_accumulation_steps: 2
-gradient_checkpointing: true
-gradient_checkpointing_kwargs:
-  use_reentrant: false
-learning_rate: 2.0e-4 
-lr_scheduler_type: constant
-warmup_ratio: 0.1
+num\_train\_epochs: 1
+per\_device\_train\_batch\_size: 8
+gradient\_accumulation\_steps: 2
+gradient\_checkpointing: true
+gradient\_checkpointing\_kwargs:
+  use\_reentrant: false
+learning\_rate: 2.0e-4 
+lr\_scheduler\_type: constant
+warmup\_ratio: 0.1
  
 # Logging arguments
-logging_strategy: steps
-logging_steps: 5
-report_to:
+logging\_strategy: steps
+logging\_steps: 5
+report\_to:
 - tensorboard
-save_strategy: "epoch"
+save\_strategy: "epoch"
 seed: 42
  
 # Hugging Face Hub 
-push_to_hub: true
-# hub_model_id: llama-3-1-8b-math-orca-qlora-10k-ep1 # if not defined same as output_dir
-hub_strategy: every_save
+push\_to\_hub: true
+# hub\_model\_id: llama-3-1-8b-math-orca-qlora-10k-ep1 # if not defined same as output\_dir
+hub\_strategy: every\_save
 ```
 
 This config works for single-GPU training and for multi-GPU training with DeepSpeed (see Appendix for full command). If you want to use Spectrum check the [Appendix](https://www.philschmid.de/Appendix) for more information.
 
 ```python
-!python scripts/run_sft.py --config receipes/llama-3-1-8b-qlora.yaml
+!python scripts/run\_sft.py --config receipes/llama-3-1-8b-qlora.yaml
 ```
 
 I ran several experiments with different optimization strategies, including Flash Attention, Liger Kernels, Q-Lora, and the Spectrum method to compare the time it takes to fine-tune a model. The results are summarized in the following table:
@@ -281,7 +281,7 @@ I ran several experiments with different optimization strategies, including Flas
 Using Q-LoRA only saves the trained adapter weights. If you want to use the model as standalone model, e.g. for inference you might want to merge the adapter and base model. This can be done using the following command:
 
 ```python
-!python scripts/merge_adapter_weights.py --peft_model_id runs/llama-3-1-8b-math-orca-qlora-10k-ep1 --push_to_hub True --repository_id llama-3-1-8b-math-orca-qlora-10k-ep1-merged
+!python scripts/merge\_adapter\_weights.py --peft\_model\_id runs/llama-3-1-8b-math-orca-qlora-10k-ep1 --push\_to\_hub True --repository\_id llama-3-1-8b-math-orca-qlora-10k-ep1-merged
 ```
 
 ## 5\. Test Model and run Inference
@@ -306,27 +306,27 @@ We will start the on 1 GPU detached. Meaning we can can continue to use the note
 ```bash
 %%bash
  
-num_gpus=1
-model_id=philschmid/llama-3-1-8b-math-orca-spectrum-10k-ep1 # replace with your model id
+num\_gpus=1
+model\_id=philschmid/llama-3-1-8b-math-orca-spectrum-10k-ep1 # replace with your model id
  
-docker run --name tgi --gpus ${num_gpus} -d -ti -p 8080:80 --shm-size=2GB \
-  -e HF_TOKEN=$(cat ~/.cache/huggingface/token) \
+docker run --name tgi --gpus ${num\_gpus} -d -ti -p 8080:80 --shm-size=2GB \
+  -e HF\_TOKEN=$(cat ~/.cache/huggingface/token) \
   ghcr.io/huggingface/text-generation-inference:3.0.1 \
-  --model-id ${model_id} \
-  --num-shard ${num_gpus}
+  --model-id ${model\_id} \
+  --num-shard ${num\_gpus}
 ```
 
 Our container will now start in the background and download the model from Hugging Face Hub. We can check the logs to see the progress with `docker logs -f tgi`.
 
-Once our container is running we can send requests using the `openai` or `huggingface_hub` sdk. Here we ll use the `openai` sdk to send a request to our inference server. If you don't have the `openai` sdk installed you can install it using `pip install openai`.
+Once our container is running we can send requests using the `openai` or `huggingface\_hub` sdk. Here we ll use the `openai` sdk to send a request to our inference server. If you don't have the `openai` sdk installed you can install it using `pip install openai`.
 
 ```python
 from openai import OpenAI
  
 # create client 
-client = OpenAI(base_url="http://localhost:8080/v1",api_key="-")
+client = OpenAI(base\_url="http://localhost:8080/v1",api\_key="-")
  
-system_message = """Solve the given high school math problem by providing a clear explanation of each step leading to the final solution.
+system\_message = """Solve the given high school math problem by providing a clear explanation of each step leading to the final solution.
  
 Provide a detailed breakdown of your calculations, beginning with an explanation of the problem and describing how you derive each formula, value, or conclusion. Use logical steps that build upon one another, to arrive at the final answer in a systematic manner.
  
@@ -346,23 +346,23 @@ Provide a detailed breakdown of your calculations, beginning with an explanation
 """
  
 messages = [
-    {"role": "system", "content": system_message},
+    {"role": "system", "content": system\_message},
     {"role": "user", "content": "Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?"},
 ]
-expected_answer = "72"
+expected\_answer = "72"
  
 # Take a random sample from the dataset and remove the last message and send it to the model
 response = client.chat.completions.create(
     model="orca",
     messages=messages,
     stream=False, # no streaming
-    max_tokens=256,
+    max\_tokens=256,
 )
 response = response.choices[0].message.content
  
 # Print results
 print(f"Query:\n{messages[1]['content']}")
-print(f"Original Answer:\n{expected_answer}")
+print(f"Original Answer:\n{expected\_answer}")
 print(f"Generated Answer:\n{response}")
 ```
 
@@ -371,11 +371,11 @@ Awesome that looks great! Now we can evaluate our model with the [Evaluation Har
 *Note: Make sure to change the model id to your fine-tuned model.*
 
 ```python
-!lm_eval --model local-chat-completions \
-  --tasks gsm8k_cot \
-  --model_args model=philschmid/llama-3-1-8b-math-orca-spectrum-10k-ep1,base_url=http://localhost:8080/v1/chat/completions,num_concurrent=8,max_retries=3,tokenized_requests=False \
-  --apply_chat_template \
-  --fewshot_as_multiturn
+!lm\_eval --model local-chat-completions \
+  --tasks gsm8k\_cot \
+  --model\_args model=philschmid/llama-3-1-8b-math-orca-spectrum-10k-ep1,base\_url=http://localhost:8080/v1/chat/completions,num\_concurrent=8,max\_retries=3,tokenized\_requests=False \
+  --apply\_chat\_template \
+  --fewshot\_as\_multiturn
 ```
 
 Wow, 54% accuracy with only using 10k samples is pretty good! We successfully validated that our model can solve math problems. Now, don't forget to stop your container once you are done.
@@ -399,10 +399,10 @@ The Appendix contains additional commands and documentation on how to run distri
 
 ### Deepspeed + Q-LoRA
 
-Note: change the `num_processes` to the number of GPUs you want to use.
+Note: change the `num\_processes` to the number of GPUs you want to use.
 
 ```bash
-accelerate launch --config_file configs/accelerate_configs/deepspeed_zero3.yaml --num_processes 8 scripts/run_sft.py --config receipes/llama-3-1-8b-qlora.yaml
+accelerate launch --config\_file configs/accelerate\_configs/deepspeed\_zero3.yaml --num\_processes 8 scripts/run\_sft.py --config receipes/llama-3-1-8b-qlora.yaml
 ```
 
 ## Inference
@@ -419,9 +419,9 @@ docker run --runtime nvidia --gpus all \
 
 ## Spectrum
 
-Spectrum uses Signal-to-Noise Ratio (SNR) analysis to select the most useful layers for fine-tuning. It provides scripts and pre-run scanned for different models. If your model isn't scanned it will prompt you for the batch size to use for scanning. Batch size of 4 for 70b models requires 8xH100. But popular models like Llama 3.1 8B are already scanned. You can find the scanned models [here](https://github.com/cognitivecomputations/spectrum/tree/main/model_snr_results).
+Spectrum uses Signal-to-Noise Ratio (SNR) analysis to select the most useful layers for fine-tuning. It provides scripts and pre-run scanned for different models. If your model isn't scanned it will prompt you for the batch size to use for scanning. Batch size of 4 for 70b models requires 8xH100. But popular models like Llama 3.1 8B are already scanned. You can find the scanned models [here](https://github.com/cognitivecomputations/spectrum/tree/main/model\_snr\_results).
 
-The script will generate a yaml configuration file in the `model_snr_results` with the name of the model and the top-percent, e.g. for `meta-llama/Llama-3.1-8B` and `30` it will generate it at `snr_results_meta-llama-Meta-Llama-3.1-8B_unfrozenparameters_30percent.yaml`.
+The script will generate a yaml configuration file in the `model\_snr\_results` with the name of the model and the top-percent, e.g. for `meta-llama/Llama-3.1-8B` and `30` it will generate it at `snr\_results\_meta-llama-Meta-Llama-3.1-8B\_unfrozenparameters\_30percent.yaml`.
 
 - `--model-name`: Specify the local model path or the Hugging Face repository.
 - `--top-percent`: Specify the top percentage of SNR layers you want to retrieve.
@@ -432,16 +432,16 @@ git clone https://github.com/cognitivecomputations/spectrum.git
 cd spectrum
 # generate yaml configuration
 python3 spectrum.py --model-name meta-llama/Meta-Llama-3.1-8B --top-percent 30
-# Top 30% SNR layers saved to snr_results_meta-llama-Meta-Llama-3.1-8B_unfrozenparameters_30percent.yaml
+# Top 30% SNR layers saved to snr\_results\_meta-llama-Meta-Llama-3.1-8B\_unfrozenparameters\_30percent.yaml
 cd ..
 ```
 
-After the yaml configuration is generated we can use it to fine-tune our model. We need to define the yaml configuration file in our train config yaml file and provide the path to the yaml file as `spectrum_config_path`. Take a look at [receipes/llama-3-1-8b-spectrum.yaml](https://github.com/philschmid/deep-learning-pytorch-huggingface/blob/main/training/receipes/llama-3-1-8b-spectrum.yaml) for an example.
+After the yaml configuration is generated we can use it to fine-tune our model. We need to define the yaml configuration file in our train config yaml file and provide the path to the yaml file as `spectrum\_config\_path`. Take a look at [receipes/llama-3-1-8b-spectrum.yaml](https://github.com/philschmid/deep-learning-pytorch-huggingface/blob/main/training/receipes/llama-3-1-8b-spectrum.yaml) for an example.
 
 Then we can start the training with the following command for single GPU training:
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python scripts/run_sft.py --config receipes/llama-3-1-8b-spectrum.yaml
+CUDA\_VISIBLE\_DEVICES=0 python scripts/run\_sft.py --config receipes/llama-3-1-8b-spectrum.yaml
 ```
 
 *Note: Spectrum requires a more memory than Q-Lora. According to the paper ~30-50GB on a single GPU.*
@@ -449,7 +449,7 @@ CUDA_VISIBLE_DEVICES=0 python scripts/run_sft.py --config receipes/llama-3-1-8b-
 For multi-GPU training with FSDP and Deepspeed you can use the following command:
 
 ```bash
-accelerate launch --config_file configs/accelerate_configs/deepspeed_zero3.yaml --num_processes 8 scripts/run_sft.py --config receipes/llama-3-1-8b-spectrum.yaml
+accelerate launch --config\_file configs/accelerate\_configs/deepspeed\_zero3.yaml --num\_processes 8 scripts/run\_sft.py --config receipes/llama-3-1-8b-spectrum.yaml
 ```
 
 *Note: Training on 8x L4 GPUs with Spectrum takes ~21 minutes. Q-Lora on the same config took 18 minutes.*

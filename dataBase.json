@@ -226,6 +226,24 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Introducing the Claude apps gateway for Amazon Bedrock and Google Cloud | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jun 29, 2026",
+        "source": "https://claude.com/blog/introducing-the-claude-apps-gateway",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 455
+      },
+      {
+        "title": "Claude in Microsoft Foundry is now generally available | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jun 29, 2026",
+        "source": "https://claude.com/blog/claude-in-microsoft-foundry",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 266
+      },
+      {
         "title": "Lessons from Anthropic on building effective human-agent teams | Claude by Anthropic",
         "site": "Claude",
         "published": "Jun 24, 2026",
@@ -1780,6 +1798,15 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "Build from anywhere with Cursor for iOS · Cursor",
+        "site": "Cursor",
+        "published": "2026-06-29T12:00:00.000Z, 2026-06-29T12:00:00.000Z",
+        "source": "https://cursor.com/blog/ios-mobile-app",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 679
+      },
+      {
         "title": "How Notion used the Cursor SDK to embed coding agents · Cursor",
         "site": "Cursor",
         "published": "2026-06-25T12:00:00.000Z, 2026-06-25T12:00:00.000Z",
@@ -2550,6 +2577,42 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Wiki Memory",
+        "site": "LangChain Blog",
+        "published": "2026-06-30T15:00:00.000Z",
+        "source": "https://www.langchain.com/blog/wiki-memory",
+        "domain": "",
+        "language": "en",
+        "wordCount": 660
+      },
+      {
+        "title": "Harbor x LangChain: A Unified Stack for Evaluating Agents",
+        "site": "LangChain Blog",
+        "published": "2026-06-30T15:00:00.000Z",
+        "source": "https://www.langchain.com/blog/unified-stack-for-evaluating-agents",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1412
+      },
+      {
+        "title": "Introducing Dynamic Subagents in Deep Agents",
+        "site": "LangChain Blog",
+        "published": "2026-06-29T16:00:00.000Z",
+        "source": "https://www.langchain.com/blog/introducing-dynamic-subagents-in-deep-agents",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1760
+      },
+      {
+        "title": "How Candidly Built State-Aware Agent Harnesses with LangSmith",
+        "site": "LangChain Blog",
+        "published": "2026-06-29T15:00:00.000Z",
+        "source": "https://www.langchain.com/blog/how-candidly-built-state-aware-agent-harnesses-with-langsmith",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2425
+      },
       {
         "title": "Prompt Caching with Deep Agents",
         "site": "LangChain Blog",

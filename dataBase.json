@@ -226,6 +226,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "A Field Guide to Claude Fable: Finding Your Unknowns | Claude | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 06, 2026",
+        "source": "https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2077
+      },
+      {
         "title": "New analytics and cost controls are available for Claude Enterprise | Claude by Anthropic",
         "site": "Claude",
         "published": "Jul 02, 2026",
@@ -1815,6 +1824,15 @@
     "title": "Cursor",
     "link": "https://cursor.com/blog",
     "posts": [
+      {
+        "title": "CFOs and the new economics of AI · Cursor",
+        "site": "Cursor",
+        "published": "2026-07-06T12:00:00.000Z, 2026-07-06T12:00:00.000Z",
+        "source": "https://cursor.com/blog/cfo-council",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 646
+      },
       {
         "title": "Build from anywhere with Cursor for iOS · Cursor",
         "site": "Cursor",

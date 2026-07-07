@@ -226,6 +226,33 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Choosing a Claude model and effort level in Claude Code | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 07, 2026",
+        "source": "https://claude.com/blog/claude-model-and-effort-level-in-claude-code",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2590
+      },
+      {
+        "title": "Claude Cowork on web and mobile: hand off work anywhere | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 07, 2026",
+        "source": "https://claude.com/blog/cowork-web-mobile",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 586
+      },
+      {
+        "title": "How people are using Claude Cowork | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 07, 2026",
+        "source": "https://claude.com/blog/how-people-are-using-claude-cowork",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1382
+      },
+      {
         "title": "A Field Guide to Claude Fable: Finding Your Unknowns | Claude | Claude by Anthropic",
         "site": "Claude",
         "published": "Jul 06, 2026",
@@ -2613,6 +2640,24 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Improving Agents is a Data Mining Problem",
+        "site": "LangChain Blog",
+        "published": "2026-07-07T15:15:00.000Z",
+        "source": "https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1469
+      },
+      {
+        "title": "How Schneider Electric Built Their LLMOps Foundations With LangSmith",
+        "site": "LangChain Blog",
+        "published": "2026-07-07T15:00:00.000Z",
+        "source": "https://www.langchain.com/blog/how-schneider-electric-built-their-llmops-foundations-at-enterprise-scale-with-langsmith",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1990
+      },
       {
         "title": "Your coding agent bill doubled. Here’s how to fix it.",
         "site": "LangChain Blog",

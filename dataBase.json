@@ -226,6 +226,33 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Working at the frontier: How Thomson Reuters builds AI for high- stakes professional work | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 08, 2026",
+        "source": "https://claude.com/blog/working-at-the-frontier-how-thomson-reuters-builds-ai-for-high--stakes-professional-work",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1420
+      },
+      {
+        "title": "Using Claude Cowork in marketing operations to automate reporting and campaign building | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 08, 2026",
+        "source": "https://claude.com/blog/how-anthropics-marketing-operations-team-uses-claude-cowork-to-automate-reporting-and-campaign-builds",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1562
+      },
+      {
+        "title": "Bringing Claude Code and Claude Cowork to government | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 07, 2026",
+        "source": "https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 503
+      },
+      {
         "title": "Choosing a Claude model and effort level in Claude Code | Claude by Anthropic",
         "site": "Claude",
         "published": "Jul 07, 2026",
@@ -1852,6 +1879,15 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "Introducing Grok 4.5 · Cursor",
+        "site": "Cursor",
+        "published": "2026-07-08T00:00:00.000Z, 2026-07-08T00:00:00.000Z",
+        "source": "https://cursor.com/blog/grok-4-5",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 523
+      },
+      {
         "title": "CFOs and the new economics of AI · Cursor",
         "site": "Cursor",
         "published": "2026-07-06T12:00:00.000Z, 2026-07-06T12:00:00.000Z",
@@ -2640,6 +2676,33 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "LangChain and NVIDIA Launch NemoClaw Deep Agents Blueprint",
+        "site": "LangChain Blog",
+        "published": "2026-07-08T15:00:00.000Z",
+        "source": "https://www.langchain.com/blog/langchain-and-nvidia-launch-the-nemoclaw-deep-agents-blueprint",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1213
+      },
+      {
+        "title": "Tuning the harness, not the model: a Nemotron 3 Ultra playbook",
+        "site": "LangChain Blog",
+        "published": "2026-07-08T14:59:00.000Z",
+        "source": "https://www.langchain.com/blog/tuning-the-harness-not-the-model-a-nemotron-3-ultra-playbook",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2382
+      },
+      {
+        "title": "Deep Agents Code on NVIDIA NemoClaw",
+        "site": "LangChain Blog",
+        "published": "2026-07-08T14:58:00.000Z",
+        "source": "https://www.langchain.com/blog/deep-agents-code-on-nemoclaw-a-governed-blueprint-for-your-most-sensitive-code",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1432
+      },
       {
         "title": "Improving Agents is a Data Mining Problem",
         "site": "LangChain Blog",

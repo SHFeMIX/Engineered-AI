@@ -226,6 +226,24 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Working with Claude Fable 5 in Claude Cowork | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 16, 2026",
+        "source": "https://claude.com/blog/working-with-claude-fable-5-in-claude-cowork",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2713
+      },
+      {
+        "title": "Working at the frontier: How Base44 trusts Claude Fable 5 with their most challenging engineering work | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 15, 2026",
+        "source": "https://claude.com/blog/working-at-the-frontier-why-base44-trusts-claude-fable-5-with-their-most-challenging-engineering-work",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 948
+      },
+      {
         "title": "Working at the frontier: How Hebbia builds AI for financial diligence that can't miss a detail | Claude by Anthropic",
         "site": "Claude",
         "published": "Jul 13, 2026",
@@ -2694,6 +2712,24 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "New in Fleet: Deploy AI agents to Slack in one click",
+        "site": "LangChain Blog",
+        "published": "2026-07-15T16:30:00.000Z",
+        "source": "https://www.langchain.com/blog/new-in-langsmith-fleet-bring-agents-into-slack-in-one-click",
+        "domain": "",
+        "language": "en",
+        "wordCount": 747
+      },
+      {
+        "title": "Agents need their own computer. Here's how to give them one safely.",
+        "site": "LangChain Blog",
+        "published": "2026-07-15T16:00:00.000Z",
+        "source": "https://www.langchain.com/blog/agents-need-their-own-computer",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2388
+      },
       {
         "title": "How to Debug Coding Agents with LangSmith Traces",
         "site": "LangChain Blog",

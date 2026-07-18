@@ -226,6 +226,33 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "How Cursor knew Claude Fable 5 was ready for the hardest 1% of problems | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 17, 2026",
+        "source": "https://claude.com/blog/working-at-the-frontier-cursor",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1221
+      },
+      {
+        "title": "CISO's guide to agentic AI | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 17, 2026",
+        "source": "https://claude.com/blog/ciso-guide-to-agentic-ai",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 3384
+      },
+      {
+        "title": "How Anthropic runs large-scale code migrations with Claude Code | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 16, 2026",
+        "source": "https://claude.com/blog/ai-code-migration",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 3140
+      },
+      {
         "title": "Working with Claude Fable 5 in Claude Cowork | Claude by Anthropic",
         "site": "Claude",
         "published": "Jul 16, 2026",
@@ -2712,6 +2739,24 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Proving the ROI of agentic AI in financial services",
+        "site": "LangChain Blog",
+        "published": "2026-07-17T19:00:00.000Z",
+        "source": "https://www.langchain.com/blog/proving-the-roi-of-agentic-ai-in-financial-services",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2669
+      },
+      {
+        "title": "OpenWiki 0.2 brings OKF to codebase documentation",
+        "site": "LangChain Blog",
+        "published": "2026-07-16T16:15:00.000Z",
+        "source": "https://www.langchain.com/blog/openwiki-0-2-adds-okf-support",
+        "domain": "",
+        "language": "en",
+        "wordCount": 746
+      },
       {
         "title": "New in Fleet: Deploy AI agents to Slack in one click",
         "site": "LangChain Blog",
@@ -5621,6 +5666,15 @@
     "title": "PhilSchmid",
     "link": "https://www.philschmid.de",
     "posts": [
+      {
+        "title": "Building Managed Agents That Use GitHub Without Exposing Your Token",
+        "site": "Philipp Schmid",
+        "published": "2026-07-17",
+        "source": "https://www.philschmid.de/managed-agents-gh",
+        "domain": "",
+        "language": "en",
+        "wordCount": 969
+      },
       {
         "title": "Control an Android Phone with Gemini 3.5 Flash Computer Use",
         "site": "Philipp Schmid",

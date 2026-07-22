@@ -226,6 +226,15 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "How Anthropic secures its AI-native software development lifecycle | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 21, 2026",
+        "source": "https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2849
+      },
+      {
         "title": "How Datadog built a “universal machine tool” for Claude Code | Claude by Anthropic",
         "site": "Claude",
         "published": "Jul 21, 2026",
@@ -2766,6 +2775,33 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "3 Years of Graph Engineering with LangGraph",
+        "site": "",
+        "published": "",
+        "source": "https://www.langchain.com/blog/3-years-of-graph-engineering-with-langgraph",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1263
+      },
+      {
+        "title": "How Apollo Uses Deep Agents and LangSmith for GTM AI",
+        "site": "LangChain Blog",
+        "published": "2026-07-21T17:00:00.000Z",
+        "source": "https://www.langchain.com/blog/how-apollo-rebuilt-its-ai-assistant-on-deep-agents-to-power-the-full-gtm-loop",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1162
+      },
+      {
+        "title": "Trace voice agents in LangSmith",
+        "site": "LangChain Blog",
+        "published": "2026-07-21T15:50:00.000Z",
+        "source": "https://www.langchain.com/blog/trace-voice-agents-in-langsmith",
+        "domain": "",
+        "language": "en",
+        "wordCount": 653
+      },
       {
         "title": "IssueBench - How We Evaluate Engine",
         "site": "LangChain Blog",

@@ -226,6 +226,24 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "Building verification loops in Claude Code with skills | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 22, 2026",
+        "source": "https://claude.com/blog/building-verification-loops-in-claude-code-with-skills",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1686
+      },
+      {
+        "title": "How Outtake built a cyber investigator on Claude | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 22, 2026",
+        "source": "https://claude.com/blog/how-outtake-built-a-cyber-investigator-on-claude",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 2124
+      },
+      {
         "title": "How Anthropic secures its AI-native software development lifecycle | Claude by Anthropic",
         "site": "Claude",
         "published": "Jul 21, 2026",
@@ -1969,6 +1987,15 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "Introducing Cursor Router · Cursor",
+        "site": "Cursor",
+        "published": "2026-07-22T00:00:00.000Z, 2026-07-22T00:00:00.000Z",
+        "source": "https://cursor.com/blog/router",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1217
+      },
+      {
         "title": "Agent swarms and the new model economics · Cursor",
         "site": "Cursor",
         "published": "2026-07-20T12:00:00.000Z, 2026-07-20T12:00:00.000Z",
@@ -2775,6 +2802,15 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Eval Engineering Skill: Build Evals From Repo Context and Traces",
+        "site": "LangChain Blog",
+        "published": "2026-07-22T16:55:00.000Z",
+        "source": "https://www.langchain.com/blog/towards-automating-eval-engineering",
+        "domain": "",
+        "language": "en",
+        "wordCount": 954
+      },
       {
         "title": "3 Years of Graph Engineering with LangGraph",
         "site": "",

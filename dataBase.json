@@ -226,6 +226,51 @@
     "link": "https://claude.com/blog",
     "posts": [
       {
+        "title": "How the product designer who built Claude Design uses it | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 24, 2026",
+        "source": "https://claude.com/blog/how-the-product-designer-who-built-claude-design-uses-it-to-explore-ideas-before-building-them",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1670
+      },
+      {
+        "title": "The new rules of context engineering for Claude 5 generation models  | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 24, 2026",
+        "source": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1605
+      },
+      {
+        "title": "Claude models explained: choosing the best model for your use case | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 24, 2026",
+        "source": "https://claude.com/blog/claude-models-explained-choosing-the-best-model-for-your-use-case",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1076
+      },
+      {
+        "title": "Four role-based certifications for the people who put Claude to work for customers | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 23, 2026",
+        "source": "https://claude.com/blog/four-role-based-claude-certifications",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 1104
+      },
+      {
+        "title": "Think through hard problems in voice mode | Claude by Anthropic",
+        "site": "Claude",
+        "published": "Jul 23, 2026",
+        "source": "https://claude.com/blog/think-through-hard-problems-in-voice-mode",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 601
+      },
+      {
         "title": "Building verification loops in Claude Code with skills | Claude by Anthropic",
         "site": "Claude",
         "published": "Jul 22, 2026",
@@ -2802,6 +2847,33 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Own Your Intelligence: The Key to Lasting AI Advantage",
+        "site": "LangChain Blog",
+        "published": "2026-07-25T20:13:00.000Z",
+        "source": "https://www.langchain.com/blog/own-your-intelligence",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1692
+      },
+      {
+        "title": "July 2026: LangChain Newsletter — NemoClaw Blueprint, OpenWiki Brains, and More",
+        "site": "LangChain Blog",
+        "published": "2026-07-23T19:00:00.000Z",
+        "source": "https://www.langchain.com/blog/july-2026-langchain-newsletter",
+        "domain": "",
+        "language": "en",
+        "wordCount": 623
+      },
+      {
+        "title": "How We Benchmark Deep Agents",
+        "site": "LangChain Blog",
+        "published": "2026-07-23T16:55:00.000Z",
+        "source": "https://www.langchain.com/blog/how-we-benchmark-deep-agents",
+        "domain": "",
+        "language": "en",
+        "wordCount": 718
+      },
       {
         "title": "Eval Engineering Skill: Build Evals From Repo Context and Traces",
         "site": "LangChain Blog",

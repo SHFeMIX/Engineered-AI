@@ -2032,6 +2032,24 @@
     "link": "https://cursor.com/blog",
     "posts": [
       {
+        "title": "How we set up our cloud agent environment · Cursor",
+        "site": "Cursor",
+        "published": "2026-07-30T12:00:00.000Z, 2026-07-30T12:00:00.000Z",
+        "source": "https://cursor.com/blog/cloud-agent-environment",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 964
+      },
+      {
+        "title": "Introducing Cursor Start · Cursor",
+        "site": "Cursor",
+        "published": "2026-07-28T12:00:00.000Z, 2026-07-28T12:00:00.000Z",
+        "source": "https://cursor.com/blog/cursor-start-india",
+        "domain": "",
+        "language": "en-US",
+        "wordCount": 471
+      },
+      {
         "title": "Introducing Cursor Router · Cursor",
         "site": "Cursor",
         "published": "2026-07-22T00:00:00.000Z, 2026-07-22T00:00:00.000Z",
@@ -2847,6 +2865,51 @@
     "title": "LangChain",
     "link": "https://www.langchain.com/blog",
     "posts": [
+      {
+        "title": "Evaluating code review agents with ReviewBench",
+        "site": "LangChain Blog",
+        "published": "2026-07-31T20:00:00.000Z",
+        "source": "https://www.langchain.com/blog/evaluating-code-review-agents-with-reviewbench",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1184
+      },
+      {
+        "title": "LangSmith LLM Gateway: runtime controls for production agents",
+        "site": "LangChain Blog",
+        "published": "2026-07-30T15:30:00.000Z",
+        "source": "https://www.langchain.com/blog/langsmith-llm-gateway-runtime-controls-for-production-agents",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1292
+      },
+      {
+        "title": "Deep Agents v0.7",
+        "site": "LangChain Blog",
+        "published": "2026-07-29T17:00:00.000Z",
+        "source": "https://www.langchain.com/blog/deep-agents-v0-7",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1190
+      },
+      {
+        "title": "How Similarweb Evaluates Agent Reports with LangSmith",
+        "site": "LangChain Blog",
+        "published": "2026-07-29T15:30:00.000Z",
+        "source": "https://www.langchain.com/blog/how-similarweb-evaluates-long-form-agent-research-reports-with-langsmith",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2152
+      },
+      {
+        "title": "How LangChain Built an Agent-First Data Stack",
+        "site": "LangChain Blog",
+        "published": "2026-07-28T03:27:00.000Z",
+        "source": "https://www.langchain.com/blog/agent-data-stack",
+        "domain": "",
+        "language": "en",
+        "wordCount": 2831
+      },
       {
         "title": "Own Your Intelligence: The Key to Lasting AI Advantage",
         "site": "LangChain Blog",
@@ -5855,6 +5918,15 @@
     "title": "PhilSchmid",
     "link": "https://www.philschmid.de",
     "posts": [
+      {
+        "title": "Evaluating Agents Beyond the First Prompt",
+        "site": "Philipp Schmid",
+        "published": "2026-07-27",
+        "source": "https://www.philschmid.de/evocode-bench",
+        "domain": "",
+        "language": "en",
+        "wordCount": 1082
+      },
       {
         "title": "Building Managed Agents That Use GitHub Without Exposing Your Token",
         "site": "Philipp Schmid",
